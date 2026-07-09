@@ -137,35 +137,52 @@ export default function ClientBody({
     // ── Register GSAP plugins ──────────────────────────────────────────────
     gsap.registerPlugin(ScrollTrigger);
 
-    // ── 1. Lenis smooth scrolling ──────────────────────────────────────────
-    const lenis = new Lenis({
-      duration: 1.4,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 0.9,
-      touchMultiplier: 1.8,
-    });
+    const isMobile = window.innerWidth < 768;
 
-    // Sync Lenis scroll events → ScrollTrigger position updates
-    lenis.on("scroll", () => ScrollTrigger.update());
+    // ── 1. Lenis smooth scrolling (desktop only) ───────────────────────────
+    let lenis: InstanceType<typeof Lenis> | null = null;
+    let gsapTick: ((time: number) => void) | null = null;
 
-    // Drive Lenis via GSAP ticker so both share the same RAF loop
-    const gsapTick = (time: number) => {
-      lenis.raf(time * 1000);
-    };
-    gsap.ticker.add(gsapTick);
-    gsap.ticker.lagSmoothing(0);
+    if (!isMobile) {
+      lenis = new Lenis({
+        duration: 1.4,
+        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: "vertical",
+        gestureOrientation: "vertical",
+        smoothWheel: true,
+        wheelMultiplier: 0.9,
+        touchMultiplier: 1.8,
+      });
+
+      // Sync Lenis scroll events → ScrollTrigger position updates
+      lenis.on("scroll", () => ScrollTrigger.update());
+
+      // Drive Lenis via GSAP ticker so both share the same RAF loop
+      gsapTick = (time: number) => {
+        lenis!.raf(time * 1000);
+      };
+      gsap.ticker.add(gsapTick);
+      gsap.ticker.lagSmoothing(0);
+    }
 
     // ── 2. Reveal animations driven by GSAP ScrollTrigger ─────────────────
     const initReveal = () => {
       ScrollTrigger.refresh();
 
-      const isMobile = window.innerWidth < 768;
-      const startY = isMobile ? 25 : 50;
-      const startXLeft = isMobile ? -12 : -65;
-      const startXRight = isMobile ? 12 : 65;
+      const startY = isMobile ? 30 : 50;
+      const startXLeft = isMobile ? -20 : -65;
+      const startXRight = isMobile ? 20 : 65;
+
+      // Mobile: use toggleActions (fire-and-forget) so animation always plays on scroll
+      // Desktop: use scrub for smooth parallax feel
+      const makeTrigger = (el: HTMLElement, extra?: object) => ({
+        trigger: el,
+        start: "top 90%",
+        end: isMobile ? "top 65%" : "top 60%",
+        scrub: isMobile ? false : 1.5,
+        toggleActions: isMobile ? "play none none none" : "play none none reverse",
+        ...extra,
+      });
 
       // Fade-up (.reveal-hidden)
       document.querySelectorAll<HTMLElement>(".reveal-hidden").forEach((el) => {
@@ -173,19 +190,14 @@ export default function ClientBody({
         el.style.willChange = "opacity, transform";
         gsap.fromTo(
           el,
-          { opacity: 0, y: startY, scale: isMobile ? 0.99 : 0.97 },
+          { opacity: 0, y: startY, scale: isMobile ? 0.98 : 0.97 },
           {
             opacity: 1,
             y: 0,
             scale: 1,
+            duration: isMobile ? 0.6 : undefined,
             ease: "power2.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 90%",
-              end: "top 60%",
-              scrub: 1.5,
-              toggleActions: "play none none reverse",
-            },
+            scrollTrigger: makeTrigger(el),
           }
         );
       });
@@ -200,14 +212,9 @@ export default function ClientBody({
           {
             opacity: 1,
             x: 0,
+            duration: isMobile ? 0.6 : undefined,
             ease: "power2.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 90%",
-              end: "top 58%",
-              scrub: 1.5,
-              toggleActions: "play none none reverse",
-            },
+            scrollTrigger: makeTrigger(el, { end: isMobile ? "top 65%" : "top 58%" }),
           }
         );
       });
@@ -222,14 +229,9 @@ export default function ClientBody({
           {
             opacity: 1,
             x: 0,
+            duration: isMobile ? 0.6 : undefined,
             ease: "power2.out",
-            scrollTrigger: {
-              trigger: el,
-              start: "top 90%",
-              end: "top 58%",
-              scrub: 1.5,
-              toggleActions: "play none none reverse",
-            },
+            scrollTrigger: makeTrigger(el, { end: isMobile ? "top 65%" : "top 58%" }),
           }
         );
       });
@@ -244,11 +246,13 @@ export default function ClientBody({
             opacity: 1,
             y: 0,
             ease: "power1.out",
+            duration: isMobile ? 0.5 : undefined,
             scrollTrigger: {
               trigger: sec,
               start: "top 96%",
               end: "top 78%",
-              scrub: 1,
+              scrub: isMobile ? false : 1,
+              toggleActions: isMobile ? "play none none none" : undefined,
             },
           }
         );
@@ -260,8 +264,8 @@ export default function ClientBody({
 
     return () => {
       clearTimeout(timer);
-      gsap.ticker.remove(gsapTick);
-      lenis.destroy();
+      if (gsapTick) gsap.ticker.remove(gsapTick);
+      if (lenis) lenis.destroy();
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, [pathname]);
