@@ -34,18 +34,19 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
 /* Minimize initial animation offsets on mobile to prevent overflow-x before JS loads */
 @media (max-width: 767px) {
   .reveal-left-hidden {
-    transform: translateX(-20px) !important;
+    transform: translateX(-20px);
   }
   .reveal-right-hidden {
-    transform: translateX(20px) !important;
+    transform: translateX(20px);
   }
   .reveal-hidden {
-    transform: translateY(30px) !important;
+    transform: translateY(30px);
   }
 
   /* Fix large headings that overflow on mobile */
-  h1, h2, h3 {
-    word-break: break-word !important;
+  h1, h2, h3, h4, h5, h6 {
+    word-break: break-all !important;
+    overflow-wrap: anywhere !important;
     hyphens: auto;
   }
 
