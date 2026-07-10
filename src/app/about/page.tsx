@@ -174,9 +174,10 @@ export default function AboutPage() {
               alt="PersonalTrainer.sg"
               className="h-10 md:h-14 w-auto logo-glow"
             />
-            <span className="font-oswald font-black text-[1.35rem] md:text-[1.8rem] tracking-tight text-white uppercase leading-none whitespace-nowrap transition-colors duration-300 group-hover:text-[#C5A059]">
-              PersonalTrainer.sg
-            </span>
+            <div className="flex flex-col text-left transition-colors duration-300 group-hover:text-[#C5A059]">
+              <span className="text-white uppercase">Personal</span>
+              <span className="text-white uppercase">Trainer.sg</span>
+            </div>
           </Link>
         </div>
 
@@ -233,9 +234,10 @@ export default function AboutPage() {
                   alt="PersonalTrainer.sg"
                   className="h-10 w-auto logo-glow"
                 />
-                <span className="font-oswald font-black text-[1.35rem] tracking-tight text-white uppercase leading-none whitespace-nowrap">
-                  PersonalTrainer.sg
-                </span>
+                <div className="flex flex-col text-left">
+                  <span className="text-white uppercase">Personal</span>
+                  <span className="text-[#C5A059] uppercase">Trainer.sg</span>
+                </div>
               </div>
               <button
                 onClick={() => setMobileMenuOpen(false)}
@@ -893,9 +895,10 @@ export default function AboutPage() {
                 alt="PersonalTrainer.sg"
                 className="h-10 w-auto logo-glow"
               />
-              <span className="font-oswald font-black text-[1.35rem] tracking-tight text-white uppercase leading-none whitespace-nowrap">
-                PersonalTrainer.sg
-              </span>
+              <div className="flex flex-col text-left">
+                <span className="text-white uppercase">Personal</span>
+                <span className="text-[#C5A059] uppercase">Trainer.sg</span>
+              </div>
             </div>
             <p className="text-white text-sm leading-relaxed mb-4">
               Led by Md Salaudin Adam (DONN)
