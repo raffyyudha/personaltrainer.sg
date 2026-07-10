@@ -37,7 +37,13 @@ nav {
 
 @media (min-width: 768px) {
   .logo-glow {
-    height: 11.5rem !important; /* Enlarged desktop size */
+    height: 3.5rem !important; /* Enlarged desktop size */
+  }
+  #site-logo::before,
+  .flex.items-center.gap-3:has(.logo-glow)::before {
+    left: 2rem !important;
+    width: 5rem !important;
+    height: 5rem !important;
   }
 }
 
@@ -88,7 +94,7 @@ nav {
 
 @media (min-width: 768px) {
   .logo-glow + div span {
-    font-size: 1.6rem !important;
+    font-size: 1.15rem !important;
   }
 }
 
