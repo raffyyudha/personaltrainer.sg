@@ -274,16 +274,12 @@ export default function ServicesPage() {
       {/* Main Navigation */}
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/85 border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
         <div className="flex items-center">
-          <Link href="/" className="flex items-center gap-3 group" id="site-logo">
+          <Link href="/" className="flex items-center group" id="site-logo">
             <img
               src="/logopt.png"
               alt="PersonalTrainer.sg"
-              className="h-10 md:h-14 w-auto logo-glow"
+              className="h-14 md:h-20 w-auto logo-glow transition-transform duration-300 group-hover:scale-105"
             />
-            <div className="flex flex-col text-left transition-colors duration-300 group-hover:text-[#C5A059]">
-              <span className="text-white uppercase">Personal</span>
-              <span className="text-white uppercase">Trainer.sg</span>
-            </div>
           </Link>
         </div>
 
@@ -334,16 +330,12 @@ export default function ServicesPage() {
           <div>
             <div className="flex justify-between items-center mb-12">
               {/* Mobile drawer logo */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center">
                 <img
                   src="/logopt.png"
                   alt="PersonalTrainer.sg"
-                  className="h-10 w-auto logo-glow"
+                  className="h-16 w-auto logo-glow"
                 />
-                <div className="flex flex-col text-left">
-                  <span className="text-white uppercase">Personal</span>
-                  <span className="text-[#C5A059] uppercase">Trainer.sg</span>
-                </div>
               </div>
               <button
                 onClick={() => setMobileMenuOpen(false)}
