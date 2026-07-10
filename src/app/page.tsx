@@ -208,15 +208,17 @@ export default function Home() {
       </div>
 
       {/* Main Navigation */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/85 border-b border-white/5 py-5 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/85 border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
         <div className="flex items-center">
-          <a href="#" className="flex items-center gap-2 group">
-            <span className="text-3xl font-extrabold font-oswald tracking-tighter whitespace-nowrap inline-block">
-              PersonalTrainer<span className="text-[#800020] group-hover:text-[#C5A059] transition-colors duration-300">.sg</span>
+          <a href="#" className="flex items-center gap-3 group" id="site-logo">
+            <img
+              src="/logopt.png"
+              alt="PersonalTrainer.sg"
+              className="h-10 md:h-14 w-auto logo-glow"
+            />
+            <span className="font-oswald font-black text-[1.35rem] md:text-[1.8rem] tracking-tight text-white uppercase leading-none whitespace-nowrap transition-colors duration-300 group-hover:text-[#C5A059]">
+              PersonalTrainer.sg
             </span>
-            <div className="w-6 h-6 rounded-full border border-[#C5A059] flex items-center justify-center text-[10px] font-bold text-[#C5A059] group-hover:bg-[#C5A059] group-hover:text-black transition-all duration-300">
-              PT
-            </div>
           </a>
         </div>
 
@@ -262,9 +264,17 @@ export default function Home() {
         <div className="fixed inset-0 z-50 bg-black/95 flex flex-col justify-between p-8 animate-fadeIn">
           <div>
             <div className="flex justify-between items-center mb-12">
-              <span className="text-2xl font-extrabold font-oswald tracking-tighter whitespace-nowrap inline-block">
-                PersonalTrainer<span className="text-[#800020]">.sg</span>
-              </span>
+              {/* Mobile drawer logo */}
+              <div className="flex items-center gap-3">
+                <img
+                  src="/logopt.png"
+                  alt="PersonalTrainer.sg"
+                  className="h-10 w-auto logo-glow"
+                />
+                <span className="font-oswald font-black text-[1.35rem] tracking-tight text-white uppercase leading-none whitespace-nowrap">
+                  PersonalTrainer.sg
+                </span>
+              </div>
               <button
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300"
@@ -378,11 +388,11 @@ export default function Home() {
       {/* Full-Width Hero Image Banner */}
       <section className="w-full overflow-hidden">
         <ScrollReveal className="reveal-hidden">
-          <div className="w-full aspect-[21/9] overflow-hidden">
+          <div className="w-full">
             <img
               src="/heroimage.avif"
               alt="Gym workout action shot"
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              className="w-full h-auto block hover:scale-105 transition-transform duration-700 origin-center"
             />
           </div>
         </ScrollReveal>
@@ -1276,9 +1286,16 @@ export default function Home() {
             
             {/* Footer Logo and About */}
             <div>
-              <span className="text-2xl font-extrabold font-oswald tracking-tighter mb-4 block whitespace-nowrap">
-                PersonalTrainer<span className="text-[#800020]">.sg</span>
-              </span>
+              <div className="flex items-center gap-3 mb-4">
+                <img
+                  src="/logopt.png"
+                  alt="PersonalTrainer.sg"
+                  className="h-10 w-auto logo-glow"
+                />
+                <span className="font-oswald font-black text-[1.35rem] tracking-tight text-white uppercase leading-none whitespace-nowrap">
+                  PersonalTrainer.sg
+                </span>
+              </div>
               <p className="text-white text-sm leading-relaxed mb-4">
                 Led by Md Salaudin Adam (DONN)
               </p>
@@ -1364,3 +1381,5 @@ export default function Home() {
     </div>
   );
 }
+
+

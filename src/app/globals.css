@@ -6,7 +6,7 @@
 
 /* Prevent horizontal overflow on mobile viewports */
 html, body {
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
   width: 100% !important;
   max-width: 100vw !important;
   position: relative;
@@ -15,9 +15,34 @@ html, body {
 }
 
 /* Ensure all section elements behave nicely on mobile */
-section, main, footer, header, nav {
+section, main, footer, header {
   max-width: 100% !important;
-  overflow-x: hidden !important;
+  overflow-x: clip !important;
+}
+
+nav {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  overflow: visible !important;
+}
+
+.logo-glow {
+  height: 5rem !important; /* Double mobile size (from h-10/2.5rem to 5rem) */
+  width: auto !important;
+  filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.9)) drop-shadow(0 0 4px rgba(197, 160, 89, 0.65)) !important;
+  transition: all 0.3s ease !important;
+}
+
+@media (min-width: 768px) {
+  .logo-glow {
+    height: 7rem !important; /* Double desktop size (from h-14/3.5rem to 7rem) */
+  }
+}
+
+.logo-glow:hover {
+  filter: drop-shadow(0 0 16px rgba(197, 160, 89, 1)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.9)) !important;
+  transform: scale(1.03);
 }
 
 /* Fix marquee alignment and scaling on small screens */
@@ -80,10 +105,24 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
     box-sizing: border-box !important;
   }
   nav {
-    padding: 0.75rem 1rem !important;
+    padding: 0.625rem 1rem !important;
   }
-  nav .font-oswald {
-    font-size: 1.125rem !important;
+  /* Only shrink nav font-oswald for items OUTSIDE the logo area.
+     The logo uses explicit inline rem sizing so it stays prominent. */
+  nav .font-oswald:not([id="site-logo"] *):not([id="site-logo"]) {
+    font-size: 1rem !important;
+  }
+  /* Ensure the logo shield badge is never clipped or hidden */
+  nav #site-logo {
+    gap: 0.5rem !important;
+  }
+  nav #site-logo > div:first-child {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    flex-shrink: 0 !important;
+  }
+  nav #site-logo span[class*="font-oswald"] {
+    font-size: 1.3rem !important;
   }
   nav .rounded-full {
     width: 1.25rem !important;

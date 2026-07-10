@@ -12,3 +12,5 @@ export default function ResultsLayout({
 }) {
   return <>{children}</>;
 }
+
+
