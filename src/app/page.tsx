@@ -54,11 +54,12 @@ const ScrollReveal = ({
 
 // Animated Stats Counter Component
 const AnimatedCounter = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(end);
   const ref = useRef<HTMLSpanElement | null>(null);
   const hasAnimated = useRef(false);
 
   useEffect(() => {
+    setCount(0);
     const currentRef = ref.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -210,7 +211,7 @@ export default function Home() {
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/85 border-b border-white/5 py-5 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
         <div className="flex items-center">
           <a href="#" className="flex items-center gap-2 group">
-            <span className="text-3xl font-extrabold font-oswald tracking-tighter">
+            <span className="text-3xl font-extrabold font-oswald tracking-tighter whitespace-nowrap inline-block">
               PersonalTrainer<span className="text-[#800020] group-hover:text-[#C5A059] transition-colors duration-300">.sg</span>
             </span>
             <div className="w-6 h-6 rounded-full border border-[#C5A059] flex items-center justify-center text-[10px] font-bold text-[#C5A059] group-hover:bg-[#C5A059] group-hover:text-black transition-all duration-300">
@@ -261,7 +262,7 @@ export default function Home() {
         <div className="fixed inset-0 z-50 bg-black/95 flex flex-col justify-between p-8 animate-fadeIn">
           <div>
             <div className="flex justify-between items-center mb-12">
-              <span className="text-2xl font-extrabold font-oswald tracking-tighter">
+              <span className="text-2xl font-extrabold font-oswald tracking-tighter whitespace-nowrap inline-block">
                 PersonalTrainer<span className="text-[#800020]">.sg</span>
               </span>
               <button
@@ -396,7 +397,7 @@ export default function Home() {
                 <span className="text-6xl md:text-8xl font-extrabold font-oswald text-white tracking-tighter block">
                   <AnimatedCounter end={24} />+
                 </span>
-                <h4 className="font-oswald text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-2">YEARS OF COACHING</h4>
+                <h4 className="font-oswald text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-2">Years of Coaching Experience</h4>
               </div>
             </ScrollReveal>
             <ScrollReveal className="reveal-hidden" delay={150}>
@@ -404,7 +405,7 @@ export default function Home() {
                 <span className="text-6xl md:text-8xl font-extrabold font-oswald text-white tracking-tighter block">
                   <AnimatedCounter end={2002} />
                 </span>
-                <h4 className="font-oswald text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-2">TRUSTED IN SINGAPORE</h4>
+                <h4 className="font-oswald text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-2">Trusted in Singapore Since 2002</h4>
               </div>
             </ScrollReveal>
             <ScrollReveal className="reveal-hidden" delay={300}>
@@ -412,7 +413,7 @@ export default function Home() {
                 <span className="text-6xl md:text-8xl font-extrabold font-oswald text-white tracking-tighter block">
                   <AnimatedCounter end={100} />%
                 </span>
-                <h4 className="font-oswald text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-2">RESULTS FOCUSED</h4>
+                <h4 className="font-oswald text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-2">Results Focused Coaching</h4>
               </div>
             </ScrollReveal>
           </div>
@@ -694,19 +695,19 @@ export default function Home() {
                 title: "Weight Loss & Stamina",
                 trainer: "Md Salaudin Adam (DONN)",
                 img: "https://ext.same-assets.com/3485311241/2060538637.jpeg",
-                desc: "Before and after transformation photos will be displayed here. Client progress photos will be displayed here. Real client results and transformation stories will be presented professionally and clearly."
+                desc: "Real client transformations showcasing progressive weight loss and improved physical stamina. Guided step-by-step through customized resistance training, cardiovascular conditioning, and consistent lifestyle changes."
               },
               {
                 title: "Strength & Body Toning",
                 trainer: "Md Salaudin Adam (DONN)",
                 img: "https://ext.same-assets.com/3485311241/2657269775.jpeg",
-                desc: "Before and after transformation photos will be displayed here. Client progress photos will be displayed here. Real client results and transformation stories will be presented professionally and clearly."
+                desc: "Focused resistance programming to build physical strength, improve muscle definition, and enhance body posture. Every session focuses on correct movement patterns, safety, and progressive loading."
               },
               {
                 title: "Lifestyle Transformations",
                 trainer: "Md Salaudin Adam (DONN)",
                 img: "https://ext.same-assets.com/3485311241/1906150620.jpeg",
-                desc: "Before and after transformation photos will be displayed here. Client progress photos will be displayed here. Real client results and transformation stories will be presented professionally and clearly."
+                desc: "Helping clients rebuild healthy habits, physical energy, and daily focus. A comprehensive lifestyle transformation combining structured exercise, regular accountability, and sustainable nutritional adjustments."
               }
             ].map((cls, idx) => (
               <ScrollReveal key={cls.title} className="reveal-hidden" delay={idx * 150}>
@@ -1082,16 +1083,16 @@ export default function Home() {
               <div className="grid md:grid-cols-2 gap-6">
                 {[
                   {
-                    name: "Emma Collins",
-                    role: "Client",
+                    name: "Anna, 36",
+                    role: "DBS Bank",
                     avatar: "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/image-XXQWD4N.jpg",
-                    quote: "Training with PersonalTrainer.sg gave me the structure and motivation I needed. The sessions are professional, challenging and focused on real results."
+                    quote: "I have never had anyone believe in me or stand behind me the way you have. Not only did you help me shed 30 pounds, you also helped me to get off the anxiety medication. You pushed me to get my life back and claim it as mine again."
                   },
                   {
-                    name: "Daniel Kim",
-                    role: "Client",
+                    name: "Ann Nelson",
+                    role: "Stay at Home Mom",
                     avatar: "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/image-XUF7Y3A.jpg",
-                    quote: "I became stronger, fitter and more confident. The coaching is clear, disciplined and personalised."
+                    quote: "Over the last few months of training and eating properly, I have begun to see a body I really like. What a powerful feeling I have attained from doing this for myself… it is a great reward. I would recommend this to anyone."
                   }
                 ].map((item, idx) => (
                   <div key={idx} className="bg-[#f5f5f5] text-black p-8 flex flex-col justify-between min-h-[250px] relative">
@@ -1100,11 +1101,6 @@ export default function Home() {
                     </p>
                     <div className="flex items-center justify-between mt-auto">
                       <div className="flex items-center gap-3">
-                        <img
-                          src={item.avatar}
-                          alt={item.name}
-                          className="w-12 h-12 rounded-full object-cover"
-                        />
                         <div>
                           <h4 className="font-oswald text-base font-bold text-black uppercase">
                             {item.name}
@@ -1280,7 +1276,7 @@ export default function Home() {
             
             {/* Footer Logo and About */}
             <div>
-              <span className="text-2xl font-extrabold font-oswald tracking-tighter mb-4 block">
+              <span className="text-2xl font-extrabold font-oswald tracking-tighter mb-4 block whitespace-nowrap">
                 PersonalTrainer<span className="text-[#800020]">.sg</span>
               </span>
               <p className="text-white text-sm leading-relaxed mb-4">
@@ -1328,16 +1324,9 @@ export default function Home() {
             {/* Open Hours */}
             <div>
               <h4 className="font-oswald text-lg font-bold text-white mb-6 uppercase tracking-wider">Open Hours</h4>
-              <ul className="space-y-3 text-sm text-white font-oswald">
-                <li className="flex justify-between flex-col sm:flex-row lg:flex-col xl:flex-row gap-1">
-                  <span className="uppercase text-xs tracking-wider">Monday - Friday:</span>
-                  <span>07.00 - 23.00</span>
-                </li>
-                <li className="flex justify-between flex-col sm:flex-row lg:flex-col xl:flex-row gap-1">
-                  <span className="uppercase text-xs tracking-wider">Weekend:</span>
-                  <span>10.00 - 20.00</span>
-                </li>
-              </ul>
+              <p className="text-white text-sm tracking-wider font-oswald uppercase">
+                By Appointment Only
+              </p>
             </div>
 
             {/* Get in touch */}

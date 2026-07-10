@@ -45,14 +45,16 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
 
   /* Fix large headings that overflow on mobile */
   h1, h2, h3, h4, h5, h6 {
-    word-break: break-all !important;
-    overflow-wrap: anywhere !important;
-    hyphens: auto;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+    letter-spacing: 0.02em !important;
   }
 
   /* Constrain huge Oswald/Syne uppercase headings */
   .font-syne, .font-oswald {
     max-width: 100% !important;
+    letter-spacing: 0.02em !important;
   }
 
   /* Specific heading size caps to prevent overflow */
@@ -120,7 +122,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
   .section-label {
     font-size: 0.6875rem !important;
     margin-bottom: 0.5rem !important;
-    letter-spacing: 0.15em !important;
+    letter-spacing: 0.08em !important;
   }
   #about .relative .absolute.bg-\[\#800020\] {
     display: none;
@@ -190,10 +192,18 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
     font-size: clamp(1.125rem, 5vw, 1.75rem) !important;
     line-height: 1.25 !important;
   }
-  /* WhatsApp button smaller on mobile */
+  /* WhatsApp button smaller and shifted on mobile */
+  a[aria-label*="WhatsApp"] {
+    bottom: 20px !important;
+    right: 16px !important;
+    transform: scale(0.85) !important;
+  }
   a[aria-label*="WhatsApp"] > div:first-of-type {
     width: 50px !important;
     height: 50px !important;
+  }
+  a[aria-label*="WhatsApp"] > span {
+    display: none !important;
   }
 }
 

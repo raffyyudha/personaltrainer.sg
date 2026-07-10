@@ -169,7 +169,7 @@ export default function AboutPage() {
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/85 border-b border-white/5 py-5 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2 group">
-            <span className="text-3xl font-extrabold font-oswald tracking-tighter">
+            <span className="text-3xl font-extrabold font-oswald tracking-tighter whitespace-nowrap inline-block">
               PersonalTrainer<span className="text-[#800020] group-hover:text-[#C5A059] transition-colors duration-300">.sg</span>
             </span>
             <div className="w-6 h-6 rounded-full border border-[#C5A059] flex items-center justify-center text-[10px] font-bold text-[#C5A059] group-hover:bg-[#C5A059] group-hover:text-black transition-all duration-300">
@@ -224,7 +224,7 @@ export default function AboutPage() {
         <div className="fixed inset-0 z-50 bg-black/95 flex flex-col justify-between p-8 animate-fadeIn">
           <div>
             <div className="flex justify-between items-center mb-12">
-              <span className="text-2xl font-extrabold font-oswald tracking-tighter">
+              <span className="text-2xl font-extrabold font-oswald tracking-tighter whitespace-nowrap inline-block">
                 PersonalTrainer<span className="text-[#800020] animate-fadeIn">.sg</span>
               </span>
               <button
@@ -791,11 +791,6 @@ export default function AboutPage() {
                   </p>
                   
                   <div className="flex items-center gap-4">
-                    <img
-                      src={testimonials[testimonialIndex].avatar}
-                      alt={testimonials[testimonialIndex].name}
-                      className="w-14 h-14 rounded-full object-cover border border-[#C5A059]"
-                    />
                     <div>
                       <h4 className="font-oswald text-lg font-bold text-white uppercase">
                         {testimonials[testimonialIndex].name}
@@ -882,7 +877,7 @@ export default function AboutPage() {
           
           {/* Footer Logo and About */}
           <div>
-            <span className="text-2xl font-extrabold font-oswald tracking-tighter mb-4 block">
+            <span className="text-2xl font-extrabold font-oswald tracking-tighter mb-4 block whitespace-nowrap">
               PersonalTrainer<span className="text-[#800020]">.sg</span>
             </span>
             <p className="text-white text-sm leading-relaxed mb-4">
@@ -930,16 +925,9 @@ export default function AboutPage() {
           {/* Open Hours */}
           <div>
             <h4 className="font-oswald text-lg font-bold text-white mb-6 uppercase tracking-wider">Open Hours</h4>
-            <ul className="space-y-3 text-sm text-white">
-              <li className="flex justify-between">
-                <span className="uppercase text-xs tracking-wider">Monday - Friday:</span>
-                <span>07.00 - 23.00</span>
-              </li>
-              <li className="flex justify-between">
-                <span className="uppercase text-xs tracking-wider">Weekend:</span>
-                <span>10.00 - 20.00</span>
-              </li>
-            </ul>
+            <p className="text-white text-sm tracking-wider font-oswald uppercase">
+              By Appointment Only
+            </p>
           </div>
 
           {/* Get in touch */}
