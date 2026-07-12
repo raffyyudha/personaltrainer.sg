@@ -92,6 +92,54 @@ const AnimatedCounter = ({ end, duration = 2000 }: { end: number; duration?: num
   return <span ref={ref}>{count}</span>;
 };
 
+const menuItems = [
+  {
+    name: "Home",
+    url: "/"
+  },
+  {
+    name: "About Us",
+    url: "/about",
+    submenu: [
+      { name: "DONN’s Training System", url: "/about#system" },
+      { name: "FAQ", url: "/about#faq" }
+    ]
+  },
+  {
+    name: "Services",
+    url: "/services",
+    submenu: [
+      { name: "Personal Training", url: "/services#personal-training" },
+      { name: "Couple Training", url: "/services#couple-training" },
+      { name: "Weight Loss Training", url: "/services#weight-loss" },
+      { name: "Strength Training", url: "/services#strength-training" },
+      { name: "Kickboxing Fitness", url: "/services#kickboxing" },
+      { name: "Home and Condo Gym Training", url: "/services#home-condo-training" },
+      { name: "Gym Management", url: "/services#gym-management" },
+      { name: "Senior Fitness Training", url: "/services#senior-fitness" },
+      { name: "Corporate Wellness", url: "/services#corporate-wellness" },
+      { name: "Fitness Calculator", url: "/services#fitness-calculator" }
+    ]
+  },
+  {
+    name: "Results",
+    url: "/result",
+    submenu: [
+      { name: "Client Transformations", url: "/result#transformations" },
+      { name: "Testimonials", url: "/result#testimonials" },
+      { name: "Gallery", url: "/result#gallery" }
+    ]
+  },
+  {
+    name: "Contact Us",
+    url: "/contact",
+    submenu: [
+      { name: "Book a Trial Session", url: "/contact#trial" },
+      { name: "WhatsApp Enquiry", url: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Personal%20Training.%20Can%20you%20advise%20on%20availability%20and%20Trial%20Session%3F" }
+    ]
+  }
+];
+
 export default function Home() {
   // States for interactive elements
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -207,44 +255,67 @@ export default function Home() {
         </div>
       </div>
 
+      
       {/* Main Navigation */}
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/85 border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
         <div className="flex items-center">
-          <a href="#" className="flex items-center group" id="site-logo">
-            <img
-              src="/logopt.png"
-              alt="PersonalTrainer.sg"
-              className="h-14 md:h-20 w-auto logo-glow transition-transform duration-300 group-hover:scale-105"
-            />
-          </a>
+          <Link href="/" className="flex items-center group" id="site-logo">
+            <div className="brand-logo-wrapper group-hover:scale-105 transition-transform duration-300">
+              <img
+                src="/logopt.png"
+                alt="PersonalTrainer.sg Shield"
+              />
+            </div>
+            <div className="brand-text-container">
+              <span className="brand-text-title">PERSONALTRAINER.SG</span>
+              <span className="brand-text-subtitle">Trusted in Singapore Since 2002</span>
+            </div>
+          </Link>
         </div>
 
-        {/* Desktop Menu */}
+        {/* Desktop Menu with Hover Dropdowns */}
         <div className="hidden lg:flex items-center gap-10">
-          {[
-            { name: "Home", url: "/" },
-            { name: "About Us", url: "/about" },
-            { name: "Services", url: "/services" },
-            { name: "Results", url: "/result" },
-            { name: "Contact Us", url: "/contact" }
-          ].map((item) => (
-            <Link
-              key={item.name}
-              href={item.url}
-              className="text-sm uppercase tracking-widest font-semibold hover:text-[#800020] transition-colors duration-300 relative py-1 group"
-            >
-              {item.name}
-              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#800020] transition-all duration-300 group-hover:w-full" />
-            </Link>
+          {menuItems.map((item) => (
+            <div key={item.name} className="relative group py-2">
+              <Link
+                href={item.url}
+                className={`text-xs uppercase tracking-widest font-semibold hover:text-[#C5A059] transition-colors duration-300 pb-1 relative block ${
+                  item.name === "Home" ? "text-[#C5A059]" : "text-white"
+                }`}
+              >
+                {item.name}
+                <span className={`absolute bottom-0 left-0 w-0 h-[2px] bg-[#C5A059] transition-all duration-300 group-hover:w-full ${
+                  item.name === "Home" ? "w-full bg-[#C5A059]" : ""
+                }`} />
+              </Link>
+              {item.submenu && (
+                <div className="nav-dropdown">
+                  {item.submenu.map((sub) => {
+                    const isExternal = sub.url.startsWith('http');
+                    return (
+                      <Link
+                        key={sub.name}
+                        href={sub.url}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noopener noreferrer" : undefined}
+                        className="nav-dropdown-item"
+                      >
+                        {sub.name}
+                      </Link>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
         {/* Desktop CTA */}
         <div className="hidden lg:block">
-          <a href="#trial" className="btn-primary group text-sm">
+          <Link href="/#trial" className="btn-primary group text-sm">
             <span>TRIAL SESSION</span>
             <ArrowUpRight size={16} className="group-hover:rotate-45 transition-transform duration-300" />
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Trigger */}
@@ -260,7 +331,7 @@ export default function Home() {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 bg-black/95 flex flex-col justify-between p-8 animate-fadeIn">
           <div>
-            <div className="flex justify-between items-center mb-12">
+            <div className="flex justify-between items-center mb-8">
               {/* Mobile drawer logo */}
               <div className="flex items-center">
                 <img
@@ -276,33 +347,52 @@ export default function Home() {
                 <X size={20} />
               </button>
             </div>
-            <div className="flex flex-col gap-6 text-2xl font-oswald">
-              {[
-                { name: "Home", url: "/" },
-                { name: "About Us", url: "/about" },
-                { name: "Services", url: "/services" },
-                { name: "Results", url: "/result" },
-                { name: "Contact Us", url: "/contact" }
-              ].map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.url}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest"
-                >
-                  {item.name}
-                </Link>
+            
+            {/* Mobile links scrollable list */}
+            <div className="flex flex-col gap-6 text-xl font-oswald overflow-y-auto max-h-[70vh] pr-2">
+              {menuItems.map((item) => (
+                <div key={item.name} className="flex flex-col gap-2">
+                  <Link
+                    href={item.url}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest font-bold ${
+                      item.name === "Home" ? "text-[#C5A059]" : "text-white"
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.submenu && (
+                    <div className="flex flex-col gap-1.5 pl-4 border-l border-white/5 mt-1">
+                      {item.submenu.map((sub) => {
+                        const isExternal = sub.url.startsWith('http');
+                        return (
+                          <Link
+                            key={sub.name}
+                            href={sub.url}
+                            target={isExternal ? "_blank" : undefined}
+                            rel={isExternal ? "noopener noreferrer" : undefined}
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="text-xs uppercase tracking-widest text-[#C5A059] hover:text-white transition-colors duration-300 py-1"
+                          >
+                            <span className="text-white/20 mr-1.5">—</span>
+                            {sub.name}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
           <div className="border-t border-white/10 pt-6">
-            <a
-              href="#trial"
+            <Link
+              href="/#trial"
               onClick={() => setMobileMenuOpen(false)}
               className="btn-primary w-full text-center"
             >
               TRIAL SESSION
-            </a>
+            </Link>
           </div>
         </div>
       )}
@@ -346,33 +436,27 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Avatar Pile */}
-              <div className="flex -space-x-3 mb-4">
-                {[
-                  "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/image-XXQWD4N.jpg",
-                  "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/image-XUF7Y3A.jpg",
-                  "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/image-Q83DW5Z.jpg",
-                  "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/image-GJDLB3J.jpg"
-                ].map((src, i) => (
-                  <img
-                    key={i}
-                    src={src}
-                    alt="Avatar"
-                    className="w-14 h-14 rounded-full border-[3px] border-[#C5A059] object-cover hover:scale-110 hover:z-10 transition-all duration-300"
-                  />
-                ))}
-              </div>
-              <h4 className="font-oswald text-xs tracking-[0.2em] font-bold uppercase text-[#C5A059] mb-4">
-                Founder & Fitness Director • Trusted in Singapore Since 2002
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-xs text-white font-sans mt-2 w-full">
-                <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> 24 Years Coaching Experience</span>
-                <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> Transformation Specialist</span>
-                <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> NASM Certified PT</span>
-                <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> TRX Certified PT</span>
-                <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> SOE Certified PT</span>
-                <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> FMT Fit Muay Trainer</span>
-                <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> CPR and AED Certified</span>
+              {/* Founder Profile & Core Services Panel */}
+              <div className="border border-[#C5A059]/20 bg-[#0c0c0c] p-6 rounded-lg mb-6 w-full shadow-lg shadow-black/40">
+                <h3 className="font-oswald text-2xl font-bold text-white uppercase mb-1">
+                  Md Salaudin Adam (DONN)
+                </h3>
+                <p className="text-xs uppercase tracking-widest text-[#C5A059] font-bold mb-4">
+                  Founder & Fitness Director • PersonalTrainer.sg
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 text-sm text-gray-300 font-sans mt-2 w-full">
+                  <span className="flex items-center gap-2 text-white font-bold"><Check size={14} className="text-[#C5A059] shrink-0" /> 24 Years Coaching Experience</span>
+                  <span className="flex items-center gap-2 text-white font-bold"><Check size={14} className="text-[#C5A059] shrink-0" /> Trusted in SG Since 2002</span>
+                  
+                  <div className="col-span-1 sm:col-span-2 border-t border-white/10 my-1"></div>
+                  
+                  <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> Personal Training</span>
+                  <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> Weight Loss Training</span>
+                  <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> Strength Training</span>
+                  <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> Senior Fitness Training</span>
+                  <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> Couple Training</span>
+                  <span className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> Kickboxing Fitness</span>
+                </div>
               </div>
             </ScrollReveal>
           </div>
