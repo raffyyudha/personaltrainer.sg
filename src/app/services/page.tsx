@@ -875,7 +875,7 @@ export default function ServicesPage() {
                         href={item.ctaUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-primary py-3 px-6 text-xs font-bold uppercase tracking-wider whitespace-nowrap self-end md:self-auto"
+                        className="btn-primary py-3 px-6 text-xs font-bold uppercase tracking-wider whitespace-normal text-center break-words shrink-0 max-w-full"
                       >
                         {item.ctaText}
                       </a>

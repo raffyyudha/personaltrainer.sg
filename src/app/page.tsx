@@ -150,22 +150,53 @@ export default function Home() {
   // Newsletter Form state
   const testimonials = [
     {
-      name: "Client Testimonial",
-      role: "Personal Training Client",
-      avatar: "/aboutus.jpeg",
-      quote: "Structured coaching and constant encouragement helped me achieve goals I thought were impossible. I feel stronger, healthier, and vastly more confident."
-    },
-    {
-      name: "Client Testimonial",
-      role: "Weight Loss Trainee",
-      avatar: "/trainwith.avif",
-      quote: "Over a few months of disciplined training and balanced nutrition awareness, I've transformed my lifestyle and gained lasting fitness habits."
-    },
-    {
-      name: "Client Testimonial",
-      role: "Senior Fitness Client",
+      name: "Al Bennati, 44",
+      role: "Real Estate",
       avatar: "/donn-coaching-latpulldown.avif",
-      quote: "Thanks to Donn, I'm physically stronger and my mobility has improved tremendously. His 24 years of experience really shows in every session."
+      headline: "Lost 23 lbs, 5½ inches off waist & no more back medication in 5 months!",
+      quote: "Dear Don S Adam, I turned 40 in June and I have 2 little boys that are 2 and 5 years old. It is important for me to be there for them as they get older. I want to actively participate in their growth and development. When I joined Body Construction I had no idea what I was in for. I've lost 23 pounds, 5 ½ inches off my waist, 50 points off my cholesterol level, no more daily back medication, and all of this in 5 months. That's what I call \"Body Construction! My workout partner is my 70 year old father and his results have been incredible too. We've been pushed harder than I would have thought possible. Every day we both reach new highs in strength and endurance. Don knows your body better than you do. Listen, learn, and results will come."
+    },
+    {
+      name: "Ken Folkman",
+      role: "Executive Trainee",
+      avatar: "/donn-coaching-barbell.avif",
+      headline: "Turned the clock back 20 years with effective 45-minute workouts!",
+      quote: "Thank you so much for having such a positive impact on my life over the last 4 months. Your innovative training techniques along with balanced nutritional plan have allowed me to set goals and achieve results that I didn't know possible at this point in my life. These results affect a person not only in how they look, but in how you carry yourself and what activities you think are now possible. An example : The Hindu squats made my legs stronger for activities like snow skiing and hiking. This exercise was so much more effective then a whole day doing leg presses and curls. From the beginning of the year, your new workout plan of 30,000 push ups, 30,000 Hindu Squats, and 10,000 pull ups during the year has achieved better results in a 45 minute work out then years of 2 hours at the gym with weights. Combined with your unique nutritional plans, I truly feel at the top of my game and have effectively turned the clock back 20 years. And although all of your training and nutritional guidance is the best that I have ever seen from a professional trainer, nothing is more meaning full then your positive attitude each day and strive for happiness. For all that you have done for my physically, more importantly your outlook on life has helped me realize what are the most important values in life in achieving everyday happiness. I appreciate all that you have done for me. You're an excellent and professional trainer, a good friend, and a positive person for whoever crosses your path."
+    },
+    {
+      name: "Arthur S",
+      role: "President, IDEA Corp",
+      avatar: "/donn-flexing.avif",
+      headline: "Transformed from an out-of-shape smoker into a strong, resilient achiever!",
+      quote: "\"I can't believe I've become one of your testimonials, thanks for all you've done for me!\" Over the past several months, you have seen me go from an out of shape, overweight, smoking, blob, to a guy who has overcome self-doubt, lung-bursting cardio training, muscle fatigue, near cardiac arrest and exhaustion to find the person I knew I could be. The funny thing is, I've enjoyed every minute of it. When I came into the gym for the first time, you opened my eyes to nutrition, fitness and a healthy lifestyle, something I thought I did pretty well on my own, but boy was I wrong! As I reflect on this new person I have become, I realize that you have done more than just \"get me into shape.\" You have pressed me beyond my self-inflicted, imaginary limits to see that with the right mindset and a little perseverance, you can achieve anything. This is a lesson that goes far beyond my workouts at Body Construction and has permeated all of the things in my life. My path of apparent, but subconscious self-destruction has been rerouted to a path of fitness, health and greater happiness. I owe a lot of that success to you and your ability to inspire, push, joke, command, drill and ultimately transform the old me into the new me. It is a commitment, and it's not easy, but the good things in life seldom are. For those people thinking about \"finding the inner you,\" turn your life over to Roy, let him help you find this new path, be mentally tough and you will find great rewards at the end of the rainbow. I know when your prospective clients read this it will sound like either you wrote it, or a bunch of BS. If anyone is considering working out at Body Construction and would like to hear it straight from me, I'd be glad to tell them face-to-face. Thanks for all you've done for me!"
+    },
+    {
+      name: "Michael Oats, 39",
+      role: "Engineer, David & Associates",
+      avatar: "/donn-coaching-elliptical.avif",
+      headline: "Gained 49 lbs of muscle, cured bursitis & ran a 5-minute mile treadmill sprint!",
+      quote: "\"My mental state of mind is incredible, I look good, feel good and I'm never going back. I owe him my life because that's what he's given back to me. Thanks Don!\" Dear Don, I was 35 years old, 6 feet tall and 155 pounds...the same weight I was the day I left high school, only in much worse physical condition. I felt terrible and lied to myself for years about how insecure I was about my physical condition. I had bursitis and I've had stomach problems and dehydration episodes, both of which have repeatedly landed me in the hospital, and no doctor could solve any of my problems. I had worked with many trainers before and they weren't trainers, they were salesman. So I was skeptical if Don was different, but he was and I could tell from day one. The game plan was serious and straightforward, no magic, just consistent workouts, eating the right foods, plenty of water and sleep. My bursitis was gone in two weeks and the workouts were short, intense and focused. In 9 months my weight was up 49 pounds, my chest and quads were up 5 inches each and the nutritional changes that he had recommended had solved all my stomach and dehydration problems. I haven't run for 7 years, but two weeks ago ran a 5 minute mile on the treadmill. A few days later I decided to do The Turkey Trot (6.2 miles). After 6 miles I wasn't even sweating, so I decided to sprint the last 0.2 mile...it was amazing. My mental state of mind is incredible, I look good, feel good and I'm never going back. I owe him my life because that's what he's given back to me. Thanks Don!"
+    },
+    {
+      name: "Eric T. Castillo",
+      role: "Account Manager - Aerospace",
+      avatar: "/trainwith.avif",
+      headline: "Instills accountability, passion and drive for lasting health empowerment!",
+      quote: "\"You hold your clients accountable and instill the desire that is so crucial for results.\" Over ten years ago I made a decision that has changed my life. I wasn't aware of it at the time but when I decided to engage your services and get serious about getting into shape I was changed forever. I have learned the fundamentals of strength training, nutrition, aerobics, goal setting and attainment etc... It's not only about learning, I am now empowered to live a fit and healthy life. Thank you! I am convinced that it goes beyond the fundamentals; I think your success can be attributed to many excellent characteristics. Your passion and drive for results are incredible. You hold your clients accountable and instill the desire that is so crucial for results. You have an excellent approach of pushing hard and encouragement at the same time. You are also open to new ideas and innovated approaches. There is no lack of creativity and new techniques in your programs. You embrace advancements in nutrition, exercises and equipment and I consider you an expert in these areas. Finally, I want to thank you for our friendship. You have been a steadfast friend and companion. You have lifted me up on countless times and helped me and encouraged me. You are a man of utmost integrity and dedication. I am beholden of our friendship. Thank you. Sincerely,"
+    },
+    {
+      name: "Anna, 36",
+      role: "DBS Bank",
+      avatar: "/aboutus.jpeg",
+      headline: "Shed 30 lbs, stopped anxiety medication & reclaimed life with confidence!",
+      quote: "\"I have never had anyone believe in me or stand behind me the way you have.\" Dear Md Salaudin Adam aka Don: I sit here writing this with tears running down my face. Words cannot describe all that you have done for me. When I met you, I was an overweight and very unhappy woman. However, what you saw was different. You looked at me and saw all my potential and all my success. I have never had anyone believe in me or stand behind me the way you have. I know that you will say that the success was mine, that you were just my \"Trainer\". But, you will never be a \"just anything\". To me, you are everything. You pushed me to get my life back and claim it as mine again. Not only did you help me shed 30 pounds, you also helped me to get off the anxiety medication (Effexor) that I really wanted to quit taking. You believed in me, when I didn't believe in myself. You drove me crazy at times and I know that there were times that the feeling was mutual. But, you knew exactly what you had to do to get me to respond in the most effective way. And for that you will forever be in my heart. You have the same compassion and energy for everyone you meet. You truly have passion in your life and in your work. Your clients, family and friends are blessed to have you in their lives. I know that is how I feel about you. Don, I want to thank you with all that I am and all that I am becoming. You came into my life when I needed you the most and I know that it was meant to be. If there is ever anything I can do to help you in your endeavors, please let me know. I am living with passion \"You didn't just change my body... you changed my life.\""
+    },
+    {
+      name: "Monika, 41",
+      role: "Spa Manager",
+      avatar: "/heroimage.avif",
+      headline: "Lost 19 lbs, built self-discipline & physical strength with warrior workouts!",
+      quote: "\"It's been quite challenging stuff, these workouts, the stuff warriors are made of.\" Dear Don: Save the Drama? Not this time, not for this. On April 7th, 2009, I walked through what I considered a heavy door to a Gym. My emotions and fears are still fresh in my mind as I write these words, and the following are but a few: Fear; \"I'm too weak for this; People will laugh at me; I look like a wet Chihuahua when I sweat; I'm afraid to work out with Don — very very afraid; I have degenerative disc disease in my cervical spine, not to mention spurring, and I'm old and fat\". Yikes! Well, no one laughed at me, only with me. Don is a gem of a man, a silly genius family man. And, I won't lie to you. It's been quite challenging stuff, these workouts, the stuff warriors are made of. With Don's vast knowledge and education regarding the body and its mechanics, his passion for excellence and compassion, I have come to realize that he has our best interests at heart. Thanks to him, I'm stronger physically, I've lost nineteen pounds, and the results have been amazing. In four short months, my mind is sharper, and I have more self-confidence. I'm delighted with my new self-discipline, not to mention the fact that I'VE GOT GUNS! Now, when I walk through that very light-weight door, I'm in genuine awe. DON S ADAM is, without a doubt, truly gifted, not only as a fitness expert, but as a lovely and patient friend and mentor. In my mind, he saved my health. \"Get real, Drama Queen\"; right? No. This is real. In the past year, I have undergone two major surgeries, and with the nourishing atmosphere of Body Construction and all of its staff, along with the assistance and kindness of my workout partner, Adriana Sanchez, I'm here to tell you: DON-ism: There Is No Substitute. No excuses. Give it your all and a little extra. No more Fat Food restaurants. Eat healthy, and live every day as if it's your last. And, beware of your friend-enemies. They mean well, but they will tell you, \"Oooh, no, you don't need to lose weight; you're just fine the way you are; don't over-do it\". Rise above it, and join me on what I consider a journey, not a destination. Thank you, my brother, DON. With Every Good Wish,"
     }
   ];
 
