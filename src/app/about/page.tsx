@@ -330,7 +330,7 @@ export default function AboutPage() {
         {/* Mobile Menu Trigger */}
         <button
           onClick={() => setMobileMenuOpen(true)}
-          className="lg:hidden w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300"
+          className="lg:hidden w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300 shrink-0 ml-auto z-30"
         >
           <Menu size={20} />
         </button>

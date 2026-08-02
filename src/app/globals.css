@@ -113,26 +113,31 @@ nav {
 }
 
 @media (max-width: 767px) {
+  nav {
+    padding: 0.5rem 0.5rem !important;
+  }
   .brand-logo-wrapper {
-    width: 6.75rem !important; /* Prominent 108px logo on mobile */
-    height: 6.75rem !important;
+    width: 6.5rem !important; /* Prominent 104px logo badge on mobile */
+    height: 6.5rem !important;
+    border-radius: 12px !important;
   }
   .brand-text-container {
-    margin-left: 0.45rem !important;
+    margin-left: 0.4rem !important;
     min-width: 0 !important;
+    flex-shrink: 1 !important;
   }
   .brand-text-title {
-    font-size: 1.05rem !important; /* Large, bold, prominent title on mobile */
+    font-size: clamp(0.72rem, 3.8vw, 1.05rem) !important; /* Scaled responsively so it NEVER pushes burger button off screen */
     font-weight: 800 !important;
-    letter-spacing: 0.10em !important;
-    margin-right: -0.10em !important;
+    letter-spacing: 0.09em !important;
+    margin-right: -0.09em !important;
   }
   .brand-text-subtitle {
-    font-size: 0.66rem !important; /* Large bold gold text 100% flush aligned under .SG */
+    font-size: clamp(0.45rem, 2.4vw, 0.66rem) !important; /* Scaled responsively so it is 100% flush aligned under .SG */
     font-weight: 800 !important;
-    letter-spacing: 0.076em !important;
-    margin-top: 0.12rem !important;
-    margin-right: -0.076em !important;
+    letter-spacing: 0.068em !important;
+    margin-top: 0.1rem !important;
+    margin-right: -0.068em !important;
     text-align: left !important;
   }
 }
@@ -449,6 +454,19 @@ p {
   transform: translateY(0) !important;
   pointer-events: auto !important;
 }
+
+/* Hide Vercel Preview Toolbar / Dev Feedback Floating Pill */
+#vercel-toolbar,
+[data-vercel-toolbar],
+vercel-live-feedback,
+div[class*="vercel-toolbar"],
+div[id*="vercel-toolbar"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 
 .nav-dropdown {
   position: absolute;
