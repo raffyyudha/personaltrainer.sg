@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import {
   Facebook,
   Instagram,
@@ -187,7 +188,7 @@ export default function Home() {
     {
       name: "Anna, 36",
       role: "DBS Bank",
-      avatar: "/aboutus.jpeg",
+      avatar: "/aboutus.avif",
       headline: "Shed 30 lbs, stopped anxiety medication & reclaimed life with confidence!",
       quote: "\"I have never had anyone believe in me or stand behind me the way you have.\" Dear Md Salaudin Adam aka Don: I sit here writing this with tears running down my face. Words cannot describe all that you have done for me. When I met you, I was an overweight and very unhappy woman. However, what you saw was different. You looked at me and saw all my potential and all my success. I have never had anyone believe in me or stand behind me the way you have. I know that you will say that the success was mine, that you were just my \"Trainer\". But, you will never be a \"just anything\". To me, you are everything. You pushed me to get my life back and claim it as mine again. Not only did you help me shed 30 pounds, you also helped me to get off the anxiety medication (Effexor) that I really wanted to quit taking. You believed in me, when I didn't believe in myself. You drove me crazy at times and I know that there were times that the feeling was mutual. But, you knew exactly what you had to do to get me to respond in the most effective way. And for that you will forever be in my heart. You have the same compassion and energy for everyone you meet. You truly have passion in your life and in your work. Your clients, family and friends are blessed to have you in their lives. I know that is how I feel about you. Don, I want to thank you with all that I am and all that I am becoming. You came into my life when I needed you the most and I know that it was meant to be. If there is ever anything I can do to help you in your endeavors, please let me know. I am living with passion \"You didn't just change my body... you changed my life.\""
     },
@@ -277,147 +278,7 @@ export default function Home() {
 
       
       {/* Main Navigation */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/85 border-b border-white/5 py-2 md:py-2.5 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
-        <div className="flex items-center">
-          <Link href="/" className="flex items-center group" id="site-logo">
-            <div className="brand-logo-wrapper group-hover:scale-105 transition-transform duration-300">
-              <img
-                src="/logopt.png"
-                alt="PersonalTrainer.sg Shield"
-              />
-            </div>
-            <div className="brand-text-container">
-              <span className="brand-text-title">PERSONALTRAINER.SG</span>
-              <span className="brand-text-subtitle">Trusted in Singapore Since 2002</span>
-            </div>
-          </Link>
-        </div>
-
-        {/* Desktop Menu with Hover Dropdowns */}
-        <div className="hidden lg:flex items-center gap-10">
-          {menuItems.map((item) => (
-            <div key={item.name} className="relative group py-2">
-              <Link
-                href={item.url}
-                className={`text-xs uppercase tracking-widest font-semibold hover:text-[#C5A059] transition-colors duration-300 pb-1 relative block ${
-                  item.name === "Home" ? "text-[#C5A059]" : "text-white"
-                }`}
-              >
-                {item.name}
-                <span className={`absolute bottom-0 left-0 w-0 h-[2px] bg-[#C5A059] transition-all duration-300 group-hover:w-full ${
-                  item.name === "Home" ? "w-full bg-[#C5A059]" : ""
-                }`} />
-              </Link>
-              {item.submenu && (
-                <div className="nav-dropdown">
-                  {item.submenu.map((sub) => {
-                    const isExternal = sub.url.startsWith('http');
-                    return (
-                      <Link
-                        key={sub.name}
-                        href={sub.url}
-                        target={isExternal ? "_blank" : undefined}
-                        rel={isExternal ? "noopener noreferrer" : undefined}
-                        className="nav-dropdown-item"
-                      >
-                        {sub.name}
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Desktop CTA */}
-        <div className="hidden lg:block">
-          <Link href="/#trial" className="btn-primary group text-sm">
-            <span>TRIAL SESSION</span>
-            <ArrowUpRight size={16} className="group-hover:rotate-45 transition-transform duration-300" />
-          </Link>
-        </div>
-
-        {/* Mobile Menu Trigger */}
-        <button
-          onClick={() => setMobileMenuOpen(true)}
-          className="lg:hidden w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300 shrink-0 ml-auto z-30"
-        >
-          <Menu size={20} />
-        </button>
-      </nav>
-
-      {/* Mobile Drawer Overlay */}
-      {mobileMenuOpen && (
-        <div className="mobile-nav-drawer flex flex-col justify-between p-6 sm:p-8 animate-fadeIn">
-          <div className="w-full">
-            <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
-              {/* Mobile drawer logo */}
-              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center group">
-                <div className="brand-logo-wrapper">
-                  <img src="/logopt.png" alt="PersonalTrainer.sg Shield" />
-                </div>
-                <div className="brand-text-container">
-                  <span className="brand-text-title">PERSONALTRAINER.SG</span>
-                  <span className="brand-text-subtitle">Trusted in Singapore Since 2002</span>
-                </div>
-              </Link>
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-10 h-10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300 shrink-0 ml-2"
-              >
-                <X size={22} />
-              </button>
-            </div>
-            
-            {/* Mobile links full scrollable list */}
-            <div className="flex flex-col gap-5 text-lg font-oswald py-2 pr-2">
-              {menuItems.map((item) => (
-                <div key={item.name} className="flex flex-col gap-2">
-                  <Link
-                    href={item.url}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest font-bold text-xl ${
-                      item.name === "Home" ? "text-[#C5A059]" : "text-white"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.submenu && (
-                    <div className="flex flex-col gap-2 pl-4 border-l-2 border-[#C5A059]/40 mt-1">
-                      {item.submenu.map((sub) => {
-                        const isExternal = sub.url.startsWith('http');
-                        return (
-                          <Link
-                            key={sub.name}
-                            href={sub.url}
-                            target={isExternal ? "_blank" : undefined}
-                            rel={isExternal ? "noopener noreferrer" : undefined}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="text-xs uppercase tracking-wider text-gray-300 hover:text-[#C5A059] transition-colors duration-300 py-1 font-sans font-medium"
-                          >
-                            <span className="text-[#C5A059] mr-2">›</span>
-                            {sub.name}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-6 mt-8 mb-6">
-            <Link
-              href="/#trial"
-              onClick={() => setMobileMenuOpen(false)}
-              className="btn-primary w-full text-center py-4 text-base font-bold"
-            >
-              <span>TRIAL SESSION</span>
-            </Link>
-          </div>
-        </div>
-      )}
+      <Navbar activePage="home" />
 
       {/* Hero Section */}
       <section id="home" className="relative px-6 md:px-12 py-16 lg:py-28 overflow-hidden">
@@ -602,7 +463,7 @@ export default function Home() {
               <div className="absolute left-0 top-0 w-[60%] h-[45%] bg-[#800020] -z-0" />
               <div className="relative z-10 pt-12 pl-12 pr-4 pb-4 lg:pr-0 lg:pb-0">
                 <img
-                  src="/aboutus.jpeg"
+                  src="/aboutus.avif"
                   alt="Fitness Training"
                   className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-700"
                 />
@@ -732,7 +593,7 @@ export default function Home() {
               num: "04.",
               title: "Senior Fitness Training",
               desc: "Safe and structured training for older adults who want to improve strength, balance, mobility, stability and daily movement confidence. The training is adjusted according to ability, condition and comfort level.",
-              img: "/aboutus.jpeg"
+              img: "/aboutus.avif"
             }
           ].map((srv, idx) => (
             <ScrollReveal key={srv.num} className="reveal-hidden" delay={idx * 150}>
@@ -779,13 +640,13 @@ export default function Home() {
               num: "06.",
               title: "Kickboxing Fitness",
               desc: "High energy Kickboxing Fitness training to improve stamina, coordination, fat burning, movement confidence and overall fitness. Suitable for clients who want a more dynamic and challenging workout style.",
-              img: "/donn-flexing.avif"
+              img: "/donn-kickboxing.avif"
             },
             {
               num: "07.",
               title: "Corporate Wellness",
               desc: "Fitness and wellness support for companies, teams and professionals who want to improve energy, health, performance and lifestyle habits.",
-              img: "/WhatsApp Image 2026-07-08 at 9.44.08 PM.avif"
+              img: "/donn-facility.avif"
             },
             {
               num: "08.",

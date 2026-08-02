@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import {
   Facebook,
   Instagram,
@@ -230,145 +231,7 @@ export default function ContactPage() {
 
       
       {/* Main Navigation */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/85 border-b border-white/5 py-2 md:py-2.5 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
-        <div className="flex items-center">
-          <Link href="/" className="flex items-center group" id="site-logo">
-            <div className="brand-logo-wrapper group-hover:scale-105 transition-transform duration-300">
-              <img
-                src="/logopt.png"
-                alt="PersonalTrainer.sg Shield"
-              />
-            </div>
-            <div className="brand-text-container">
-              <span className="brand-text-title">PERSONALTRAINER.SG</span>
-              <span className="brand-text-subtitle">Trusted in Singapore Since 2002</span>
-            </div>
-          </Link>
-        </div>
-
-        {/* Desktop Menu with Hover Dropdowns */}
-        <div className="hidden lg:flex items-center gap-10">
-          {menuItems.map((item) => (
-            <div key={item.name} className="relative group py-2">
-              <Link
-                href={item.url}
-                className={`text-xs uppercase tracking-widest font-semibold hover:text-[#C5A059] transition-colors duration-300 pb-1 relative block ${
-                  item.name === "Contact Us" ? "text-[#C5A059]" : "text-white"
-                }`}
-              >
-                {item.name}
-                <span className={`absolute bottom-0 left-0 w-0 h-[2px] bg-[#C5A059] transition-all duration-300 group-hover:w-full ${
-                  item.name === "Contact Us" ? "w-full bg-[#C5A059]" : ""
-                }`} />
-              </Link>
-              {item.submenu && (
-                <div className="nav-dropdown">
-                  {item.submenu.map((sub) => {
-                    const isExternal = sub.url.startsWith('http');
-                    return (
-                      <Link
-                        key={sub.name}
-                        href={sub.url}
-                        target={isExternal ? "_blank" : undefined}
-                        rel={isExternal ? "noopener noreferrer" : undefined}
-                        className="nav-dropdown-item"
-                      >
-                        {sub.name}
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Desktop CTA */}
-        <div className="hidden lg:block">
-          <Link href="/#trial" className="btn-primary group text-sm">
-            <span>TRIAL SESSION</span>
-            <ArrowUpRight size={16} className="group-hover:rotate-45 transition-transform duration-300" />
-          </Link>
-        </div>
-
-        {/* Mobile Menu Trigger */}
-        <button
-          onClick={() => setMobileMenuOpen(true)}
-          className="lg:hidden w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300 shrink-0 ml-auto z-30"
-        >
-          <Menu size={20} />
-        </button>
-      </nav>
-
-      {/* Mobile Drawer Overlay */}
-      {mobileMenuOpen && (
-        <div className="mobile-nav-drawer flex flex-col justify-between p-6 sm:p-8 animate-fadeIn">
-          <div className="w-full">
-            <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
-              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center group">
-                <div className="brand-logo-wrapper">
-                  <img src="/logopt.png" alt="PersonalTrainer.sg Shield" />
-                </div>
-                <div className="brand-text-container">
-                  <span className="brand-text-title">PERSONALTRAINER.SG</span>
-                  <span className="brand-text-subtitle">Trusted in Singapore Since 2002</span>
-                </div>
-              </Link>
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-10 h-10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300 shrink-0 ml-2"
-              >
-                <X size={22} />
-              </button>
-            </div>
-            
-            <div className="flex flex-col gap-5 text-lg font-oswald py-2 pr-2">
-              {menuItems.map((item) => (
-                <div key={item.name} className="flex flex-col gap-2">
-                  <Link
-                    href={item.url}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest font-bold text-xl ${
-                      item.name === "Contact Us" ? "text-[#C5A059]" : "text-white"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.submenu && (
-                    <div className="flex flex-col gap-2 pl-4 border-l-2 border-[#C5A059]/40 mt-1">
-                      {item.submenu.map((sub) => {
-                        const isExternal = sub.url.startsWith('http');
-                        return (
-                          <Link
-                            key={sub.name}
-                            href={sub.url}
-                            target={isExternal ? "_blank" : undefined}
-                            rel={isExternal ? "noopener noreferrer" : undefined}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="text-xs uppercase tracking-wider text-gray-300 hover:text-[#C5A059] transition-colors duration-300 py-1 font-sans font-medium"
-                          >
-                            <span className="text-[#C5A059] mr-2">›</span>
-                            {sub.name}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-6 mt-8 mb-6">
-            <Link
-              href="/#trial"
-              onClick={() => setMobileMenuOpen(false)}
-              className="btn-primary w-full text-center py-4 text-base font-bold"
-            >
-              <span>TRIAL SESSION</span>
-            </Link>
-          </div>
-        </div>
-      )}
+      <Navbar activePage="contactus" />
 
       {/* Breadcrumb Header Banner / Hero Section */}
       <section className="relative py-24 bg-[#0d0d0d] border-b border-white/5 flex flex-col items-center justify-center text-center overflow-hidden">

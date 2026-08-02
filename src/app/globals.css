@@ -33,11 +33,12 @@ nav {
   z-index: 2;
 }
 
-/* Shield Logo Wrapper (2x Bigger, High Contrast) */
+/* Shield Logo Wrapper (Full 12rem Size from Previous Deployment) */
 .brand-logo-wrapper {
   position: relative !important;
   width: 7.5rem !important; /* 120px on mobile */
   height: 7.5rem !important;
+  margin-bottom: -3.2rem !important; /* Overflows past bottom border */
   overflow: hidden !important;
   border-radius: 14px !important;
   flex-shrink: 0 !important;
@@ -48,6 +49,7 @@ nav {
   align-items: center !important;
   justify-content: center !important;
   padding: 5px !important;
+  z-index: 60 !important;
 }
 
 .brand-logo-wrapper img {
@@ -65,8 +67,9 @@ nav {
 
 @media (min-width: 768px) {
   .brand-logo-wrapper {
-    width: 12rem !important; /* 192px on desktop (2x bigger) */
+    width: 12rem !important; /* Full 12rem / 192px from previous deployment */
     height: 12rem !important;
+    margin-bottom: -5.8rem !important; /* Extends past bottom border of navbar */
     border-radius: 18px !important;
     border: 3.5px solid #C5A059 !important;
     padding: 7px !important;
@@ -87,7 +90,7 @@ nav {
 }
 
 .brand-text-title {
-  font-size: 2.2rem !important; /* Large, bold, high-impact */
+  font-size: 2.2rem !important;
   font-weight: 800 !important;
   line-height: 1.1 !important;
   letter-spacing: 0.14em !important;
@@ -99,10 +102,10 @@ nav {
 }
 
 .brand-text-subtitle {
-  font-size: 1.45rem !important; /* Large bold yellow font */
+  font-size: 1.45rem !important;
   font-weight: 800 !important;
   line-height: 1.15 !important;
-  letter-spacing: 0.106em !important; /* 100% pixel-flush aligned with .SG right edge */
+  letter-spacing: 0.106em !important;
   color: #C5A059 !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
@@ -114,26 +117,21 @@ nav {
 
 @media (max-width: 767px) {
   nav {
-    padding: 0.5rem 0.5rem !important;
-  }
-  .brand-logo-wrapper {
-    width: 6.5rem !important; /* Prominent 104px logo badge on mobile */
-    height: 6.5rem !important;
-    border-radius: 12px !important;
+    padding: 0.5rem 0.75rem !important;
   }
   .brand-text-container {
-    margin-left: 0.4rem !important;
+    margin-left: 0.5rem !important;
     min-width: 0 !important;
     flex-shrink: 1 !important;
   }
   .brand-text-title {
-    font-size: clamp(0.72rem, 3.8vw, 1.05rem) !important; /* Scaled responsively so it NEVER pushes burger button off screen */
+    font-size: clamp(0.72rem, 3.8vw, 1.05rem) !important;
     font-weight: 800 !important;
-    letter-spacing: 0.09em !important;
-    margin-right: -0.09em !important;
+    letter-spacing: 0.08em !important;
+    margin-right: -0.08em !important;
   }
   .brand-text-subtitle {
-    font-size: clamp(0.45rem, 2.4vw, 0.66rem) !important; /* Scaled responsively so it is 100% flush aligned under .SG */
+    font-size: clamp(0.45rem, 2.4vw, 0.66rem) !important;
     font-weight: 800 !important;
     letter-spacing: 0.068em !important;
     margin-top: 0.1rem !important;

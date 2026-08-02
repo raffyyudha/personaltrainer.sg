@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 import {
   Facebook,
   Instagram,
@@ -216,7 +217,7 @@ const blueprints = [
     title: "Kickboxing Fitness",
     subtitle: "Dynamic kickboxing workouts for cardio, stamina and fat burning.",
     desc: "Kickboxing Fitness is a dynamic training option for clients who want a more energetic and challenging workout style. This programme uses kickboxing inspired movements to improve stamina, coordination, movement confidence, conditioning and calorie burning. It is suitable for clients who want to enjoy training while still working hard towards fitness and body transformation goals. Kickboxing Fitness can be combined with Personal Training, Weight Loss Training or Strength Training depending on your programme.",
-    img: "/donn-flexing.avif",
+    img: "/donn-kickboxing.avif",
     suitableFor: [
       "Clients who enjoy high energy workouts",
       "Clients who want Fat Burning",
@@ -270,7 +271,7 @@ const blueprints = [
     title: "Gym Management",
     subtitle: "Professional consultation, gym layout planning and facility management.",
     desc: "Gym Management services are designed for condo developers, corporate offices, management committees, or private gym owners who want to set up, upgrade, or manage a high-quality fitness facility. With over two decades of industry experience in Singapore, Md Salaudin Adam (DONN) provides expert consulting on gym layouts, space optimization, safety protocols, equipment sourcing, and ongoing maintenance guidance. A well-designed and properly managed gym enhances the value of your property or office and ensures a premium, safe, and professional experience for all users.",
-    img: "/WhatsApp Image 2026-07-08 at 9.44.08 PM.avif",
+    img: "/donn-facility.avif",
     suitableFor: [
       "Condo management committees (MCST)",
       "Corporate offices setting up wellness spaces",
@@ -297,7 +298,7 @@ const blueprints = [
     title: "Senior Fitness Training",
     subtitle: "Safe, structured and practical training for older adults.",
     desc: "Senior Fitness Training is designed for older adults who want to improve strength, balance, mobility, stability and daily movement confidence. The programme is adjusted according to the client’s ability, comfort level, medical background and current fitness condition. The focus is not on pushing aggressively. The focus is on safe movement, better control, stronger muscles, improved balance and confidence in daily activities. Training can help seniors maintain independence, move better and feel more capable in everyday life.",
-    img: "/aboutus.jpeg",
+    img: "/aboutus.avif",
     note: "For clients with medical conditions, doctor’s clearance may be required before starting training.",
     suitableFor: [
       "Older adults who want safe training",
@@ -325,7 +326,7 @@ const blueprints = [
     title: "Corporate Wellness",
     subtitle: "Fitness and wellness support for companies, teams and professionals.",
     desc: "Corporate Wellness is designed for companies, teams and working professionals who want to improve health, energy, fitness and workplace performance. A healthier team can be more energetic, more confident and more productive. Corporate Wellness sessions can be customised based on the company’s goals, available space, group size and schedule. Programmes may include fitness sessions, group workouts, lifestyle coaching, weight management support and practical wellness education.",
-    img: "/WhatsApp Image 2026-07-08 at 9.44.08 PM.avif",
+    img: "/donn-facility.avif",
     suitableFor: [
       "Companies",
       "Corporate teams",
@@ -624,145 +625,7 @@ export default function ServicesPage() {
 
       
       {/* Main Navigation */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-black/85 border-b border-white/5 py-2 md:py-2.5 px-6 md:px-12 flex justify-between items-center transition-all duration-300">
-        <div className="flex items-center">
-          <Link href="/" className="flex items-center group" id="site-logo">
-            <div className="brand-logo-wrapper group-hover:scale-105 transition-transform duration-300">
-              <img
-                src="/logopt.png"
-                alt="PersonalTrainer.sg Shield"
-              />
-            </div>
-            <div className="brand-text-container">
-              <span className="brand-text-title">PERSONALTRAINER.SG</span>
-              <span className="brand-text-subtitle">Trusted in Singapore Since 2002</span>
-            </div>
-          </Link>
-        </div>
-
-        {/* Desktop Menu with Hover Dropdowns */}
-        <div className="hidden lg:flex items-center gap-10">
-          {menuItems.map((item) => (
-            <div key={item.name} className="relative group py-2">
-              <Link
-                href={item.url}
-                className={`text-xs uppercase tracking-widest font-semibold hover:text-[#C5A059] transition-colors duration-300 pb-1 relative block ${
-                  item.name === "Services" ? "text-[#C5A059]" : "text-white"
-                }`}
-              >
-                {item.name}
-                <span className={`absolute bottom-0 left-0 w-0 h-[2px] bg-[#C5A059] transition-all duration-300 group-hover:w-full ${
-                  item.name === "Services" ? "w-full bg-[#C5A059]" : ""
-                }`} />
-              </Link>
-              {item.submenu && (
-                <div className="nav-dropdown">
-                  {item.submenu.map((sub) => {
-                    const isExternal = sub.url.startsWith('http');
-                    return (
-                      <Link
-                        key={sub.name}
-                        href={sub.url}
-                        target={isExternal ? "_blank" : undefined}
-                        rel={isExternal ? "noopener noreferrer" : undefined}
-                        className="nav-dropdown-item"
-                      >
-                        {sub.name}
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* Desktop CTA */}
-        <div className="hidden lg:block">
-          <Link href="/#trial" className="btn-primary group text-sm">
-            <span>TRIAL SESSION</span>
-            <ArrowUpRight size={16} className="group-hover:rotate-45 transition-transform duration-300" />
-          </Link>
-        </div>
-
-        {/* Mobile Menu Trigger */}
-        <button
-          onClick={() => setMobileMenuOpen(true)}
-          className="lg:hidden w-10 h-10 border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300 shrink-0 ml-auto z-30"
-        >
-          <Menu size={20} />
-        </button>
-      </nav>
-
-      {/* Mobile Drawer Overlay */}
-      {mobileMenuOpen && (
-        <div className="mobile-nav-drawer flex flex-col justify-between p-6 sm:p-8 animate-fadeIn">
-          <div className="w-full">
-            <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
-              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center group">
-                <div className="brand-logo-wrapper">
-                  <img src="/logopt.png" alt="PersonalTrainer.sg Shield" />
-                </div>
-                <div className="brand-text-container">
-                  <span className="brand-text-title">PERSONALTRAINER.SG</span>
-                  <span className="brand-text-subtitle">Trusted in Singapore Since 2002</span>
-                </div>
-              </Link>
-              <button
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-10 h-10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300 shrink-0 ml-2"
-              >
-                <X size={22} />
-              </button>
-            </div>
-            
-            <div className="flex flex-col gap-5 text-lg font-oswald py-2 pr-2">
-              {menuItems.map((item) => (
-                <div key={item.name} className="flex flex-col gap-2">
-                  <Link
-                    href={item.url}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest font-bold text-xl ${
-                      item.name === "Services" ? "text-[#C5A059]" : "text-white"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.submenu && (
-                    <div className="flex flex-col gap-2 pl-4 border-l-2 border-[#C5A059]/40 mt-1">
-                      {item.submenu.map((sub) => {
-                        const isExternal = sub.url.startsWith('http');
-                        return (
-                          <Link
-                            key={sub.name}
-                            href={sub.url}
-                            target={isExternal ? "_blank" : undefined}
-                            rel={isExternal ? "noopener noreferrer" : undefined}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="text-xs uppercase tracking-wider text-gray-300 hover:text-[#C5A059] transition-colors duration-300 py-1 font-sans font-medium"
-                          >
-                            <span className="text-[#C5A059] mr-2">›</span>
-                            {sub.name}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="border-t border-white/10 pt-6 mt-8 mb-6">
-            <Link
-              href="/#trial"
-              onClick={() => setMobileMenuOpen(false)}
-              className="btn-primary w-full text-center py-4 text-base font-bold"
-            >
-              <span>TRIAL SESSION</span>
-            </Link>
-          </div>
-        </div>
-      )}
+      <Navbar activePage="services" />
 
 
 <section className="relative py-24 bg-[#0d0d0d] border-b border-white/5 flex flex-col items-center justify-center text-center overflow-hidden"><div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-35 pointer-events-none"></div><div className="absolute left-[-10%] top-[10%] w-[350px] h-[350px] bg-[#800020] rounded-full blur-[150px] opacity-10 pointer-events-none"></div><div className="relative z-10 max-w-5xl mx-auto px-6"><ScrollReveal className="reveal-hidden"><h1 className="text-3xl md:text-6xl font-black font-syne uppercase tracking-tight mb-4 leading-tight">Structured Personal Training <br/><span className="text-[#800020]">for Real Results</span></h1><div className="text-gray-350 text-sm md:text-base max-w-3xl mx-auto mb-8 leading-relaxed font-sans font-normal text-center space-y-3"><p>Professional Personal Training in Singapore for Weight Loss Training, Strength Training, Senior Fitness Training, Couple Training, Kickboxing Fitness, Corporate Wellness and Lifestyle Transformation.</p><p className="text-xs text-white border-l border-r border-[#C5A059] px-4 inline-block">Led by Md Salaudin Adam (DONN), Founder and Fitness Director of PersonalTrainer.sg, Trusted in Singapore Since 2002 with 24 Years of Coaching Experience.</p></div><div className="grid grid-cols-2 sm:grid-cols-3 gap-3 max-w-4xl mx-auto mb-10 text-left"><div className="bg-white/5 border border-white/10 p-3 rounded flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check-big text-[#C5A059] shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span className="text-[10px] sm:text-xs text-white font-bold uppercase tracking-wider font-oswald">Founder and Fitness Director of PersonalTrainer.sg</span></div><div className="bg-white/5 border border-white/10 p-3 rounded flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check-big text-[#C5A059] shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span className="text-[10px] sm:text-xs text-white font-bold uppercase tracking-wider font-oswald">Trusted in Singapore Since 2002</span></div><div className="bg-white/5 border border-white/10 p-3 rounded flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check-big text-[#C5A059] shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span className="text-[10px] sm:text-xs text-white font-bold uppercase tracking-wider font-oswald">24 Years of Coaching Experience</span></div><div className="bg-white/5 border border-white/10 p-3 rounded flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check-big text-[#C5A059] shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span className="text-[10px] sm:text-xs text-white font-bold uppercase tracking-wider font-oswald">Transformation Specialist</span></div><div className="bg-white/5 border border-white/10 p-3 rounded flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check-big text-[#C5A059] shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span className="text-[10px] sm:text-xs text-white font-bold uppercase tracking-wider font-oswald">NASM Certified Personal Trainer</span></div><div className="bg-white/5 border border-white/10 p-3 rounded flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check-big text-[#C5A059] shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span className="text-[10px] sm:text-xs text-white font-bold uppercase tracking-wider font-oswald">TRX Certified Personal Trainer</span></div><div className="bg-white/5 border border-white/10 p-3 rounded flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check-big text-[#C5A059] shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span className="text-[10px] sm:text-xs text-white font-bold uppercase tracking-wider font-oswald">SOE Certified Personal Trainer</span></div><div className="bg-white/5 border border-white/10 p-3 rounded flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check-big text-[#C5A059] shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span className="text-[10px] sm:text-xs text-white font-bold uppercase tracking-wider font-oswald">FMT Fit Muay Trainer</span></div><div className="bg-white/5 border border-white/10 p-3 rounded flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-circle-check-big text-[#C5A059] shrink-0"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span className="text-[10px] sm:text-xs text-white font-bold uppercase tracking-wider font-oswald">CPR and AED Certified</span></div></div><div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto mb-8">
