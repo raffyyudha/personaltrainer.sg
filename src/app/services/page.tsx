@@ -694,7 +694,7 @@ export default function ServicesPage() {
                       <img 
                         src={item.img} 
                         alt={item.title} 
-                        className="w-full h-full object-cover scale-100 hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover object-top scale-100 hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                     <div className="lg:col-span-8 space-y-6">

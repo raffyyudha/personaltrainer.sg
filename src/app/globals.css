@@ -253,7 +253,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
     word-break: normal !important;
   }
   #home {
-    padding: 1.5rem 1rem !important;
+    padding-top: 4.5rem !important; /* Generous spacing below overlapping shield logo on mobile */
+    padding-bottom: 2rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   #home h1 {
     font-size: clamp(1.25rem, 6vw, 1.75rem) !important;
@@ -268,6 +271,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
     width: 2.25rem !important;
     height: 2.25rem !important;
     border-width: 2px !important;
+  }
+  /* Card image display on mobile (full size, top aligned so heads/faces are never cut off on Android/iOS) */
+  .group img {
+    object-position: top center !important;
   }
   h2.font-oswald, h2.font-syne {
     font-size: clamp(1.125rem, 5vw, 1.5rem) !important;

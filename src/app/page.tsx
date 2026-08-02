@@ -281,7 +281,7 @@ export default function Home() {
       <Navbar activePage="home" />
 
       {/* Hero Section */}
-      <section id="home" className="relative px-6 md:px-12 py-16 lg:py-28 overflow-hidden">
+      <section id="home" className="relative px-6 md:px-12 pt-28 pb-16 lg:pt-36 lg:pb-28 overflow-hidden">
         {/* Background Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear_gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none" />
         <div className="absolute right-[-10%] top-[10%] w-[500px] h-[500px] bg-[#800020] rounded-full blur-[180px] opacity-15 pointer-events-none" />
@@ -549,7 +549,7 @@ export default function Home() {
               <img
                 src="/donn-coaching-latpulldown.avif"
                 alt="Personal Training"
-                className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-all duration-700"
+                className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-all duration-300 group-hover:bg-black/75" />
               
@@ -601,7 +601,7 @@ export default function Home() {
                 <img
                   src={srv.img}
                   alt={srv.title}
-                  className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-all duration-300 group-hover:bg-black/75" />
                 
@@ -660,7 +660,7 @@ export default function Home() {
                 <img
                   src={srv.img}
                   alt={srv.title}
-                  className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-all duration-700"
+                  className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-all duration-300 group-hover:bg-black/75" />
                 
