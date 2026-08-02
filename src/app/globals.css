@@ -113,21 +113,26 @@ nav {
 }
 
 @media (max-width: 767px) {
+  .brand-logo-wrapper {
+    width: 6.75rem !important; /* Prominent 108px logo on mobile */
+    height: 6.75rem !important;
+  }
   .brand-text-container {
-    margin-left: 0.65rem !important;
+    margin-left: 0.45rem !important;
+    min-width: 0 !important;
   }
   .brand-text-title {
-    font-size: 1.25rem !important; /* Prominent title on mobile */
+    font-size: 1.05rem !important; /* Large, bold, prominent title on mobile */
     font-weight: 800 !important;
-    letter-spacing: 0.14em !important;
-    margin-right: -0.14em !important;
+    letter-spacing: 0.10em !important;
+    margin-right: -0.10em !important;
   }
   .brand-text-subtitle {
-    font-size: 0.82rem !important; /* Large yellow font on mobile */
+    font-size: 0.66rem !important; /* Large bold gold text 100% flush aligned under .SG */
     font-weight: 800 !important;
-    letter-spacing: 0.098em !important; /* 100% pixel-flush aligned under G of .SG */
-    margin-top: 0.15rem !important;
-    margin-right: -0.098em !important;
+    letter-spacing: 0.076em !important;
+    margin-top: 0.12rem !important;
+    margin-right: -0.076em !important;
     text-align: left !important;
   }
 }
