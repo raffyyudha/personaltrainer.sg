@@ -191,7 +191,7 @@ export default function RatesPage() {
 
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[100] bg-black/98 overflow-y-auto max-h-screen flex flex-col justify-between p-6 sm:p-8 animate-fadeIn">
+        <div className="mobile-nav-drawer flex flex-col justify-between p-6 sm:p-8 animate-fadeIn">
           <div className="w-full">
             <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
               <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center group">

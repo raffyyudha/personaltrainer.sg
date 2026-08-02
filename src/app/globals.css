@@ -483,9 +483,22 @@ p {
   white-space: nowrap;
 }
 
-.nav-dropdown-item:hover {
-  background-color: rgba(197, 160, 89, 0.15);
-  color: #C5A059;
-  padding-left: 24px;
+
+/* Mobile Navigation Drawer System - Solid Black Background & Maximum Z-Index */
+.mobile-nav-drawer {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  min-height: 100vh !important;
+  background-color: #050505 !important;
+  background: #050505 !important;
+  opacity: 1 !important;
+  z-index: 999999 !important;
+  overflow-y: auto !important;
 }
+
 

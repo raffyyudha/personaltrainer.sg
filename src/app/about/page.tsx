@@ -338,40 +338,40 @@ export default function AboutPage() {
 
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex flex-col justify-between p-8 animate-fadeIn">
-          <div>
-            <div className="flex justify-between items-center mb-8">
-              {/* Mobile drawer logo */}
-              <div className="flex items-center">
-                <img
-                  src="/logopt.png"
-                  alt="PersonalTrainer.sg"
-                  className="h-16 w-auto logo-glow"
-                />
-              </div>
+        <div className="mobile-nav-drawer flex flex-col justify-between p-6 sm:p-8 animate-fadeIn">
+          <div className="w-full">
+            <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
+              <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center group">
+                <div className="brand-logo-wrapper">
+                  <img src="/logopt.png" alt="PersonalTrainer.sg Shield" />
+                </div>
+                <div className="brand-text-container">
+                  <span className="brand-text-title">PERSONALTRAINER.SG</span>
+                  <span className="brand-text-subtitle">Trusted in Singapore Since 2002</span>
+                </div>
+              </Link>
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300"
+                className="w-10 h-10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300 shrink-0 ml-2"
               >
-                <X size={20} />
+                <X size={22} />
               </button>
             </div>
             
-            {/* Mobile links scrollable list */}
-            <div className="flex flex-col gap-6 text-xl font-oswald overflow-y-auto max-h-[70vh] pr-2">
+            <div className="flex flex-col gap-5 text-lg font-oswald py-2 pr-2">
               {menuItems.map((item) => (
                 <div key={item.name} className="flex flex-col gap-2">
                   <Link
                     href={item.url}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest font-bold ${
+                    className={`hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest font-bold text-xl ${
                       item.name === "About Us" ? "text-[#C5A059]" : "text-white"
                     }`}
                   >
                     {item.name}
                   </Link>
                   {item.submenu && (
-                    <div className="flex flex-col gap-1.5 pl-4 border-l border-white/5 mt-1">
+                    <div className="flex flex-col gap-2 pl-4 border-l-2 border-[#C5A059]/40 mt-1">
                       {item.submenu.map((sub) => {
                         const isExternal = sub.url.startsWith('http');
                         return (
@@ -381,9 +381,9 @@ export default function AboutPage() {
                             target={isExternal ? "_blank" : undefined}
                             rel={isExternal ? "noopener noreferrer" : undefined}
                             onClick={() => setMobileMenuOpen(false)}
-                            className="text-xs uppercase tracking-widest text-[#C5A059] hover:text-white transition-colors duration-300 py-1"
+                            className="text-xs uppercase tracking-wider text-gray-300 hover:text-[#C5A059] transition-colors duration-300 py-1 font-sans font-medium"
                           >
-                            <span className="text-white/20 mr-1.5">—</span>
+                            <span className="text-[#C5A059] mr-2">›</span>
                             {sub.name}
                           </Link>
                         );
@@ -394,13 +394,13 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-          <div className="border-t border-white/10 pt-6">
+          <div className="border-t border-white/10 pt-6 mt-8 mb-6">
             <Link
               href="/#trial"
               onClick={() => setMobileMenuOpen(false)}
-              className="btn-primary w-full text-center"
+              className="btn-primary w-full text-center py-4 text-base font-bold"
             >
-              TRIAL SESSION
+              <span>TRIAL SESSION</span>
             </Link>
           </div>
         </div>

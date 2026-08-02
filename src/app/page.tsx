@@ -349,7 +349,7 @@ export default function Home() {
 
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[100] bg-black/98 overflow-y-auto max-h-screen flex flex-col justify-between p-6 sm:p-8 animate-fadeIn">
+        <div className="mobile-nav-drawer flex flex-col justify-between p-6 sm:p-8 animate-fadeIn">
           <div className="w-full">
             <div className="flex justify-between items-center mb-6 pb-4 border-b border-white/10">
               {/* Mobile drawer logo */}
@@ -1237,41 +1237,128 @@ export default function Home() {
       {/* Testimonials Section */}
       <section className="bg-black py-12 md:py-20 px-6 md:px-12 relative overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Heading + Cards */}
+          {/* Left Column: Heading + Interactive Cards Slider */}
           <div className="lg:col-span-8 flex flex-col justify-center">
             <ScrollReveal className="reveal-left-hidden">
-              <span className="section-label">
-                TESTIMONIALS
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase font-syne mb-2 leading-tight text-white break-words">
-                What Clients Say
-              </h2>
-              <p className="text-[#C5A059] font-oswald text-lg uppercase tracking-wider mb-6">
-                Real feedback from clients who value structure, discipline and proper coaching.
-              </p>
+              {/* Header Title */}
+              <div className="mb-6">
+                <span className="section-label">
+                  TESTIMONIALS
+                </span>
+                <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase font-syne mb-2 leading-tight text-white break-words">
+                  What Clients Say
+                </h2>
+                <p className="text-[#C5A059] font-oswald text-base md:text-lg uppercase tracking-wider">
+                  Real feedback from clients who value structure, discipline and proper coaching.
+                </p>
+              </div>
 
-              {/* Side-by-Side Testimonial Cards */}
-              <div className="grid md:grid-cols-2 gap-6">
-                {testimonials.slice(0, 2).map((item, idx) => (
-                  <div key={idx} className="bg-[#0d0d0d] border border-white/5 text-white p-8 flex flex-col justify-between min-h-[250px] relative rounded-xl hover:border-[#800020]/30 transition-colors">
-                    <p className="text-gray-300 text-sm leading-relaxed mb-6 font-sans">
-                      "{item.quote}"
-                    </p>
-                    <div className="flex items-center justify-between mt-auto">
-                      <div className="flex items-center gap-3">
-                        <div>
-                          <h4 className="font-oswald text-base font-bold text-white uppercase">
-                            {item.name}
-                          </h4>
-                          <p className="text-xs uppercase tracking-wider text-[#C5A059] font-semibold">
-                            {item.role}
-                          </p>
-                        </div>
+              {/* TOP SLIDER NAVIGATION CONTROL BAR */}
+              <div className="bg-[#111] border border-[#C5A059]/40 p-3 sm:p-4 rounded-xl flex flex-wrap items-center justify-between gap-3 mb-6 shadow-lg">
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-oswald uppercase tracking-widest text-[#C5A059] font-bold bg-[#1a1a1a] px-3 py-1.5 border border-white/10 rounded">
+                    SLIDE {testimonialIndex + 1} OF {testimonials.length}
+                  </span>
+                </div>
+
+                {/* Arrow Buttons & Slide Navigation */}
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setTestimonialIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+                    className="flex items-center gap-1.5 px-4 py-2 bg-[#800020] text-white font-oswald text-xs font-bold uppercase tracking-wider hover:bg-[#9E1026] transition-colors rounded border border-[#800020]"
+                    aria-label="Previous Testimonial"
+                  >
+                    <ChevronLeft size={18} />
+                    <span>PREV</span>
+                  </button>
+
+                  <button
+                    onClick={() => setTestimonialIndex((prev) => (prev + 1) % testimonials.length)}
+                    className="flex items-center gap-1.5 px-4 py-2 bg-[#C5A059] text-black font-oswald text-xs font-bold uppercase tracking-wider hover:bg-[#D4AF37] transition-colors rounded border border-[#C5A059]"
+                    aria-label="Next Testimonial"
+                  >
+                    <span>NEXT</span>
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
+              </div>
+
+              {/* Side-by-Side Testimonial Cards Slider */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                {[
+                  testimonials[testimonialIndex],
+                  testimonials[(testimonialIndex + 1) % testimonials.length]
+                ].map((item, idx) => (
+                  <div
+                    key={`${item.name}-${idx}`}
+                    className="bg-[#0d0d0d] border border-white/15 text-white p-6 md:p-8 flex flex-col justify-between h-[420px] md:h-[450px] relative rounded-xl hover:border-[#C5A059]/50 transition-all duration-300 shadow-2xl"
+                  >
+                    <div className="flex-1 flex flex-col overflow-hidden">
+                      {item.headline && (
+                        <h4 className="text-[#C5A059] font-oswald text-sm md:text-base font-bold uppercase tracking-wide mb-3 leading-snug shrink-0">
+                          "{item.headline}"
+                        </h4>
+                      )}
+                      
+                      {/* Scrollable Pure White Quote Container */}
+                      <div className="overflow-y-auto pr-2 max-h-[250px] md:max-h-[280px] custom-scrollbar my-auto">
+                        <p className="text-white text-sm md:text-base leading-relaxed font-sans font-normal text-slate-100">
+                          "{item.quote}"
+                        </p>
                       </div>
-                      <span className="text-4xl font-serif text-[#C5A059]/30 font-bold">”</span>
+                    </div>
+
+                    {/* Card Footer Author Details */}
+                    <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/10 shrink-0">
+                      <div>
+                        <h5 className="font-oswald text-base font-bold text-white uppercase tracking-wider">
+                          {item.name}
+                        </h5>
+                        <p className="text-xs uppercase tracking-wider text-[#C5A059] font-semibold">
+                          {item.role}
+                        </p>
+                      </div>
+                      <span className="text-3xl font-serif text-[#C5A059]/40 font-bold">”</span>
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* BOTTOM NAVIGATION CONTROL BAR (PAGINATION DOTS & NUMBERED BUTTONS) */}
+              <div className="bg-[#111] border border-white/10 p-4 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+                {/* Dot Indicators */}
+                <div className="flex items-center gap-2">
+                  {testimonials.map((_, dotIdx) => (
+                    <button
+                      key={dotIdx}
+                      onClick={() => setTestimonialIndex(dotIdx)}
+                      className={`h-3 transition-all duration-300 rounded-full ${
+                        testimonialIndex === dotIdx
+                          ? "w-8 bg-[#C5A059]"
+                          : "w-3 bg-white/20 hover:bg-white/50"
+                      }`}
+                      aria-label={`Go to testimonial ${dotIdx + 1}`}
+                    />
+                  ))}
+                </div>
+
+                {/* Numbered Page Buttons [1] [2] [3] [4] [5] [6] [7] */}
+                <div className="flex items-center gap-1.5 flex-wrap justify-center">
+                  <span className="text-xs font-oswald text-gray-400 mr-1 uppercase">SLIDE:</span>
+                  {testimonials.map((_, pageIdx) => (
+                    <button
+                      key={pageIdx}
+                      onClick={() => setTestimonialIndex(pageIdx)}
+                      className={`w-8 h-8 rounded text-xs font-bold font-oswald transition-all duration-200 border ${
+                        testimonialIndex === pageIdx
+                          ? "bg-[#C5A059] text-black border-[#C5A059] scale-110"
+                          : "bg-[#1a1a1a] text-white border-white/10 hover:border-[#C5A059] hover:text-[#C5A059]"
+                      }`}
+                    >
+                      {pageIdx + 1}
+                    </button>
+                  ))}
+                </div>
               </div>
             </ScrollReveal>
           </div>
