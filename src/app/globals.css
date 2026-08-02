@@ -33,21 +33,21 @@ nav {
   z-index: 2;
 }
 
-/* Shield Logo Wrapper (2x Bigger, Square Frame, Crisp & High Contrast) */
+/* Shield Logo Wrapper (2x Bigger, High Contrast) */
 .brand-logo-wrapper {
   position: relative !important;
-  width: 9.5rem !important; /* 2x bigger on mobile (152px) */
-  height: 9.5rem !important;
+  width: 7.5rem !important; /* 120px on mobile */
+  height: 7.5rem !important;
   overflow: hidden !important;
-  border-radius: 16px !important; /* Square frame with subtle rounded corners */
+  border-radius: 14px !important;
   flex-shrink: 0 !important;
-  border: 3px solid #C5A059 !important; /* Sharp Gold accent frame */
-  background: #000000 !important; /* Crisp solid black background for maximum clarity */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9), 0 0 20px rgba(197, 160, 89, 0.5) !important;
+  border: 3px solid #C5A059 !important;
+  background: #000000 !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.9), 0 0 16px rgba(197, 160, 89, 0.5) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 6px !important;
+  padding: 5px !important;
 }
 
 .brand-logo-wrapper img {
@@ -60,16 +60,16 @@ nav {
   object-fit: contain !important;
   display: block !important;
   max-width: 100% !important;
-  filter: contrast(1.15) brightness(1.18) !important; /* Crystal clear, sharp image */
+  filter: contrast(1.15) brightness(1.18) !important;
 }
 
 @media (min-width: 768px) {
   .brand-logo-wrapper {
-    width: 14rem !important; /* 2x bigger on desktop (224px) */
-    height: 14rem !important;
+    width: 12rem !important; /* 192px on desktop (2x bigger) */
+    height: 12rem !important;
     border-radius: 18px !important;
     border: 3.5px solid #C5A059 !important;
-    padding: 8px !important;
+    padding: 7px !important;
   }
 }
 
@@ -79,7 +79,7 @@ nav {
   flex-direction: column !important;
   justify-content: center !important;
   text-align: left !important;
-  margin-left: 1.25rem !important; /* Spacing between logo and text */
+  margin-left: 1.1rem !important;
   font-family: 'Oswald', sans-serif !important;
   position: relative;
   z-index: 2;
@@ -87,46 +87,48 @@ nav {
 }
 
 .brand-text-title {
-  font-size: 2.2rem !important;
+  font-size: 2.2rem !important; /* Large, bold, high-impact */
   font-weight: 800 !important;
   line-height: 1.1 !important;
-  letter-spacing: 0.14em !important; /* Visually balanced right alignment */
+  letter-spacing: 0.14em !important;
   color: #ffffff !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
   display: block !important;
-  margin-right: -0.14em !important; /* Negate last char tracking */
+  margin-right: -0.14em !important;
 }
 
 .brand-text-subtitle {
-  font-size: 0.95rem !important; /* Bigger subtitle font */
-  font-weight: 600 !important;
-  line-height: 1.2 !important;
-  color: #C5A059 !important; /* Premium gold */
+  font-size: 1.45rem !important; /* Large bold yellow font */
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0.106em !important; /* 100% pixel-flush aligned with .SG right edge */
+  color: #C5A059 !important;
   text-transform: uppercase !important;
   white-space: nowrap !important;
   display: block !important;
-  width: 100% !important;
-  text-align: justify !important;
-  text-align-last: justify !important; /* Spans from under P of PERSONALTRAINER to exact end under .SG */
+  text-align: left !important;
   margin-top: 0.25rem !important;
+  margin-right: -0.106em !important;
 }
 
 @media (max-width: 767px) {
   .brand-text-container {
-    margin-left: 0.75rem !important;
+    margin-left: 0.65rem !important;
   }
   .brand-text-title {
-    font-size: 1.25rem !important;
+    font-size: 1.25rem !important; /* Prominent title on mobile */
+    font-weight: 800 !important;
     letter-spacing: 0.14em !important;
     margin-right: -0.14em !important;
   }
   .brand-text-subtitle {
-    font-size: 0.62rem !important; /* Bigger subtitle font on mobile */
+    font-size: 0.82rem !important; /* Large yellow font on mobile */
+    font-weight: 800 !important;
+    letter-spacing: 0.098em !important; /* 100% pixel-flush aligned under G of .SG */
     margin-top: 0.15rem !important;
-    width: 100% !important;
-    text-align: justify !important;
-    text-align-last: justify !important;
+    margin-right: -0.098em !important;
+    text-align: left !important;
   }
 }
 
