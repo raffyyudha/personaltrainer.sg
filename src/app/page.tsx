@@ -281,7 +281,7 @@ export default function Home() {
       <Navbar activePage="home" />
 
       {/* Hero Section */}
-      <section id="home" className="relative px-6 md:px-12 pt-28 pb-16 lg:pt-36 lg:pb-28 overflow-hidden">
+      <section id="home" className="relative px-6 md:px-12 pt-28 pb-16 lg:pt-30 xl:pt-32 lg:pb-28 overflow-hidden">
         {/* Background Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear_gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none" />
         <div className="absolute right-[-10%] top-[10%] w-[500px] h-[500px] bg-[#800020] rounded-full blur-[180px] opacity-15 pointer-events-none" />
