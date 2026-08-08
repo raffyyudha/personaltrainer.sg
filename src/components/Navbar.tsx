@@ -74,7 +74,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 bg-black border-b border-white/10 px-4 md:px-8 py-3.5 transition-all duration-300 overflow-visible">
+      <nav className="relative z-50 bg-black border-b border-white/10 px-4 md:px-8 py-3.5 transition-all duration-300 overflow-visible">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           
           {/* Left: Brand Logo & Title */}
