@@ -1097,9 +1097,9 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="bg-black py-12 md:py-20 px-6 md:px-12 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Heading + Interactive Cards Slider */}
-          <div className="lg:col-span-8 flex flex-col justify-center">
+        <div className="max-w-7xl mx-auto">
+          {/* Heading + Interactive Cards Slider */}
+          <div className="w-full flex flex-col justify-center">
             <ScrollReveal className="reveal-left-hidden">
               {/* Header Title */}
               <div className="mb-6">
@@ -1221,17 +1221,6 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-            </ScrollReveal>
-          </div>
-
-          {/* Right Column: Giant Fit Man Cutout */}
-          <div className="lg:col-span-4 relative self-end hidden lg:block">
-            <ScrollReveal className="reveal-right-hidden">
-              <img
-                src="/trainwith.avif"
-                alt="Fit Member cutout"
-                className="w-full object-cover max-h-[550px]"
-              />
             </ScrollReveal>
           </div>
         </div>

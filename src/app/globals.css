@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
     height: 2.25rem !important;
     border-width: 2px !important;
   }
-  /* Card image display on mobile (full size, top aligned so heads/faces are never cut off on Android/iOS) */
+  /* Card image display on mobile */
   .group img {
     object-position: top center !important;
   }
@@ -376,54 +376,6 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
     display: none !important;
   }
 }
-/* Premium Navigation Dropdown Styling */
-.nav-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%) translateY(8px);
-  margin-top: 0.5rem;
-  width: 16rem;
-  background-color: rgba(5, 5, 5, 0.98);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 0.75rem 0;
-  border-radius: 0.375rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(16px);
-  z-index: 50;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
-}
-
-.relative:hover .nav-dropdown,
-.group:hover .nav-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(0);
-}
-
-.nav-dropdown-item {
-  font-family: var(--font-oswald);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: rgba(255, 255, 255, 0.7);
-  padding: 0.5rem 1rem;
-  border-left: 2px solid transparent;
-  transition: all 0.2s ease;
-  text-align: left;
-}
-
-.nav-dropdown-item:hover {
-  color: #C5A059;
-  border-left-color: #C5A059;
-  padding-left: 1.25rem;
-  background-color: rgba(255, 255, 255, 0.02);
-}
-
 /* Infinite Marquee Scrolling Animation */
 @keyframes marquee {
   0% {
@@ -457,15 +409,6 @@ p {
   }
 }
 
-/* Navigation Hover Dropdown Menu System */
-.group:hover .nav-dropdown,
-.group:focus-within .nav-dropdown {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: translateY(0) !important;
-  pointer-events: auto !important;
-}
-
 /* Hide Vercel Preview Toolbar / Dev Feedback Floating Pill */
 #vercel-toolbar,
 [data-vercel-toolbar],
@@ -478,12 +421,12 @@ div[id*="vercel-toolbar"] {
   pointer-events: none !important;
 }
 
-
+/* Scoped Navigation Hover Dropdown Menu System */
 .nav-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 280px;
+  min-width: 260px;
   background-color: #0d0d0d;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-top: 3px solid #C5A059;
@@ -492,7 +435,7 @@ div[id*="vercel-toolbar"] {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
   opacity: 0;
   visibility: hidden;
-  transform: translateY(4px);
+  transform: translateY(6px);
   transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
   pointer-events: none;
   z-index: 100;
@@ -509,10 +452,19 @@ div[id*="vercel-toolbar"] {
   background: transparent;
 }
 
+/* Show dropdown strictly for the hovered navigation parent */
+.group:hover > .nav-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+
 .nav-dropdown-item {
   display: flex;
   align-items: center;
   padding: 10px 18px;
+  font-family: Oswald, sans-serif;
   font-size: 12px;
   font-weight: 700;
   color: #e5e5e5;
@@ -520,6 +472,14 @@ div[id*="vercel-toolbar"] {
   letter-spacing: 0.06em;
   transition: all 0.2s ease;
   white-space: nowrap;
+  border-left: 2px solid transparent;
+}
+
+.nav-dropdown-item:hover {
+  color: #C5A059;
+  border-left-color: #C5A059;
+  padding-left: 22px;
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 
