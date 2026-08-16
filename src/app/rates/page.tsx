@@ -298,8 +298,100 @@ export default function RatesPage() {
         </div>
       </section>
 
+      {/* Official Personal Training Rate Schedule Table */}
+      <section id="official-rates" className="py-16 px-6 md:px-12 max-w-5xl mx-auto">
+        <ScrollReveal className="reveal-hidden">
+          <div className="text-center mb-10">
+            <span className="section-label justify-center mb-3">
+              <Award size={16} className="text-[#C5A059]" /> OFFICIAL RATE CARD
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-syne text-white">
+              Official Personal Training Rates
+            </h2>
+            <p className="text-gray-200 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed font-sans font-normal">
+              Structured 1-on-1 and Couple Personal Training session rates in Singapore.
+            </p>
+          </div>
+
+          {/* Rate Table Container matching Official Graphic */}
+          <div className="bg-[#0e0e0e] border-2 border-[#C5A059]/60 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden relative">
+            
+            {/* Header Badge */}
+            <div className="text-center mb-6 pb-6 border-b border-white/10">
+              <h3 className="font-oswald text-2xl sm:text-3xl font-extrabold uppercase text-white tracking-wider flex items-center justify-center gap-2">
+                <span>PERSONALTRAINER<span className="text-[#C5A059]">.SG</span></span>
+              </h3>
+              <p className="text-xs uppercase tracking-widest text-[#C5A059] font-oswald font-bold mt-1">
+                IF RESULTS MATTERS
+              </p>
+            </div>
+
+            {/* Table */}
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="border-b border-white/20 text-white font-oswald text-base sm:text-lg uppercase tracking-wider">
+                    <th className="py-3 px-4 font-black">Package</th>
+                    <th className="py-3 px-4 text-center font-black">Single</th>
+                    <th className="py-3 px-4 text-center font-black">Couple</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/10 font-sans text-sm sm:text-base">
+                  <tr className="hover:bg-white/5 transition-colors">
+                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">Trial</td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$144</td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$216</td>
+                  </tr>
+                  <tr className="hover:bg-white/5 transition-colors">
+                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">Starter</td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$96</td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$144</td>
+                  </tr>
+                  <tr className="hover:bg-white/5 transition-colors">
+                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">12 Sessions</td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$136 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($1,632 total)</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$204 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($2,448 total)</span></td>
+                  </tr>
+                  <tr className="hover:bg-white/5 transition-colors">
+                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">24 Sessions</td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$126 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($3,024 total)</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$189 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($4,536 total)</span></td>
+                  </tr>
+                  <tr className="hover:bg-white/5 transition-colors">
+                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">36 Sessions</td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$116 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($4,176 total)</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$174 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($6,264 total)</span></td>
+                  </tr>
+                  <tr className="hover:bg-white/5 transition-colors">
+                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">48 Sessions</td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$106 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($5,088 total)</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$159 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($7,632 total)</span></td>
+                  </tr>
+                  <tr className="bg-emerald-950/40 border-2 border-emerald-500/50 hover:bg-emerald-900/30 transition-colors">
+                    <td className="py-4 px-4 font-black text-emerald-400 font-oswald text-lg sm:text-xl flex items-center gap-2">
+                      <span>60 Sessions</span>
+                      <span className="bg-emerald-500 text-black text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider font-sans">Best Rate</span>
+                    </td>
+                    <td className="py-4 px-4 text-center font-black text-emerald-400 font-oswald text-xl sm:text-2xl">$96 <span className="text-xs text-emerald-300/80 block font-sans font-normal">/ sess ($5,760 total)</span></td>
+                    <td className="py-4 px-4 text-center font-black text-emerald-400 font-oswald text-xl sm:text-2xl">$144 <span className="text-xs text-emerald-300/80 block font-sans font-normal">/ sess ($8,640 total)</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Footer Date Revision Notice */}
+            <div className="mt-6 pt-4 border-t border-white/10 text-center">
+              <p className="text-xs sm:text-sm text-gray-300 font-oswald uppercase tracking-wider">
+                Price revised from <strong className="text-white font-bold">27 DEC 2025</strong>
+              </p>
+            </div>
+
+          </div>
+        </ScrollReveal>
+      </section>
+
       {/* Package Options Breakdown */}
-      <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
+      <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
         <ScrollReveal className="reveal-hidden">
           <div className="text-center mb-16">
             <span className="section-label justify-center">
@@ -309,143 +401,115 @@ export default function RatesPage() {
               Personalised Coaching Packages
             </h2>
             <p className="text-gray-200 max-w-3xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed font-normal">
-              We recommend discussing your goals during an initial free consultation or enquiry so we can suggest the most effective package for your needs.
+              We recommend discussing your goals during an initial free consultation or trial session so we can suggest the most effective package for your needs.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* All 7 Packages Grid */}
+        {/* All Packages Grid */}
         <div className="space-y-12">
           
-          {/* Row 1: Student, Beginner, Starter, Getting There */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          {/* Row 1: 12 Sessions & 24 Sessions */}
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
             
-            {/* Package 1: Student */}
+            {/* Package 1: 12 Sessions */}
             <ScrollReveal className="reveal-hidden">
-              <div className="bg-[#0d0d0d] border border-white/10 p-6 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
+              <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">Special Student Rate</span>
-                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">Student's Package</h3>
-                  <div className="my-4 border-y border-white/10 py-3">
-                    <span className="text-4xl font-extrabold font-oswald text-emerald-400">$80</span>
-                    <span className="text-xs text-gray-300 uppercase tracking-wider block mt-1 font-oswald">For Any Number Of Sessions! (Min. 12 Sessions)</span>
+                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">12 Sessions Package</span>
+                  <h3 className="font-oswald text-2xl sm:text-3xl font-bold uppercase text-white mb-2">12 Sessions Foundation</h3>
+                  <div className="my-4 border-y border-white/10 py-4 grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <span className="text-xs text-gray-400 font-oswald uppercase block">Single Rate</span>
+                      <span className="text-3xl font-extrabold font-oswald text-white">$136 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
+                      <span className="text-xs text-[#C5A059] block font-oswald mt-0.5">$1,632 total</span>
+                    </div>
+                    <div className="border-l border-white/10 pl-4">
+                      <span className="text-xs text-gray-400 font-oswald uppercase block">Couple Rate</span>
+                      <span className="text-3xl font-extrabold font-oswald text-white">$204 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
+                      <span className="text-xs text-[#C5A059] block font-oswald mt-0.5">$2,448 total</span>
+                    </div>
                   </div>
-                  <p className="text-gray-300 text-sm leading-relaxed font-sans mb-4">
-                    Tailored for full-time students looking for structured personal training, proper exercise form, strength foundation and fitness guidance.
-                  </p>
-                </div>
-                <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%20Student%27s%20Package."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-center block text-xs"
-                >
-                  Enquire Student Package
-                </a>
-              </div>
-            </ScrollReveal>
-
-            {/* Package 2: Beginner */}
-            <ScrollReveal className="reveal-hidden" delay={100}>
-              <div className="bg-[#0d0d0d] border border-white/10 p-6 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
-                <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">Entry Level</span>
-                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">Beginner's Package</h3>
-                  <div className="my-4 border-y border-white/10 py-3">
-                    <span className="text-4xl font-extrabold font-oswald text-emerald-400">$86</span>
-                    <span className="text-xs text-gray-300 uppercase tracking-wider block mt-1 font-oswald">For Any Number Of Sessions! (Min. 12 Sessions)</span>
-                  </div>
-                  <p className="text-gray-300 text-sm leading-relaxed font-sans mb-4">
-                    Designed for individuals starting their fitness journey, learning correct movement mechanics, mobility and safe weight loss foundation.
-                  </p>
-                </div>
-                <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%20Beginner%27s%20Package."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-center block text-xs"
-                >
-                  Enquire Beginner Package
-                </a>
-              </div>
-            </ScrollReveal>
-
-            {/* Package 3: Starter */}
-            <ScrollReveal className="reveal-hidden" delay={200}>
-              <div className="bg-[#0d0d0d] border border-white/10 p-6 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
-                <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">12 Sessions</span>
-                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">Starter Package</h3>
-                  <div className="my-4 border-y border-white/10 py-3">
-                    <span className="text-4xl font-extrabold font-oswald text-emerald-400">$1,440</span>
-                    <span className="text-xs text-[#C5A059] uppercase tracking-wider block mt-1 font-oswald">12 Sessions @ $120 Per Session</span>
-                  </div>
-                  <p className="text-gray-200 text-xs leading-relaxed font-sans mb-2 font-semibold">
+                  <p className="text-gray-200 text-xs leading-relaxed font-sans mb-3 font-semibold">
                     Includes initial InBody Analysis Screening Report:
                   </p>
-                  <ul className="space-y-1.5 text-xs text-gray-300 font-sans mb-4">
-                    <li className="flex items-center gap-1.5"><CheckCircle size={12} className="text-[#C5A059]" /> Present, Appropriate & Target Weight</li>
-                    <li className="flex items-center gap-1.5"><CheckCircle size={12} className="text-[#C5A059]" /> Overall Body Fat %, Body Age & RMR</li>
-                    <li className="flex items-center gap-1.5"><CheckCircle size={12} className="text-[#C5A059]" /> Goal Setting & Nutrition Plan</li>
-                    <li className="flex items-center gap-1.5"><CheckCircle size={12} className="text-[#C5A059]" /> Once In 3 Weeks InBody Tracking</li>
+                  <ul className="space-y-2 text-xs text-gray-300 font-sans mb-6">
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Present, Appropriate & Target Weight</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Overall Body Fat %, Body Age & RMR</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Goal Setting & Nutrition Plan</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Once In 3 Weeks InBody Tracking</li>
                   </ul>
                 </div>
                 <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2012-Session%20Starter%20Package."
+                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2012-Session%20Package."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-center block text-xs"
                 >
-                  Enquire Starter Package
+                  Enquire 12-Session Package
                 </a>
               </div>
             </ScrollReveal>
 
-            {/* Package 4: Getting There */}
-            <ScrollReveal className="reveal-hidden" delay={300}>
-              <div className="bg-[#0d0d0d] border border-white/10 p-6 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
+            {/* Package 2: 24 Sessions */}
+            <ScrollReveal className="reveal-hidden" delay={150}>
+              <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">24 Sessions</span>
-                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">Getting There Package</h3>
-                  <div className="my-4 border-y border-white/10 py-3">
-                    <span className="text-4xl font-extrabold font-oswald text-emerald-400">$2,640</span>
-                    <span className="text-xs text-[#C5A059] uppercase tracking-wider block mt-1 font-oswald">24 Sessions @ $110 Per Session</span>
+                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">24 Sessions Package</span>
+                  <h3 className="font-oswald text-2xl sm:text-3xl font-bold uppercase text-white mb-2">24 Sessions Progress</h3>
+                  <div className="my-4 border-y border-white/10 py-4 grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <span className="text-xs text-gray-400 font-oswald uppercase block">Single Rate</span>
+                      <span className="text-3xl font-extrabold font-oswald text-white">$126 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
+                      <span className="text-xs text-[#C5A059] block font-oswald mt-0.5">$3,024 total</span>
+                    </div>
+                    <div className="border-l border-white/10 pl-4">
+                      <span className="text-xs text-gray-400 font-oswald uppercase block">Couple Rate</span>
+                      <span className="text-3xl font-extrabold font-oswald text-white">$189 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
+                      <span className="text-xs text-[#C5A059] block font-oswald mt-0.5">$4,536 total</span>
+                    </div>
                   </div>
-                  <p className="text-gray-200 text-xs leading-relaxed font-sans mb-2 font-semibold">
+                  <p className="text-gray-200 text-xs leading-relaxed font-sans mb-3 font-semibold">
                     Includes initial InBody Analysis Screening Report:
                   </p>
-                  <ul className="space-y-1.5 text-xs text-gray-300 font-sans mb-4">
-                    <li className="flex items-center gap-1.5"><CheckCircle size={12} className="text-[#C5A059]" /> Full Body Fat % & Muscle Mass Report</li>
-                    <li className="flex items-center gap-1.5"><CheckCircle size={12} className="text-[#C5A059]" /> Customised Nutrition & Dietary Plan</li>
-                    <li className="flex items-center gap-1.5"><CheckCircle size={12} className="text-[#C5A059]" /> Weight Loss & Resistance Guidance</li>
-                    <li className="flex items-center gap-1.5"><CheckCircle size={12} className="text-[#C5A059]" /> Once In 3 Weeks InBody Tracking</li>
+                  <ul className="space-y-2 text-xs text-gray-300 font-sans mb-6">
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Full Body Fat % & Muscle Mass Report</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Customised Nutrition & Dietary Plan</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Weight Loss & Resistance Guidance</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Once In 3 Weeks InBody Tracking</li>
                   </ul>
                 </div>
                 <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2024-Session%20Getting%20There%20Package."
+                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2024-Session%20Package."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-center block text-xs"
                 >
-                  Enquire Getting There Package
+                  Enquire 24-Session Package
                 </a>
               </div>
             </ScrollReveal>
 
           </div>
 
-          {/* Row 2: Transformation, Turbo Charge, Signature */}
+          {/* Row 2: 36, 48, and 60 Sessions */}
           <div className="grid md:grid-cols-3 gap-8 items-stretch pt-6 border-t border-white/10">
             
-            {/* Package 5: Transformation Package */}
+            {/* Package 3: 36 Sessions */}
             <ScrollReveal className="reveal-hidden">
               <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">36 Sessions</span>
-                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">Transformation Package</h3>
-                  <div className="my-4 border-y border-white/10 py-3">
-                    <span className="text-4xl font-extrabold font-oswald text-emerald-400">$3,600</span>
-                    <span className="text-xs text-[#C5A059] uppercase tracking-wider block mt-1 font-oswald">36 Sessions @ $100 Per Session</span>
+                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">36 Sessions Package</span>
+                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">36 Sessions Transformation</h3>
+                  <div className="my-4 border-y border-white/10 py-3 text-center">
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-xs text-gray-400 font-oswald uppercase">Single:</span>
+                      <span className="text-xl font-bold font-oswald text-white">$116 <span className="text-xs text-gray-400 font-normal">/sess ($4,176)</span></span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-gray-400 font-oswald uppercase">Couple:</span>
+                      <span className="text-xl font-bold font-oswald text-white">$174 <span className="text-xs text-gray-400 font-normal">/sess ($6,264)</span></span>
+                    </div>
                   </div>
                   <ul className="space-y-2 text-xs text-gray-300 font-sans mb-6">
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Initial InBody Analysis Screening Report</li>
@@ -453,29 +517,34 @@ export default function RatesPage() {
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Nutrition & Dietary Plan + Weight Loss Advice</li>
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Before & After Professional Photographs</li>
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Fortnightly InBody Analysis Tracking</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Weekly Progress Updates & Support</li>
                   </ul>
                 </div>
                 <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2036-Session%20Transformation%20Package."
+                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2036-Session%20Package."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-center block text-xs"
                 >
-                  Enquire Transformation Package
+                  Enquire 36-Session Package
                 </a>
               </div>
             </ScrollReveal>
 
-            {/* Package 6: Turbo Charge Package */}
+            {/* Package 4: 48 Sessions */}
             <ScrollReveal className="reveal-hidden" delay={150}>
               <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">48 Sessions</span>
-                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">Turbo Charge Package</h3>
-                  <div className="my-4 border-y border-white/10 py-3">
-                    <span className="text-4xl font-extrabold font-oswald text-emerald-400">$4,320</span>
-                    <span className="text-xs text-[#C5A059] uppercase tracking-wider block mt-1 font-oswald">48 Sessions @ $90 Per Session</span>
+                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">48 Sessions Package</span>
+                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">48 Sessions Turbo Charge</h3>
+                  <div className="my-4 border-y border-white/10 py-3 text-center">
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-xs text-gray-400 font-oswald uppercase">Single:</span>
+                      <span className="text-xl font-bold font-oswald text-white">$106 <span className="text-xs text-gray-400 font-normal">/sess ($5,088)</span></span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-gray-400 font-oswald uppercase">Couple:</span>
+                      <span className="text-xl font-bold font-oswald text-white">$159 <span className="text-xs text-gray-400 font-normal">/sess ($7,632)</span></span>
+                    </div>
                   </div>
                   <ul className="space-y-2 text-xs text-gray-300 font-sans mb-6">
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Initial InBody Analysis Screening Report</li>
@@ -483,49 +552,53 @@ export default function RatesPage() {
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Nutrition & Dietary Plan + Weight Loss Advice</li>
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Before & After Professional Photographs</li>
                     <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Fortnightly InBody Analysis Tracking</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Weekly Progress Updates & Advice</li>
                   </ul>
                 </div>
                 <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2048-Session%20Turbo%20Charge%20Package."
+                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2048-Session%20Package."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary text-center block text-xs"
                 >
-                  Enquire Turbo Charge Package
+                  Enquire 48-Session Package
                 </a>
               </div>
             </ScrollReveal>
 
-            {/* Package 7: Signature Package (BEST VALUE) */}
+            {/* Package 5: 60 Sessions (BEST RATE) */}
             <ScrollReveal className="reveal-hidden" delay={300}>
-              <div className="bg-[#0d0d0d] border-2 border-[#C5A059] p-8 rounded-xl flex flex-col justify-between shadow-2xl relative h-full">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#C5A059] text-black text-[10px] font-oswald font-extrabold uppercase px-4 py-1 rounded-full tracking-widest shadow-md">
-                  BEST VALUE • SIGNATURE
+              <div className="bg-[#0d0d0d] border-2 border-emerald-500/60 p-8 rounded-xl flex flex-col justify-between shadow-2xl relative h-full">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-black text-[10px] font-oswald font-extrabold uppercase px-4 py-1 rounded-full tracking-widest shadow-md">
+                  BEST VALUE • $96 / SESS
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">60 Sessions</span>
-                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">Signature Package</h3>
-                  <div className="my-4 border-y border-white/10 py-3">
-                    <span className="text-4xl font-extrabold font-oswald text-emerald-400">$4,800</span>
-                    <span className="text-xs text-[#C5A059] uppercase tracking-wider block mt-1 font-oswald">60 Sessions @ $80 Per Session</span>
+                  <span className="text-xs uppercase tracking-widest text-emerald-400 font-bold block mb-2 font-oswald">60 Sessions Package</span>
+                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">60 Sessions Signature</h3>
+                  <div className="my-4 border-y border-emerald-500/20 py-3 text-center bg-emerald-950/20 rounded px-3">
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-xs text-emerald-300 font-oswald uppercase font-bold">Single:</span>
+                      <span className="text-xl font-bold font-oswald text-emerald-400">$96 <span className="text-xs text-emerald-300/80 font-normal">/sess ($5,760)</span></span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-xs text-emerald-300 font-oswald uppercase font-bold">Couple:</span>
+                      <span className="text-xl font-bold font-oswald text-emerald-400">$144 <span className="text-xs text-emerald-300/80 font-normal">/sess ($8,640)</span></span>
+                    </div>
                   </div>
                   <ul className="space-y-2 text-xs text-gray-200 font-sans mb-6">
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Complete InBody Screening & Body Age Report</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Full Personalised Training Program & Goal Setting</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Advanced Nutrition & Dietary Guidance</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Before & After Transformation Photo Suite</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Weekly InBody Analysis Tracking</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Continual Coaching Support & Progress Reviews</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-emerald-400" /> Complete InBody Screening & Body Age Report</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-emerald-400" /> Full Personalised Training Program & Goal Setting</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-emerald-400" /> Advanced Nutrition & Dietary Guidance</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-emerald-400" /> Before & After Transformation Photo Suite</li>
+                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-emerald-400" /> Weekly InBody Analysis Tracking</li>
                   </ul>
                 </div>
                 <a
                   href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2060-Session%20Signature%20Package."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-gold text-center block text-xs"
+                  className="w-full py-3.5 text-center font-bold tracking-wider font-oswald uppercase text-xs transition-all duration-300 bg-emerald-500 text-black hover:bg-emerald-400 rounded-lg block"
                 >
-                  Enquire Signature Package
+                  Enquire 60-Session Package
                 </a>
               </div>
             </ScrollReveal>

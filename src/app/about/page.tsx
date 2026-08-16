@@ -29,7 +29,16 @@ import {
   Minus,
   CheckCircle,
   Play,
-  Activity
+  Activity,
+  Award,
+  ShieldCheck,
+  Target,
+  TrendingUp,
+  Clock,
+  Crown,
+  Sparkles,
+  Shield,
+  Medal
 } from "lucide-react";
 
 // ScrollReveal Wrapper Component — GSAP in ClientBody.tsx drives all animations
@@ -312,13 +321,6 @@ export default function AboutPage() {
                   alt="Fitness Training"
                   className="w-full h-auto object-contain border-[8px] border-white/5 transition-all duration-700"
                 />
-                <div className="absolute left-[-30px] bottom-[-30px] w-[180px] h-[180px] border-[6px] border-white/10 hidden sm:block">
-                  <img
-                    src="/donn-coaching-latpulldown.avif"
-                    alt="Trainer close up"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
               </div>
             </ScrollReveal>
           </div>
@@ -341,46 +343,6 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              {/* Vision & Mission Toggle Panels */}
-              <div className="border border-white/10 rounded-lg p-6 bg-[#0d0d0d] mb-8">
-                <div className="flex border-b border-white/10 pb-4 mb-4 gap-6">
-                  <button
-                    onClick={() => setActiveVisionTab("vision")}
-                    className={`font-oswald text-lg font-bold uppercase tracking-widest pb-1 transition-all duration-300 ${
-                      activeVisionTab === "vision" ? "text-[#800020] border-b-2 border-[#800020]" : "text-gray-500 hover:text-white"
-                    }`}
-                  >
-                    Founder Directives
-                  </button>
-                  <button
-                    onClick={() => setActiveVisionTab("mission")}
-                    className={`font-oswald text-lg font-bold uppercase tracking-widest pb-1 transition-all duration-300 ${
-                      activeVisionTab === "mission" ? "text-[#800020] border-b-2 border-[#800020]" : "text-gray-500 hover:text-white"
-                    }`}
-                  >
-                    Credentials
-                  </button>
-                </div>
-                <div className="text-white text-sm leading-relaxed min-h-[140px] font-sans">
-                  {activeVisionTab === "vision" ? (
-                    <ul className="space-y-2 animate-fadeIn">
-                      <li className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> Founder and Fitness Director</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> Trusted in Singapore Since 2002</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> 24 Years of Coaching Experience</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> Transformation Specialist</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> CPR and AED Certified</li>
-                    </ul>
-                  ) : (
-                    <ul className="space-y-2 animate-fadeIn">
-                      <li className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> NASM Certified Personal Trainer</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> TRX Certified Personal Trainer</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> SOE Certified Personal Trainer</li>
-                      <li className="flex items-center gap-2"><Check size={14} className="text-[#C5A059] shrink-0" /> FMT Fit Muay Trainer</li>
-                    </ul>
-                  )}
-                </div>
-              </div>
-
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                 <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="btn-primary group text-center">
                   <span>WhatsApp Me Now</span>
@@ -395,92 +357,235 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Facilities Section */}
-      <section id="system" className="py-12 md:py-20 px-6 md:px-12 max-w-7xl mx-auto">
+      {/* DONN’s Elite Performance System (DEPS) Section */}
+      <section id="system" className="py-16 md:py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5 scroll-mt-28 lg:scroll-mt-36">
         <ScrollReveal className="reveal-hidden">
-          <div className="text-center mb-16">
-            <span className="section-label justify-center">
-              <Dumbbell size={16} className="text-[#C5A059]" /> TRAINING PHILOSOPHY
+          
+          {/* DEPS Main Heading */}
+          <div className="text-center mb-16 max-w-4xl mx-auto">
+            <span className="section-label justify-center mb-3">
+              <Crown size={16} className="text-[#C5A059]" /> SIGNATURE COACHING SYSTEM
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-syne">
-              Proper Coaching. Real Structure. Long Term Results.
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase mb-6 font-syne text-white tracking-tight">
+              DONN’s Elite Performance System <span className="text-[#C5A059]">(DEPS)</span>
             </h2>
-            <p className="text-white max-w-2xl mx-auto text-sm md:text-base">
-              PersonalTrainer.sg has been serving clients in Singapore since 2002. We build results that last.
+            <p className="text-[#C5A059] font-oswald text-lg sm:text-xl font-bold uppercase tracking-wider mb-4">
+              Proper Coaching. Real Structure. Long Term Results.
+            </p>
+            <p className="text-gray-200 text-base sm:text-lg leading-relaxed font-sans font-normal">
+              DONN’s Elite Performance System (DEPS) is built on clear coaching principles developed through 24 Years of Coaching Experience and Trusted in Singapore Since 2002.
             </p>
           </div>
+
         </ScrollReveal>
 
-        {/* Facilities Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-          {[
-            {
-              title: "More Than a Personal Trainer",
-              icon: "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/Cardio-white-group.png",
-              desc: (
-                <>
-                  <strong className="text-[#C5A059] block mb-2 font-oswald text-xs uppercase tracking-wider">A structured coaching approach built from real experience.</strong>
-                  Personal Training is not only about counting repetitions or making a client sweat. A serious trainer must know how to assess, guide, correct, motivate and adjust the programme according to the client’s body, ability, goal and lifestyle. Md Salaudin Adam (DONN) brings a strong combination of practical experience, professional certifications, discipline and real world coaching knowledge. His training approach is suitable for beginners, busy professionals, seniors, couples, clients with low fitness levels and individuals who want a complete Body Transformation. The goal is always clear: Train safely, train properly, stay consistent, improve progressively, and build results that last.
-                </>
-              )
-            },
-            {
-              title: "Training Philosophy",
-              icon: "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/Cardio-white-dumble_1.png",
-              desc: (
-                <>
-                  <strong className="text-[#C5A059] block mb-2 font-oswald text-xs uppercase tracking-wider">Proper Coaching. Real Structure. Long Term Results.</strong>
-                  The training philosophy at PersonalTrainer.sg is simple but powerful. Fitness must be practical. Training must be safe. Progress must be structured. Results must be realistic. Every client starts from a different point. Some are new to exercise. Some have trained before but lost consistency. Some want to lose weight. Some want to get stronger. Some want to improve mobility, posture, stamina or confidence. That is why there is no single standard programme for everyone. The right programme must match the client’s current condition, goal, schedule, body type and lifestyle. Md Salaudin Adam (DONN) focuses on helping clients understand how to train properly, move better, build strength, improve confidence and create a fitness routine that can become part of their life. The objective is to build a stronger, healthier and more confident version of yourself.
-                </>
-              )
-            },
-            {
-              title: "24 Years of Coaching Experience",
-              icon: "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/Cardio-white-exercise.png",
-              desc: (
-                <>
-                  Experience matters in Personal Training. A trainer with real experience understands that every client responds differently. Some clients need more structure. Some need more confidence. Some need more discipline. Some need safer exercise selection. Some need better movement correction. Some need stronger accountability. Some need a complete lifestyle reset. With 24 Years of Coaching Experience, Md Salaudin Adam (DONN) is able to adjust training based on age, ability, fitness level, body condition and goal. His coaching style combines discipline, encouragement, proper technique and realistic progression. Every session is planned with purpose. Every exercise must have a reason. Every programme must move the client closer to the goal.
-                </>
-              )
-            },
-            {
-              title: "Trusted in Singapore Since 2002",
-              icon: "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/Cardio-white-locker_1.png",
-              desc: (
-                <>
-                  PersonalTrainer.sg has been serving clients in Singapore since 2002. Over the years, Md Salaudin Adam (DONN) has coached many different types of clients with different needs, goals, fitness levels and challenges. Some clients come for Weight Loss. Some come for Strength Training. Some come for Senior Fitness. Some come for Couple Training. Some come for Kickboxing Fitness. Some come because they have lost discipline and need accountability. Some come because they want to rebuild confidence and take control of their health again. With more than two decades in the fitness industry, Md Salaudin Adam (DONN) understands that successful transformation requires structure, patience, consistency, education, discipline and the right coaching relationship.
-                </>
-              )
-            },
-            {
-              title: "Why Experience Matters",
-              icon: "https://templates.sparklethings.com/fitcore/wp-content/uploads/sites/103/2025/09/Cardio-white-group.png",
-              desc: (
-                <>
-                  A good Personal Trainer must do more than demonstrate exercises. A good Personal Trainer must be able to read the client, understand limitations, adjust training, correct form, manage intensity and guide progress properly. This is where experience becomes important. With 24 Years of Coaching Experience, Md Salaudin Adam (DONN) understands how to work with different bodies, different personalities, different goals and different levels of fitness. His approach is firm, professional and practical. The aim is to help clients train better, think better, move better and live better.
-                </>
-              )
-            }
-          ].map((fac, idx) => (
-            <ScrollReveal key={fac.title} className="reveal-hidden" delay={idx * 150}>
-              <div className="bg-[#0d0d0d] border border-white/5 p-8 rounded-lg hover:border-[#C5A059]/30 transition-all duration-300 flex flex-col items-center text-center group">
-                <div className="w-20 h-20 rounded-full bg-[#161616] flex items-center justify-center mb-6 group-hover:bg-[#800020] transition-all duration-300">
-                  <img
-                    src={fac.icon}
-                    alt={fac.title}
-                    className="w-10 h-10 object-contain group-hover:brightness-0 group-hover:invert transition-all duration-300"
-                  />
+        {/* SECTION 1: FOUNDER DIRECTIVES */}
+        <div className="mb-20">
+          <ScrollReveal className="reveal-hidden">
+            <div className="border-l-4 border-[#C5A059] pl-6 mb-10">
+              <h3 className="text-2xl sm:text-3xl font-black uppercase font-oswald text-white tracking-wide">
+                Founder Directives
+              </h3>
+              <p className="text-gray-300 text-sm sm:text-base font-sans mt-2 leading-relaxed max-w-3xl font-normal">
+                This system is not based on random workouts, guesswork or temporary motivation. It is based on structure, discipline, safe progression, accountability and long term transformation.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          {/* 10 Founder Directives Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                num: "01",
+                title: "Train with Purpose",
+                desc: "Every session must have a clear direction based on the client’s goal, fitness level, body condition and training suitability.",
+                icon: <Target className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                num: "02",
+                title: "Prioritise Proper Technique",
+                desc: "Correct form, posture, breathing, control and safe movement must always come before heavier weights or harder exercises.",
+                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                num: "03",
+                title: "Build Progress Step by Step",
+                desc: "Fitness results should be developed through structured progression, not rushed training or careless exercise selection.",
+                icon: <TrendingUp className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                num: "04",
+                title: "Focus on Safety and Sustainability",
+                desc: "Training must be challenging but suitable for the client’s body, age, ability, limitations and lifestyle.",
+                icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                num: "05",
+                title: "Create Real Accountability",
+                desc: "Clients need guidance, structure, discipline and regular support to stay consistent and committed.",
+                icon: <Clock className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                num: "06",
+                title: "Coach the Individual, Not the Template",
+                desc: "Every client is different. DEPS is adjusted based on the client’s goal, fitness level, schedule, lifestyle, training history and physical condition.",
+                icon: <Users className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                num: "07",
+                title: "Combine Strength, Stamina and Movement Quality",
+                desc: "A proper programme should improve strength, stamina, mobility, posture, balance, body control and daily movement confidence.",
+                icon: <Activity className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                num: "08",
+                title: "Support Lifestyle Change",
+                desc: "Long term results require better habits, nutrition awareness, consistency, discipline and realistic lifestyle improvement.",
+                icon: <Sparkles className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                num: "09",
+                title: "Keep Coaching Professional",
+                desc: "Every client must be coached with respect, focus, attention to detail and a high professional standard.",
+                icon: <Award className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                num: "10",
+                title: "Build Long Term Transformation",
+                desc: "The goal is not just to complete workouts. The goal is to help clients become stronger, healthier, more confident and more consistent over time.",
+                icon: <Crown className="w-6 h-6 text-[#C5A059]" />
+              }
+            ].map((directive, idx) => (
+              <ScrollReveal key={directive.num} className="reveal-hidden" delay={idx * 80}>
+                <div className="bg-[#0e0e0e] border border-white/10 p-6 sm:p-7 rounded-xl hover:border-[#C5A059]/60 hover:shadow-[0_0_20px_rgba(197,160,89,0.15)] transition-all duration-300 flex flex-col justify-between h-full group">
+                  <div>
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="w-12 h-12 border border-[#C5A059]/40 bg-[#161616] rounded-lg flex items-center justify-center group-hover:bg-[#C5A059]/10 group-hover:border-[#C5A059] transition-all duration-300 shrink-0">
+                        {directive.icon}
+                      </div>
+                      <span className="font-oswald text-2xl font-black text-[#C5A059]/40 group-hover:text-[#C5A059] transition-colors">
+                        {directive.num}
+                      </span>
+                    </div>
+                    <h4 className="font-oswald text-lg sm:text-xl font-bold uppercase text-white mb-2.5 group-hover:text-[#C5A059] transition-colors leading-snug">
+                      {directive.title}
+                    </h4>
+                    <p className="text-gray-300 text-xs sm:text-sm font-sans leading-relaxed font-normal">
+                      {directive.desc}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold font-oswald mb-3 text-white group-hover:text-[#C5A059] transition-colors duration-300 uppercase">
-                  {fac.title}
-                </h3>
-                <div className="text-white text-sm leading-relaxed">
-                  {fac.desc}
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
+
+        {/* SECTION 2: FOUNDER CREDENTIALS */}
+        <div>
+          <ScrollReveal className="reveal-hidden">
+            <div className="border-l-4 border-[#C5A059] pl-6 mb-8">
+              <h3 className="text-2xl sm:text-3xl font-black uppercase font-oswald text-white tracking-wide">
+                Founder Credentials
+              </h3>
+              <p className="text-gray-300 text-sm sm:text-base font-sans mt-2 leading-relaxed max-w-4xl font-normal">
+                Md Salaudin Adam (DONN), Founder and Fitness Director of PersonalTrainer.sg, brings over two decades of coaching experience, professional certifications and real world training expertise to DONN’s Elite Performance System (DEPS).
+              </p>
+            </div>
+
+            {/* Certifications Banner Badge */}
+            <div className="bg-[#121212] border-2 border-[#C5A059]/50 rounded-xl p-5 mb-10 text-center shadow-xl">
+              <span className="text-xs uppercase tracking-widest text-[#C5A059] font-oswald font-bold block mb-1">
+                Professional Fitness Certifications
+              </span>
+              <div className="text-lg sm:text-2xl font-black font-oswald text-white uppercase tracking-wider">
+                NASM | SOE | TRX | FMT | CPR | AED
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* 12 Founder Credentials Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "Founder of PersonalTrainer.sg",
+                desc: "Founder and Fitness Director of PersonalTrainer.sg, providing structured personal training services across Singapore.",
+                icon: <Crown className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "Trusted in Singapore Since 2002",
+                desc: "A long standing personal training brand built on trust, coaching experience and client results.",
+                icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "24 Years of Coaching Experience",
+                desc: "Over two decades of hands on coaching experience with clients of different ages, goals, fitness levels and lifestyles.",
+                icon: <Award className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "Professional Personal Trainer",
+                desc: "Experienced in personal training, weight loss training, strength training, senior fitness, couple training, kickboxing fitness and lifestyle transformation coaching.",
+                icon: <Dumbbell className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "Fitness Lifestyle Consultant",
+                desc: "Guiding clients beyond exercise with structure, accountability, nutrition awareness and sustainable lifestyle habits.",
+                icon: <Users className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "Premium Performance & Transformation Specialist",
+                desc: "Focused on helping clients improve strength, confidence, body composition, stamina, movement quality and long term fitness.",
+                icon: <Sparkles className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "NASM Certified",
+                desc: "Professional certification foundation for structured personal training and safe coaching practice.",
+                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "SOE Certified",
+                desc: "Additional professional training credential supporting coaching knowledge and fitness instruction.",
+                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "TRX Certified",
+                desc: "Qualified in suspension training for strength, core control, stability and functional movement.",
+                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "FMT Certified",
+                desc: "Certified in Functional Movement Training to support movement quality, mobility, posture and exercise correction.",
+                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "CPR and AED Certified",
+                desc: "Certified in emergency response support for safer training environments.",
+                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+              },
+              {
+                title: "MANHUNT Finalist 2001",
+                desc: "Fitness and physique background that supports my long standing involvement in performance, discipline and body transformation.",
+                icon: <Medal className="w-6 h-6 text-[#C5A059]" />
+              }
+            ].map((cred, idx) => (
+              <ScrollReveal key={cred.title} className="reveal-hidden" delay={idx * 80}>
+                <div className="bg-[#0e0e0e] border border-white/10 p-6 rounded-xl hover:border-[#C5A059]/60 hover:shadow-[0_0_20px_rgba(197,160,89,0.15)] transition-all duration-300 flex flex-col justify-between h-full group">
+                  <div>
+                    <div className="w-11 h-11 border border-[#C5A059]/40 bg-[#161616] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#C5A059]/10 group-hover:border-[#C5A059] transition-all duration-300 shrink-0">
+                      {cred.icon}
+                    </div>
+                    <h4 className="font-oswald text-base sm:text-lg font-bold uppercase text-white mb-2 group-hover:text-[#C5A059] transition-colors leading-snug">
+                      {cred.title}
+                    </h4>
+                    <p className="text-gray-300 text-xs sm:text-sm font-sans leading-relaxed font-normal">
+                      {cred.desc}
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+
       </section>
 
       {/* Who I Help Section */}
@@ -737,9 +842,9 @@ export default function AboutPage() {
               <span className="section-label">
                 <MessageSquare size={16} className="text-[#C5A059]" /> TESTIMONIAL
               </span>
-              <h2 className="text-4xl md:text-5xl font-black uppercase font-syne mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase font-syne mb-6 leading-tight">
                 Trusted by Our <br />
-                <span className="text-[#800020]">Community</span>
+                <span className="text-[#800020] whitespace-nowrap">Community</span>
               </h2>
               <p className="text-white text-base leading-relaxed mb-8">
                 Discover the actual training experiences shared by clients who committed to structured personal training with PersonalTrainer.sg.

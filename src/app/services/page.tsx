@@ -326,7 +326,7 @@ const blueprints = [
     title: "Corporate Wellness",
     subtitle: "Fitness and wellness support for companies, teams and professionals.",
     desc: "Corporate Wellness is designed for companies, teams and working professionals who want to improve health, energy, fitness and workplace performance. A healthier team can be more energetic, more confident and more productive. Corporate Wellness sessions can be customised based on the company’s goals, available space, group size and schedule. Programmes may include fitness sessions, group workouts, lifestyle coaching, weight management support and practical wellness education.",
-    img: "/donn-facility.avif",
+    img: "/corporate-wellness.avif",
     suitableFor: [
       "Companies",
       "Corporate teams",
@@ -660,59 +660,63 @@ export default function ServicesPage() {
                 <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
                   activeBlueprint === item.id ? "max-h-[1500px] opacity-100 py-2" : "max-h-0 opacity-0"
                 }`}>
-                  <div className="p-6 md:p-8 bg-[#070707] grid lg:grid-cols-12 gap-8 items-start">
-                    <div className="lg:col-span-4 h-64 lg:h-full min-h-[250px] relative overflow-hidden rounded-lg border border-white/5">
-                      <img 
-                        src={item.img} 
-                        alt={item.title} 
-                        className="w-full h-full object-contain bg-[#0c0c0c] p-1 scale-100 hover:scale-105 transition-transform duration-700"
-                      />
-                    </div>
-                    <div className="lg:col-span-8 space-y-6">
-                      <p className="text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed font-sans font-normal">
-                        {item.desc}
-                      </p>
-                      
-                      {item.note && (
-                        <div className="bg-[#800020]/10 border border-[#800020]/30 p-4 rounded text-sm text-white italic font-sans flex items-start gap-2">
-                          <CheckCircle size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                          <span>{item.note}</span>
-                        </div>
-                      )}
+                  <div className="p-6 md:p-8 bg-[#070707] space-y-6">
+                    {/* Top 2-Column Section */}
+                    <div className="grid lg:grid-cols-12 gap-8 items-start">
+                      <div className="lg:col-span-4 h-64 lg:h-full min-h-[250px] relative overflow-hidden rounded-lg border border-white/5">
+                        <img 
+                          src={item.img} 
+                          alt={item.title} 
+                          className="w-full h-full object-contain bg-[#0c0c0c] p-1 scale-100 hover:scale-105 transition-transform duration-700"
+                        />
+                      </div>
+                      <div className="lg:col-span-8 space-y-6">
+                        <p className="text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed font-sans font-normal">
+                          {item.desc}
+                        </p>
+                        
+                        {item.note && (
+                          <div className="bg-[#800020]/10 border border-[#800020]/30 p-4 rounded text-sm text-white italic font-sans flex items-start gap-2">
+                            <CheckCircle size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
+                            <span>{item.note}</span>
+                          </div>
+                        )}
 
-                      <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-white/5">
-                        <div>
-                          <h4 className="font-oswald text-base font-bold uppercase tracking-wider text-[#C5A059] mb-4">
-                            Who This Is Suitable For
-                          </h4>
-                          <ul className="space-y-3 text-sm sm:text-base text-gray-200 font-sans">
-                            {item.suitableFor.map((itemStr, idx) => (
-                              <li key={idx} className="flex items-start gap-2">
-                                <Check size={14} className="text-[#800020] shrink-0 mt-0.5" />
-                                <span>{itemStr}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <h4 className="font-oswald text-base font-bold uppercase tracking-wider text-[#C5A059] mb-4">
-                            Main Focus
-                          </h4>
-                          <ul className="space-y-3 text-sm sm:text-base text-gray-200 font-sans">
-                            {item.mainFocus.map((itemStr, idx) => (
-                              <li key={idx} className="flex items-start gap-2">
-                                <CheckCircle size={14} className="text-[#C5A059] shrink-0 mt-0.5" />
-                                <span>{itemStr}</span>
-                              </li>
-                            ))}
-                          </ul>
+                        <div className="grid md:grid-cols-2 gap-6 pt-4 border-t border-white/5">
+                          <div>
+                            <h4 className="font-oswald text-base font-bold uppercase tracking-wider text-[#C5A059] mb-4">
+                              Who This Is Suitable For
+                            </h4>
+                            <ul className="space-y-3 text-sm sm:text-base text-gray-200 font-sans">
+                              {item.suitableFor.map((itemStr, idx) => (
+                                <li key={idx} className="flex items-start gap-2">
+                                  <Check size={14} className="text-[#800020] shrink-0 mt-0.5" />
+                                  <span>{itemStr}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-oswald text-base font-bold uppercase tracking-wider text-[#C5A059] mb-4">
+                              Main Focus
+                            </h4>
+                            <ul className="space-y-3 text-sm sm:text-base text-gray-200 font-sans">
+                              {item.mainFocus.map((itemStr, idx) => (
+                                <li key={idx} className="flex items-start gap-2">
+                                  <CheckCircle size={14} className="text-[#C5A059] shrink-0 mt-0.5" />
+                                  <span>{itemStr}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="lg:col-span-12 bg-[#0c0c0c] border border-white/5 p-6 rounded-lg flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mt-6">
-                      <div>
-                        <p className="text-white text-xs font-bold font-sans">
+                    {/* Bottom Full-Width CTA Box */}
+                    <div className="w-full bg-[#0c0c0c] border border-white/10 p-5 sm:p-6 rounded-xl flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
+                      <div className="w-full md:w-auto text-center md:text-left flex-1 min-w-0">
+                        <p className="text-white text-sm sm:text-base font-bold font-sans">
                           Start your {item.title} journey with proper guidance.
                         </p>
                       </div>
@@ -720,9 +724,10 @@ export default function ServicesPage() {
                         href={item.ctaUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-primary py-3 px-6 text-xs font-bold uppercase tracking-wider whitespace-normal text-center break-words shrink-0 max-w-full"
+                        className="btn-primary py-3.5 px-6 sm:px-8 text-xs sm:text-sm font-bold uppercase tracking-wider whitespace-nowrap text-center shrink-0 flex items-center justify-center gap-2"
                       >
-                        {item.ctaText}
+                        <span>{item.ctaText}</span>
+                        <ArrowRight size={15} className="shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
                       </a>
                     </div>
                   </div>

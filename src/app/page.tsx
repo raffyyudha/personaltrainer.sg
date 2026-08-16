@@ -494,60 +494,34 @@ export default function Home() {
 
       {/* Services Section */}
       <section id="services" className="py-12 md:py-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-6 mb-6">
-          {/* Text Card */}
-          <ScrollReveal className="reveal-left-hidden">
-            <div className="bg-[#1a1a1a] p-6 sm:p-10 lg:p-12 flex flex-col justify-center h-full">
-              <span className="section-label">
-                <Activity size={16} className="text-[#C5A059]" /> SERVICES
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black mb-6 font-syne leading-tight break-words">
-                Personal Training Services
-              </h2>
-              <p className="text-white text-base leading-relaxed mb-8">
-                Structured coaching for different goals, ages and fitness levels. Every programme is designed to help you train better, move better, feel better and build confidence.
-              </p>
-              <a href="#trial" className="btn-primary group inline-flex self-start">
-                <span>Book Trial Session</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
-            </div>
-          </ScrollReveal>
-
-          {/* Service 01 */}
-          <ScrollReveal className="reveal-right-hidden">
-            <div className="group relative h-96 lg:h-full overflow-hidden border border-white/5 hover:border-[#C5A059]/30 transition-all duration-500">
-              <img
-                src="/donn-coaching-latpulldown.avif"
-                alt="Personal Training"
-                className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-all duration-300 group-hover:bg-black/75" />
-              
-              {/* Gold Arrow Button at Top Right */}
-              <div className="absolute top-6 right-6 z-20">
-                <div className="w-12 h-12 bg-[#C5A059] text-black flex items-center justify-center transition-all duration-300 group-hover:bg-white">
-                  <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-                </div>
-              </div>
-
-              {/* Number and Title and Description */}
-              <div className="absolute bottom-8 left-8 right-8 z-10">
-                <span className="text-4xl font-extrabold font-oswald text-[#C5A059] block mb-2">01.</span>
-                <h3 className="text-2xl md:text-3xl font-bold font-oswald uppercase text-white group-hover:text-[#C5A059] transition-colors duration-300">
-                  Personal Training
-                </h3>
-                <p className="text-white text-xs overflow-hidden max-h-0 group-hover:max-h-32 transition-all duration-500 ease-in-out leading-relaxed mt-2">
-                  One to one coaching for individuals who want proper guidance, structure, accountability and results. Suitable for beginners, busy professionals, returning trainees and clients who want a serious fitness plan.
-                </p>
-              </div>
-            </div>
-          </ScrollReveal>
+        {/* Section Header */}
+        <div className="bg-[#1a1a1a] p-6 sm:p-10 lg:p-12 mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border border-white/5">
+          <div>
+            <span className="section-label">
+              <Activity size={16} className="text-[#C5A059]" /> SERVICES
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black mb-3 font-syne leading-tight text-white">
+              Personal Training Services
+            </h2>
+            <p className="text-white text-base leading-relaxed max-w-3xl">
+              Structured coaching for different goals, ages and fitness levels. Every programme is designed to help you train better, move better, feel better and build confidence.
+            </p>
+          </div>
+          <a href="#trial" className="btn-primary group inline-flex shrink-0 self-start md:self-center">
+            <span>Book Trial Session</span>
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+          </a>
         </div>
 
-        {/* Row 2: 3-column grid for services 2, 3, 4 */}
-        <div className="grid md:grid-cols-3 gap-6 mb-6">
+        {/* 4x2 Grid for All 8 Services */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
+            {
+              num: "01.",
+              title: "Personal Training",
+              desc: "One to one coaching for individuals who want proper guidance, structure, accountability and results. Suitable for beginners, busy professionals, returning trainees and clients who want a serious fitness plan.",
+              img: "/donn-coaching-latpulldown.avif"
+            },
             {
               num: "02.",
               title: "Weight Loss Training",
@@ -565,42 +539,7 @@ export default function Home() {
               title: "Senior Fitness Training",
               desc: "Safe and structured training for older adults who want to improve strength, balance, mobility, stability and daily movement confidence. The training is adjusted according to ability, condition and comfort level.",
               img: "/aboutus.avif"
-            }
-          ].map((srv, idx) => (
-            <ScrollReveal key={srv.num} className="reveal-hidden" delay={idx * 150}>
-              <div className="group relative h-96 overflow-hidden border border-white/5 hover:border-[#C5A059]/30 transition-all duration-500">
-                <img
-                  src={srv.img}
-                  alt={srv.title}
-                  className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-all duration-300 group-hover:bg-black/75" />
-                
-                {/* Gold Arrow Button at Top Right */}
-                <div className="absolute top-6 right-6 z-20">
-                  <div className="w-12 h-12 bg-[#C5A059] text-black flex items-center justify-center transition-all duration-300 group-hover:bg-white">
-                    <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="absolute bottom-8 left-8 right-8 z-10">
-                  <span className="text-4xl font-extrabold font-oswald text-[#C5A059] block mb-2">{srv.num}</span>
-                  <h3 className="text-2xl font-bold font-oswald uppercase text-white group-hover:text-[#C5A059] transition-colors duration-300">
-                    {srv.title}
-                  </h3>
-                  <p className="text-white text-xs overflow-hidden max-h-0 group-hover:max-h-32 transition-all duration-500 ease-in-out leading-relaxed mt-2">
-                    {srv.desc}
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-
-        {/* Row 3: 4-column grid for services 5, 6, 7, 8 */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
+            },
             {
               num: "05.",
               title: "Couple Training",
@@ -617,7 +556,7 @@ export default function Home() {
               num: "07.",
               title: "Corporate Wellness",
               desc: "Fitness and wellness support for companies, teams and professionals who want to improve energy, health, performance and lifestyle habits.",
-              img: "/donn-facility.avif"
+              img: "/corporate-wellness.avif"
             },
             {
               num: "08.",
@@ -625,35 +564,33 @@ export default function Home() {
               desc: "Remote Fitness Coaching for clients who need structure, guidance and accountability but prefer flexible training support.",
               img: "/onlinecoaching.avif"
             }
-          ].map((srv, idx) => (
-            <ScrollReveal key={srv.num} className="reveal-hidden" delay={idx * 100}>
-              <div className="group relative h-96 overflow-hidden border border-white/5 hover:border-[#C5A059]/30 transition-all duration-500">
-                <img
-                  src={srv.img}
-                  alt={srv.title}
-                  className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-all duration-300 group-hover:bg-black/75" />
-                
-                {/* Gold Arrow Button at Top Right */}
-                <div className="absolute top-6 right-6 z-20">
-                  <div className="w-12 h-12 bg-[#C5A059] text-black flex items-center justify-center transition-all duration-300 group-hover:bg-white">
-                    <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
-                  </div>
-                </div>
-
-                {/* Content */}
-                <div className="absolute bottom-8 left-8 right-8 z-10">
-                  <span className="text-4xl font-extrabold font-oswald text-[#C5A059] block mb-2">{srv.num}</span>
-                  <h3 className="text-xl font-bold font-oswald uppercase text-white group-hover:text-[#C5A059] transition-colors duration-300">
-                    {srv.title}
-                  </h3>
-                  <p className="text-white text-xs overflow-hidden max-h-0 group-hover:max-h-32 transition-all duration-500 ease-in-out leading-relaxed mt-2">
-                    {srv.desc}
-                  </p>
+          ].map((srv) => (
+            <div key={srv.num} className="group relative h-96 overflow-hidden border border-white/5 hover:border-[#C5A059]/30 transition-all duration-500 rounded-sm">
+              <img
+                src={srv.img}
+                alt={srv.title}
+                className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-all duration-300 group-hover:bg-black/75" />
+              
+              {/* Gold Arrow Button at Top Right */}
+              <div className="absolute top-6 right-6 z-20">
+                <div className="w-12 h-12 bg-[#C5A059] text-black flex items-center justify-center transition-all duration-300 group-hover:bg-white">
+                  <ArrowRight size={20} className="-rotate-45 group-hover:rotate-0 transition-transform duration-300" />
                 </div>
               </div>
-            </ScrollReveal>
+
+              {/* Content */}
+              <div className="absolute bottom-8 left-8 right-8 z-10">
+                <span className="text-4xl font-extrabold font-oswald text-[#C5A059] block mb-2">{srv.num}</span>
+                <h3 className="text-xl md:text-2xl font-bold font-oswald uppercase text-white group-hover:text-[#C5A059] transition-colors duration-300">
+                  {srv.title}
+                </h3>
+                <p className="text-white text-xs overflow-hidden max-h-0 group-hover:max-h-32 transition-all duration-500 ease-in-out leading-relaxed mt-2">
+                  {srv.desc}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </section>
@@ -733,91 +670,89 @@ export default function Home() {
                 buttonUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Lifestyle%20Transformations.",
                 isPrimaryButton: true
               }
-            ].map((cls, idx) => (
-              <ScrollReveal key={cls.title} className="reveal-hidden" delay={idx * 150}>
-                <div className="grid lg:grid-cols-12 overflow-hidden group rounded-xl border border-white/10 bg-[#0d0d0d] shadow-2xl">
-                  {/* Left Column: Image Thumbnail */}
-                  <div className="lg:col-span-5 min-h-[320px] lg:min-h-[460px] overflow-hidden relative border-b lg:border-b-0 lg:border-r border-white/10">
-                    <img
-                      src={cls.img}
-                      alt={cls.title}
-                      className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-700"
-                    />
+            ].map((cls) => (
+              <div key={cls.title} className="grid lg:grid-cols-12 overflow-hidden group rounded-2xl border-2 border-white/10 bg-[#0d0d0d] shadow-2xl">
+                {/* Left Column: Image Thumbnail */}
+                <div className="lg:col-span-5 min-h-[380px] lg:min-h-[580px] overflow-hidden relative border-b lg:border-b-0 lg:border-r-2 border-white/10 flex items-center justify-center">
+                  <img
+                    src={cls.img}
+                    alt={cls.title}
+                    className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                
+                {/* Right Column: Details & Highlight Grid */}
+                <div className="lg:col-span-7 bg-[#121212] p-6 sm:p-10 lg:p-12 xl:p-14 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black font-oswald text-[#C5A059] uppercase tracking-wide mb-5">
+                      {cls.title}
+                    </h3>
+                    
+                    <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed font-sans font-medium mb-8">
+                      {cls.desc}
+                    </p>
+
+                    {/* 4 Premium Highlight Points Grid - Extra Large Fonts */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6 mb-8 pt-6 border-t-2 border-white/15">
+                      <div className="bg-[#1c1c1c] border-2 border-white/10 p-5 sm:p-6 rounded-xl hover:border-[#C5A059] transition-all duration-300 shadow-lg">
+                        <div className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-oswald text-[#C5A059] font-black mb-2">
+                          Focus Area
+                        </div>
+                        <div className="text-base sm:text-lg md:text-xl text-white font-sans leading-relaxed font-semibold">
+                          {cls.focusArea}
+                        </div>
+                      </div>
+
+                      <div className="bg-[#1c1c1c] border-2 border-white/10 p-5 sm:p-6 rounded-xl hover:border-[#C5A059] transition-all duration-300 shadow-lg">
+                        <div className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-oswald text-[#C5A059] font-black mb-2">
+                          Training Benefit
+                        </div>
+                        <div className="text-base sm:text-lg md:text-xl text-white font-sans leading-relaxed font-semibold">
+                          {cls.benefit}
+                        </div>
+                      </div>
+
+                      <div className="bg-[#1c1c1c] border-2 border-white/10 p-5 sm:p-6 rounded-xl hover:border-[#C5A059] transition-all duration-300 shadow-lg">
+                        <div className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-oswald text-[#C5A059] font-black mb-2">
+                          Suitable For
+                        </div>
+                        <div className="text-base sm:text-lg md:text-xl text-white font-sans leading-relaxed font-semibold">
+                          {cls.suitableFor}
+                        </div>
+                      </div>
+
+                      <div className="bg-[#1c1c1c] border-2 border-white/10 p-5 sm:p-6 rounded-xl hover:border-[#C5A059] transition-all duration-300 shadow-lg">
+                        <div className="text-sm sm:text-base md:text-lg uppercase tracking-widest font-oswald text-[#C5A059] font-black mb-2">
+                          Coaching Outcome
+                        </div>
+                        <div className="text-base sm:text-lg md:text-xl text-white font-sans leading-relaxed font-semibold">
+                          {cls.outcome}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  
-                  {/* Right Column: Details & Highlight Grid */}
-                  <div className="lg:col-span-7 bg-[#121212] p-6 md:p-8 lg:p-9 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-[24px] lg:text-[32px] font-black font-oswald text-white uppercase tracking-tight mb-4 group-hover:text-[#C5A059] transition-colors duration-300">
-                        {cls.title}
-                      </h3>
-                      
-                      <p className="text-[15.5px] lg:text-[17.5px] text-gray-200 leading-[1.65] font-sans font-normal mb-6">
-                        {cls.desc}
-                      </p>
 
-                      {/* 4 Premium Highlight Points Grid */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6 pt-4 border-t border-white/10">
-                        <div className="bg-[#181818] border border-white/5 p-3.5 rounded-lg">
-                          <div className="text-[11px] uppercase tracking-wider font-oswald text-[#C5A059] font-bold mb-1">
-                            Focus Area
-                          </div>
-                          <div className="text-xs sm:text-sm text-gray-200 font-sans leading-relaxed">
-                            {cls.focusArea}
-                          </div>
-                        </div>
-
-                        <div className="bg-[#181818] border border-white/5 p-3.5 rounded-lg">
-                          <div className="text-[11px] uppercase tracking-wider font-oswald text-[#C5A059] font-bold mb-1">
-                            Training Benefit
-                          </div>
-                          <div className="text-xs sm:text-sm text-gray-200 font-sans leading-relaxed">
-                            {cls.benefit}
-                          </div>
-                        </div>
-
-                        <div className="bg-[#181818] border border-white/5 p-3.5 rounded-lg">
-                          <div className="text-[11px] uppercase tracking-wider font-oswald text-[#C5A059] font-bold mb-1">
-                            Suitable For
-                          </div>
-                          <div className="text-xs sm:text-sm text-gray-200 font-sans leading-relaxed">
-                            {cls.suitableFor}
-                          </div>
-                        </div>
-
-                        <div className="bg-[#181818] border border-white/5 p-3.5 rounded-lg">
-                          <div className="text-[11px] uppercase tracking-wider font-oswald text-[#C5A059] font-bold mb-1">
-                            Coaching Outcome
-                          </div>
-                          <div className="text-xs sm:text-sm text-gray-200 font-sans leading-relaxed">
-                            {cls.outcome}
-                          </div>
-                        </div>
-                      </div>
+                  {/* Footer CTA & Trainer Badge */}
+                  <div className="pt-6 border-t-2 border-white/15 flex flex-wrap items-center justify-between gap-5 mt-auto">
+                    <div className="flex items-center gap-3 text-base sm:text-lg md:text-xl text-white font-sans font-bold">
+                      <User size={22} className="text-[#C5A059] shrink-0" />
+                      <span className="text-white">{cls.trainer}</span>
                     </div>
 
-                    {/* Footer CTA & Trainer Badge */}
-                    <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 mt-auto">
-                      <div className="flex items-center gap-2 text-xs sm:text-sm text-white/70 font-sans">
-                        <User size={15} className="text-[#C5A059] shrink-0" />
-                        <span className="font-semibold text-white">{cls.trainer}</span>
-                      </div>
-
-                      <a
-                        href={cls.buttonUrl}
-                        target={cls.buttonUrl.startsWith("http") ? "_blank" : undefined}
-                        rel={cls.buttonUrl.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className={cls.isPrimaryButton
-                          ? "btn-primary py-3 px-6 text-xs sm:text-sm tracking-wider font-extrabold inline-flex items-center gap-2"
-                          : "btn-outline py-3 px-6 text-xs sm:text-sm tracking-wider font-extrabold border-2 inline-flex items-center gap-2"}
-                      >
-                        <span>{cls.buttonText}</span>
-                        {cls.buttonUrl.startsWith("http") && <ArrowRight size={15} className="shrink-0" />}
-                      </a>
-                    </div>
+                    <a
+                      href={cls.buttonUrl}
+                      target={cls.buttonUrl.startsWith("http") ? "_blank" : undefined}
+                      rel={cls.buttonUrl.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className={cls.isPrimaryButton
+                        ? "btn-primary py-4 px-8 text-base sm:text-lg tracking-wider font-black uppercase inline-flex items-center gap-2 rounded-xl shadow-xl"
+                        : "btn-outline py-4 px-8 text-base sm:text-lg tracking-wider font-black uppercase border-2 inline-flex items-center gap-2 rounded-xl shadow-xl"}
+                    >
+                      <span>{cls.buttonText}</span>
+                      {cls.buttonUrl.startsWith("http") && <ArrowRight size={18} className="shrink-0" />}
+                    </a>
                   </div>
                 </div>
-              </ScrollReveal>
+              </div>
             ))}
           </div>
         </div>
@@ -853,44 +788,74 @@ export default function Home() {
           <div className="lg:col-span-8 grid sm:grid-cols-2 gap-6">
             {[
               {
-                title: "24 Years of Coaching Experience",
+                title: (
+                  <>
+                    24 Years of <br />
+                    Coaching Experience
+                  </>
+                ),
                 desc: "Coaching since 2002 with structured personal training experience across different ages, goals and fitness levels.",
                 icon: <Award className="w-7 h-7 text-[#C5A059]" />
               },
               {
-                title: "Trusted in Singapore Since 2002",
+                title: (
+                  <>
+                    Trusted in Singapore <br />
+                    Since 2002
+                  </>
+                ),
                 desc: "Over two decades of helping clients across Singapore improve their fitness, strength, health and confidence.",
                 icon: <ShieldCheck className="w-7 h-7 text-[#C5A059]" />
               },
               {
-                title: "Personalised Training Programmes",
+                title: (
+                  <>
+                    Personalised Training <br />
+                    Programmes
+                  </>
+                ),
                 desc: "Training plans are adjusted based on the client’s body, fitness level, goal, schedule and lifestyle.",
                 icon: <ClipboardCheck className="w-7 h-7 text-[#C5A059]" />
               },
               {
-                title: "Proper Technique and Safe Training",
+                title: (
+                  <>
+                    Proper Technique & <br />
+                    Safe Training
+                  </>
+                ),
                 desc: "Every session focuses on correct form, safe movement, posture, control and progressive improvement.",
                 icon: <Activity className="w-7 h-7 text-[#C5A059]" />
               },
               {
-                title: "Accountability and Progress Tracking",
+                title: (
+                  <>
+                    Accountability & <br />
+                    Progress Tracking
+                  </>
+                ),
                 desc: "Clients are guided with structure, discipline, consistency and regular coaching adjustments.",
                 icon: <Target className="w-7 h-7 text-[#C5A059]" />
               },
               {
-                title: "Premium Coaching Standard",
+                title: (
+                  <>
+                    Premium Coaching <br />
+                    Standard
+                  </>
+                ),
                 desc: "A professional coaching approach built on experience, results, trust and long term transformation.",
                 icon: <Crown className="w-7 h-7 text-[#C5A059]" />
               }
             ].map((fac, idx) => (
-              <ScrollReveal key={fac.title} className="reveal-hidden" delay={idx * 100}>
+              <ScrollReveal key={idx} className="reveal-hidden" delay={idx * 100}>
                 <div className="bg-[#0e0e0e] border border-white/10 hover:border-[#800020]/60 hover:shadow-[0_0_25px_rgba(128,0,32,0.35)] transition-all duration-300 rounded-xl p-6 lg:p-7 flex flex-col justify-between h-full group">
                   <div>
                     {/* Gold Icon Container */}
                     <div className="w-14 h-14 border-2 border-[#C5A059] bg-[#161616] rounded-lg flex items-center justify-center mb-5 group-hover:bg-[#C5A059]/15 group-hover:border-[#C5A059] transition-all duration-300 shrink-0 shadow-md">
                       {fac.icon}
                     </div>
-                    <h3 className="text-base sm:text-lg font-bold font-oswald mb-2.5 text-white group-hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-wide">
+                    <h3 className="text-base sm:text-lg font-bold font-oswald mb-2.5 text-white group-hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-wide min-h-[3.25rem] flex items-center">
                       {fac.title}
                     </h3>
                   </div>
@@ -965,41 +930,41 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {[
               {
-                name: "Md Salaudin Adam (DONN)",
-                role: "Founder & Fitness Director",
+                title: "Founder & Fitness Director",
+                subtitle: "Md Salaudin Adam (DONN)",
                 img: "/donn-coaching-latpulldown.avif"
               },
               {
-                name: "24 Years Coaching",
-                role: "Trusted in SG Since 2002",
+                title: "24 Years of Coaching Experience",
+                subtitle: "Trusted in Singapore Since 2002",
                 img: "/donn-coaching-elliptical.avif"
               },
               {
-                name: "NASM / TRX / SOE / FMT",
-                role: "Certified Personal Trainer",
+                title: "Certified Personal Trainer",
+                subtitle: "NASM | SOE | TRX | FMT | CPR | AED",
                 img: "/donn-coaching-barbell.avif"
               },
               {
-                name: "FMT Muay Trainer",
-                role: "Manhunt Finalist 2001",
+                title: "Performance & Transformation Specialist",
+                subtitle: "MANHUNT Finalist 2001",
                 img: "/donn-flexing.avif"
               }
             ].map((trn, idx) => (
-              <ScrollReveal key={trn.name} className="reveal-hidden" delay={idx * 150}>
-                <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0e0e0e] shadow-xl hover:border-[#800020]/60 transition-all duration-300 flex flex-col h-full group">
+              <ScrollReveal key={idx} className="reveal-hidden" delay={idx * 150}>
+                <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0e0e0e] shadow-xl hover:border-[#C5A059]/50 transition-all duration-300 flex flex-col h-full group">
                   <div className="h-64 sm:h-72 relative overflow-hidden bg-black border-b border-white/10">
                     <img
                       src={trn.img}
-                      alt={trn.name}
+                      alt={trn.title}
                       className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
-                  <div className="p-5 text-center flex-1 flex flex-col justify-center bg-[#121212]">
-                    <h3 className="font-oswald text-lg font-bold tracking-wide uppercase text-white group-hover:text-[#C5A059] transition-colors">
-                      {trn.name}
+                  <div className="p-5 text-center flex-1 flex flex-col justify-center bg-[#121212] min-h-[5.5rem]">
+                    <h3 className="font-oswald text-base sm:text-lg font-bold uppercase text-white group-hover:text-[#C5A059] transition-colors leading-snug">
+                      {trn.title}
                     </h3>
-                    <p className="text-xs uppercase tracking-wider text-[#C5A059] font-bold mt-1.5">
-                      {trn.role}
+                    <p className="text-xs sm:text-sm uppercase tracking-wider text-[#C5A059] font-bold mt-1.5 font-sans">
+                      {trn.subtitle}
                     </p>
                   </div>
                 </div>
@@ -1008,40 +973,40 @@ export default function Home() {
           </div>
 
           {/* 4 Standardised Credential Boxes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-8 sm:pb-12">
             <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
-              <div className="text-base font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+              <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
                 Md Salaudin Adam (DONN)
               </div>
-              <div className="text-xs text-gray-200 font-sans">
+              <div className="text-xs sm:text-sm text-gray-200 font-sans font-medium">
                 Founder and Fitness Director
               </div>
             </div>
 
             <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
-              <div className="text-base font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+              <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                Trusted Since 2002
+              </div>
+              <div className="text-xs sm:text-sm text-gray-200 font-sans font-medium">
                 24 Years of Coaching Experience
               </div>
-              <div className="text-xs text-gray-200 font-sans">
-                Trusted in Singapore Since 2002
-              </div>
             </div>
 
             <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
-              <div className="text-base font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+              <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                Professional Certifications
+              </div>
+              <div className="text-xs sm:text-sm text-gray-200 font-sans font-medium">
                 NASM | SOE | TRX | FMT | CPR | AED
               </div>
-              <div className="text-xs text-gray-200 font-sans">
-                Professional Fitness Certifications
-              </div>
             </div>
 
             <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
-              <div className="text-base font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
-                MANHUNT Finalist 2001
+              <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                Premium Coaching Standard
               </div>
-              <div className="text-xs text-gray-200 font-sans">
-                Premium Performance and Transformation Specialist
+              <div className="text-xs sm:text-sm text-gray-200 font-sans font-medium">
+                Performance and Transformation Specialist
               </div>
             </div>
           </div>
@@ -1049,54 +1014,43 @@ export default function Home() {
       </section>
 
       {/* Trial Session Section */}
-      <section id="trial" className="py-16 md:py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
-        <ScrollReveal className="reveal-hidden">
-          <div className="text-center mb-12">
-            <span className="section-label justify-center mb-3">
-              <Dumbbell size={16} className="text-[#C5A059]" /> TRIAL SESSION
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-oswald text-white tracking-tight">
-              Start With a Trial Session
-            </h2>
-            
-            <p className="text-[15.5px] lg:text-[18px] text-gray-200 leading-[1.65] max-w-3xl mx-auto font-sans font-normal mb-6">
-              The trial session is designed to understand your current fitness level, body condition, goals, lifestyle and training suitability. During the session, you will experience the coaching style, training structure and professional approach used at PersonalTrainer.sg.
-            </p>
+      <section id="trial" className="py-12 md:py-20 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5 scroll-mt-28 lg:scroll-mt-36">
+        <div className="text-center mb-8 sm:mb-10">
+          <span className="section-label justify-center mb-2">
+            <Dumbbell size={16} className="text-[#C5A059]" /> TRIAL SESSION
+          </span>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-3 font-oswald text-white tracking-tight">
+            Start With a Trial Session
+          </h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed max-w-3xl mx-auto font-sans font-normal mb-6">
+            The trial session is designed to understand your current fitness level, body condition, goals, lifestyle and training suitability. Experience our structured coaching style and professional approach.
+          </p>
 
-            {/* Trial Session Important Info Box */}
-            <div className="bg-[#121212] border border-[#C5A059]/40 rounded-xl p-6 max-w-3xl mx-auto mb-8 text-left space-y-3.5 font-sans shadow-xl">
-              <div className="flex items-center gap-2.5 text-[#C5A059] font-oswald font-bold uppercase tracking-wider text-base sm:text-lg">
-                <CheckCircle size={20} className="shrink-0 text-[#C5A059]" />
-                <span>Trial Session Details & Terms</span>
-              </div>
-              <ul className="text-xs sm:text-sm text-gray-200 space-y-2.5 leading-relaxed">
-                <li className="flex items-start gap-2.5">
-                  <span className="text-[#C5A059] font-bold text-base">•</span>
-                  <span>The trial session is approximately 90 minutes.</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-[#C5A059] font-bold text-base">•</span>
-                  <span>It includes around 30 minutes of assessment and consultation, followed by around 60 minutes of training.</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-[#C5A059] font-bold text-base">•</span>
-                  <span>The trial session is free only if the client signs up for a minimum 12 session package immediately after the trial session.</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-[#C5A059] font-bold text-base">•</span>
-                  <span>If the client decides not to continue after the trial, the trial session fee is $144.</span>
-                </li>
-              </ul>
+          {/* Trial Session Terms Box */}
+          <div className="bg-[#121212] border border-[#C5A059]/40 rounded-xl p-4 sm:p-5 max-w-3xl mx-auto text-left space-y-2.5 font-sans shadow-xl">
+            <div className="flex items-center gap-2 text-[#C5A059] font-oswald font-bold uppercase tracking-wider text-sm sm:text-base">
+              <CheckCircle size={18} className="shrink-0 text-[#C5A059]" />
+              <span>Trial Session Details & Terms</span>
             </div>
-
-            <p className="text-[#C5A059] font-oswald text-base sm:text-lg font-bold uppercase tracking-wider text-center">
-              Start your fitness journey with proper guidance, structure and a clear plan.
-            </p>
+            <ul className="text-xs sm:text-sm text-gray-200 space-y-1.5 leading-relaxed">
+              <li className="flex items-start gap-2">
+                <span className="text-[#C5A059] font-bold">•</span>
+                <span>The trial session is approximately 90 minutes (30m assessment + 60m training).</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#C5A059] font-bold">•</span>
+                <span>FREE if you sign up for a minimum 12-session package immediately after the trial session.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#C5A059] font-bold">•</span>
+                <span>Trial session fee is $144 if you decide not to continue after the trial.</span>
+              </li>
+            </ul>
           </div>
-        </ScrollReveal>
+        </div>
 
-        {/* Trial Session Steps Cards Grid */}
-        <div className="grid md:grid-cols-3 gap-8 items-stretch">
+        {/* 3 Step Cards Grid */}
+        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {[
             {
               name: "01. Fitness Assessment",
@@ -1134,56 +1088,55 @@ export default function Home() {
               ],
               waUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20a%20Trial%20Session%20(Custom%20Roadmap)."
             }
-          ].map((plan, idx) => (
-            <ScrollReveal key={plan.name} className="reveal-hidden h-full" delay={idx * 150}>
-              <div
-                className={`bg-[#0d0d0d] border rounded-xl p-7 flex flex-col justify-between h-full transition-all duration-300 relative shadow-2xl ${
-                  plan.featured
-                    ? "border-[#C5A059] shadow-lg shadow-[#C5A059]/10 lg:scale-[1.02] z-10"
-                    : "border-white/10 hover:border-[#800020]/50"
-                }`}
-              >
-                {plan.featured && (
-                  <span className="absolute top-4 right-4 bg-[#C5A059] text-black text-[11px] font-bold uppercase tracking-widest px-3 py-1 font-oswald rounded">
-                    RECOMMENDED
-                  </span>
-                )}
+          ].map((plan) => (
+            <div
+              key={plan.name}
+              className={`bg-[#0d0d0d] border rounded-xl p-6 flex flex-col justify-between h-full transition-all duration-300 relative shadow-2xl ${
+                plan.featured
+                  ? "border-[#C5A059] shadow-lg shadow-[#C5A059]/10"
+                  : "border-white/10 hover:border-[#800020]/50"
+              }`}
+            >
+              {plan.featured && (
+                <span className="absolute top-4 right-4 bg-[#C5A059] text-black text-[11px] font-bold uppercase tracking-widest px-2.5 py-0.5 font-oswald rounded">
+                  RECOMMENDED
+                </span>
+              )}
+              
+              <div>
+                <h3 className="text-lg sm:text-xl font-bold font-oswald text-white mb-2.5 uppercase tracking-tight">
+                  {plan.name}
+                </h3>
+                <p className="text-gray-300 text-xs sm:text-sm font-sans leading-relaxed mb-4">
+                  {plan.desc}
+                </p>
                 
-                <div>
-                  <h3 className="text-xl sm:text-2xl font-bold font-oswald text-white mb-3 uppercase tracking-tight">
-                    {plan.name}
-                  </h3>
-                  <p className="text-gray-200 text-xs sm:text-sm font-sans leading-relaxed mb-6">
-                    {plan.desc}
-                  </p>
-                  
-                  <div className="border-t border-white/10 pt-4 mb-4">
-                    <span className="text-xs uppercase tracking-wider text-[#C5A059] font-bold font-oswald block mb-3">
-                      Trial Session Focus:
-                    </span>
+                <div className="border-t border-white/10 pt-3.5 mb-3.5">
+                  <span className="text-xs uppercase tracking-wider text-[#C5A059] font-bold font-oswald block mb-2.5">
+                    Trial Session Focus:
+                  </span>
 
-                    <ul className="space-y-2.5 font-sans">
-                      {plan.focusBullets.map((bullet, fIdx) => (
-                        <li key={fIdx} className="flex items-center gap-2.5 text-xs sm:text-sm text-gray-200">
-                          <CheckCircle size={15} className="text-[#C5A059] shrink-0" />
-                          <span>{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <ul className="space-y-2 font-sans">
+                    {plan.focusBullets.map((bullet, fIdx) => (
+                      <li key={fIdx} className="flex items-center gap-2 text-xs sm:text-sm text-gray-200">
+                        <CheckCircle size={14} className="text-[#C5A059] shrink-0" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-
-                <a
-                  href={plan.waUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full mt-6 py-3.5 text-center font-bold tracking-wider font-oswald uppercase text-xs sm:text-sm transition-all duration-300 btn-gold rounded-lg inline-flex items-center justify-center gap-2"
-                >
-                  <span>Enquire About Trial Session</span>
-                  <ArrowRight size={15} className="shrink-0" />
-                </a>
               </div>
-            </ScrollReveal>
+
+              <a
+                href={plan.waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full mt-4 py-3.5 text-center font-bold tracking-wider font-oswald uppercase text-xs sm:text-sm transition-all duration-300 btn-gold rounded-lg inline-flex items-center justify-center gap-2"
+              >
+                <span>Enquire About Trial Session</span>
+                <ArrowRight size={14} className="shrink-0" />
+              </a>
+            </div>
           ))}
         </div>
       </section>

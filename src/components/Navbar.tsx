@@ -80,7 +80,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
         style={{ background: '#000000', backgroundColor: '#000000', opacity: 1 }}
       >
         {/* Main Navigation Bar */}
-        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-3 lg:py-4">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-2.5 lg:py-3">
           
           {/* Left: Brand Logo & Title */}
           <Link href="/" className="flex items-center group shrink-0" id="site-logo">
