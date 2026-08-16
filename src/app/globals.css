@@ -30,9 +30,14 @@ p, span, a, li, td, th, label, blockquote {
 }
 
 /* Ensure all section elements behave nicely on mobile */
-section, main, footer, header {
+section, main, footer {
   max-width: 100% !important;
   overflow-x: clip !important;
+}
+
+header {
+  max-width: 100% !important;
+  overflow: visible !important;
 }
 
 /* Ensure div containers never hide text */
@@ -40,10 +45,16 @@ div {
   max-width: 100%;
 }
 
-nav {
-  position: relative !important;
-  z-index: 50 !important;
-  overflow: visible !important;
+.fixed-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+  background-color: #000000 !important;
+  background: #000000 !important;
+  opacity: 1 !important;
 }
 
 .logo-glow {
@@ -52,7 +63,28 @@ nav {
   z-index: 2;
 }
 
-/* Shield Logo Wrapper (Full 12rem Size from Previous Deployment) */
+/* ============================================================
+   PREMIUM HEADER SYSTEM - SOLID BLACK BACKGROUND
+   ============================================================ */
+
+header, nav {
+  background-color: #000000 !important;
+  background: #000000 !important;
+  opacity: 1 !important;
+}
+
+/* Fixed header clearance - push body content down so it doesn't hide behind the fixed header */
+body {
+  padding-top: 80px !important; /* header height on mobile */
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-top: 100px !important; /* header height on desktop */
+  }
+}
+
+/* Shield Logo Wrapper (Full 12rem Size Restored) */
 .brand-logo-wrapper {
   position: relative !important;
   width: 7.5rem !important; /* 120px on mobile */
@@ -86,22 +118,22 @@ nav {
 
 @media (min-width: 768px) {
   .brand-logo-wrapper {
-    width: 12rem !important; /* Full 12rem / 192px from previous deployment */
+    width: 12rem !important; /* Full 12rem / 192px */
     height: 12rem !important;
     margin-bottom: -5.8rem !important; /* Extends past bottom border of navbar */
     border-radius: 18px !important;
-    border: 3.5px solid #C5A059 !important;
-    padding: 7px !important;
   }
 }
 
+/* Precise clearance for first section under 12rem shield logo */
 @media (min-width: 1024px) {
-  /* Tight, perfect spacing on desktop so the hero text sits right below the 12rem shield logo */
   #home,
+  header + section,
+  header + div + section,
   nav + section,
   nav + div + section,
   main > section:first-of-type {
-    padding-top: 7.5rem !important;
+    padding-top: 11.5rem !important; /* ~184px clearance on desktop */
   }
 }
 
@@ -145,9 +177,6 @@ nav {
 }
 
 @media (max-width: 767px) {
-  nav {
-    padding: 0.5rem 0.75rem !important;
-  }
   .brand-text-container {
     margin-left: 0.5rem !important;
     min-width: 0 !important;
@@ -167,6 +196,57 @@ nav {
     margin-right: -0.068em !important;
     text-align: left !important;
   }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .brand-text-container {
+    margin-left: 0.75rem !important;
+  }
+  .brand-text-title {
+    font-size: 1.4rem !important;
+  }
+  .brand-text-subtitle {
+    font-size: 0.92rem !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .brand-text-title {
+    font-size: 1.85rem !important;
+  }
+  .brand-text-subtitle {
+    font-size: 1.2rem !important;
+  }
+}
+
+/* Navigation Menu Links Container Explicit Flex Spacing */
+.nav-links-container {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.25rem !important; /* 20px gap on 1024px+ */
+}
+
+@media (min-width: 1280px) {
+  .nav-links-container {
+    gap: 2rem !important; /* 32px gap on 1280px+ */
+  }
+}
+
+@media (min-width: 1536px) {
+  .nav-links-container {
+    gap: 2.5rem !important; /* 40px gap on 1536px+ */
+  }
+}
+
+/* Scroll clearance for sticky fixed header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+section[id],
+div[id] {
+  scroll-margin-top: 100px !important;
 }
 
 /* Prominent Section Labels (INTRODUCTION, SERVICES, RESULTS, etc.) */
@@ -200,6 +280,16 @@ nav {
 /* Fix marquee alignment and scaling on small screens */
 .animate-marquee {
   width: max-content;
+  white-space: nowrap !important;
+}
+
+.animate-marquee,
+.animate-marquee * {
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-wrap: normal !important;
+  word-break: normal !important;
+  flex-shrink: 0 !important;
 }
 
 /* Global word break policies to prevent text overflows on mobile viewports */
@@ -295,7 +385,6 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
     word-break: normal !important;
   }
   #home {
-    padding-top: 5.5rem !important;
     padding-bottom: 2rem !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;

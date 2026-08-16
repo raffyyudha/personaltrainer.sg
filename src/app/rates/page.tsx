@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import TikTokIcon from "@/components/TikTokIcon";
 import {
   Facebook,
   Instagram,
-  Youtube,
   Phone,
   Mail,
   ArrowRight,
@@ -589,14 +589,14 @@ export default function RatesPage() {
                 <li>• 24 Years of Coaching Experience</li>
               </ul>
               <div className="flex gap-2">
-                <a href="#" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
                   <Facebook size={16} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
                   <Instagram size={16} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
-                  <Youtube size={16} />
+                <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                  <TikTokIcon size={16} />
                 </a>
               </div>
             </div>

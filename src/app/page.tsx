@@ -3,10 +3,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import TikTokIcon from "@/components/TikTokIcon";
 import {
   Facebook,
   Instagram,
-  Youtube,
   Phone,
   Mail,
   ArrowRight,
@@ -248,47 +248,18 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#050505] text-white selection:bg-[#800020] selection:text-white font-sans">
       
-      {/* Top Info Bar */}
-      <div className="hidden lg:flex justify-between items-center bg-[#050505] border-b border-white/10 px-8 py-2 text-sm text-white">
-        <div className="flex items-center gap-6">
-          <a href="https://wa.me/6591081781" className="flex items-center gap-2 hover:text-[#C5A059] transition-colors duration-300">
-            <Phone size={14} className="text-[#C5A059]" />
-            <span>WhatsApp: +65 9108 1781</span>
-          </a>
-          <a href="mailto:donn@personaltrainer.sg" className="flex items-center gap-2 hover:text-[#C5A059] transition-colors duration-300">
-            <Mail size={14} className="text-[#C5A059]" />
-            <span>donn@personaltrainer.sg</span>
-          </a>
-        </div>
-        <div className="flex items-center gap-4">
-          <span className="text-xs uppercase tracking-wider text-gray-500 font-bold">Follow us:</span>
-          <div className="flex gap-2">
-            <a href="#" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
-              <Facebook size={14} />
-            </a>
-            <a href="#" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
-              <Instagram size={14} />
-            </a>
-            <a href="#" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
-              <Youtube size={14} />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      
       {/* Main Navigation */}
       <Navbar activePage="home" />
 
       {/* Hero Section */}
-      <section id="home" className="relative px-6 md:px-12 pt-28 pb-16 lg:pt-30 xl:pt-32 lg:pb-28 overflow-hidden">
+      <section id="home" className="relative px-6 md:px-12 pt-20 pb-16 lg:pt-28 xl:pt-32 lg:pb-28 overflow-hidden">
         {/* Background Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear_gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none" />
         <div className="absolute right-[-10%] top-[10%] w-[500px] h-[500px] bg-[#800020] rounded-full blur-[180px] opacity-15 pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 xl:gap-14 items-start relative z-10">
           {/* Left Column: Heading + Buttons */}
-          <div className="flex flex-col items-start">
+          <div className="flex flex-col items-start pt-1.5 lg:pt-1">
             <ScrollReveal className="reveal-left-hidden">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.1rem] xl:text-[3.6rem] font-black tracking-tight leading-[1.15] uppercase mb-8 font-oswald text-white drop-shadow-md">
                 TRANSFORM YOUR BODY. <br />
@@ -330,45 +301,42 @@ export default function Home() {
                 </div>
 
                 <h2 className="font-syne text-2xl sm:text-3xl font-black text-white uppercase tracking-tight mb-4 leading-tight">
-                  Premium Personal Training in Singapore
+                  PREMIUM PERSONAL TRAINING IN SINGAPORE
                 </h2>
                 
-                <p className="text-sm sm:text-base text-gray-300 leading-relaxed font-sans mb-4">
+                <p className="text-[15.5px] lg:text-[17.5px] text-gray-200 leading-[1.65] font-sans mb-5 font-normal">
                   PersonalTrainer.sg provides structured coaching for Weight Loss Training, Strength Training, Senior Fitness Training, Couple Training, Kickboxing Fitness and Lifestyle Transformation.
                 </p>
 
-                <div className="bg-[#800020]/15 border-l-2 border-[#C5A059] p-4 rounded-r-lg mb-6">
-                  <p className="text-xs sm:text-sm text-[#C5A059] font-sans font-semibold leading-relaxed">
+                <div className="bg-[#800020]/15 border-l-2 border-[#C5A059] p-4 rounded-r-lg">
+                  <p className="text-[15.5px] lg:text-[16.5px] text-[#C5A059] font-sans font-medium leading-[1.65]">
                     Led by Md Salaudin Adam (DONN), Founder and Fitness Director, Trusted in Singapore Since 2002 with 24 Years of Coaching Experience.
                   </p>
                 </div>
-
-                {/* Service Programs Chips */}
-                <div>
-                  <h4 className="text-xs uppercase tracking-[0.15em] font-bold text-white/50 mb-3 font-oswald">
-                    Key Service Programs:
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {[
-                      "Personal Training",
-                      "Weight Loss Training",
-                      "Strength Training",
-                      "Senior Fitness Training",
-                      "Couple Training",
-                      "Kickboxing Fitness"
-                    ].map((service) => (
-                      <div
-                        key={service}
-                        className="inline-flex items-center gap-2 bg-[#161616] border border-white/10 hover:border-[#C5A059]/60 hover:bg-[#1f1619] px-3.5 py-2 rounded-full text-xs font-semibold text-white transition-all duration-300 shadow-sm"
-                      >
-                        <CheckCircle size={13} className="text-[#C5A059] shrink-0" />
-                        <span>{service}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </ScrollReveal>
+          </div>
+        </div>
+
+        {/* Separate Service Programs Badges Section below Hero Grid */}
+        <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-white/10 relative z-10">
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {[
+              "Personal Training",
+              "Weight Loss Training",
+              "Strength Training",
+              "Senior Fitness Training",
+              "Couple Training",
+              "Kickboxing Fitness"
+            ].map((service) => (
+              <div
+                key={service}
+                className="inline-flex items-center gap-2.5 bg-[#161616] border border-white/15 hover:border-[#C5A059]/60 hover:bg-[#1f1619] px-4 py-2.5 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider font-oswald text-white transition-all duration-300 shadow-md"
+              >
+                <CheckCircle size={15} className="text-[#C5A059] shrink-0" />
+                <span>{service}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -1311,14 +1279,14 @@ export default function Home() {
                 <li>• 24 Years of Coaching Experience</li>
               </ul>
               <div className="flex gap-2">
-                <a href="#" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
                   <Facebook size={16} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
                   <Instagram size={16} />
                 </a>
-                <a href="#" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
-                  <Youtube size={16} />
+                <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                  <TikTokIcon size={16} />
                 </a>
               </div>
             </div>

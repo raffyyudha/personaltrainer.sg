@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X, Phone, Mail, Facebook, Instagram } from "lucide-react";
+import TikTokIcon from "@/components/TikTokIcon";
 
 interface SubMenuItem {
   name: string;
@@ -74,8 +75,40 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
 
   return (
     <>
-      <nav className="relative z-50 bg-black border-b border-white/10 px-4 md:px-8 py-3.5 transition-all duration-300 overflow-visible">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <header
+        className="fixed-header fixed top-0 left-0 right-0 w-full z-[9999] border-b border-white/10 overflow-visible shadow-2xl"
+        style={{ background: '#000000', backgroundColor: '#000000', opacity: 1 }}
+      >
+        {/* Top Info Bar - inside fixed header */}
+        <div className="hidden lg:flex justify-between items-center bg-[#050505] border-b border-white/10 px-8 py-2 text-sm text-white">
+          <div className="flex items-center gap-6">
+            <a href="https://wa.me/6591081781" className="flex items-center gap-2 hover:text-[#C5A059] transition-colors duration-300">
+              <Phone size={14} className="text-[#C5A059]" />
+              <span>WhatsApp: +65 9108 1781</span>
+            </a>
+            <a href="mailto:donn@personaltrainer.sg" className="flex items-center gap-2 hover:text-[#C5A059] transition-colors duration-300">
+              <Mail size={14} className="text-[#C5A059]" />
+              <span>donn@personaltrainer.sg</span>
+            </a>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="text-xs uppercase tracking-wider text-gray-500 font-bold">Follow us:</span>
+            <div className="flex gap-2">
+              <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
+                <Facebook size={14} />
+              </a>
+              <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
+                <Instagram size={14} />
+              </a>
+              <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
+                <TikTokIcon size={14} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Navigation Bar */}
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-3 lg:py-4">
           
           {/* Left: Brand Logo & Title */}
           <Link href="/" className="flex items-center group shrink-0" id="site-logo">
@@ -92,14 +125,14 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
           </Link>
 
           {/* Center: Navigation Menu */}
-          <div className="hidden lg:flex items-center gap-8 xl:gap-10">
+          <div className="hidden lg:flex items-center nav-links-container shrink-0">
             {menuItems.map((item) => {
               const itemSlug = item.name.toLowerCase().replace(/[^a-z]/g, "");
               const currentSlug = activePage.toLowerCase().replace(/[^a-z]/g, "");
               const isActive = currentSlug === itemSlug;
 
               return (
-                <div key={item.name} className="relative group py-2">
+                <div key={item.name} className="relative group py-1">
                   <Link
                     href={item.url}
                     className={`text-xs xl:text-sm font-oswald uppercase tracking-widest font-bold transition-colors duration-300 relative flex flex-col items-start ${
@@ -139,26 +172,26 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
           </div>
 
           {/* Right: CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center shrink-0">
             <Link
               href="/#trial"
-              className="bg-[#800020] hover:bg-[#9E1026] text-white font-oswald font-bold text-xs xl:text-sm uppercase tracking-wider px-6 py-3 transition-colors duration-300 inline-flex items-center gap-2"
+              className="bg-[#800020] hover:bg-[#9E1026] text-white font-oswald font-bold text-xs xl:text-sm uppercase tracking-wider px-5 py-2.5 xl:px-6 xl:py-3 transition-all duration-300 inline-flex items-center gap-2 whitespace-nowrap shrink-0 group rounded-md shadow-md"
             >
-              <span>TRIAL SESSION</span>
-              <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+              <span>BOOK A TRIAL SESSION</span>
+              <ArrowUpRight size={15} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300 shrink-0" />
             </Link>
           </div>
 
           {/* Mobile Menu Trigger */}
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="lg:hidden w-10 h-10 border border-white/10 flex items-center justify-center text-white hover:bg-[#800020] transition-colors duration-300 shrink-0 ml-auto"
+            className="lg:hidden w-10 h-10 border border-white/10 rounded-md flex items-center justify-center text-white hover:bg-[#800020] transition-colors duration-300 shrink-0 ml-auto"
             aria-label="Toggle menu"
           >
             <Menu size={20} />
           </button>
         </div>
-      </nav>
+      </header>
 
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (
@@ -215,10 +248,10 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
             <Link
               href="/#trial"
               onClick={() => setMobileMenuOpen(false)}
-              className="bg-[#800020] hover:bg-[#9E1026] text-white font-oswald font-bold text-center text-sm uppercase tracking-wider py-3.5 px-6 w-full flex items-center justify-center gap-2"
+              className="bg-[#800020] hover:bg-[#9E1026] text-white font-oswald font-bold text-center text-sm uppercase tracking-wider py-3.5 px-6 w-full flex items-center justify-center gap-2 group"
             >
-              <span>TRIAL SESSION</span>
-              <ArrowUpRight size={16} />
+              <span>BOOK A TRIAL SESSION</span>
+              <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
             </Link>
           </div>
         </div>

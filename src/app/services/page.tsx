@@ -3,10 +3,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import TikTokIcon from "@/components/TikTokIcon";
 import {
   Facebook,
   Instagram,
-  Youtube,
   Phone,
   Mail,
   ArrowRight,
@@ -136,7 +136,7 @@ const blueprints = [
     title: "Couple Training",
     subtitle: "Train together, stay motivated and work towards better fitness as a team.",
     desc: "Couple Training is designed for two clients (partners, friends, or family members) who want to train together. Training with a partner is a great way to stay motivated, enjoy the process, and share the commitment. The sessions are planned to accommodate both individuals' fitness levels and objectives, ensuring that both participants get a structured and safe workout. It is an excellent option for couples who want to build healthy lifestyle habits together, stay consistent, and motivate each other through every workout.",
-    img: "/trainwith.avif",
+    img: "/trainwith.png",
     suitableFor: [
       "Partners, friends or family members",
       "Clients who want training motivation",
@@ -595,35 +595,6 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-[#050505] text-white selection:bg-[#800020] selection:text-white font-sans">
       
-      {/* Top Info Bar */}
-      <div className="hidden lg:flex justify-between items-center bg-[#050505] border-b border-white/10 px-8 py-2 text-sm text-white">
-        <div className="flex items-center gap-6">
-          <a href="https://wa.me/6591081781" className="flex items-center gap-2 hover:text-[#C5A059] transition-colors duration-300">
-            <Phone size={14} className="text-[#C5A059]" />
-            <span>WhatsApp: +65 9108 1781</span>
-          </a>
-          <a href="mailto:donn@personaltrainer.sg" className="flex items-center gap-2 hover:text-[#C5A059] transition-colors duration-300">
-            <Mail size={14} className="text-[#C5A059]" />
-            <span>donn@personaltrainer.sg</span>
-          </a>
-        </div>
-        <div className="flex items-center gap-4">
-          <span className="text-xs uppercase tracking-wider text-gray-500 font-bold">Follow us:</span>
-          <div className="flex gap-2">
-            <a href="#" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
-              <Facebook size={14} />
-            </a>
-            <a href="#" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
-              <Instagram size={14} />
-            </a>
-            <a href="#" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
-              <Youtube size={14} />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      
       {/* Main Navigation */}
       <Navbar activePage="services" />
 
@@ -694,7 +665,7 @@ export default function ServicesPage() {
                       <img 
                         src={item.img} 
                         alt={item.title} 
-                        className="w-full h-full object-cover object-top scale-100 hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-contain bg-[#0c0c0c] p-1 scale-100 hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                     <div className="lg:col-span-8 space-y-6">
@@ -1197,14 +1168,14 @@ export default function ServicesPage() {
               <li>• 24 Years of Coaching Experience</li>
             </ul>
             <div className="flex gap-2">
-              <a href="#" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300">
+              <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300">
                 <Facebook size={14} />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300">
+              <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300">
                 <Instagram size={14} />
               </a>
-              <a href="#" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300">
-                <Youtube size={14} />
+              <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300">
+                <TikTokIcon size={14} />
               </a>
             </div>
           </div>
