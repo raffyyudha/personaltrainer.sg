@@ -58,49 +58,44 @@ div {
 }
 
 .logo-glow {
-  filter: contrast(1.08) brightness(1.1) !important; /* Keep image 100% crisp, sharp and vivid */
+  filter: contrast(1.15) brightness(1.18) drop-shadow(0 0 10px rgba(197, 160, 89, 0.7)) !important;
   position: relative;
   z-index: 2;
 }
 
-/* ============================================================
-   PREMIUM HEADER SYSTEM - SOLID BLACK BACKGROUND
-   ============================================================ */
-
-header, nav {
-  background-color: #000000 !important;
-  background: #000000 !important;
-  opacity: 1 !important;
-}
-
-/* Fixed header clearance - push body content down so it doesn't hide behind the fixed header */
-body {
-  padding-top: 80px !important; /* header height on mobile */
-}
-
-@media (min-width: 1024px) {
-  body {
-    padding-top: 100px !important; /* header height on desktop */
+@keyframes logoPulseGlow {
+  0%, 100% {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.95), 0 0 22px rgba(197, 160, 89, 0.7), 0 0 45px rgba(128, 0, 32, 0.45), inset 0 0 12px rgba(197, 160, 89, 0.25) !important;
+  }
+  50% {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.95), 0 0 32px rgba(255, 229, 163, 0.9), 0 0 55px rgba(128, 0, 32, 0.65), inset 0 0 18px rgba(255, 229, 163, 0.4) !important;
   }
 }
 
-/* Shield Logo Wrapper (Full 12rem Size Restored) */
+/* Shield Logo Wrapper (Full 12rem Size Restored with Ultra-Highlight) */
 .brand-logo-wrapper {
   position: relative !important;
   width: 7.5rem !important; /* 120px on mobile */
   height: 7.5rem !important;
   margin-bottom: -3.2rem !important; /* Overflows past bottom border */
   overflow: hidden !important;
-  border-radius: 14px !important;
+  border-radius: 16px !important;
   flex-shrink: 0 !important;
-  border: 3px solid #C5A059 !important;
-  background: #000000 !important;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.9), 0 0 16px rgba(197, 160, 89, 0.5) !important;
+  border: 3px solid transparent !important;
+  background-image: linear-gradient(#050505, #050505), linear-gradient(135deg, #FFE5A3 0%, #C5A059 45%, #800020 100%) !important;
+  background-origin: border-box !important;
+  background-clip: padding-box, border-box !important;
+  animation: logoPulseGlow 4s infinite ease-in-out !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 5px !important;
+  padding: 6px !important;
   z-index: 60 !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.brand-logo-wrapper:hover {
+  transform: scale(1.06) !important;
 }
 
 .brand-logo-wrapper img {
@@ -113,7 +108,7 @@ body {
   object-fit: contain !important;
   display: block !important;
   max-width: 100% !important;
-  filter: contrast(1.15) brightness(1.18) !important;
+  filter: contrast(1.18) brightness(1.22) drop-shadow(0 0 8px rgba(197, 160, 89, 0.6)) !important;
 }
 
 @media (min-width: 768px) {
@@ -121,11 +116,20 @@ body {
     width: 12rem !important; /* Full 12rem / 192px */
     height: 12rem !important;
     margin-bottom: -5.8rem !important; /* Extends past bottom border of navbar */
-    border-radius: 18px !important;
+    border-radius: 20px !important;
   }
 }
 
 /* Precise clearance for first section under 12rem shield logo */
+#home,
+header + section,
+header + div + section,
+nav + section,
+nav + div + section,
+main > section:first-of-type {
+  padding-top: 8.5rem !important; /* Mobile clearance */
+}
+
 @media (min-width: 1024px) {
   #home,
   header + section,
@@ -133,7 +137,7 @@ body {
   nav + section,
   nav + div + section,
   main > section:first-of-type {
-    padding-top: 11.5rem !important; /* ~184px clearance on desktop */
+    padding-top: 13.5rem !important; /* ~216px clearance on desktop so logo never overlaps hero */
   }
 }
 

@@ -800,7 +800,7 @@ export default function ContactPage() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                <span className="font-sans">Condo Gyms & selected ActiveSG Gyms, Singapore</span>
+                <span className="font-sans">Training locations arranged across Singapore</span>
               </li>
             </ul>
           </div>
@@ -808,11 +808,11 @@ export default function ContactPage() {
         </div>
 
         {/* Copyrights and Terms */}
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-4 font-sans">
           <p>© 2026 PersonalTrainer.sg. All Rights Reserved. Led by Md Salaudin Adam (DONN).</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors font-sans">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors font-sans">Terms of Service</a>
+            <Link href="/privacy" className="hover:text-[#C5A059] transition-colors font-sans">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#C5A059] transition-colors font-sans">Terms of Service</Link>
           </div>
         </div>
       </footer>

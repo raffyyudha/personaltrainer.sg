@@ -632,7 +632,7 @@ export default function RatesPage() {
               <ul className="space-y-4 text-xs text-white font-sans">
                 <li className="flex items-start gap-3">
                   <MapPin size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>Condo gyms, selected ActiveSG gyms and suitable training locations across Singapore</span>
+                  <span>Training locations arranged across Singapore</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <Phone size={16} className="text-[#C5A059] shrink-0" />
@@ -642,17 +642,20 @@ export default function RatesPage() {
                 </li>
                 <li className="flex items-center gap-3">
                   <Mail size={16} className="text-[#C5A059] shrink-0" />
-                  <a href="mailto:info@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors">
-                    info@personaltrainer.sg
+                  <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors">
+                    donn@personaltrainer.sg
                   </a>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-between items-center text-xs text-white font-sans gap-4">
-            <p>© {new Date().getFullYear()} PersonalTrainer.sg. All Rights Reserved.</p>
-            <p className="text-gray-400">Led by Md Salaudin Adam (DONN) • Founder & Fitness Director</p>
+          <div className="flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 font-sans gap-4">
+            <p>© 2026 PersonalTrainer.sg. All Rights Reserved. Led by Md Salaudin Adam (DONN).</p>
+            <div className="flex gap-6">
+              <Link href="/privacy" className="hover:text-[#C5A059] transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-[#C5A059] transition-colors">Terms of Service</Link>
+            </div>
           </div>
         </div>
       </footer>

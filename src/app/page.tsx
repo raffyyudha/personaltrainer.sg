@@ -32,6 +32,9 @@ import {
   Activity,
   Award,
   Shield,
+  ShieldCheck,
+  ClipboardCheck,
+  Crown,
   Target
 } from "lucide-react";
 
@@ -204,27 +207,27 @@ export default function Home() {
   const faqs = [
     {
       q: "What should I prepare for my first session?",
-      a: "Bring a bottle of water, a sweat towel, and wear comfortable athletic clothing and shoes."
+      a: "Please wear comfortable workout clothes and proper training shoes. Bring a water bottle, towel and any relevant health, injury or medical information that may affect your training. The first session is also used to understand your current fitness level, body condition, goals and training suitability."
     },
     {
       q: "Do I need a condo gym or private gym access?",
-      a: "Training can be arranged at suitable locations in Singapore, including condo gyms, selected ActiveSG gyms, and other suitable training environments."
+      a: "No, not always. Training can be arranged at suitable locations across Singapore, including condo gyms, selected ActiveSG gyms, suitable private gym spaces, outdoor training areas, multi storey car park training areas and other approved training environments. Location suitability can be discussed during enquiry."
     },
     {
-      q: "How do I book a Trial Session?",
-      a: "You can enquire about a trial session via WhatsApp or our contact form to discuss your goals, current condition, and schedule."
+      q: "How do I book a trial session?",
+      a: "You can contact PersonalTrainer.sg through WhatsApp at +65 9108 1781 or submit the website enquiry form. We will first understand your goals, current condition, preferred location, schedule and training needs before confirming the trial session."
     },
     {
       q: "Who will be my personal trainer?",
-      a: "You will be coached directly by Md Salaudin Adam (DONN), Founder and Fitness Director of PersonalTrainer.sg, who has 24 years of coaching experience."
+      a: "Training may be conducted by Md Salaudin Adam (DONN), Founder and Fitness Director of PersonalTrainer.sg, or by a suitable trainer from the PersonalTrainer.sg team, depending on client needs, location, schedule and availability."
     },
     {
-      q: "What training styles do you specialize in?",
-      a: "We provide structured coaching for Weight Loss, Strength Training, Senior Fitness, Couple Training, Kickboxing Fitness and Lifestyle Transformation."
+      q: "What training styles do you specialise in?",
+      a: "PersonalTrainer.sg provides Personal Training, Weight Loss Training, Strength Training, Senior Fitness Training, Couple Training, Kickboxing Fitness, Home and Condo Gym Training, Corporate Wellness, Gym Management and structured lifestyle transformation coaching."
     },
     {
-      q: "How are payments and bookings structured?",
-      a: "Bookings are scheduled in advance. You can discuss flexible package options and payment methods during or after your trial session."
+      q: "Can beginners start personal training?",
+      a: "Yes. Training can be adjusted for beginners, clients returning after a long break, busy professionals, seniors, couples and clients with low fitness levels. The programme will be based on your current ability, body condition and goals."
     }
   ];
 
@@ -602,7 +605,7 @@ export default function Home() {
               num: "05.",
               title: "Couple Training",
               desc: "Train together with your spouse, partner, friend or family member while working towards better fitness, health and motivation. A practical and enjoyable way to stay consistent together.",
-              img: "/trainwith.avif"
+              img: "/coupletraining.avif"
             },
             {
               num: "06.",
@@ -620,7 +623,7 @@ export default function Home() {
               num: "08.",
               title: "Online Coaching",
               desc: "Remote Fitness Coaching for clients who need structure, guidance and accountability but prefer flexible training support.",
-              img: "/heroimage.avif"
+              img: "/onlinecoaching.avif"
             }
           ].map((srv, idx) => (
             <ScrollReveal key={srv.num} className="reveal-hidden" delay={idx * 100}>
@@ -689,63 +692,127 @@ export default function Home() {
           </ScrollReveal>
 
           {/* Before and After / Client Progress cards */}
-          <div className="space-y-8">
+          <div className="space-y-12">
             {[
               {
                 title: "Weight Loss & Stamina",
                 trainer: "Md Salaudin Adam (DONN)",
                 img: "/donn-coaching-elliptical.avif",
-                desc: "Real client transformations showcasing progressive weight loss and improved physical stamina. Guided step-by-step through customized resistance training, cardiovascular conditioning, and consistent lifestyle changes."
+                desc: "Structured training designed to support fat loss, improve stamina, build consistency and develop better lifestyle habits through progressive exercise, coaching accountability and realistic training guidance.",
+                focusArea: "Fat loss, stamina, energy and training consistency",
+                benefit: "Improves cardiovascular fitness, movement confidence, strength endurance and overall body conditioning",
+                suitableFor: "Clients who want to lose weight, improve fitness, restart their training journey or build healthier habits",
+                outcome: "A stronger, fitter and more disciplined body with better long term lifestyle control",
+                buttonText: "WhatsApp PersonalTrainer.sg",
+                buttonUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Weight%20Loss%20%26%20Stamina%20Training.",
+                isPrimaryButton: true
               },
               {
                 title: "Strength & Body Toning",
                 trainer: "Md Salaudin Adam (DONN)",
                 img: "/donn-coaching-barbell.avif",
-                desc: "Focused resistance programming to build physical strength, improve muscle definition, and enhance body posture. Every session focuses on correct movement patterns, safety, and progressive loading."
+                desc: "Focused resistance training to build physical strength, improve muscle definition, enhance posture and develop better body control through proper technique, safe progression and structured coaching.",
+                focusArea: "Strength, posture, muscle tone and exercise technique",
+                benefit: "Builds lean strength, improves body shape, supports safer movement and increases confidence during training",
+                suitableFor: "Clients who want to get stronger, tone their body, improve posture and train with proper form",
+                outcome: "A stronger, firmer and more confident body with better movement quality",
+                buttonText: "Book a Trial Session",
+                buttonUrl: "#trial",
+                isPrimaryButton: false
               },
               {
                 title: "Lifestyle Transformations",
                 trainer: "Md Salaudin Adam (DONN)",
                 img: "/donn-flexing.avif",
-                desc: "Helping clients rebuild healthy habits, physical energy, and daily focus. A comprehensive lifestyle transformation combining structured exercise, regular accountability, and sustainable nutritional adjustments."
+                desc: "A structured coaching approach designed to help clients rebuild healthier habits, improve daily energy, stay consistent and create sustainable long term lifestyle change through training, accountability and nutrition awareness.",
+                focusArea: "Healthy habits, discipline, accountability and long term consistency",
+                benefit: "Improves daily energy, confidence, fitness routine, lifestyle awareness and personal discipline",
+                suitableFor: "Busy professionals, beginners, returning clients and anyone who needs structure to restart their fitness journey",
+                outcome: "A healthier, more active and more confident lifestyle that can be maintained long term",
+                buttonText: "WhatsApp PersonalTrainer.sg",
+                buttonUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Lifestyle%20Transformations.",
+                isPrimaryButton: true
               }
             ].map((cls, idx) => (
               <ScrollReveal key={cls.title} className="reveal-hidden" delay={idx * 150}>
-                <div className="grid lg:grid-cols-2 overflow-hidden group">
-                  {/* Class Thumbnail */}
-                  <div className="h-64 lg:h-auto overflow-hidden relative">
+                <div className="grid lg:grid-cols-12 overflow-hidden group rounded-xl border border-white/10 bg-[#0d0d0d] shadow-2xl">
+                  {/* Left Column: Image Thumbnail */}
+                  <div className="lg:col-span-5 min-h-[320px] lg:min-h-[460px] overflow-hidden relative border-b lg:border-b-0 lg:border-r border-white/10">
                     <img
                       src={cls.img}
                       alt={cls.title}
-                      className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-700"
                     />
                   </div>
                   
-                  {/* Class Details */}
-                  <div className="bg-[#1a1a1a] p-6 md:p-8 lg:p-10 flex flex-col justify-between">
+                  {/* Right Column: Details & Highlight Grid */}
+                  <div className="lg:col-span-7 bg-[#121212] p-6 md:p-8 lg:p-9 flex flex-col justify-between">
                     <div>
-                      <h3 className="text-2xl md:text-3xl font-bold font-oswald mb-4 group-hover:text-[#C5A059] transition-colors duration-300">
+                      <h3 className="text-[24px] lg:text-[32px] font-black font-oswald text-white uppercase tracking-tight mb-4 group-hover:text-[#C5A059] transition-colors duration-300">
                         {cls.title}
                       </h3>
-                      <p className="text-gray-200 text-lg md:text-xl mb-8 leading-relaxed font-sans font-normal">
+                      
+                      <p className="text-[15.5px] lg:text-[17.5px] text-gray-200 leading-[1.65] font-sans font-normal mb-6">
                         {cls.desc}
                       </p>
+
+                      {/* 4 Premium Highlight Points Grid */}
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-6 pt-4 border-t border-white/10">
+                        <div className="bg-[#181818] border border-white/5 p-3.5 rounded-lg">
+                          <div className="text-[11px] uppercase tracking-wider font-oswald text-[#C5A059] font-bold mb-1">
+                            Focus Area
+                          </div>
+                          <div className="text-xs sm:text-sm text-gray-200 font-sans leading-relaxed">
+                            {cls.focusArea}
+                          </div>
+                        </div>
+
+                        <div className="bg-[#181818] border border-white/5 p-3.5 rounded-lg">
+                          <div className="text-[11px] uppercase tracking-wider font-oswald text-[#C5A059] font-bold mb-1">
+                            Training Benefit
+                          </div>
+                          <div className="text-xs sm:text-sm text-gray-200 font-sans leading-relaxed">
+                            {cls.benefit}
+                          </div>
+                        </div>
+
+                        <div className="bg-[#181818] border border-white/5 p-3.5 rounded-lg">
+                          <div className="text-[11px] uppercase tracking-wider font-oswald text-[#C5A059] font-bold mb-1">
+                            Suitable For
+                          </div>
+                          <div className="text-xs sm:text-sm text-gray-200 font-sans leading-relaxed">
+                            {cls.suitableFor}
+                          </div>
+                        </div>
+
+                        <div className="bg-[#181818] border border-white/5 p-3.5 rounded-lg">
+                          <div className="text-[11px] uppercase tracking-wider font-oswald text-[#C5A059] font-bold mb-1">
+                            Coaching Outcome
+                          </div>
+                          <div className="text-xs sm:text-sm text-gray-200 font-sans leading-relaxed">
+                            {cls.outcome}
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
-                    <div className="flex flex-wrap items-center justify-between gap-4">
-                      <div className="flex flex-wrap gap-6 text-sm text-white">
-                        <span className="flex items-center gap-2">
-                          <User size={16} className="text-[#C5A059]" />
-                          <span>{cls.trainer}</span>
-                        </span>
-                        <span className="flex items-center gap-2">
-                          <Calendar size={16} className="text-[#C5A059]" />
-                          <span>PersonalTrainer.sg</span>
-                        </span>
+                    {/* Footer CTA & Trainer Badge */}
+                    <div className="pt-4 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 mt-auto">
+                      <div className="flex items-center gap-2 text-xs sm:text-sm text-white/70 font-sans">
+                        <User size={15} className="text-[#C5A059] shrink-0" />
+                        <span className="font-semibold text-white">{cls.trainer}</span>
                       </div>
-                      
-                      <a href="#trial" className="btn-primary py-3 px-6 text-sm">
-                        Start Transformation
+
+                      <a
+                        href={cls.buttonUrl}
+                        target={cls.buttonUrl.startsWith("http") ? "_blank" : undefined}
+                        rel={cls.buttonUrl.startsWith("http") ? "noopener noreferrer" : undefined}
+                        className={cls.isPrimaryButton
+                          ? "btn-primary py-3 px-6 text-xs sm:text-sm tracking-wider font-extrabold inline-flex items-center gap-2"
+                          : "btn-outline py-3 px-6 text-xs sm:text-sm tracking-wider font-extrabold border-2 inline-flex items-center gap-2"}
+                      >
+                        <span>{cls.buttonText}</span>
+                        {cls.buttonUrl.startsWith("http") && <ArrowRight size={15} className="shrink-0" />}
                       </a>
                     </div>
                   </div>
@@ -757,25 +824,26 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section id="why-choose-us" className="py-12 md:py-20 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
+      <section id="why-choose-us" className="py-16 md:py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Left Column: Text Content */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-4 lg:sticky lg:top-32">
             <ScrollReveal className="reveal-left-hidden">
-              <span className="section-label">
+              <span className="section-label mb-3">
                 <Dumbbell size={16} className="text-[#C5A059]" /> WHY CHOOSE US
               </span>
-              <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-6 font-syne leading-tight text-white break-words">
-                Why Choose PersonalTrainer.sg
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-black mb-5 font-oswald leading-tight text-white uppercase tracking-tight">
+                WHY CHOOSE <br className="hidden sm:block" />
+                <span className="text-[#C5A059]">PERSONALTRAINER.SG</span>
               </h2>
-              <p className="text-[#C5A059] font-oswald text-lg uppercase tracking-wider mb-4">
-                Professional coaching. Real structure. Serious results.
+              <p className="text-[#C5A059] font-oswald text-base sm:text-lg font-bold uppercase tracking-wider mb-4 leading-snug">
+                Professional Coaching. Real Structure. Serious Results.
               </p>
-              <p className="text-white text-base leading-relaxed mb-8">
-                At PersonalTrainer.sg, the focus is on proper coaching, safe training progression, discipline, accountability, and real progress.
+              <p className="text-gray-200 text-sm sm:text-base leading-relaxed mb-8 font-sans font-normal">
+                At PersonalTrainer.sg, the focus is on proper coaching, safe training progression, discipline, accountability and real long term improvement.
               </p>
               <a href="#trial" className="btn-primary group inline-flex">
-                <span>Start Today</span>
+                <span>Book a Trial Session</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </ScrollReveal>
@@ -786,45 +854,47 @@ export default function Home() {
             {[
               {
                 title: "24 Years of Coaching Experience",
-                desc: "Coaching since 2002, focusing on custom exercise selection, movement quality, and safe progressive training tailored for you.",
-                icon: <Award className="w-8 h-8 text-[#C5A059]" />
+                desc: "Coaching since 2002 with structured personal training experience across different ages, goals and fitness levels.",
+                icon: <Award className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "Trusted in Singapore Since 2002",
-                desc: "Over two decades of helping individuals, seniors, and busy professionals improve their health and strength in Singapore.",
-                icon: <Shield className="w-8 h-8 text-[#C5A059]" />
+                desc: "Over two decades of helping clients across Singapore improve their fitness, strength, health and confidence.",
+                icon: <ShieldCheck className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "Personalised Training Programmes",
-                desc: "A customized program built from scratch for your fitness level, goals, schedule, and lifestyle—no generic templates.",
-                icon: <Dumbbell className="w-8 h-8 text-[#C5A059]" />
+                desc: "Training plans are adjusted based on the client’s body, fitness level, goal, schedule and lifestyle.",
+                icon: <ClipboardCheck className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "Proper Technique and Safe Training",
-                desc: "Guidance on proper posture, breathing, and form. Learn to train safely, confidently, and effectively.",
-                icon: <Activity className="w-8 h-8 text-[#C5A059]" />
+                desc: "Every session focuses on correct form, safe movement, posture, control and progressive improvement.",
+                icon: <Activity className="w-7 h-7 text-[#C5A059]" />
               },
               {
-                title: "Results Focused Coaching",
-                desc: "We align workouts, daily habits, nutrition awareness, and accountability to ensure your long-term success.",
-                icon: <Target className="w-8 h-8 text-[#C5A059]" />
+                title: "Accountability and Progress Tracking",
+                desc: "Clients are guided with structure, discipline, consistency and regular coaching adjustments.",
+                icon: <Target className="w-7 h-7 text-[#C5A059]" />
               },
               {
-                title: "Training That Fits Your Lifestyle",
-                desc: "Train at convenient locations in Singapore, including condo gyms, selected public gyms, or private spaces.",
-                icon: <MapPin className="w-8 h-8 text-[#C5A059]" />
+                title: "Premium Coaching Standard",
+                desc: "A professional coaching approach built on experience, results, trust and long term transformation.",
+                icon: <Crown className="w-7 h-7 text-[#C5A059]" />
               }
             ].map((fac, idx) => (
               <ScrollReveal key={fac.title} className="reveal-hidden" delay={idx * 100}>
-                <div className="bg-[#1a1a1a] border border-white/5 p-8 hover:border-[#C5A059]/30 transition-all duration-300 group h-full flex flex-col">
-                  {/* Square Icon Container with Gold Border */}
-                  <div className="w-16 h-16 border-2 border-[#C5A059] flex items-center justify-center mb-6 group-hover:bg-[#C5A059]/10 transition-all duration-300 shrink-0">
-                    {fac.icon}
+                <div className="bg-[#0e0e0e] border border-white/10 hover:border-[#800020]/60 hover:shadow-[0_0_25px_rgba(128,0,32,0.35)] transition-all duration-300 rounded-xl p-6 lg:p-7 flex flex-col justify-between h-full group">
+                  <div>
+                    {/* Gold Icon Container */}
+                    <div className="w-14 h-14 border-2 border-[#C5A059] bg-[#161616] rounded-lg flex items-center justify-center mb-5 group-hover:bg-[#C5A059]/15 group-hover:border-[#C5A059] transition-all duration-300 shrink-0 shadow-md">
+                      {fac.icon}
+                    </div>
+                    <h3 className="text-base sm:text-lg font-bold font-oswald mb-2.5 text-white group-hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-wide">
+                      {fac.title}
+                    </h3>
                   </div>
-                  <h3 className="text-lg font-bold font-oswald mb-3 text-white group-hover:text-[#C5A059] transition-colors duration-300 uppercase">
-                    {fac.title}
-                  </h3>
-                  <p className="text-white text-xs leading-relaxed mt-auto">
+                  <p className="text-gray-300 text-xs sm:text-sm font-sans leading-relaxed mt-2 font-normal">
                     {fac.desc}
                   </p>
                 </div>
@@ -875,24 +945,24 @@ export default function Home() {
       </section>
 
       {/* Credentials Section */}
-      <section id="credentials" className="bg-[#0c0c0c] py-12 md:py-20 px-6 md:px-12">
+      <section id="credentials" className="bg-[#0c0c0c] py-16 md:py-24 px-6 md:px-12 border-t border-white/5">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal className="reveal-hidden">
-            <div className="text-center mb-16">
-              <span className="section-label justify-center">
+            <div className="text-center mb-12">
+              <span className="section-label justify-center mb-3">
                 CREDENTIALS
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-syne leading-tight break-words">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-5 font-oswald text-white tracking-tight">
                 Professional Credentials
               </h2>
-              <p className="text-white max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-                With more than two decades of experience in Singapore’s fitness industry, Md Salaudin Adam (DONN) brings discipline, structure and practical coaching to help clients train safely, stay consistent and work towards real results.
+              <p className="text-[15.5px] lg:text-[18px] text-gray-200 leading-[1.65] max-w-3xl mx-auto font-sans font-normal">
+                With more than two decades of coaching experience in Singapore’s fitness industry, Md Salaudin Adam (DONN) brings discipline, structure and practical coaching to help clients train safely, stay consistent and work towards real results.
               </p>
             </div>
           </ScrollReveal>
 
-          {/* Trainers Cards Grid (repurposed for credentials) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 4 Credential Image Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {[
               {
                 name: "Md Salaudin Adam (DONN)",
@@ -905,7 +975,7 @@ export default function Home() {
                 img: "/donn-coaching-elliptical.avif"
               },
               {
-                name: "NASM / TRX / SOE",
+                name: "NASM / TRX / SOE / FMT",
                 role: "Certified Personal Trainer",
                 img: "/donn-coaching-barbell.avif"
               },
@@ -916,32 +986,19 @@ export default function Home() {
               }
             ].map((trn, idx) => (
               <ScrollReveal key={trn.name} className="reveal-hidden" delay={idx * 150}>
-                <div className="group relative flex flex-col bg-transparent h-full">
-                  {/* Trainer Image Cutout */}
-                  <div className="w-full aspect-[4/5] overflow-hidden bg-black/40 border border-white/5 border-b-0">
+                <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0e0e0e] shadow-xl hover:border-[#800020]/60 transition-all duration-300 flex flex-col h-full group">
+                  <div className="h-64 sm:h-72 relative overflow-hidden bg-black border-b border-white/10">
                     <img
                       src={trn.img}
                       alt={trn.name}
-                      className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-all duration-700 object-top"
+                      className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
-
-                  {/* Social Icons row overlapping the boundary */}
-                  <div className="flex justify-center gap-2 -mt-5 z-20 relative">
-                    <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300">
-                      <Phone size={16} />
-                    </a>
-                    <a href="mailto:donn@personaltrainer.sg" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-300">
-                      <Mail size={16} />
-                    </a>
-                  </div>
-                  
-                  {/* Bottom Text Panel */}
-                  <div className="bg-[#111] p-6 text-center border border-white/5 border-t-0 pt-8 z-10 flex-1 flex flex-col justify-center">
-                    <h3 className="font-oswald text-xl font-bold tracking-wide uppercase text-white">
+                  <div className="p-5 text-center flex-1 flex flex-col justify-center bg-[#121212]">
+                    <h3 className="font-oswald text-lg font-bold tracking-wide uppercase text-white group-hover:text-[#C5A059] transition-colors">
                       {trn.name}
                     </h3>
-                    <p className="text-xs uppercase tracking-widest text-[#C5A059] font-bold mt-2">
+                    <p className="text-xs uppercase tracking-wider text-[#C5A059] font-bold mt-1.5">
                       {trn.role}
                     </p>
                   </div>
@@ -949,27 +1006,92 @@ export default function Home() {
               </ScrollReveal>
             ))}
           </div>
+
+          {/* 4 Standardised Credential Boxes */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
+              <div className="text-base font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                Md Salaudin Adam (DONN)
+              </div>
+              <div className="text-xs text-gray-200 font-sans">
+                Founder and Fitness Director
+              </div>
+            </div>
+
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
+              <div className="text-base font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                24 Years of Coaching Experience
+              </div>
+              <div className="text-xs text-gray-200 font-sans">
+                Trusted in Singapore Since 2002
+              </div>
+            </div>
+
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
+              <div className="text-base font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                NASM | SOE | TRX | FMT | CPR | AED
+              </div>
+              <div className="text-xs text-gray-200 font-sans">
+                Professional Fitness Certifications
+              </div>
+            </div>
+
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
+              <div className="text-base font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                MANHUNT Finalist 2001
+              </div>
+              <div className="text-xs text-gray-200 font-sans">
+                Premium Performance and Transformation Specialist
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Trial Session Section */}
-      <section id="trial" className="py-12 md:py-20 px-6 md:px-12 max-w-7xl mx-auto">
+      <section id="trial" className="py-16 md:py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
         <ScrollReveal className="reveal-hidden">
-          <div className="text-center mb-16">
-            <span className="section-label justify-center">
+          <div className="text-center mb-12">
+            <span className="section-label justify-center mb-3">
               <Dumbbell size={16} className="text-[#C5A059]" /> TRIAL SESSION
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-syne text-white break-words">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-oswald text-white tracking-tight">
               Start With a Trial Session
             </h2>
-            <div className="text-white max-w-2xl mx-auto text-sm md:text-base leading-relaxed space-y-4">
-              <p>
-                The Trial Session is designed to understand your current fitness level, body condition, goals, lifestyle and training suitability. During the session, you will experience the coaching style, training structure and professional approach used at PersonalTrainer.sg.
-              </p>
-              <p className="text-[#C5A059] font-bold uppercase font-oswald tracking-wider">
-                Start your fitness journey with proper guidance and a clear plan.
-              </p>
+            
+            <p className="text-[15.5px] lg:text-[18px] text-gray-200 leading-[1.65] max-w-3xl mx-auto font-sans font-normal mb-6">
+              The trial session is designed to understand your current fitness level, body condition, goals, lifestyle and training suitability. During the session, you will experience the coaching style, training structure and professional approach used at PersonalTrainer.sg.
+            </p>
+
+            {/* Trial Session Important Info Box */}
+            <div className="bg-[#121212] border border-[#C5A059]/40 rounded-xl p-6 max-w-3xl mx-auto mb-8 text-left space-y-3.5 font-sans shadow-xl">
+              <div className="flex items-center gap-2.5 text-[#C5A059] font-oswald font-bold uppercase tracking-wider text-base sm:text-lg">
+                <CheckCircle size={20} className="shrink-0 text-[#C5A059]" />
+                <span>Trial Session Details & Terms</span>
+              </div>
+              <ul className="text-xs sm:text-sm text-gray-200 space-y-2.5 leading-relaxed">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#C5A059] font-bold text-base">•</span>
+                  <span>The trial session is approximately 90 minutes.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#C5A059] font-bold text-base">•</span>
+                  <span>It includes around 30 minutes of assessment and consultation, followed by around 60 minutes of training.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#C5A059] font-bold text-base">•</span>
+                  <span>The trial session is free only if the client signs up for a minimum 12 session package immediately after the trial session.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-[#C5A059] font-bold text-base">•</span>
+                  <span>If the client decides not to continue after the trial, the trial session fee is $144.</span>
+                </li>
+              </ul>
             </div>
+
+            <p className="text-[#C5A059] font-oswald text-base sm:text-lg font-bold uppercase tracking-wider text-center">
+              Start your fitness journey with proper guidance, structure and a clear plan.
+            </p>
           </div>
         </ScrollReveal>
 
@@ -978,84 +1100,87 @@ export default function Home() {
           {[
             {
               name: "01. Fitness Assessment",
-              desc: "Understand your current physical capabilities and establish core targets.",
+              desc: "Understand your current fitness level, body condition, movement quality and suitability for training.",
               featured: false,
-              features: [
-                { name: "Body condition check", active: true },
-                { name: "Fitness level assessment", active: true },
-                { name: "Goal & lifestyle analysis", active: true },
-                { name: "Schedule suitability", active: true }
-              ]
+              focusBullets: [
+                "Body condition check",
+                "Fitness level assessment",
+                "Goal and lifestyle analysis",
+                "Schedule suitability"
+              ],
+              waUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20a%20Trial%20Session%20(Fitness%20Assessment)."
             },
             {
               name: "02. Coaching Experience",
-              desc: "Experience the structured and highly disciplined coaching style of coach DONN.",
+              desc: "Experience the structured and disciplined coaching approach used by PersonalTrainer.sg.",
               featured: true,
-              features: [
-                { name: "Proper form coaching", active: true },
-                { name: "Exercise control & technique", active: true },
-                { name: "Safe training progression", active: true },
-                { name: "Breathing & posture advice", active: true }
-              ]
+              focusBullets: [
+                "Proper form coaching",
+                "Exercise control and technique",
+                "Safe training progression",
+                "Breathing and posture guidance"
+              ],
+              waUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20a%20Trial%20Session%20(Coaching%20Experience)."
             },
             {
               name: "03. Custom Roadmap",
-              desc: "Identify where you are now, where you want to go and what is suitable.",
+              desc: "Identify the training direction, coaching approach and programme structure suitable for your goal.",
               featured: false,
-              features: [
-                { name: "Personalized template outline", active: true },
-                { name: "Progression mapping", active: true },
-                { name: "Practical schedule setup", active: true },
-                { name: "Nutrition awareness blueprint", active: true }
-              ]
+              focusBullets: [
+                "Personalised programme outline",
+                "Progression planning",
+                "Practical schedule setup",
+                "Nutrition awareness guidance"
+              ],
+              waUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20a%20Trial%20Session%20(Custom%20Roadmap)."
             }
           ].map((plan, idx) => (
-            <ScrollReveal key={plan.name} className="reveal-hidden h-full">
+            <ScrollReveal key={plan.name} className="reveal-hidden h-full" delay={idx * 150}>
               <div
-                className={`bg-[#0d0d0d] border rounded-lg p-8 flex flex-col justify-between h-full transition-all duration-300 relative ${
+                className={`bg-[#0d0d0d] border rounded-xl p-7 flex flex-col justify-between h-full transition-all duration-300 relative shadow-2xl ${
                   plan.featured
-                    ? "border-[#C5A059] shadow-lg shadow-[#C5A059]/5 lg:scale-105 z-10"
-                    : "border-white/5 hover:border-[#800020]/30"
+                    ? "border-[#C5A059] shadow-lg shadow-[#C5A059]/10 lg:scale-[1.02] z-10"
+                    : "border-white/10 hover:border-[#800020]/50"
                 }`}
               >
                 {plan.featured && (
-                  <span className="absolute top-4 right-4 bg-[#C5A059] text-black text-xs font-bold uppercase tracking-widest px-3 py-1 font-oswald rounded">
+                  <span className="absolute top-4 right-4 bg-[#C5A059] text-black text-[11px] font-bold uppercase tracking-widest px-3 py-1 font-oswald rounded">
                     RECOMMENDED
                   </span>
                 )}
                 
                 <div>
-                  <h3 className="text-xl font-bold font-oswald text-white mb-2 uppercase">{plan.name}</h3>
-                  <p className="text-white text-xs mb-6 min-h-[40px]">
+                  <h3 className="text-xl sm:text-2xl font-bold font-oswald text-white mb-3 uppercase tracking-tight">
+                    {plan.name}
+                  </h3>
+                  <p className="text-gray-200 text-xs sm:text-sm font-sans leading-relaxed mb-6">
                     {plan.desc}
                   </p>
                   
-                  <div className="border-t border-white/5 py-4">
-                    <span className="text-2xl font-extrabold font-oswald text-[#C5A059] tracking-tighter">Trial Session</span>
-                    <span className="text-white text-xs block mt-1">First step of transformation</span>
-                  </div>
+                  <div className="border-t border-white/10 pt-4 mb-4">
+                    <span className="text-xs uppercase tracking-wider text-[#C5A059] font-bold font-oswald block mb-3">
+                      Trial Session Focus:
+                    </span>
 
-                  <ul className="border-t border-white/5 py-6 space-y-3">
-                    {plan.features.map((feat, fIdx) => (
-                      <li key={fIdx} className={`flex items-center gap-3 text-sm ${feat.active ? "text-white" : "text-gray-600 line-through"}`}>
-                        {feat.active ? (
-                          <Check size={16} className="text-[#C5A059]" />
-                        ) : (
-                          <X size={16} className="text-gray-600" />
-                        )}
-                        <span>{feat.name}</span>
-                      </li>
-                    ))}
-                  </ul>
+                    <ul className="space-y-2.5 font-sans">
+                      {plan.focusBullets.map((bullet, fIdx) => (
+                        <li key={fIdx} className="flex items-center gap-2.5 text-xs sm:text-sm text-gray-200">
+                          <CheckCircle size={15} className="text-[#C5A059] shrink-0" />
+                          <span>{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
 
                 <a
-                  href="https://wa.me/6591081781"
+                  href={plan.waUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-4 text-center font-bold tracking-wider font-oswald uppercase transition-all duration-300 btn-gold"
+                  className="w-full mt-6 py-3.5 text-center font-bold tracking-wider font-oswald uppercase text-xs sm:text-sm transition-all duration-300 btn-gold rounded-lg inline-flex items-center justify-center gap-2"
                 >
-                  Enquire About Trial Session
+                  <span>Enquire About Trial Session</span>
+                  <ArrowRight size={15} className="shrink-0" />
                 </a>
               </div>
             </ScrollReveal>
@@ -1195,66 +1320,66 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-12 md:py-20 px-6 md:px-12 max-w-7xl mx-auto grid lg:grid-cols-12 gap-12 bg-black">
-        <div className="lg:col-span-5">
-          <ScrollReveal className="reveal-left-hidden">
-            <span className="section-label">
-              FAQS
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase font-syne mb-6 leading-tight text-white break-words">
-              Clear answers to common inquiries.
-            </h2>
-            <p className="text-white text-base leading-relaxed mb-8 max-w-md">
-              If you have questions about the training environments, custom templates, schedules, or session suitability, find direct answers here or reach out via WhatsApp.
-            </p>
-            <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="btn-gold inline-flex group">
-              <span>WhatsApp Chat</span>
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
-          </ScrollReveal>
-        </div>
+      <section className="py-16 md:py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-5 lg:sticky lg:top-32">
+            <ScrollReveal className="reveal-left-hidden">
+              <span className="section-label mb-3">
+                FAQS
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-black uppercase font-oswald mb-5 leading-tight text-white tracking-tight">
+                CLEAR ANSWERS TO <br className="hidden sm:block" />
+                <span className="text-[#C5A059]">COMMON INQUIRIES</span>
+              </h2>
+              <p className="text-[15.5px] lg:text-[17.5px] text-gray-200 leading-[1.65] mb-8 font-sans font-normal">
+                If you have questions about training locations, trial sessions, coaching suitability, training structure or schedule arrangements, you can find the main answers below or contact PersonalTrainer.sg directly through WhatsApp.
+              </p>
+              <a href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20have%20a%20question%20about%20Personal%20Training." target="_blank" rel="noopener noreferrer" className="btn-gold inline-flex items-center gap-2 group py-3.5 px-6 font-extrabold text-xs sm:text-sm uppercase tracking-wider rounded-lg">
+                <span>WHATSAPP PERSONALTRAINER.SG</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300 shrink-0" />
+              </a>
+            </ScrollReveal>
+          </div>
 
-        {/* Interactive Accordion List */}
-        <div className="lg:col-span-7 space-y-4">
-          {faqs.map((faq, i) => (
-            <ScrollReveal key={i} className="reveal-right-hidden">
-              <div className="border border-white/5 overflow-hidden transition-all duration-300">
-                <button
-                  onClick={() => setActiveFaq(activeFaq === i ? null : i)}
-                  className={`w-full flex justify-between items-center p-6 text-left transition-colors duration-300 focus:outline-none ${
-                    activeFaq === i
-                      ? "bg-[#C5A059] text-black font-bold font-oswald text-lg uppercase"
-                      : "bg-[#1a1a1a] text-white hover:text-[#C5A059] font-bold font-oswald text-lg uppercase"
-                  }`}
-                >
-                  <span>{faq.q}</span>
-                  <div className="transition-transform duration-300">
-                    {activeFaq === i ? (
-                      <span className="text-xl">↑</span>
-                    ) : (
-                      <span className="text-xl">↓</span>
-                    )}
-                  </div>
-                </button>
-                <div
-                  className={`transition-all duration-300 ease-in-out overflow-hidden bg-black ${
-                    activeFaq === i ? "max-h-[200px] border-t border-white/5 opacity-100" : "max-h-0 opacity-0"
-                  }`}
-                >
-                  <div className="p-6 text-sm text-white leading-relaxed">
-                    {faq.a}
+          {/* Interactive Accordion List */}
+          <div className="lg:col-span-7 space-y-4">
+            {faqs.map((faq, i) => (
+              <ScrollReveal key={i} className="reveal-right-hidden" delay={i * 100}>
+                <div className="border border-white/10 rounded-xl overflow-hidden transition-all duration-300 bg-[#0e0e0e] shadow-xl">
+                  <button
+                    onClick={() => setActiveFaq(activeFaq === i ? null : i)}
+                    className={`w-full flex justify-between items-center p-5 sm:p-6 text-left transition-colors duration-300 focus:outline-none ${
+                      activeFaq === i
+                        ? "bg-[#181818] text-[#C5A059] font-bold font-oswald text-base sm:text-lg uppercase border-b border-[#C5A059]/30"
+                        : "bg-[#0e0e0e] text-white hover:text-[#C5A059] font-bold font-oswald text-base sm:text-lg uppercase"
+                    }`}
+                  >
+                    <span className="pr-4 leading-snug">{faq.q}</span>
+                    <div className="transition-transform duration-300 shrink-0">
+                      <ChevronDown size={20} className={`text-[#C5A059] transition-transform duration-300 ${activeFaq === i ? "rotate-180" : ""}`} />
+                    </div>
+                  </button>
+                  <div
+                    className={`transition-all duration-300 ease-in-out overflow-hidden bg-[#070707] ${
+                      activeFaq === i ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="p-6 text-sm sm:text-base text-gray-200 leading-relaxed font-sans font-normal border-t border-white/5">
+                      {faq.a}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </ScrollReveal>
-          ))}
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Footer Section */}
-      <footer id="contact" className="bg-[#050505] py-16 px-6 md:px-12 border-t border-white/5">
-        <div className="max-w-7xl mx-auto">{/* Footer Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-white/5 pb-12 mb-12">
+      <footer id="contact" className="bg-[#050505] py-16 px-6 md:px-12 border-t border-white/10">
+        <div className="max-w-7xl mx-auto">
+          {/* Footer Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-white/10 pb-12 mb-12">
             
             {/* Footer Logo and About */}
             <div>
@@ -1265,27 +1390,28 @@ export default function Home() {
                   className="h-10 w-auto logo-glow"
                 />
                 <div className="flex flex-col text-left">
-                  <span className="text-white uppercase">Personal</span>
-                  <span className="text-[#C5A059] uppercase">Trainer.sg</span>
+                  <span className="text-white font-extrabold font-oswald tracking-tight text-lg leading-tight uppercase">
+                    Personal<span className="text-[#C5A059]">Trainer.sg</span>
+                  </span>
                 </div>
               </div>
-              <p className="text-white text-sm leading-relaxed mb-4">
+              <p className="text-white text-sm font-semibold mb-3 font-sans">
                 Led by Md Salaudin Adam (DONN)
               </p>
-              <ul className="text-white text-xs space-y-1.5 mb-6 font-sans">
+              <ul className="text-gray-300 text-xs space-y-1.5 mb-6 font-sans">
                 <li>• Founder and Fitness Director</li>
-                <li>• Transformation Specialist</li>
+                <li>• Premium Performance and Transformation Specialist</li>
                 <li>• Trusted in Singapore Since 2002</li>
                 <li>• 24 Years of Coaching Experience</li>
               </ul>
               <div className="flex gap-2">
-                <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center rounded hover:bg-white transition-colors duration-300">
                   <Facebook size={16} />
                 </a>
-                <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center rounded hover:bg-white transition-colors duration-300">
                   <Instagram size={16} />
                 </a>
-                <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center rounded hover:bg-white transition-colors duration-300">
                   <TikTokIcon size={16} />
                 </a>
               </div>
@@ -1294,7 +1420,7 @@ export default function Home() {
             {/* Quick Links */}
             <div>
               <h4 className="font-oswald text-lg font-bold text-white mb-6 uppercase tracking-wider">Quick Links</h4>
-              <ul className="space-y-3 text-sm text-white font-oswald">
+              <ul className="space-y-3 text-sm font-oswald">
                 {[
                   { name: "Home", url: "/" },
                   { name: "About Us", url: "/about" },
@@ -1303,7 +1429,7 @@ export default function Home() {
                   { name: "Contact Us", url: "/contact" }
                 ].map((link) => (
                   <li key={link.name}>
-                    <Link href={link.url} className="hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest text-xs">
+                    <Link href={link.url} className="text-gray-300 hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest text-xs">
                       {link.name}
                     </Link>
                   </li>
@@ -1314,7 +1440,7 @@ export default function Home() {
             {/* Open Hours */}
             <div>
               <h4 className="font-oswald text-lg font-bold text-white mb-6 uppercase tracking-wider">Open Hours</h4>
-              <p className="text-white text-sm tracking-wider font-oswald uppercase">
+              <p className="text-gray-300 text-xs sm:text-sm tracking-wider font-oswald uppercase">
                 By Appointment Only
               </p>
             </div>
@@ -1322,7 +1448,7 @@ export default function Home() {
             {/* Get in touch */}
             <div>
               <h4 className="font-oswald text-lg font-bold text-white mb-6 uppercase tracking-wider">Get in Touch</h4>
-              <ul className="space-y-4 text-sm text-white">
+              <ul className="space-y-4 text-xs sm:text-sm text-gray-300 font-sans">
                 <li className="flex items-start gap-3">
                   <Phone size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
                   <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="hover:text-[#C5A059] transition-colors duration-300">WhatsApp: +65 9108 1781</a>
@@ -1333,7 +1459,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>Condo Gyms & selected ActiveSG Gyms, Singapore</span>
+                  <span>Training locations arranged across Singapore</span>
                 </li>
               </ul>
             </div>
@@ -1341,11 +1467,11 @@ export default function Home() {
           </div>
 
           {/* Copyrights and Terms */}
-          <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+          <div className="flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-4 font-sans">
             <p>© 2026 PersonalTrainer.sg. All Rights Reserved. Led by Md Salaudin Adam (DONN).</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+              <Link href="/privacy" className="hover:text-[#C5A059] transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="hover:text-[#C5A059] transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>

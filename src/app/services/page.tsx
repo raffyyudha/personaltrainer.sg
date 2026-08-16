@@ -136,7 +136,7 @@ const blueprints = [
     title: "Couple Training",
     subtitle: "Train together, stay motivated and work towards better fitness as a team.",
     desc: "Couple Training is designed for two clients (partners, friends, or family members) who want to train together. Training with a partner is a great way to stay motivated, enjoy the process, and share the commitment. The sessions are planned to accommodate both individuals' fitness levels and objectives, ensuring that both participants get a structured and safe workout. It is an excellent option for couples who want to build healthy lifestyle habits together, stay consistent, and motivate each other through every workout.",
-    img: "/trainwith.png",
+    img: "/coupletraining.avif",
     suitableFor: [
       "Partners, friends or family members",
       "Clients who want training motivation",
@@ -1222,7 +1222,7 @@ export default function ServicesPage() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                <span>Condo gyms, selected ActiveSG gyms and suitable training locations across Singapore</span>
+                <span>Training locations arranged across Singapore</span>
               </li>
             </ul>
           </div>
@@ -1230,11 +1230,11 @@ export default function ServicesPage() {
         </div>
 
         {/* Copyrights and Terms */}
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-4 font-sans">
           <p>© 2026 PersonalTrainer.sg. All Rights Reserved. Led by Md Salaudin Adam (DONN).</p>
           <div className="flex gap-6">
-            <a href="/contact" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="/contact" className="hover:text-white transition-colors">Terms of Service</a>
+            <Link href="/privacy" className="hover:text-[#C5A059] transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#C5A059] transition-colors">Terms of Service</Link>
           </div>
         </div>
       </footer>

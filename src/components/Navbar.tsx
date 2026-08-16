@@ -79,34 +79,6 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
         className="fixed-header fixed top-0 left-0 right-0 w-full z-[9999] border-b border-white/10 overflow-visible shadow-2xl"
         style={{ background: '#000000', backgroundColor: '#000000', opacity: 1 }}
       >
-        {/* Top Info Bar - inside fixed header */}
-        <div className="hidden lg:flex justify-between items-center bg-[#050505] border-b border-white/10 px-8 py-2 text-sm text-white">
-          <div className="flex items-center gap-6">
-            <a href="https://wa.me/6591081781" className="flex items-center gap-2 hover:text-[#C5A059] transition-colors duration-300">
-              <Phone size={14} className="text-[#C5A059]" />
-              <span>WhatsApp: +65 9108 1781</span>
-            </a>
-            <a href="mailto:donn@personaltrainer.sg" className="flex items-center gap-2 hover:text-[#C5A059] transition-colors duration-300">
-              <Mail size={14} className="text-[#C5A059]" />
-              <span>donn@personaltrainer.sg</span>
-            </a>
-          </div>
-          <div className="flex items-center gap-4">
-            <span className="text-xs uppercase tracking-wider text-gray-500 font-bold">Follow us:</span>
-            <div className="flex gap-2">
-              <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
-                <Facebook size={14} />
-              </a>
-              <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
-                <Instagram size={14} />
-              </a>
-              <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:border-[#800020] hover:text-white transition-all duration-300">
-                <TikTokIcon size={14} />
-              </a>
-            </div>
-          </div>
-        </div>
-
         {/* Main Navigation Bar */}
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 py-3 lg:py-4">
           
