@@ -127,7 +127,7 @@ header + div + section,
 nav + section,
 nav + div + section,
 main > section:first-of-type {
-  padding-top: 8.5rem !important; /* Mobile clearance */
+  padding-top: 10.5rem !important; /* Mobile & tablet clearance so logo NEVER overlaps hero */
 }
 
 @media (min-width: 1024px) {
@@ -137,7 +137,7 @@ main > section:first-of-type {
   nav + section,
   nav + div + section,
   main > section:first-of-type {
-    padding-top: 13.5rem !important; /* ~216px clearance on desktop so logo never overlaps hero */
+    padding-top: 13.5rem !important; /* ~216px clearance on desktop */
   }
 }
 
@@ -364,13 +364,13 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
   nav + div + section,
   header + section,
   main > section:first-of-type {
-    padding-top: 5.5rem !important;
+    padding-top: 10.5rem !important;
+  }
+  .nav-links-container {
+    display: none !important;
   }
   nav {
     padding: 0.625rem 1rem !important;
-  }
-  nav .font-oswald:not([id="site-logo"] *):not([id="site-logo"]) {
-    font-size: 1rem !important;
   }
   nav #site-logo {
     gap: 0.5rem !important;

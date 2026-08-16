@@ -157,10 +157,10 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
           {/* Mobile Menu Trigger */}
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="lg:hidden w-10 h-10 border border-white/10 rounded-md flex items-center justify-center text-white hover:bg-[#800020] transition-colors duration-300 shrink-0 ml-auto"
-            aria-label="Toggle menu"
+            className="flex lg:hidden w-11 h-11 border-2 border-[#C5A059] bg-[#800020] rounded-lg items-center justify-center text-white hover:bg-[#9E1026] active:scale-95 transition-all duration-300 shrink-0 ml-auto shadow-lg relative z-[100]"
+            aria-label="Toggle mobile menu"
           >
-            <Menu size={20} />
+            <Menu size={24} className="text-[#C5A059]" />
           </button>
         </div>
       </header>
