@@ -512,8 +512,8 @@ export default function Home() {
                   <div className="bg-[#121212] border border-white/10 p-3.5 rounded-lg text-left flex items-start gap-3 hover:border-[#C5A059]/40 transition-colors">
                     <ShieldCheck className="text-[#C5A059] shrink-0 mt-0.5" size={22} />
                     <div>
-                      <span className="text-[#C5A059] font-oswald text-sm font-bold block uppercase">NASM &amp; TRX Certified</span>
-                      <span className="text-gray-300 text-xs font-sans block leading-tight">Safe, evidence-based coaching</span>
+                      <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-bold block uppercase">NASM | SOE | TRX | FMT | CPR | AED</span>
+                      <span className="text-gray-300 text-xs font-sans block leading-tight">Full professional certifications</span>
                     </div>
                   </div>
                   <div className="bg-[#121212] border border-white/10 p-3.5 rounded-lg text-left flex items-start gap-3 hover:border-[#C5A059]/40 transition-colors">
@@ -615,9 +615,9 @@ export default function Home() {
                   <span className="text-[#C5A059] font-oswald text-2xl sm:text-3xl font-black block">100%</span>
                   <span className="text-gray-300 text-xs font-sans uppercase font-bold block mt-1">Tailored Programmes</span>
                 </div>
-                <div className="bg-[#161616] border border-[#C5A059]/30 p-4 rounded-xl text-center">
-                  <span className="text-[#C5A059] font-oswald text-2xl sm:text-3xl font-black block">NASM / TRX</span>
-                  <span className="text-gray-300 text-xs font-sans uppercase font-bold block mt-1">Certified Specialist</span>
+                <div className="bg-[#161616] border border-[#C5A059]/30 p-4 rounded-xl text-center flex flex-col justify-center">
+                  <span className="text-[#C5A059] font-oswald text-sm sm:text-base font-black tracking-wider block uppercase">NASM | SOE | TRX | FMT | CPR | AED</span>
+                  <span className="text-gray-300 text-xs font-sans uppercase font-bold block mt-1">Full Certified Specialist</span>
                 </div>
                 <div className="bg-[#161616] border border-[#C5A059]/30 p-4 rounded-xl text-center">
                   <span className="text-[#C5A059] font-oswald text-2xl sm:text-3xl font-black block">SINCE 2002</span>
