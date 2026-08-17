@@ -35,7 +35,9 @@ import {
   ShieldCheck,
   ClipboardCheck,
   Crown,
-  Target
+  Target,
+  Star,
+  Sparkles
 } from "lucide-react";
 
 // ScrollReveal Wrapper Component — GSAP in ClientBody.tsx drives all animations
@@ -424,140 +426,241 @@ export default function Home() {
       </div>
 
       {/* About Us Section */}
-      <section id="about" className="bg-[#1a1a1a] py-12 md:py-20 px-6 md:px-12 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-0 items-stretch">
+      <section id="about" className="bg-[#050505] py-12 md:py-20 px-4 sm:px-6 md:px-12 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto border-2 border-[#C5A059]/40 rounded-2xl bg-[#090909] shadow-2xl overflow-hidden grid lg:grid-cols-12 gap-0 items-stretch">
           
           {/* About Left Side - Brand Showcase & Large Logo Display */}
-          <div className="relative h-full">
-            <ScrollReveal className="reveal-left-hidden h-full">
-              <div className="relative bg-[#0d0d0d] border border-[#C5A059]/30 p-6 sm:p-10 lg:p-12 h-full flex flex-col justify-between overflow-hidden group">
-                {/* Ambient Glow & Grid Effects */}
-                <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#800020] rounded-full blur-[120px] opacity-30 pointer-events-none" />
-                <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-[#C5A059] rounded-full blur-[140px] opacity-20 pointer-events-none" />
-                <div className="absolute inset-0 bg-[radial-gradient(#222_1px,transparent_1px)] bg-[size:16px_16px] opacity-25 pointer-events-none" />
+          <div className="lg:col-span-5 relative bg-[#0c0c0c] p-6 sm:p-8 lg:p-10 flex flex-col justify-between overflow-hidden group border-b lg:border-b-0 lg:border-r-2 border-[#C5A059]/30">
+            {/* Ambient Glow & Grid Effects */}
+            <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#800020] rounded-full blur-[120px] opacity-30 pointer-events-none" />
+            <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-[#C5A059] rounded-full blur-[140px] opacity-20 pointer-events-none" />
+            <div className="absolute inset-0 bg-[radial-gradient(#222_1px,transparent_1px)] bg-[size:16px_16px] opacity-30 pointer-events-none" />
 
-                <div className="relative z-10 flex flex-col items-center text-center my-auto">
-                  {/* Large Official Brand Shield Logo */}
-                  <div className="relative mb-6">
-                    <div className="absolute inset-0 bg-[#C5A059]/25 rounded-full blur-3xl transform scale-125" />
-                    <img
-                      src="/logopt.png"
-                      alt="PersonalTrainer.sg Official Crest"
-                      className="w-56 sm:w-64 md:w-72 lg:w-80 h-auto object-contain relative z-10 drop-shadow-[0_0_35px_rgba(197,160,89,0.55)] transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
+            <ScrollReveal className="reveal-left-hidden flex flex-col justify-between h-full relative z-10 space-y-6">
+              
+              {/* Top Header Bar */}
+              <div className="w-full flex items-center justify-between border-b border-white/10 pb-4">
+                <div className="flex items-center gap-2 text-[#C5A059] font-oswald text-xs sm:text-sm font-bold uppercase tracking-widest">
+                  <Crown size={16} className="shrink-0" />
+                  <span>OFFICIAL BRAND CREST</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={14} className="text-[#C5A059] fill-[#C5A059]" />
+                  ))}
+                </div>
+              </div>
 
-                  {/* Tagline Badge */}
-                  <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-extrabold uppercase tracking-[0.25em] px-4 py-1.5 bg-white/5 border border-[#C5A059]/30 inline-block mb-3">
-                    Trusted in Singapore Since 2002
-                  </span>
+              {/* Center Logo Showcase */}
+              <div className="flex flex-col items-center text-center my-auto w-full">
+                <div className="relative mb-4">
+                  <div className="absolute inset-0 bg-[#C5A059]/25 rounded-full blur-3xl transform scale-125 pointer-events-none" />
+                  <img
+                    src="/logopt.png"
+                    alt="PersonalTrainer.sg Official Crest"
+                    className="w-48 sm:w-56 md:w-64 h-auto object-contain relative z-10 drop-shadow-[0_0_35px_rgba(197,160,89,0.55)] transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
 
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black font-syne uppercase tracking-tight text-white mb-2">
-                    PersonalTrainer.sg
-                  </h3>
+                <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] px-4 py-1.5 bg-white/5 border border-[#C5A059]/30 inline-block mb-3 rounded whitespace-nowrap">
+                  Trusted in Singapore Since 2002
+                </span>
 
-                  <p className="text-gray-300 text-sm sm:text-base font-sans max-w-md leading-relaxed mb-6">
-                    Singapore&apos;s Premier 1-on-1 Personal Training &amp; Body Transformation Specialist. Led by Md Salaudin Adam (DONN), Fitness Director &amp; Founder.
-                  </p>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black font-oswald uppercase tracking-tight text-white mb-2 whitespace-nowrap">
+                  PERSONAL<span className="text-[#C5A059]">TRAINER.SG</span>
+                </h3>
 
-                  {/* Integrated Training Preview Image Frame */}
-                  <div className="w-full relative overflow-hidden border border-white/10 rounded-lg shadow-2xl my-2 group-hover:border-[#C5A059]/50 transition-colors duration-500">
-                    <img
-                      src="/aboutus.avif"
-                      alt="Personal Training in Action"
-                      className="w-full h-48 sm:h-56 md:h-64 object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-4 text-left">
-                      <div>
-                        <span className="text-[#C5A059] font-oswald text-xs font-bold uppercase tracking-wider block">
-                          24+ Years of Coaching Leadership
-                        </span>
-                        <span className="text-white font-syne text-sm sm:text-base font-bold block">
-                          Structured &amp; Results-Focused Coaching
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                <p className="text-gray-300 text-xs sm:text-sm font-sans max-w-sm leading-relaxed mb-4 font-normal">
+                  Singapore&apos;s Premier 1-on-1 Personal Training &amp; Body Transformation Specialist. Led by Md Salaudin Adam (DONN), Fitness Director &amp; Founder.
+                </p>
 
-                  {/* 4 Feature Highlights Grid */}
-                  <div className="grid grid-cols-2 gap-3 w-full mt-4">
-                    <div className="bg-white/5 border border-white/10 p-3 rounded text-left flex items-center gap-3">
-                      <Award className="text-[#C5A059] shrink-0" size={20} />
-                      <div>
-                        <span className="text-[#C5A059] font-oswald text-xs font-bold block uppercase">24 Years</span>
-                        <span className="text-gray-300 text-[11px] font-sans block leading-tight">Coaching Experience</span>
-                      </div>
-                    </div>
-                    <div className="bg-white/5 border border-white/10 p-3 rounded text-left flex items-center gap-3">
-                      <Target className="text-[#C5A059] shrink-0" size={20} />
-                      <div>
-                        <span className="text-[#C5A059] font-oswald text-xs font-bold block uppercase">100% Custom</span>
-                        <span className="text-gray-300 text-[11px] font-sans block leading-tight">Tailored Programmes</span>
-                      </div>
-                    </div>
-                    <div className="bg-white/5 border border-white/10 p-3 rounded text-left flex items-center gap-3">
-                      <ShieldCheck className="text-[#C5A059] shrink-0" size={20} />
-                      <div>
-                        <span className="text-[#C5A059] font-oswald text-xs font-bold block uppercase">NASM &amp; TRX</span>
-                        <span className="text-gray-300 text-[11px] font-sans block leading-tight">Certified Specialist</span>
-                      </div>
-                    </div>
-                    <div className="bg-white/5 border border-white/10 p-3 rounded text-left flex items-center gap-3">
-                      <Crown className="text-[#C5A059] shrink-0" size={20} />
-                      <div>
-                        <span className="text-[#C5A059] font-oswald text-xs font-bold block uppercase">Singapore</span>
-                        <span className="text-gray-300 text-[11px] font-sans block leading-tight">Trusted Since 2002</span>
-                      </div>
+                {/* Integrated Training Preview Image Frame */}
+                <div className="w-full relative overflow-hidden border border-white/10 rounded-xl shadow-2xl my-2 group-hover:border-[#C5A059]/50 transition-colors duration-500">
+                  <img
+                    src="/aboutus.avif"
+                    alt="Personal Training in Action"
+                    className="w-full h-48 sm:h-56 md:h-60 object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex items-end p-4 text-left">
+                    <div>
+                      <span className="text-[#C5A059] font-oswald text-xs font-bold uppercase tracking-wider block">
+                        24+ Years of Coaching Leadership
+                      </span>
+                      <span className="text-white font-syne text-xs sm:text-sm font-bold block">
+                        Structured &amp; Results-Focused Coaching
+                      </span>
                     </div>
                   </div>
                 </div>
+
+                {/* 4 Large Feature Highlight Cards (Full height coverage) */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mt-4">
+                  <div className="bg-[#121212] border border-white/10 p-3.5 rounded-lg text-left flex items-start gap-3 hover:border-[#C5A059]/40 transition-colors">
+                    <Award className="text-[#C5A059] shrink-0 mt-0.5" size={22} />
+                    <div>
+                      <span className="text-[#C5A059] font-oswald text-sm font-bold block uppercase">24 Years Leadership</span>
+                      <span className="text-gray-300 text-xs font-sans block leading-tight">Proven transformation experience</span>
+                    </div>
+                  </div>
+                  <div className="bg-[#121212] border border-white/10 p-3.5 rounded-lg text-left flex items-start gap-3 hover:border-[#C5A059]/40 transition-colors">
+                    <Target className="text-[#C5A059] shrink-0 mt-0.5" size={22} />
+                    <div>
+                      <span className="text-[#C5A059] font-oswald text-sm font-bold block uppercase">100% Tailored Plan</span>
+                      <span className="text-gray-300 text-xs font-sans block leading-tight">Customized for your body &amp; goal</span>
+                    </div>
+                  </div>
+                  <div className="bg-[#121212] border border-white/10 p-3.5 rounded-lg text-left flex items-start gap-3 hover:border-[#C5A059]/40 transition-colors">
+                    <ShieldCheck className="text-[#C5A059] shrink-0 mt-0.5" size={22} />
+                    <div>
+                      <span className="text-[#C5A059] font-oswald text-sm font-bold block uppercase">NASM &amp; TRX Certified</span>
+                      <span className="text-gray-300 text-xs font-sans block leading-tight">Safe, evidence-based coaching</span>
+                    </div>
+                  </div>
+                  <div className="bg-[#121212] border border-white/10 p-3.5 rounded-lg text-left flex items-start gap-3 hover:border-[#C5A059]/40 transition-colors">
+                    <Sparkles className="text-[#C5A059] shrink-0 mt-0.5" size={22} />
+                    <div>
+                      <span className="text-[#C5A059] font-oswald text-sm font-bold block uppercase">DONN DEPS System</span>
+                      <span className="text-gray-300 text-xs font-sans block leading-tight">Signature training methodology</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Golden Trophy & Trust Banner Box at Bottom */}
+                <div className="w-full mt-4 bg-gradient-to-r from-[#800020]/20 via-[#161616] to-[#C5A059]/20 border border-[#C5A059]/40 p-4 rounded-xl text-center shadow-lg">
+                  <div className="flex items-center justify-center gap-2 mb-1">
+                    <Crown size={18} className="text-[#C5A059]" />
+                    <span className="text-white font-oswald text-xs sm:text-sm font-bold uppercase tracking-wider">
+                      SINGAPORE PREMIER 1-ON-1 COACHING
+                    </span>
+                  </div>
+                  <p className="text-[#C5A059] font-sans text-xs italic font-medium">
+                    &quot;If Results Matter, Experience Counts.&quot;
+                  </p>
+                  <div className="mt-2 text-[10px] text-gray-300 font-oswald uppercase tracking-widest flex items-center justify-center gap-2">
+                    <span>★ 100% DEDICATED</span>
+                    <span>•</span>
+                    <span>PROVEN RESULTS</span>
+                  </div>
+                </div>
+
               </div>
+
+              {/* Bottom Footer Accent Bar */}
+              <div className="w-full pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#C5A059] font-oswald font-extrabold uppercase tracking-widest">
+                <span>IF RESULTS MATTERS</span>
+                <span className="text-white/30">•</span>
+                <span>EST. 2002 SINGAPORE</span>
+              </div>
+
             </ScrollReveal>
           </div>
 
           {/* About Content - Right Side */}
-          <div className="bg-[#2a2a2a] p-6 sm:p-10 lg:p-16 flex flex-col justify-center">
-            <ScrollReveal className="reveal-right-hidden">
-              <span className="section-label">
-                <Users size={16} className="text-[#C5A059]" /> INTRODUCTION
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.2rem] xl:text-[2.6rem] font-black leading-tight mb-6 font-syne">
-                Personal Training Built for Real Results
-              </h2>
-              <div className="text-white text-base md:text-lg leading-relaxed mb-8 space-y-4">
-                <p>
-                  At PersonalTrainer.sg, Personal Training is not about random workouts, temporary motivation or short term fitness trends. It is about proper coaching, structured programming, safe training, discipline, accountability and real progress.
-                </p>
-                <p>
-                  Whether your goal is Weight Loss, Strength Training, Body Toning, Senior Fitness, Couple Training, Kickboxing Fitness or complete Lifestyle Transformation, your programme will be planned according to your body, fitness level, goals and lifestyle.
-                </p>
-                <p>
-                  Every client is different. Every body is different. Every goal is different. That is why every training plan must be personal, practical and progressive. With Md Salaudin Adam (DONN), you are guided by 24 Years of Coaching Experience, proper technique, realistic planning and a results focused approach.
-                </p>
+          <div className="lg:col-span-7 bg-[#111111] p-6 sm:p-10 lg:p-16 flex flex-col justify-between">
+            <ScrollReveal className="reveal-right-hidden space-y-8">
+              <div>
+                <span className="section-label">
+                  <Users size={18} className="text-[#C5A059]" /> INTRODUCTION
+                </span>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight mb-6 font-syne text-white tracking-tight">
+                  Personal Training Built for Real Results
+                </h2>
+                <div className="text-gray-100 text-base sm:text-lg lg:text-xl leading-relaxed space-y-5 font-sans font-normal">
+                  <p>
+                    At PersonalTrainer.sg, Personal Training is not about random workouts, temporary motivation or short term fitness trends. It is about proper coaching, structured programming, safe training, discipline, accountability and real progress.
+                  </p>
+                  <p>
+                    Whether your goal is Weight Loss, Strength Training, Body Toning, Senior Fitness, Couple Training, Kickboxing Fitness or complete Lifestyle Transformation, your programme will be planned according to your body, fitness level, goals and lifestyle.
+                  </p>
+                  <p>
+                    Every client is different. Every body is different. Every goal is different. That is why every training plan must be personal, practical and progressive. With Md Salaudin Adam (DONN), you are guided by 24 Years of Coaching Experience, proper technique, realistic planning and a results focused approach.
+                  </p>
+                </div>
               </div>
 
-              <a href="#trial" className="btn-primary group inline-flex mb-10">
-                <span>Book Trial Session</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
+              <div className="pt-2">
+                <a href="#trial" className="btn-primary group inline-flex text-base sm:text-lg px-8 py-4">
+                  <span>Book Trial Session</span>
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
+                </a>
+              </div>
 
-              {/* Vision Block (Premium Positioning Heading 1) */}
-              <div className="mb-6">
-                <h3 className="text-2xl md:text-3xl font-black font-syne mb-3">Not Just Workouts</h3>
-                <p className="text-white text-base leading-relaxed">
+              {/* Vision Block */}
+              <div className="bg-[#181818] border-2 border-white/10 p-6 sm:p-8 rounded-xl shadow-xl">
+                <h3 className="text-xl sm:text-2xl font-black font-syne text-[#C5A059] mb-3 uppercase tracking-wide">
+                  Not Just Workouts
+                </h3>
+                <p className="text-gray-200 text-sm sm:text-base lg:text-lg font-sans leading-relaxed font-normal">
                   A proper transformation does not happen from exercise alone. It happens when training, discipline, consistency, nutrition awareness, accountability and lifestyle habits work together. At PersonalTrainer.sg, every programme is designed to help you train better, move better, feel better and build confidence through structured coaching.
                 </p>
               </div>
 
-              {/* Divider */}
-              <div className="border-t border-white/10 my-4" />
-
-              {/* Mission Block (Premium Positioning Heading 2) */}
-              <div>
-                <h3 className="text-2xl md:text-3xl font-black font-syne mb-3">A Complete Coaching System</h3>
-                <p className="text-white text-base leading-relaxed">
+              {/* Mission Block */}
+              <div className="bg-[#181818] border-2 border-white/10 p-6 sm:p-8 rounded-xl shadow-xl">
+                <h3 className="text-xl sm:text-2xl font-black font-syne text-[#C5A059] mb-3 uppercase tracking-wide">
+                  A Complete Coaching System
+                </h3>
+                <p className="text-gray-200 text-sm sm:text-base lg:text-lg font-sans leading-relaxed font-normal">
                   The goal is not just to make you sweat. The goal is to help you improve your body, health, strength, fitness and lifestyle in a way that can be maintained.
                 </p>
+              </div>
+
+              {/* Asset Block 1: 4 Transformation Key Stats Grid */}
+              <div className="grid grid-cols-2 gap-3.5 pt-2">
+                <div className="bg-[#161616] border border-[#C5A059]/30 p-4 rounded-xl text-center">
+                  <span className="text-[#C5A059] font-oswald text-2xl sm:text-3xl font-black block">24+ YEARS</span>
+                  <span className="text-gray-300 text-xs font-sans uppercase font-bold block mt-1">Coaching Leadership</span>
+                </div>
+                <div className="bg-[#161616] border border-[#C5A059]/30 p-4 rounded-xl text-center">
+                  <span className="text-[#C5A059] font-oswald text-2xl sm:text-3xl font-black block">100%</span>
+                  <span className="text-gray-300 text-xs font-sans uppercase font-bold block mt-1">Tailored Programmes</span>
+                </div>
+                <div className="bg-[#161616] border border-[#C5A059]/30 p-4 rounded-xl text-center">
+                  <span className="text-[#C5A059] font-oswald text-2xl sm:text-3xl font-black block">NASM / TRX</span>
+                  <span className="text-gray-300 text-xs font-sans uppercase font-bold block mt-1">Certified Specialist</span>
+                </div>
+                <div className="bg-[#161616] border border-[#C5A059]/30 p-4 rounded-xl text-center">
+                  <span className="text-[#C5A059] font-oswald text-2xl sm:text-3xl font-black block">SINCE 2002</span>
+                  <span className="text-gray-300 text-xs font-sans uppercase font-bold block mt-1">Trusted in Singapore</span>
+                </div>
+              </div>
+
+              {/* Asset Block 2: 3 Core Pillars Checklist */}
+              <div className="bg-[#141414] border border-white/10 p-5 rounded-xl space-y-3">
+                <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-extrabold uppercase tracking-widest block mb-2">
+                  OUR CORE GUARANTEE TO EVERY CLIENT
+                </span>
+                {[
+                  "Dedicated 1-on-1 Personal Attention at Every Session",
+                  "Structured Movement & Posture Correction System (DEPS)",
+                  "Sustainable Lifestyle, Nutrition & Accountability Support"
+                ].map((pillar, idx) => (
+                  <div key={idx} className="flex items-center gap-3 text-gray-200 text-xs sm:text-sm font-sans font-medium">
+                    <CheckCircle size={18} className="text-[#C5A059] shrink-0" />
+                    <span>{pillar}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Asset Block 3: Gold & Maroon Quick Action WhatsApp Bar */}
+              <div className="bg-gradient-to-r from-[#800020] via-[#1a050a] to-[#0d0d0d] border-2 border-[#C5A059]/50 p-5 sm:p-6 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xl">
+                <div>
+                  <span className="text-white font-syne text-base sm:text-lg font-black uppercase block">
+                    Ready to Start Your Transformation?
+                  </span>
+                  <span className="text-gray-300 text-xs sm:text-sm font-sans block mt-1 font-normal">
+                    WhatsApp Md Salaudin Adam (DONN) directly for availability &amp; trial sessions.
+                  </span>
+                </div>
+                <a
+                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Personal%20Training."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#C5A059] hover:bg-white text-black font-oswald font-extrabold uppercase tracking-wider text-xs sm:text-sm px-6 py-3 rounded-lg transition-all duration-300 shrink-0 shadow-lg flex items-center gap-2 whitespace-nowrap"
+                >
+                  <span>WhatsApp Now</span>
+                  <ArrowUpRight size={16} />
+                </a>
               </div>
             </ScrollReveal>
           </div>
@@ -638,13 +741,21 @@ export default function Home() {
               img: "/onlinecoaching.avif"
             }
           ].map((srv) => (
-            <div key={srv.num} className="group relative h-80 sm:h-84 md:h-88 lg:h-96 overflow-hidden border border-white/5 hover:border-[#C5A059]/30 transition-all duration-500 rounded-sm">
+            <div key={srv.num} className="group relative h-80 sm:h-84 md:h-88 lg:h-96 overflow-hidden border border-white/5 hover:border-[#C5A059]/30 transition-all duration-500 rounded-sm bg-black">
               <img
                 src={srv.img}
                 alt={srv.title}
-                className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
+                className={`w-full h-full transition-all duration-700 ${
+                  srv.img.includes('senior-fitness') || srv.img.includes('corporate-wellness')
+                    ? "object-contain bg-black p-1 scale-100 group-hover:scale-105"
+                    : "object-cover object-top scale-100 group-hover:scale-105"
+                }`}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent transition-all duration-300 group-hover:bg-black/75" />
+              <div className={`absolute inset-0 transition-all duration-300 pointer-events-none ${
+                srv.img.includes('senior-fitness') || srv.img.includes('corporate-wellness')
+                  ? "bg-gradient-to-t from-black/80 via-transparent to-transparent group-hover:bg-black/40"
+                  : "bg-gradient-to-t from-black via-black/40 to-transparent group-hover:bg-black/75"
+              }`} />
               
               {/* Gold Arrow Button at Top Right */}
               <div className="absolute top-6 right-6 z-20">
