@@ -427,17 +427,90 @@ export default function Home() {
       <section id="about" className="bg-[#1a1a1a] py-12 md:py-20 px-6 md:px-12 relative overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-0 items-stretch">
           
-          {/* About Image with Decorative Block */}
-          <div className="relative">
+          {/* About Left Side - Brand Showcase & Large Logo Display */}
+          <div className="relative h-full">
             <ScrollReveal className="reveal-left-hidden h-full">
-              {/* Maroon Decorative Rectangle - behind and to the left/above of image */}
-              <div className="absolute left-0 top-0 w-[60%] h-[45%] bg-[#800020] -z-0" />
-              <div className="relative z-10 pt-12 pl-12 pr-4 pb-4 lg:pr-0 lg:pb-0">
-                <img
-                  src="/aboutus.avif"
-                  alt="Fitness Training"
-                  className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-700"
-                />
+              <div className="relative bg-[#0d0d0d] border border-[#C5A059]/30 p-6 sm:p-10 lg:p-12 h-full flex flex-col justify-between overflow-hidden group">
+                {/* Ambient Glow & Grid Effects */}
+                <div className="absolute -top-24 -left-24 w-80 h-80 bg-[#800020] rounded-full blur-[120px] opacity-30 pointer-events-none" />
+                <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-[#C5A059] rounded-full blur-[140px] opacity-20 pointer-events-none" />
+                <div className="absolute inset-0 bg-[radial-gradient(#222_1px,transparent_1px)] bg-[size:16px_16px] opacity-25 pointer-events-none" />
+
+                <div className="relative z-10 flex flex-col items-center text-center my-auto">
+                  {/* Large Official Brand Shield Logo */}
+                  <div className="relative mb-6">
+                    <div className="absolute inset-0 bg-[#C5A059]/25 rounded-full blur-3xl transform scale-125" />
+                    <img
+                      src="/logopt.png"
+                      alt="PersonalTrainer.sg Official Crest"
+                      className="w-56 sm:w-64 md:w-72 lg:w-80 h-auto object-contain relative z-10 drop-shadow-[0_0_35px_rgba(197,160,89,0.55)] transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+
+                  {/* Tagline Badge */}
+                  <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-extrabold uppercase tracking-[0.25em] px-4 py-1.5 bg-white/5 border border-[#C5A059]/30 inline-block mb-3">
+                    Trusted in Singapore Since 2002
+                  </span>
+
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black font-syne uppercase tracking-tight text-white mb-2">
+                    PersonalTrainer.sg
+                  </h3>
+
+                  <p className="text-gray-300 text-sm sm:text-base font-sans max-w-md leading-relaxed mb-6">
+                    Singapore&apos;s Premier 1-on-1 Personal Training &amp; Body Transformation Specialist. Led by Md Salaudin Adam (DONN), Fitness Director &amp; Founder.
+                  </p>
+
+                  {/* Integrated Training Preview Image Frame */}
+                  <div className="w-full relative overflow-hidden border border-white/10 rounded-lg shadow-2xl my-2 group-hover:border-[#C5A059]/50 transition-colors duration-500">
+                    <img
+                      src="/aboutus.avif"
+                      alt="Personal Training in Action"
+                      className="w-full h-48 sm:h-56 md:h-64 object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex items-end p-4 text-left">
+                      <div>
+                        <span className="text-[#C5A059] font-oswald text-xs font-bold uppercase tracking-wider block">
+                          24+ Years of Coaching Leadership
+                        </span>
+                        <span className="text-white font-syne text-sm sm:text-base font-bold block">
+                          Structured &amp; Results-Focused Coaching
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* 4 Feature Highlights Grid */}
+                  <div className="grid grid-cols-2 gap-3 w-full mt-4">
+                    <div className="bg-white/5 border border-white/10 p-3 rounded text-left flex items-center gap-3">
+                      <Award className="text-[#C5A059] shrink-0" size={20} />
+                      <div>
+                        <span className="text-[#C5A059] font-oswald text-xs font-bold block uppercase">24 Years</span>
+                        <span className="text-gray-300 text-[11px] font-sans block leading-tight">Coaching Experience</span>
+                      </div>
+                    </div>
+                    <div className="bg-white/5 border border-white/10 p-3 rounded text-left flex items-center gap-3">
+                      <Target className="text-[#C5A059] shrink-0" size={20} />
+                      <div>
+                        <span className="text-[#C5A059] font-oswald text-xs font-bold block uppercase">100% Custom</span>
+                        <span className="text-gray-300 text-[11px] font-sans block leading-tight">Tailored Programmes</span>
+                      </div>
+                    </div>
+                    <div className="bg-white/5 border border-white/10 p-3 rounded text-left flex items-center gap-3">
+                      <ShieldCheck className="text-[#C5A059] shrink-0" size={20} />
+                      <div>
+                        <span className="text-[#C5A059] font-oswald text-xs font-bold block uppercase">NASM &amp; TRX</span>
+                        <span className="text-gray-300 text-[11px] font-sans block leading-tight">Certified Specialist</span>
+                      </div>
+                    </div>
+                    <div className="bg-white/5 border border-white/10 p-3 rounded text-left flex items-center gap-3">
+                      <Crown className="text-[#C5A059] shrink-0" size={20} />
+                      <div>
+                        <span className="text-[#C5A059] font-oswald text-xs font-bold block uppercase">Singapore</span>
+                        <span className="text-gray-300 text-[11px] font-sans block leading-tight">Trusted Since 2002</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
           </div>
@@ -538,7 +611,7 @@ export default function Home() {
               num: "04.",
               title: "Senior Fitness Training",
               desc: "Safe and structured training for older adults who want to improve strength, balance, mobility, stability and daily movement confidence. The training is adjusted according to ability, condition and comfort level.",
-              img: "/aboutus.avif"
+              img: "/senior-fitness.avif"
             },
             {
               num: "05.",
@@ -565,7 +638,7 @@ export default function Home() {
               img: "/onlinecoaching.avif"
             }
           ].map((srv) => (
-            <div key={srv.num} className="group relative h-96 overflow-hidden border border-white/5 hover:border-[#C5A059]/30 transition-all duration-500 rounded-sm">
+            <div key={srv.num} className="group relative h-80 sm:h-84 md:h-88 lg:h-96 overflow-hidden border border-white/5 hover:border-[#C5A059]/30 transition-all duration-500 rounded-sm">
               <img
                 src={srv.img}
                 alt={srv.title}
@@ -673,7 +746,7 @@ export default function Home() {
             ].map((cls) => (
               <div key={cls.title} className="grid lg:grid-cols-12 overflow-hidden group rounded-2xl border-2 border-white/10 bg-[#0d0d0d] shadow-2xl">
                 {/* Left Column: Image Thumbnail */}
-                <div className="lg:col-span-5 min-h-[380px] lg:min-h-[580px] overflow-hidden relative border-b lg:border-b-0 lg:border-r-2 border-white/10 flex items-center justify-center">
+                <div className="lg:col-span-5 min-h-[280px] sm:min-h-[340px] lg:min-h-[460px] xl:min-h-[540px] overflow-hidden relative border-b lg:border-b-0 lg:border-r-2 border-white/10 flex items-center justify-center">
                   <img
                     src={cls.img}
                     alt={cls.title}

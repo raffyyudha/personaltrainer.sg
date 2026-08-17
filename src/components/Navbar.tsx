@@ -107,7 +107,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
                 <div key={item.name} className="relative group py-1">
                   <Link
                     href={item.url}
-                    className={`text-xs xl:text-sm font-oswald uppercase tracking-widest font-bold transition-colors duration-300 relative flex flex-col items-start ${
+                    className={`text-base lg:text-lg xl:text-xl font-oswald uppercase tracking-wider font-extrabold transition-colors duration-300 relative flex flex-col items-start ${
                       isActive ? "text-[#C5A059]" : "text-white hover:text-[#C5A059]"
                     }`}
                   >

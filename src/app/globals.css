@@ -550,30 +550,66 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
     display: none !important;
   }
 }
-/* Infinite Marquee Scrolling Animation */
+/* Infinite Marquee Scrolling Animation & Crystal-Clear Crisp Render Fix */
 @keyframes marquee {
   0% {
-    transform: translateX(0%);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 .animate-marquee {
-  display: flex;
-  width: max-content;
-  animation: marquee 35s linear infinite;
+  display: flex !important;
+  width: max-content !important;
+  max-width: none !important;
+  gap: 0 !important;
+  white-space: nowrap !important;
+  animation: marquee 35s linear infinite !important;
   will-change: transform;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .animate-marquee:hover {
   animation-play-state: paused;
 }
 
+/* Strict exemption for Marquee container & children to prevent text collision, stacking & blurring */
+.animate-marquee,
+.animate-marquee div,
+.animate-marquee span,
+.animate-marquee * {
+  max-width: none !important;
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+  word-wrap: normal !important;
+  word-break: normal !important;
+  -webkit-hyphens: none !important;
+  hyphens: none !important;
+  flex-shrink: 0 !important;
+}
+
 /* Global paragraph text sizing for maximum legibility */
 p {
   line-height: 1.65;
+}
+
+/* Universal Image Protection - Prevents cropping/clipping on all laptop screens & viewports */
+img {
+  max-width: 100%;
+  object-position: center 20%;
+}
+
+/* Responsive Image Cards for Small Laptops (13" / 14" screens & 125%-150% scaling) */
+@media (max-width: 1440px) {
+  .grid img {
+    object-position: center top !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -639,7 +675,7 @@ div[id*="vercel-toolbar"] {
   align-items: center;
   padding: 10px 18px;
   font-family: Oswald, sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   color: #e5e5e5;
   text-transform: uppercase;

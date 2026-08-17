@@ -298,7 +298,7 @@ const blueprints = [
     title: "Senior Fitness Training",
     subtitle: "Safe, structured and practical training for older adults.",
     desc: "Senior Fitness Training is designed for older adults who want to improve strength, balance, mobility, stability and daily movement confidence. The programme is adjusted according to the client’s ability, comfort level, medical background and current fitness condition. The focus is not on pushing aggressively. The focus is on safe movement, better control, stronger muscles, improved balance and confidence in daily activities. Training can help seniors maintain independence, move better and feel more capable in everyday life.",
-    img: "/aboutus.avif",
+    img: "/senior-fitness.avif",
     note: "For clients with medical conditions, doctor’s clearance may be required before starting training.",
     suitableFor: [
       "Older adults who want safe training",
