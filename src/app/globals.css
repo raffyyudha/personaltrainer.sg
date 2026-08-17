@@ -594,9 +594,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
   flex-shrink: 0 !important;
 }
 
-/* Global paragraph text sizing for maximum legibility */
+/* Global paragraph text sizing for maximum legibility across all desktop & mobile/Android screens */
 p {
-  line-height: 1.65;
+  font-size: 1.0625rem;
+  line-height: 1.7;
 }
 
 /* Universal Image Protection - Prevents cropping/clipping on all laptop screens & viewports */
@@ -614,8 +615,8 @@ img {
 
 @media (max-width: 767px) {
   p {
-    font-size: 1rem !important;
-    line-height: 1.6 !important;
+    font-size: 1.0625rem !important;
+    line-height: 1.65 !important;
   }
 }
 

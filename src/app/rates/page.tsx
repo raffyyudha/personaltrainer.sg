@@ -289,7 +289,7 @@ export default function RatesPage() {
                   </div>
                   <h3 className="font-oswald text-xl font-bold uppercase text-white mb-3">Coaching Expertise</h3>
                   <p className="text-gray-200 text-sm sm:text-base leading-relaxed font-sans font-normal">
-                    Direct coaching from Founder Md Salaudin Adam (DONN), NASM & TRX Certified Transformation Specialist with 24 Years of Coaching Experience in Singapore.
+                    Direct coaching from Founder Md Salaudin Adam (DONN), NASM | SOE | TRX | FMT | CPR | AED Certified Transformation Specialist with 24 Years of Coaching Experience in Singapore.
                   </p>
                 </div>
               </div>

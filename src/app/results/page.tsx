@@ -275,12 +275,12 @@ export default function ResultPage() {
               <div className="mt-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="font-oswald text-xl font-bold uppercase text-white hover:text-[#C5A059] transition-colors duration-300">Client Transformation #1</h3>
-                    <p className="text-xs uppercase tracking-widest text-[#800020] font-bold mt-0.5">Weight Loss & Body Toning</p>
+                    <h3 className="font-oswald text-xl sm:text-2xl font-bold uppercase text-white hover:text-[#C5A059] transition-colors duration-300">Client Transformation #1</h3>
+                    <p className="text-xs sm:text-sm uppercase tracking-widest text-[#800020] font-bold mt-0.5">Weight Loss &amp; Body Toning</p>
                   </div>
-                  <span className="bg-[#800020]/10 border border-[#800020]/30 px-2.5 py-0.5 rounded text-[10px] uppercase tracking-widest text-[#C5A059] font-bold">1-on-1 Coaching</span>
+                  <span className="bg-[#800020]/10 border border-[#800020]/30 px-3 py-1 rounded text-xs uppercase tracking-widest text-[#C5A059] font-bold">1-on-1 Coaching</span>
                 </div>
-                <p className="text-white text-xs italic leading-relaxed border-l-2 border-[#800020] pl-3 font-sans">
+                <p className="text-gray-100 text-sm sm:text-base italic leading-relaxed border-l-2 border-[#800020] pl-3 font-sans mt-3">
                   Real client transformation achieved through structured personal training and nutritional guidance.
                 </p>
               </div>
@@ -296,12 +296,12 @@ export default function ResultPage() {
               <div className="mt-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="font-oswald text-xl font-bold uppercase text-white hover:text-[#C5A059] transition-colors duration-300">Client Transformation #2</h3>
-                    <p className="text-xs uppercase tracking-widest text-[#800020] font-bold mt-0.5">Fat Loss & Muscle Building</p>
+                    <h3 className="font-oswald text-xl sm:text-2xl font-bold uppercase text-white hover:text-[#C5A059] transition-colors duration-300">Client Transformation #2</h3>
+                    <p className="text-xs sm:text-sm uppercase tracking-widest text-[#800020] font-bold mt-0.5">Fat Loss &amp; Muscle Building</p>
                   </div>
-                  <span className="bg-[#800020]/10 border border-[#800020]/30 px-2.5 py-0.5 rounded text-[10px] uppercase tracking-widest text-[#C5A059] font-bold">1-on-1 Coaching</span>
+                  <span className="bg-[#800020]/10 border border-[#800020]/30 px-3 py-1 rounded text-xs uppercase tracking-widest text-[#C5A059] font-bold">1-on-1 Coaching</span>
                 </div>
-                <p className="text-white text-xs italic leading-relaxed border-l-2 border-[#800020] pl-3 font-sans">
+                <p className="text-gray-100 text-sm sm:text-base italic leading-relaxed border-l-2 border-[#800020] pl-3 font-sans mt-3">
                   Shed body fat, gained core strength and built discipline over dedicated coaching months.
                 </p>
               </div>
@@ -317,12 +317,12 @@ export default function ResultPage() {
               <div className="mt-6">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="font-oswald text-xl font-bold uppercase text-white hover:text-[#C5A059] transition-colors duration-300">Client Transformation #3</h3>
-                    <p className="text-xs uppercase tracking-widest text-[#800020] font-bold mt-0.5">Physique & Core Conditioning</p>
+                    <h3 className="font-oswald text-xl sm:text-2xl font-bold uppercase text-white hover:text-[#C5A059] transition-colors duration-300">Client Transformation #3</h3>
+                    <p className="text-xs sm:text-sm uppercase tracking-widest text-[#800020] font-bold mt-0.5">Physique &amp; Core Conditioning</p>
                   </div>
-                  <span className="bg-[#800020]/10 border border-[#800020]/30 px-2.5 py-0.5 rounded text-[10px] uppercase tracking-widest text-[#C5A059] font-bold">1-on-1 Coaching</span>
+                  <span className="bg-[#800020]/10 border border-[#800020]/30 px-3 py-1 rounded text-xs uppercase tracking-widest text-[#C5A059] font-bold">1-on-1 Coaching</span>
                 </div>
-                <p className="text-white text-xs italic leading-relaxed border-l-2 border-[#800020] pl-3 font-sans">
+                <p className="text-gray-100 text-sm sm:text-base italic leading-relaxed border-l-2 border-[#800020] pl-3 font-sans mt-3">
                   Optimal physical condition and posture improvement through tailored progressive workouts.
                 </p>
               </div>

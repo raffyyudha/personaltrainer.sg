@@ -257,14 +257,14 @@ export default function AboutPage() {
         
         <div className="relative z-10">
           <ScrollReveal className="reveal-hidden">
-            <h1 className="text-3xl md:text-5xl font-black font-syne uppercase tracking-tight mb-4 max-w-4xl mx-auto leading-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black font-syne uppercase tracking-tight mb-4 max-w-4xl mx-auto leading-tight">
               Trusted in Singapore Since 2002. <br />
               <span className="text-[#800020]">Built on 24 Years of Coaching Experience.</span>
             </h1>
-            <p className="text-white text-sm max-w-2xl mx-auto mb-6 leading-relaxed font-sans normal-case tracking-normal font-normal">
+            <p className="text-gray-100 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-6 leading-relaxed font-sans normal-case tracking-normal font-normal">
               Md Salaudin Adam (DONN) is the Founder and Fitness Director of PersonalTrainer.sg, providing professional Personal Training in Singapore for clients who want serious results, proper coaching, better health, stronger bodies and long term lifestyle transformation.
             </p>
-            <p className="text-sm uppercase tracking-[0.2em] text-gray-500 font-bold">
+            <p className="text-sm uppercase tracking-[0.2em] text-gray-400 font-bold">
               <Link href="/" className="hover:text-[#C5A059] transition-colors">Home</Link> 
               <span className="mx-3 text-white/20">/</span> 
               <span className="text-[#C5A059]">About Us</span>
@@ -331,10 +331,10 @@ export default function AboutPage() {
               <span className="section-label">
                 <Users size={16} className="text-[#C5A059]" /> INTRODUCTION
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.2rem] xl:text-[2.6rem] font-black leading-tight uppercase mb-6 font-syne">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.5rem] xl:text-[3rem] font-black leading-tight uppercase mb-6 font-syne text-white">
                 Meet Md Salaudin Adam (DONN)
               </h2>
-              <div className="text-white text-base md:text-lg leading-relaxed mb-8 space-y-4 font-sans">
+              <div className="text-gray-100 text-lg sm:text-xl md:text-2xl leading-relaxed mb-8 space-y-5 font-sans font-normal">
                 <p>
                   Md Salaudin Adam (DONN) is a professional Personal Trainer, Transformation Specialist, and the Founder of PersonalTrainer.sg. Since 2002, he has helped clients across Singapore lose weight, gain strength, improve movement, and build lasting healthy habits.
                 </p>
@@ -344,11 +344,11 @@ export default function AboutPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="btn-primary group text-center">
+                <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="btn-primary group text-center text-base sm:text-lg px-8 py-4">
                   <span>WhatsApp Me Now</span>
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
-                <Link href="/#trial" className="btn-outline group text-center">
+                <Link href="/#trial" className="btn-outline group text-center text-base sm:text-lg px-8 py-4">
                   <span>Start Your Transformation</span>
                 </Link>
               </div>
@@ -369,31 +369,31 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase mb-4 font-syne text-white tracking-tight">
               DONN Elite Performance System <span className="text-[#C5A059]">(DEPS)</span>
             </h2>
-            <p className="text-[#C5A059] font-oswald text-lg sm:text-2xl font-bold uppercase tracking-wider mb-6">
+            <p className="text-[#C5A059] font-oswald text-xl sm:text-2xl lg:text-3xl font-bold uppercase tracking-wider mb-6">
               The Signature Training Methodology of PersonalTrainer.sg
             </p>
-            <div className="text-gray-200 text-base sm:text-lg leading-relaxed font-sans space-y-4 max-w-3xl mx-auto font-normal">
+            <div className="text-gray-100 text-lg sm:text-xl lg:text-2xl leading-relaxed font-sans space-y-5 max-w-4xl mx-auto font-normal">
               <p>
                 DONN Elite Performance System (DEPS) is the signature coaching methodology of PersonalTrainer.sg, developed by Md Salaudin Adam (DONN), Founder and Fitness Director.
               </p>
               <p>
-                Built from <strong className="text-white">24 Years of Coaching Experience</strong> and <strong className="text-white">Trusted in Singapore Since 2002</strong>, DEPS is designed to help clients train with purpose, move safely, build strength, improve stamina, reduce body fat and create long term lifestyle transformation.
+                Built from <strong className="text-white font-bold">24 Years of Coaching Experience</strong> and <strong className="text-white font-bold">Trusted in Singapore Since 2002</strong>, DEPS is designed to help clients train with purpose, move safely, build strength, improve stamina, reduce body fat and create long term lifestyle transformation.
               </p>
             </div>
 
             {/* Core Philosophy Callout Box */}
-            <div className="mt-8 bg-[#121212] border-2 border-[#C5A059]/40 rounded-2xl p-6 sm:p-8 text-center shadow-2xl relative overflow-hidden">
+            <div className="mt-10 bg-[#121212] border-2 border-[#C5A059]/40 rounded-2xl p-8 sm:p-10 text-center shadow-2xl relative overflow-hidden">
               <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#800020] rounded-full blur-3xl opacity-20 pointer-events-none" />
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#C5A059] rounded-full blur-3xl opacity-20 pointer-events-none" />
               
-              <p className="text-xl sm:text-2xl font-black font-syne text-[#800020] uppercase tracking-wide mb-3">
+              <p className="text-2xl sm:text-3xl font-black font-syne text-[#800020] uppercase tracking-wide mb-4">
                 DEPS is not random workout training.
               </p>
-              <p className="text-gray-300 text-sm sm:text-base font-sans max-w-2xl mx-auto leading-relaxed mb-6 font-normal">
+              <p className="text-gray-100 text-base sm:text-lg lg:text-xl font-sans max-w-3xl mx-auto leading-relaxed mb-6 font-normal">
                 It is a structured system that combines movement preparation, posture correction, core activation, stabilisation, strength training, metabolic conditioning and cardiovascular development.
               </p>
-              <div className="inline-block bg-[#800020] border border-[#C5A059]/40 px-6 py-2.5 rounded-full">
-                <span className="text-white font-oswald text-sm sm:text-base font-extrabold uppercase tracking-widest">
+              <div className="inline-block bg-[#800020] border border-[#C5A059]/40 px-8 py-3.5 rounded-full">
+                <span className="text-white font-oswald text-base sm:text-lg font-extrabold uppercase tracking-widest">
                   Train properly. Progress safely. Build real results.
                 </span>
               </div>
@@ -406,10 +406,10 @@ export default function AboutPage() {
         <div className="mb-20">
           <ScrollReveal className="reveal-hidden">
             <div className="border-l-4 border-[#C5A059] pl-6 mb-10">
-              <h3 className="text-2xl sm:text-3xl font-black uppercase font-oswald text-white tracking-wide">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-oswald text-white tracking-wide">
                 The DEPS Methodology
               </h3>
-              <p className="text-gray-300 text-sm sm:text-base font-sans mt-2 leading-relaxed max-w-3xl font-normal">
+              <p className="text-gray-100 text-base sm:text-lg md:text-xl font-sans mt-2 leading-relaxed max-w-3xl font-normal">
                 A 7-stage progressive movement system designed to optimize performance, prevent injury, and maximize body transformation.
               </p>
             </div>
@@ -422,60 +422,60 @@ export default function AboutPage() {
                 num: "01",
                 title: "Self Myofascial Release (SMR)",
                 desc: "Prepares the body for better movement by addressing muscular tightness, tissue restriction and training readiness.",
-                icon: <Activity className="w-6 h-6 text-[#C5A059]" />
+                icon: <Activity className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "02",
                 title: "Posture Alignment",
                 desc: "Improves body awareness, posture control and movement alignment so clients can train with better technique and less unnecessary strain.",
-                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+                icon: <CheckCircle className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "03",
                 title: "Flexibility & Core Activation",
                 desc: "Improves mobility while activating the core muscles needed for posture, balance, control and safer exercise execution.",
-                icon: <Sparkles className="w-6 h-6 text-[#C5A059]" />
+                icon: <Sparkles className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "04",
                 title: "Stabilisation Training",
                 desc: "Develops balance, joint control, coordination and movement stability before progressing into more demanding exercises.",
-                icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" />
+                icon: <ShieldCheck className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "05",
                 title: "Strength & Conditioning",
                 desc: "Builds strength, stamina, muscular endurance, body control and confidence through structured coaching and progressive training.",
-                icon: <Dumbbell className="w-6 h-6 text-[#C5A059]" />
+                icon: <Dumbbell className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "06",
                 title: "Metabolic Training",
                 desc: "Improves conditioning, calorie output, work capacity and training intensity in a controlled and suitable way.",
-                icon: <TrendingUp className="w-6 h-6 text-[#C5A059]" />
+                icon: <TrendingUp className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "07",
                 title: "Cardiovascular Conditioning",
                 desc: "Supports heart health, stamina, endurance, recovery capacity and long term fitness.",
-                icon: <Heart className="w-6 h-6 text-[#C5A059]" />
+                icon: <Heart className="w-7 h-7 text-[#C5A059]" />
               }
             ].map((phase, idx) => (
               <ScrollReveal key={phase.num} className="reveal-hidden" delay={idx * 80}>
-                <div className="bg-[#0e0e0e] border border-white/10 p-6 rounded-xl hover:border-[#C5A059]/60 hover:shadow-[0_0_20px_rgba(197,160,89,0.15)] transition-all duration-300 flex flex-col justify-between h-full group">
+                <div className="bg-[#0e0e0e] border border-white/10 p-6 sm:p-7 rounded-xl hover:border-[#C5A059]/60 hover:shadow-[0_0_20px_rgba(197,160,89,0.15)] transition-all duration-300 flex flex-col justify-between h-full group">
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 border border-[#C5A059]/40 bg-[#161616] rounded-lg flex items-center justify-center group-hover:bg-[#C5A059]/10 group-hover:border-[#C5A059] transition-all duration-300 shrink-0">
+                      <div className="w-13 h-13 border border-[#C5A059]/40 bg-[#161616] rounded-lg flex items-center justify-center group-hover:bg-[#C5A059]/10 group-hover:border-[#C5A059] transition-all duration-300 shrink-0 p-2.5">
                         {phase.icon}
                       </div>
-                      <span className="font-oswald text-2xl font-black text-[#C5A059]/40 group-hover:text-[#C5A059] transition-colors">
+                      <span className="font-oswald text-3xl font-black text-[#C5A059]/40 group-hover:text-[#C5A059] transition-colors">
                         {phase.num}
                       </span>
                     </div>
-                    <h4 className="font-oswald text-lg sm:text-xl font-bold uppercase text-white mb-2.5 group-hover:text-[#C5A059] transition-colors leading-snug">
+                    <h4 className="font-oswald text-xl sm:text-2xl font-bold uppercase text-white mb-3 group-hover:text-[#C5A059] transition-colors leading-snug">
                       {phase.title}
                     </h4>
-                    <p className="text-gray-300 text-xs sm:text-sm font-sans leading-relaxed font-normal">
+                    <p className="text-gray-100 text-base sm:text-lg font-sans leading-relaxed font-normal">
                       {phase.desc}
                     </p>
                   </div>
@@ -489,10 +489,10 @@ export default function AboutPage() {
         <div className="mb-20">
           <ScrollReveal className="reveal-hidden">
             <div className="border-l-4 border-[#800020] pl-6 mb-10">
-              <h3 className="text-2xl sm:text-3xl font-black uppercase font-oswald text-white tracking-wide">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-oswald text-white tracking-wide">
                 The 5 Core DEPS Training Methods
               </h3>
-              <p className="text-gray-300 text-sm sm:text-base font-sans mt-2 leading-relaxed max-w-3xl font-normal">
+              <p className="text-gray-100 text-base sm:text-lg md:text-xl font-sans mt-2 leading-relaxed max-w-3xl font-normal">
                 DEPS uses five primary training methods to create structured and progressive transformation:
               </p>
             </div>
@@ -530,13 +530,13 @@ export default function AboutPage() {
               <ScrollReveal key={method.title} className="reveal-hidden" delay={idx * 100}>
                 <div className="bg-[#111111] border border-white/10 p-6 rounded-xl hover:border-[#800020]/60 transition-all duration-300 flex flex-col justify-between h-full group">
                   <div>
-                    <span className="text-[#C5A059] font-oswald text-[11px] font-bold uppercase tracking-widest px-3 py-1 bg-white/5 border border-white/10 inline-block mb-4 rounded">
+                    <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-bold uppercase tracking-widest px-3.5 py-1.5 bg-white/5 border border-white/10 inline-block mb-4 rounded">
                       {method.tag}
                     </span>
-                    <h4 className="font-oswald text-xl sm:text-2xl font-black uppercase text-white mb-3 group-hover:text-[#C5A059] transition-colors">
+                    <h4 className="font-oswald text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white mb-3 group-hover:text-[#C5A059] transition-colors">
                       {method.title}
                     </h4>
-                    <p className="text-gray-300 text-xs sm:text-sm font-sans leading-relaxed font-normal">
+                    <p className="text-gray-100 text-base sm:text-lg font-sans leading-relaxed font-normal">
                       {method.desc}
                     </p>
                   </div>
@@ -553,10 +553,10 @@ export default function AboutPage() {
               <span className="section-label justify-center mb-3">
                 <Target size={16} className="text-[#C5A059]" /> PSYCHOLOGY &amp; FOCUS
               </span>
-              <h3 className="text-2xl sm:text-4xl font-black uppercase font-syne text-white mb-3">
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase font-syne text-white mb-3">
                 The DEPS Mindset
               </h3>
-              <p className="text-gray-300 text-sm sm:text-base font-sans max-w-2xl mx-auto mb-8 font-normal">
+              <p className="text-gray-100 text-base sm:text-lg lg:text-xl font-sans max-w-2xl mx-auto mb-8 font-normal">
                 DEPS is also built on the mindset required for long term results:
               </p>
 
@@ -564,7 +564,7 @@ export default function AboutPage() {
               <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 my-6">
                 {["Mindset", "Discipline", "Consistency", "Results"].map((step, index) => (
                   <React.Fragment key={step}>
-                    <div className={`px-5 py-3 rounded-lg font-oswald font-extrabold uppercase text-sm sm:text-lg tracking-wider border shadow-md ${
+                    <div className={`px-6 py-3.5 rounded-lg font-oswald font-extrabold uppercase text-base sm:text-xl tracking-wider border shadow-md ${
                       step === "Results" 
                         ? "bg-[#800020] text-white border-[#C5A059]" 
                         : "bg-white/5 text-white border-white/15"
@@ -572,13 +572,13 @@ export default function AboutPage() {
                       {step}
                     </div>
                     {index < 3 && (
-                      <ArrowRight size={20} className="text-[#C5A059] hidden sm:block" />
+                      <ArrowRight size={22} className="text-[#C5A059] hidden sm:block" />
                     )}
                   </React.Fragment>
                 ))}
               </div>
 
-              <p className="text-gray-300 text-sm sm:text-base font-sans max-w-2xl mx-auto leading-relaxed mt-6 font-normal">
+              <p className="text-gray-100 text-base sm:text-lg lg:text-xl font-sans max-w-2xl mx-auto leading-relaxed mt-6 font-normal">
                 The system helps clients stay focused, accountable and consistent instead of relying on short term motivation.
               </p>
             </div>
@@ -589,10 +589,10 @@ export default function AboutPage() {
         <div className="mb-20">
           <ScrollReveal className="reveal-hidden">
             <div className="border-l-4 border-[#C5A059] pl-6 mb-10">
-              <h3 className="text-2xl sm:text-3xl font-black uppercase font-oswald text-white tracking-wide">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-oswald text-white tracking-wide">
                 Who DEPS Is Suitable For
               </h3>
-              <p className="text-gray-300 text-sm sm:text-base font-sans mt-2 leading-relaxed max-w-3xl font-normal">
+              <p className="text-gray-100 text-base sm:text-lg md:text-xl font-sans mt-2 leading-relaxed max-w-3xl font-normal">
                 DEPS can be adapted for individuals across all fitness backgrounds:
               </p>
             </div>
@@ -611,15 +611,15 @@ export default function AboutPage() {
               "Clients who want long term lifestyle transformation"
             ].map((item, idx) => (
               <ScrollReveal key={idx} className="reveal-hidden" delay={idx * 60}>
-                <div className="bg-[#0d0d0d] border border-white/10 p-4 rounded-lg flex items-center gap-3.5 hover:border-[#C5A059]/50 transition-all duration-300">
-                  <CheckCircle size={18} className="text-[#C5A059] shrink-0" />
-                  <span className="text-white text-xs sm:text-sm font-sans font-medium">{item}</span>
+                <div className="bg-[#0d0d0d] border border-white/10 p-4 sm:p-5 rounded-lg flex items-center gap-3.5 hover:border-[#C5A059]/50 transition-all duration-300">
+                  <CheckCircle size={20} className="text-[#C5A059] shrink-0" />
+                  <span className="text-white text-base sm:text-lg font-sans font-medium">{item}</span>
                 </div>
               </ScrollReveal>
             ))}
           </div>
 
-          <div className="bg-[#121212] border-l-2 border-[#C5A059] p-4 rounded text-xs sm:text-sm text-gray-300 italic font-sans">
+          <div className="bg-[#121212] border-l-4 border-[#C5A059] p-5 rounded-lg text-base sm:text-lg text-gray-200 italic font-sans font-medium">
             Every client is different. DEPS is adjusted based on the client’s body condition, fitness level, goal, schedule, lifestyle and training history.
           </div>
         </div>
@@ -629,11 +629,11 @@ export default function AboutPage() {
           <ScrollReveal className="reveal-hidden">
             <div className="bg-[#121212] border border-white/10 rounded-2xl p-8 sm:p-12">
               <div className="border-l-4 border-[#800020] pl-6 mb-6">
-                <h3 className="text-2xl sm:text-3xl font-black uppercase font-oswald text-white tracking-wide">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-oswald text-white tracking-wide">
                   Why DEPS Works
                 </h3>
               </div>
-              <div className="text-gray-200 text-base sm:text-lg leading-relaxed font-sans space-y-4 mb-8 font-normal">
+              <div className="text-gray-100 text-lg sm:text-xl lg:text-2xl leading-relaxed font-sans space-y-5 mb-8 font-normal">
                 <p>
                   DEPS works because it gives clients a clear system instead of random workouts.
                 </p>
@@ -642,11 +642,11 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="bg-[#800020]/20 border border-[#800020]/50 p-6 rounded-xl text-center">
-                <span className="text-[#C5A059] font-oswald text-xs uppercase tracking-widest font-bold block mb-2">
+              <div className="bg-[#800020]/20 border border-[#800020]/50 p-6 sm:p-8 rounded-xl text-center">
+                <span className="text-[#C5A059] font-oswald text-xs sm:text-sm uppercase tracking-widest font-bold block mb-2">
                   The Ultimate Objective
                 </span>
-                <p className="text-white font-syne text-lg sm:text-2xl font-bold uppercase leading-snug">
+                <p className="text-white font-syne text-xl sm:text-2xl lg:text-3xl font-bold uppercase leading-snug">
                   The goal is not just to complete workouts. The goal is to help clients become stronger, healthier, more confident and more consistent for the long term.
                 </p>
               </div>
@@ -663,31 +663,31 @@ export default function AboutPage() {
               <Crown size={16} className="text-[#C5A059]" /> START YOUR JOURNEY
             </span>
             
-            <h3 className="text-2xl sm:text-4xl font-black uppercase font-syne text-white mb-4">
+            <h3 className="text-2xl sm:text-4xl lg:text-5xl font-black uppercase font-syne text-white mb-4">
               Experience DONN Elite Performance System (DEPS)
             </h3>
             
-            <p className="text-gray-300 text-base sm:text-lg font-sans max-w-2xl mx-auto mb-8 font-normal">
+            <p className="text-gray-100 text-lg sm:text-xl font-sans max-w-2xl mx-auto mb-8 font-normal">
               Start with a trial session and experience the structured coaching approach used at PersonalTrainer.sg.
             </p>
 
-            <Link href="/#trial" className="btn-primary group inline-flex mb-10 text-sm sm:text-base px-8 py-4">
+            <Link href="/#trial" className="btn-primary group inline-flex mb-10 text-base sm:text-lg px-8 py-4">
               <span>Book a Trial Session</span>
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
 
             {/* Founder Sign-off Footer Box */}
             <div className="pt-8 border-t border-white/10 max-w-xl mx-auto text-center">
-              <h4 className="font-oswald text-xl font-extrabold uppercase text-white tracking-wide">
+              <h4 className="font-oswald text-2xl font-extrabold uppercase text-white tracking-wide">
                 PersonalTrainer.sg
               </h4>
-              <p className="text-[#C5A059] font-oswald text-base font-bold uppercase tracking-wider mt-1">
+              <p className="text-[#C5A059] font-oswald text-lg font-bold uppercase tracking-wider mt-1">
                 Md Salaudin Adam (DONN)
               </p>
-              <p className="text-gray-300 text-xs sm:text-sm font-sans mt-0.5">
+              <p className="text-gray-200 text-sm sm:text-base font-sans mt-1">
                 Founder and Fitness Director • Trusted in Singapore Since 2002 • 24 Years of Coaching Experience
               </p>
-              <div className="mt-4 inline-block text-[#C5A059] font-oswald text-sm font-black uppercase tracking-[0.3em] border-b border-[#C5A059] pb-0.5">
+              <div className="mt-4 inline-block text-[#C5A059] font-oswald text-base font-black uppercase tracking-[0.3em] border-b-2 border-[#C5A059] pb-0.5">
                 IF RESULTS MATTERS
               </div>
             </div>
@@ -698,10 +698,10 @@ export default function AboutPage() {
         <div className="mt-20">
           <ScrollReveal className="reveal-hidden">
             <div className="border-l-4 border-[#C5A059] pl-6 mb-10">
-              <h3 className="text-2xl sm:text-3xl font-black uppercase font-oswald text-white tracking-wide">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-oswald text-white tracking-wide">
                 Founder Directives &amp; Core Principles
               </h3>
-              <p className="text-gray-300 text-sm sm:text-base font-sans mt-2 leading-relaxed max-w-3xl font-normal">
+              <p className="text-gray-100 text-base sm:text-lg md:text-xl font-sans mt-2 leading-relaxed max-w-3xl font-normal">
                 This system is not based on random workouts, guesswork or temporary motivation. It is based on structure, discipline, safe progression, accountability and long term transformation.
               </p>
             </div>
@@ -714,78 +714,78 @@ export default function AboutPage() {
                 num: "01",
                 title: "Train with Purpose",
                 desc: "Every session must have a clear direction based on the client’s goal, fitness level, body condition and training suitability.",
-                icon: <Target className="w-6 h-6 text-[#C5A059]" />
+                icon: <Target className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "02",
                 title: "Prioritise Proper Technique",
                 desc: "Correct form, posture, breathing, control and safe movement must always come before heavier weights or harder exercises.",
-                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+                icon: <CheckCircle className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "03",
                 title: "Build Progress Step by Step",
                 desc: "Fitness results should be developed through structured progression, not rushed training or careless exercise selection.",
-                icon: <TrendingUp className="w-6 h-6 text-[#C5A059]" />
+                icon: <TrendingUp className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "04",
                 title: "Focus on Safety and Sustainability",
                 desc: "Training must be challenging but suitable for the client’s body, age, ability, limitations and lifestyle.",
-                icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" />
+                icon: <ShieldCheck className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "05",
                 title: "Create Real Accountability",
                 desc: "Clients need guidance, structure, discipline and regular support to stay consistent and committed.",
-                icon: <Clock className="w-6 h-6 text-[#C5A059]" />
+                icon: <Clock className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "06",
                 title: "Coach the Individual, Not the Template",
                 desc: "Every client is different. DEPS is adjusted based on the client’s goal, fitness level, schedule, lifestyle, training history and physical condition.",
-                icon: <Users className="w-6 h-6 text-[#C5A059]" />
+                icon: <Users className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "07",
                 title: "Combine Strength, Stamina and Movement Quality",
                 desc: "A proper programme should improve strength, stamina, mobility, posture, balance, body control and daily movement confidence.",
-                icon: <Activity className="w-6 h-6 text-[#C5A059]" />
+                icon: <Activity className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "08",
                 title: "Support Lifestyle Change",
                 desc: "Long term results require better habits, nutrition awareness, consistency, discipline and realistic lifestyle improvement.",
-                icon: <Sparkles className="w-6 h-6 text-[#C5A059]" />
+                icon: <Sparkles className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "09",
                 title: "Keep Coaching Professional",
                 desc: "Every client must be coached with respect, focus, attention to detail and a high professional standard.",
-                icon: <Award className="w-6 h-6 text-[#C5A059]" />
+                icon: <Award className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 num: "10",
                 title: "Build Long Term Transformation",
                 desc: "The goal is not just to complete workouts. The goal is to help clients become stronger, healthier, more confident and more consistent over time.",
-                icon: <Crown className="w-6 h-6 text-[#C5A059]" />
+                icon: <Crown className="w-7 h-7 text-[#C5A059]" />
               }
             ].map((directive, idx) => (
               <ScrollReveal key={directive.num} className="reveal-hidden" delay={idx * 80}>
                 <div className="bg-[#0e0e0e] border border-white/10 p-6 sm:p-7 rounded-xl hover:border-[#C5A059]/60 hover:shadow-[0_0_20px_rgba(197,160,89,0.15)] transition-all duration-300 flex flex-col justify-between h-full group">
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 border border-[#C5A059]/40 bg-[#161616] rounded-lg flex items-center justify-center group-hover:bg-[#C5A059]/10 group-hover:border-[#C5A059] transition-all duration-300 shrink-0">
+                      <div className="w-13 h-13 border border-[#C5A059]/40 bg-[#161616] rounded-lg flex items-center justify-center group-hover:bg-[#C5A059]/10 group-hover:border-[#C5A059] transition-all duration-300 shrink-0 p-2.5">
                         {directive.icon}
                       </div>
-                      <span className="font-oswald text-2xl font-black text-[#C5A059]/40 group-hover:text-[#C5A059] transition-colors">
+                      <span className="font-oswald text-3xl font-black text-[#C5A059]/40 group-hover:text-[#C5A059] transition-colors">
                         {directive.num}
                       </span>
                     </div>
-                    <h4 className="font-oswald text-lg sm:text-xl font-bold uppercase text-white mb-2.5 group-hover:text-[#C5A059] transition-colors leading-snug">
+                    <h4 className="font-oswald text-xl sm:text-2xl font-bold uppercase text-white mb-3 group-hover:text-[#C5A059] transition-colors leading-snug">
                       {directive.title}
                     </h4>
-                    <p className="text-gray-300 text-xs sm:text-sm font-sans leading-relaxed font-normal">
+                    <p className="text-gray-100 text-base sm:text-lg font-sans leading-relaxed font-normal">
                       {directive.desc}
                     </p>
                   </div>
@@ -797,19 +797,19 @@ export default function AboutPage() {
           {/* Founder Credentials Cards */}
           <ScrollReveal className="reveal-hidden">
             <div className="border-l-4 border-[#C5A059] pl-6 mb-8">
-              <h3 className="text-2xl sm:text-3xl font-black uppercase font-oswald text-white tracking-wide">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-oswald text-white tracking-wide">
                 Founder Credentials &amp; Certifications
               </h3>
-              <p className="text-gray-300 text-sm sm:text-base font-sans mt-2 leading-relaxed max-w-4xl font-normal">
+              <p className="text-gray-100 text-base sm:text-lg md:text-xl font-sans mt-2 leading-relaxed max-w-4xl font-normal">
                 Md Salaudin Adam (DONN), Founder and Fitness Director of PersonalTrainer.sg, brings over two decades of coaching experience, professional certifications and real world training expertise to DONN’s Elite Performance System (DEPS).
               </p>
             </div>
 
-            <div className="bg-[#121212] border-2 border-[#C5A059]/50 rounded-xl p-5 mb-10 text-center shadow-xl">
-              <span className="text-xs uppercase tracking-widest text-[#C5A059] font-oswald font-bold block mb-1">
+            <div className="bg-[#121212] border-2 border-[#C5A059]/50 rounded-xl p-6 mb-10 text-center shadow-xl">
+              <span className="text-sm uppercase tracking-widest text-[#C5A059] font-oswald font-bold block mb-1">
                 Professional Fitness Certifications
               </span>
-              <div className="text-lg sm:text-2xl font-black font-oswald text-white uppercase tracking-wider">
+              <div className="text-xl sm:text-3xl font-black font-oswald text-white uppercase tracking-wider">
                 NASM | SOE | TRX | FMT | CPR | AED
               </div>
             </div>
@@ -820,74 +820,74 @@ export default function AboutPage() {
               {
                 title: "Founder of PersonalTrainer.sg",
                 desc: "Founder and Fitness Director of PersonalTrainer.sg, providing structured personal training services across Singapore.",
-                icon: <Crown className="w-6 h-6 text-[#C5A059]" />
+                icon: <Crown className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "Trusted in Singapore Since 2002",
                 desc: "A long standing personal training brand built on trust, coaching experience and client results.",
-                icon: <ShieldCheck className="w-6 h-6 text-[#C5A059]" />
+                icon: <ShieldCheck className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "24 Years of Coaching Experience",
                 desc: "Over two decades of hands on coaching experience with clients of different ages, goals, fitness levels and lifestyles.",
-                icon: <Award className="w-6 h-6 text-[#C5A059]" />
+                icon: <Award className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "Professional Personal Trainer",
                 desc: "Experienced in personal training, weight loss training, strength training, senior fitness, couple training, kickboxing fitness and lifestyle transformation coaching.",
-                icon: <Dumbbell className="w-6 h-6 text-[#C5A059]" />
+                icon: <Dumbbell className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "Fitness Lifestyle Consultant",
                 desc: "Guiding clients beyond exercise with structure, accountability, nutrition awareness and sustainable lifestyle habits.",
-                icon: <Users className="w-6 h-6 text-[#C5A059]" />
+                icon: <Users className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "Premium Performance & Transformation Specialist",
                 desc: "Focused on helping clients improve strength, confidence, body composition, stamina, movement quality and long term fitness.",
-                icon: <Sparkles className="w-6 h-6 text-[#C5A059]" />
+                icon: <Sparkles className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "NASM Certified",
                 desc: "Professional certification foundation for structured personal training and safe coaching practice.",
-                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+                icon: <CheckCircle className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "SOE Certified",
                 desc: "Additional professional training credential supporting coaching knowledge and fitness instruction.",
-                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+                icon: <CheckCircle className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "TRX Certified",
                 desc: "Qualified in suspension training for strength, core control, stability and functional movement.",
-                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+                icon: <CheckCircle className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "FMT Certified",
                 desc: "Certified in Functional Movement Training to support movement quality, mobility, posture and exercise correction.",
-                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+                icon: <CheckCircle className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "CPR and AED Certified",
                 desc: "Certified in emergency response support for safer training environments.",
-                icon: <CheckCircle className="w-6 h-6 text-[#C5A059]" />
+                icon: <CheckCircle className="w-7 h-7 text-[#C5A059]" />
               },
               {
                 title: "MANHUNT Finalist 2001",
                 desc: "Fitness and physique background that supports my long standing involvement in performance, discipline and body transformation.",
-                icon: <Medal className="w-6 h-6 text-[#C5A059]" />
+                icon: <Medal className="w-7 h-7 text-[#C5A059]" />
               }
             ].map((cred, idx) => (
               <ScrollReveal key={cred.title} className="reveal-hidden" delay={idx * 80}>
-                <div className="bg-[#0e0e0e] border border-white/10 p-6 rounded-xl hover:border-[#C5A059]/60 hover:shadow-[0_0_20px_rgba(197,160,89,0.15)] transition-all duration-300 flex flex-col justify-between h-full group">
+                <div className="bg-[#0e0e0e] border border-white/10 p-6 sm:p-7 rounded-xl hover:border-[#C5A059]/60 hover:shadow-[0_0_20px_rgba(197,160,89,0.15)] transition-all duration-300 flex flex-col justify-between h-full group">
                   <div>
-                    <div className="w-11 h-11 border border-[#C5A059]/40 bg-[#161616] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#C5A059]/10 group-hover:border-[#C5A059] transition-all duration-300 shrink-0">
+                    <div className="w-12 h-12 border border-[#C5A059]/40 bg-[#161616] rounded-lg flex items-center justify-center mb-4 group-hover:bg-[#C5A059]/10 group-hover:border-[#C5A059] transition-all duration-300 shrink-0 p-2.5">
                       {cred.icon}
                     </div>
-                    <h4 className="font-oswald text-base sm:text-lg font-bold uppercase text-white mb-2 group-hover:text-[#C5A059] transition-colors leading-snug">
+                    <h4 className="font-oswald text-lg sm:text-xl font-bold uppercase text-white mb-2.5 group-hover:text-[#C5A059] transition-colors leading-snug">
                       {cred.title}
                     </h4>
-                    <p className="text-gray-300 text-xs sm:text-sm font-sans leading-relaxed font-normal">
+                    <p className="text-gray-100 text-base sm:text-lg font-sans leading-relaxed font-normal">
                       {cred.desc}
                     </p>
                   </div>
