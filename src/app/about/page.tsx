@@ -1031,60 +1031,88 @@ export default function AboutPage() {
           </ScrollReveal>
 
           {/* Trainers Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {[
               {
-                name: "Md Salaudin Adam (DONN)",
-                role: "Founder & Fitness Director",
+                title: "Founder & Fitness Director",
+                subtitle: "Md Salaudin Adam (DONN)",
                 img: "/donn-coaching-latpulldown.avif"
               },
               {
-                name: "24 Years Coaching Experience",
-                role: "Trusted in Singapore Since 2002",
+                title: "24 Years of Coaching Experience",
+                subtitle: "Trusted in Singapore Since 2002",
                 img: "/donn-coaching-elliptical.avif"
               },
               {
-                name: "NASM / TRX / SOE",
-                role: "Certified Personal Trainer",
+                title: "Certified Personal Trainer",
+                subtitle: "NASM | SOE | TRX | FMT | CPR | AED",
                 img: "/donn-coaching-barbell.avif"
               },
               {
-                name: "FMT Fit Muay / CPR & AED",
-                role: "MANHUNT Finalist 2001",
+                title: "Performance & Transformation Specialist",
+                subtitle: "MANHUNT Finalist 2001",
                 img: "/donn-flexing.avif"
               }
             ].map((trn, idx) => (
-              <ScrollReveal key={trn.name} className="reveal-hidden" delay={idx * 150}>
-                <div className="group relative aspect-[3/4] overflow-hidden border border-white/5 bg-[#0d0d0d] rounded-xl">
-                  {/* Trainer Image */}
-                  <img
-                    src={trn.img}
-                    alt={trn.name}
-                    className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-all duration-700 object-top"
-                  />
-                  
-                  {/* Bottom Text Panel */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-black/90 p-5 text-center z-20 border-t border-white/5 group-hover:border-[#C5A059]/30 transition-colors duration-300">
-                    <h3 className="font-oswald text-xl font-bold tracking-wide uppercase text-white group-hover:text-[#C5A059] transition-colors duration-300">
-                      {trn.name}
-                    </h3>
-                    <p className="text-xs sm:text-sm uppercase tracking-widest text-[#C5A059] font-bold mt-1">
-                      {trn.role}
-                    </p>
+              <ScrollReveal key={idx} className="reveal-hidden" delay={idx * 150}>
+                <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0e0e0e] shadow-xl hover:border-[#C5A059]/50 transition-all duration-300 flex flex-col h-full group">
+                  <div className="w-full aspect-[2/3] relative overflow-hidden bg-black border-b border-white/10">
+                    <img
+                      src={trn.img}
+                      alt={trn.title}
+                      className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
+                    />
                   </div>
-                  
-                  {/* Hover Social Overlay Panel in Maroon */}
-                  <div className="absolute inset-0 bg-[#800020]/80 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                    <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
-                      <Phone size={20} />
-                    </a>
-                    <a href="mailto:donn@personaltrainer.sg" className="w-12 h-12 rounded-full bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
-                      <Mail size={20} />
-                    </a>
+                  <div className="p-5 text-center flex-1 flex flex-col justify-center bg-[#121212] min-h-[6rem]">
+                    <h3 className="font-oswald text-base sm:text-lg font-bold uppercase text-white group-hover:text-[#C5A059] transition-colors leading-snug">
+                      {trn.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm uppercase tracking-wider text-[#C5A059] font-bold mt-1.5 font-sans">
+                      {trn.subtitle}
+                    </p>
                   </div>
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+
+          {/* 4 Standardised Credential Summary Boxes (Text-only clean boxes) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-8 sm:pb-12">
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md min-h-[6rem]">
+              <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                Md Salaudin Adam (DONN)
+              </div>
+              <div className="text-xs sm:text-sm text-gray-200 font-sans font-medium">
+                Founder and Fitness Director
+              </div>
+            </div>
+
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md min-h-[6rem]">
+              <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                Trusted Since 2002
+              </div>
+              <div className="text-xs sm:text-sm text-gray-200 font-sans font-medium">
+                24 Years of Coaching Experience
+              </div>
+            </div>
+
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md min-h-[6rem]">
+              <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                Professional Certifications
+              </div>
+              <div className="text-xs sm:text-sm text-gray-200 font-sans font-medium">
+                NASM | SOE | TRX | FMT | CPR | AED
+              </div>
+            </div>
+
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md min-h-[6rem]">
+              <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
+                Premium Coaching Standard
+              </div>
+              <div className="text-xs sm:text-sm text-gray-200 font-sans font-medium">
+                Performance and Transformation Specialist
+              </div>
+            </div>
           </div>
         </div>
       </section>
