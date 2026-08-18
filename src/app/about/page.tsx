@@ -1158,13 +1158,13 @@ export default function AboutPage() {
             </div>
           </ScrollReveal>
           
-          <ScrollReveal className="reveal-right-hidden relative z-10 hidden lg:block">
-            <div className="relative aspect-square max-w-md mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#800020]/20 to-[#C5A059]/20 rounded-full blur-3xl" />
+          <ScrollReveal className="reveal-right-hidden relative z-10 mt-8 lg:mt-0">
+            <div className="relative w-full max-w-lg mx-auto bg-black/60 p-2 rounded-2xl border border-white/10 shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#800020]/20 to-[#C5A059]/20 rounded-2xl blur-2xl pointer-events-none" />
               <img 
                 src="/trainwith.avif" 
-                alt="Trainer" 
-                className="relative z-10 w-full h-full object-cover rounded-xl border border-white/10 shadow-2xl"
+                alt="Train With Md Salaudin Adam (DONN)" 
+                className="relative z-10 w-full h-auto object-contain rounded-xl border border-white/10 shadow-2xl"
               />
             </div>
           </ScrollReveal>
