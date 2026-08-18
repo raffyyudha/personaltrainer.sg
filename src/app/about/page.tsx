@@ -1259,12 +1259,12 @@ export default function AboutPage() {
             <span className="section-label">
               <MessageSquare size={16} className="text-[#C5A059]" /> FAQS
             </span>
-            <h2 className="text-4xl md:text-5xl font-black uppercase font-syne mb-6 leading-tight text-white">
-              Clear answers to <br />
-              <span className="text-[#800020]">common inquiries.</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-5xl font-black uppercase font-syne mb-6 leading-tight text-white">
+              EVERYTHING YOU <br className="hidden sm:block" />
+              <span className="text-[#C5A059]">NEED TO KNOW</span>
             </h2>
-            <p className="text-gray-100 text-lg sm:text-xl leading-relaxed mb-8 font-sans font-normal">
-              Have questions about personal training packages, rates or locations? Contact PersonalTrainer.sg directly on WhatsApp or submit an enquiry.
+            <p className="text-gray-100 text-base sm:text-lg lg:text-xl leading-relaxed mb-8 font-sans font-normal">
+              Clear answers about personal training, rates, locations, trial sessions and coaching suitability.
             </p>
             <Link href="/#contact" className="btn-outline inline-flex text-base sm:text-lg px-8 py-4">
               <span>GET IN TOUCH</span>

@@ -1477,12 +1477,12 @@ export default function Home() {
               <span className="section-label mb-3">
                 FAQS
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] font-black uppercase font-oswald mb-5 leading-tight text-white tracking-tight">
-                CLEAR ANSWERS TO <br className="hidden sm:block" />
-                <span className="text-[#C5A059]">COMMON INQUIRIES</span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-5xl font-black uppercase font-oswald mb-5 leading-tight text-white tracking-tight">
+                EVERYTHING YOU <br className="hidden sm:block" />
+                <span className="text-[#C5A059]">NEED TO KNOW</span>
               </h2>
               <p className="text-[15.5px] lg:text-[17.5px] text-gray-200 leading-[1.65] mb-8 font-sans font-normal">
-                If you have questions about training locations, trial sessions, coaching suitability, training structure or schedule arrangements, you can find the main answers below or contact PersonalTrainer.sg directly through WhatsApp.
+                Clear answers about personal training, rates, locations, trial sessions and coaching suitability.
               </p>
               <a href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20have%20a%20question%20about%20Personal%20Training." target="_blank" rel="noopener noreferrer" className="btn-gold inline-flex items-center gap-2 group py-3.5 px-6 font-extrabold text-xs sm:text-sm uppercase tracking-wider rounded-lg">
                 <span>WHATSAPP PERSONALTRAINER.SG</span>
