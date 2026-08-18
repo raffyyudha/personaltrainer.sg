@@ -479,48 +479,57 @@ export default function Home() {
                   <img
                     src="/aboutus.avif"
                     alt="Personal Training in Action"
-                    className="w-full h-48 sm:h-56 md:h-60 object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-auto object-contain group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent flex items-end p-4 text-left">
-                    <div>
-                      <span className="text-[#C5A059] font-oswald text-xs font-bold uppercase tracking-wider block">
-                        24+ Years of Coaching Leadership
-                      </span>
-                      <span className="text-white font-syne text-xs sm:text-sm font-bold block">
-                        Structured &amp; Results-Focused Coaching
-                      </span>
-                    </div>
-                  </div>
                 </div>
 
                 {/* 4 Large Feature Highlight Cards (Full height coverage) */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mt-4">
-                  <div className="bg-[#121212] border border-white/10 p-3.5 rounded-lg text-left flex items-start gap-3 hover:border-[#C5A059]/40 transition-colors">
-                    <Award className="text-[#C5A059] shrink-0 mt-0.5" size={22} />
-                    <div>
-                      <span className="text-[#C5A059] font-oswald text-sm font-bold block uppercase">24 Years Leadership</span>
-                      <span className="text-gray-300 text-xs font-sans block leading-tight">Proven transformation experience</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 w-full mt-4">
+                  <div className="bg-[#121212] border border-white/10 p-3.5 sm:p-4 rounded-xl text-left flex items-start gap-3 hover:border-[#C5A059]/50 transition-all duration-300 h-full overflow-hidden shadow-md">
+                    <Award className="text-[#C5A059] shrink-0 mt-0.5" size={20} />
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[#C5A059] font-oswald text-[12px] sm:text-[13px] font-bold block uppercase tracking-wider leading-snug">
+                        24 Years Coaching Experience
+                      </span>
+                      <span className="text-gray-300 text-[11px] sm:text-xs font-sans block leading-relaxed mt-1 font-normal">
+                        Proven transformation results
+                      </span>
                     </div>
                   </div>
-                  <div className="bg-[#121212] border border-white/10 p-3.5 rounded-lg text-left flex items-start gap-3 hover:border-[#C5A059]/40 transition-colors">
-                    <Target className="text-[#C5A059] shrink-0 mt-0.5" size={22} />
-                    <div>
-                      <span className="text-[#C5A059] font-oswald text-sm font-bold block uppercase">100% Tailored Plan</span>
-                      <span className="text-gray-300 text-xs font-sans block leading-tight">Customized for your body &amp; goal</span>
+
+                  <div className="bg-[#121212] border border-white/10 p-3.5 sm:p-4 rounded-xl text-left flex items-start gap-3 hover:border-[#C5A059]/50 transition-all duration-300 h-full overflow-hidden shadow-md">
+                    <Target className="text-[#C5A059] shrink-0 mt-0.5" size={20} />
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[#C5A059] font-oswald text-[12px] sm:text-[13px] font-bold block uppercase tracking-wider leading-snug">
+                        100% Personalised Plan
+                      </span>
+                      <span className="text-gray-300 text-[11px] sm:text-xs font-sans block leading-relaxed mt-1 font-normal">
+                        Customized for your body &amp; goals
+                      </span>
                     </div>
                   </div>
-                  <div className="bg-[#121212] border border-white/10 p-3.5 rounded-lg text-left flex items-start gap-3 hover:border-[#C5A059]/40 transition-colors">
-                    <ShieldCheck className="text-[#C5A059] shrink-0 mt-0.5" size={22} />
-                    <div>
-                      <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-bold block uppercase">NASM | SOE | TRX | FMT | CPR | AED</span>
-                      <span className="text-gray-300 text-xs font-sans block leading-tight">Full professional certifications</span>
+
+                  <div className="bg-[#121212] border border-white/10 p-3.5 sm:p-4 rounded-xl text-left flex items-start gap-3 hover:border-[#C5A059]/50 transition-all duration-300 h-full overflow-hidden shadow-md">
+                    <ShieldCheck className="text-[#C5A059] shrink-0 mt-0.5" size={20} />
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[#C5A059] font-oswald text-[10px] sm:text-[11px] md:text-[12px] font-bold block uppercase tracking-tight leading-snug break-words">
+                        NASM | SOE | TRX | FMT | CPR | AED
+                      </span>
+                      <span className="text-gray-300 text-[11px] sm:text-xs font-sans block leading-relaxed mt-1 font-normal">
+                        Certified Specialist
+                      </span>
                     </div>
                   </div>
-                  <div className="bg-[#121212] border border-white/10 p-3.5 rounded-lg text-left flex items-start gap-3 hover:border-[#C5A059]/40 transition-colors">
-                    <Sparkles className="text-[#C5A059] shrink-0 mt-0.5" size={22} />
-                    <div>
-                      <span className="text-[#C5A059] font-oswald text-sm font-bold block uppercase">DONN DEPS System</span>
-                      <span className="text-gray-300 text-xs font-sans block leading-tight">Signature training methodology</span>
+
+                  <div className="bg-[#121212] border border-white/10 p-3.5 sm:p-4 rounded-xl text-left flex items-start gap-3 hover:border-[#C5A059]/50 transition-all duration-300 h-full overflow-hidden shadow-md">
+                    <Sparkles className="text-[#C5A059] shrink-0 mt-0.5" size={20} />
+                    <div className="flex-1 min-w-0">
+                      <span className="text-[#C5A059] font-oswald text-[11px] sm:text-[12px] font-bold block uppercase tracking-wider leading-snug">
+                        DONN Elite Performance System (DEPS)
+                      </span>
+                      <span className="text-gray-300 text-[11px] sm:text-xs font-sans block leading-relaxed mt-1 font-normal">
+                        Signature training methodology
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -533,8 +542,8 @@ export default function Home() {
                       SINGAPORE PREMIER 1-ON-1 COACHING
                     </span>
                   </div>
-                  <p className="text-[#C5A059] font-sans text-xs italic font-medium">
-                    &quot;If Results Matter, Experience Counts.&quot;
+                  <p className="text-[#C5A059] font-sans text-xs sm:text-sm italic font-medium">
+                    &quot;If Results Matter, So Does Experience.&quot;
                   </p>
                   <div className="mt-2 text-[10px] text-gray-300 font-oswald uppercase tracking-widest flex items-center justify-center gap-2">
                     <span>★ 100% DEDICATED</span>
@@ -617,7 +626,7 @@ export default function Home() {
                 </div>
                 <div className="bg-[#161616] border border-[#C5A059]/30 p-4 rounded-xl text-center flex flex-col justify-center">
                   <span className="text-[#C5A059] font-oswald text-sm sm:text-base font-black tracking-wider block uppercase">NASM | SOE | TRX | FMT | CPR | AED</span>
-                  <span className="text-gray-300 text-xs font-sans uppercase font-bold block mt-1">Full Certified Specialist</span>
+                  <span className="text-gray-300 text-xs font-sans uppercase font-bold block mt-1">Certified Specialist</span>
                 </div>
                 <div className="bg-[#161616] border border-[#C5A059]/30 p-4 rounded-xl text-center">
                   <span className="text-[#C5A059] font-oswald text-2xl sm:text-3xl font-black block">SINCE 2002</span>
@@ -696,13 +705,13 @@ export default function Home() {
               num: "01.",
               title: "Personal Training",
               desc: "One to one coaching for individuals who want proper guidance, structure, accountability and results. Suitable for beginners, busy professionals, returning trainees and clients who want a serious fitness plan.",
-              img: "/donn-coaching-latpulldown.avif"
+              img: "/onepersonaltraining.avif"
             },
             {
               num: "02.",
               title: "Weight Loss Training",
               desc: "A structured programme for clients who want to reduce body fat, improve stamina, increase strength and build better lifestyle habits. The focus is on sustainable progress, not extreme shortcuts.",
-              img: "/donn-coaching-elliptical.avif"
+              img: "/weightlosstraining.avif"
             },
             {
               num: "03.",
@@ -746,13 +755,13 @@ export default function Home() {
                 src={srv.img}
                 alt={srv.title}
                 className={`w-full h-full transition-all duration-700 ${
-                  srv.img.includes('senior-fitness') || srv.img.includes('corporate-wellness')
+                  srv.img.includes('senior-fitness') || srv.img.includes('corporate-wellness') || srv.img.includes('onepersonaltraining') || srv.img.includes('weightlosstraining')
                     ? "object-contain bg-black p-1 scale-100 group-hover:scale-105"
                     : "object-cover object-top scale-100 group-hover:scale-105"
                 }`}
               />
               <div className={`absolute inset-0 transition-all duration-300 pointer-events-none ${
-                srv.img.includes('senior-fitness') || srv.img.includes('corporate-wellness')
+                srv.img.includes('senior-fitness') || srv.img.includes('corporate-wellness') || srv.img.includes('onepersonaltraining') || srv.img.includes('weightlosstraining')
                   ? "bg-gradient-to-t from-black/80 via-transparent to-transparent group-hover:bg-black/40"
                   : "bg-gradient-to-t from-black via-black/40 to-transparent group-hover:bg-black/75"
               }`} />
@@ -818,7 +827,7 @@ export default function Home() {
               {
                 title: "Weight Loss & Stamina",
                 trainer: "Md Salaudin Adam (DONN)",
-                img: "/donn-coaching-elliptical.avif",
+                img: "/weightlosstraining.avif",
                 desc: "Structured training designed to support fat loss, improve stamina, build consistency and develop better lifestyle habits through progressive exercise, coaching accountability and realistic training guidance.",
                 focusArea: "Fat loss, stamina, energy and training consistency",
                 benefit: "Improves cardiovascular fitness, movement confidence, strength endurance and overall body conditioning",
@@ -857,11 +866,15 @@ export default function Home() {
             ].map((cls) => (
               <div key={cls.title} className="grid lg:grid-cols-12 overflow-hidden group rounded-2xl border-2 border-white/10 bg-[#0d0d0d] shadow-2xl">
                 {/* Left Column: Image Thumbnail */}
-                <div className="lg:col-span-5 min-h-[280px] sm:min-h-[340px] lg:min-h-[460px] xl:min-h-[540px] overflow-hidden relative border-b lg:border-b-0 lg:border-r-2 border-white/10 flex items-center justify-center">
+                <div className="lg:col-span-5 min-h-[280px] sm:min-h-[340px] lg:min-h-[460px] xl:min-h-[540px] overflow-hidden relative border-b lg:border-b-0 lg:border-r-2 border-white/10 flex items-center justify-center bg-black">
                   <img
                     src={cls.img}
                     alt={cls.title}
-                    className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-transform duration-700"
+                    className={`w-full h-full scale-100 group-hover:scale-105 transition-transform duration-700 ${
+                      cls.img.includes('weightlosstraining') || cls.img.includes('onepersonaltraining')
+                        ? "object-contain bg-black p-2"
+                        : "object-cover object-top"
+                    }`}
                   />
                 </div>
                 
@@ -1136,14 +1149,14 @@ export default function Home() {
             ].map((trn, idx) => (
               <ScrollReveal key={idx} className="reveal-hidden" delay={idx * 150}>
                 <div className="overflow-hidden rounded-xl border border-white/10 bg-[#0e0e0e] shadow-xl hover:border-[#C5A059]/50 transition-all duration-300 flex flex-col h-full group">
-                  <div className="h-64 sm:h-72 relative overflow-hidden bg-black border-b border-white/10">
+                  <div className="w-full aspect-[2/3] relative overflow-hidden bg-black border-b border-white/10">
                     <img
                       src={trn.img}
                       alt={trn.title}
                       className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
                     />
                   </div>
-                  <div className="p-5 text-center flex-1 flex flex-col justify-center bg-[#121212] min-h-[5.5rem]">
+                  <div className="p-5 text-center flex-1 flex flex-col justify-center bg-[#121212] min-h-[6rem]">
                     <h3 className="font-oswald text-base sm:text-lg font-bold uppercase text-white group-hover:text-[#C5A059] transition-colors leading-snug">
                       {trn.title}
                     </h3>
@@ -1156,9 +1169,9 @@ export default function Home() {
             ))}
           </div>
 
-          {/* 4 Standardised Credential Boxes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-8 sm:pb-12">
-            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
+          {/* 4 Standardised Credential Summary Boxes (Text-only clean boxes) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pb-12 sm:pb-16 lg:pb-20">
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md min-h-[6rem]">
               <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
                 Md Salaudin Adam (DONN)
               </div>
@@ -1167,7 +1180,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md min-h-[6rem]">
               <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
                 Trusted Since 2002
               </div>
@@ -1176,7 +1189,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md min-h-[6rem]">
               <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
                 Professional Certifications
               </div>
@@ -1185,7 +1198,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md">
+            <div className="bg-[#121212] border border-white/10 p-5 rounded-xl text-center flex flex-col justify-center hover:border-[#C5A059]/40 transition-all duration-300 shadow-md min-h-[6rem]">
               <div className="text-base sm:text-lg font-bold font-oswald text-[#C5A059] uppercase tracking-wide mb-1">
                 Premium Coaching Standard
               </div>

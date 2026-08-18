@@ -464,11 +464,11 @@ export default function AboutPage() {
               <ScrollReveal key={phase.num} className="reveal-hidden" delay={idx * 80}>
                 <div className="bg-[#0e0e0e] border border-white/10 p-6 sm:p-7 rounded-xl hover:border-[#C5A059]/60 hover:shadow-[0_0_20px_rgba(197,160,89,0.15)] transition-all duration-300 flex flex-col justify-between h-full group">
                   <div>
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-13 h-13 border border-[#C5A059]/40 bg-[#161616] rounded-lg flex items-center justify-center group-hover:bg-[#C5A059]/10 group-hover:border-[#C5A059] transition-all duration-300 shrink-0 p-2.5">
+                    <div className="flex items-center gap-2.5 mb-4">
+                      <div className="shrink-0 text-[#C5A059] group-hover:scale-110 transition-transform duration-300">
                         {phase.icon}
                       </div>
-                      <span className="font-oswald text-3xl font-black text-[#C5A059]/40 group-hover:text-[#C5A059] transition-colors">
+                      <span className="font-oswald text-2xl sm:text-3xl font-extrabold text-[#C5A059] group-hover:text-white transition-colors">
                         {phase.num}
                       </span>
                     </div>
@@ -906,23 +906,23 @@ export default function AboutPage() {
           <div className="lg:col-span-5">
             <ScrollReveal className="reveal-left-hidden">
               <span className="section-label">
-                <Users size={16} className="text-[#C5A059]" /> WHO I HELP
+                <Users size={16} className="text-[#C5A059]" /> TRANSFORMATION BUILT AROUND YOU
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-syne leading-tight">
-                Who I Help
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.5rem] font-black uppercase mb-4 font-syne leading-tight text-white">
+                Transformation Built Around You
               </h2>
-              <p className="text-[#C5A059] font-oswald text-lg uppercase tracking-wider mb-6">
-                Personal Training for real people, real lifestyles and real goals.
+              <p className="text-[#C5A059] font-oswald text-xl sm:text-2xl uppercase tracking-wider mb-6 font-bold">
+                Personal Training for Real People, Real Lifestyles and Real Goals
               </p>
-              <p className="text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed mb-6 font-sans font-normal">
+              <p className="text-gray-100 text-lg sm:text-xl md:text-2xl leading-relaxed mb-6 font-sans font-normal">
                 PersonalTrainer.sg works with clients who want to improve their health, fitness, body shape, strength and confidence.
               </p>
-              <p className="text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed mb-8 font-sans font-normal">
+              <p className="text-gray-100 text-lg sm:text-xl md:text-2xl leading-relaxed mb-8 font-sans font-normal">
                 Whether you are starting from zero, returning after a long break, or trying to take your fitness to the next level, the programme will be adjusted according to your current condition and personal goal.
               </p>
-              <Link href="/#trial" className="btn-primary group inline-flex">
+              <Link href="/#trial" className="btn-primary group inline-flex text-base sm:text-lg px-8 py-4">
                 <span>Book a Trial Session</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
             </ScrollReveal>
           </div>
@@ -941,12 +941,12 @@ export default function AboutPage() {
               { num: "09", title: "Lifestyle Transformation", desc: "Clients who want a complete Lifestyle Transformation" }
             ].map((item, idx) => (
               <ScrollReveal key={item.num} className="reveal-hidden" delay={idx * 100}>
-                <div className="bg-[#0d0d0d] border border-white/5 p-5 rounded-lg hover:border-[#800020]/30 transition-all duration-300">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-xl font-extrabold font-oswald text-[#C5A059]">{item.num}</span>
-                    <h3 className="font-oswald text-md font-bold uppercase text-white tracking-wide">{item.title}</h3>
+                <div className="bg-[#0d0d0d] border border-white/5 p-5 sm:p-6 rounded-xl hover:border-[#800020]/30 transition-all duration-300">
+                  <div className="flex items-center gap-3 mb-2.5">
+                    <span className="text-2xl font-extrabold font-oswald text-[#C5A059]">{item.num}</span>
+                    <h3 className="font-oswald text-lg sm:text-xl font-bold uppercase text-white tracking-wide">{item.title}</h3>
                   </div>
-                  <p className="text-gray-200 text-sm sm:text-base leading-relaxed font-sans">{item.desc}</p>
+                  <p className="text-gray-100 text-base sm:text-lg leading-relaxed font-sans">{item.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -963,20 +963,20 @@ export default function AboutPage() {
               <span className="section-label">
                 <Activity size={16} className="text-[#C5A059]" /> THE DIFFERENCE
               </span>
-              <h2 className="text-xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-black uppercase mb-4 font-syne leading-tight break-words">
-                The <br /> PersonalTrainer.sg <br />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] xl:text-[3.2rem] font-black uppercase mb-4 font-syne leading-tight text-white">
+                The <span className="whitespace-nowrap inline-block">PersonalTrainer.sg</span> <br className="hidden sm:inline" />
                 <span className="text-[#800020]">Difference</span>
               </h2>
-              <p className="text-[#C5A059] font-oswald text-lg uppercase tracking-wider mb-6">
+              <p className="text-[#C5A059] font-oswald text-xl sm:text-2xl uppercase tracking-wider mb-6 font-bold">
                 Not random workouts. Not shortcuts. Proper coaching with purpose.
               </p>
-              <p className="text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed mb-4 font-sans font-normal">
+              <p className="text-gray-100 text-lg sm:text-xl md:text-2xl leading-relaxed mb-4 font-sans font-normal">
                 PersonalTrainer.sg is built on experience, discipline, structure and results. The focus is not on trends, gimmicks or temporary motivation. 
               </p>
-              <p className="text-gray-200 text-base sm:text-lg md:text-xl leading-relaxed mb-6 font-sans font-normal">
+              <p className="text-gray-100 text-lg sm:text-xl md:text-2xl leading-relaxed mb-6 font-sans font-normal">
                 The focus is on coaching that helps clients understand their body, improve their movement, build strength, reduce body fat, increase confidence and stay consistent.
               </p>
-              <div className="text-xs uppercase tracking-[0.15em] font-bold text-[#C5A059] space-y-1.5 font-oswald mt-4">
+              <div className="text-sm sm:text-base uppercase tracking-[0.15em] font-bold text-[#C5A059] space-y-2 font-oswald mt-4">
                 <div>• Every session is designed with intention.</div>
                 <div>• Every client is guided with attention.</div>
                 <div>• Every transformation starts with one clear decision.</div>
@@ -985,12 +985,12 @@ export default function AboutPage() {
           </div>
 
           {/* Right Column: Key Difference Points */}
-          <div className="lg:col-span-6 bg-[#0d0d0d] border border-white/5 p-8 rounded-lg">
+          <div className="lg:col-span-6 bg-[#0d0d0d] border border-white/5 p-8 sm:p-10 rounded-xl">
             <ScrollReveal className="reveal-right-hidden">
-              <h3 className="font-oswald text-lg font-bold uppercase tracking-wider text-white mb-6">
+              <h3 className="font-oswald text-xl sm:text-2xl font-bold uppercase tracking-wider text-white mb-6">
                 Coaching with Purpose
               </h3>
-              <ul className="space-y-3 text-sm text-white font-sans">
+              <ul className="space-y-4 text-base sm:text-lg text-gray-100 font-sans font-medium">
                 {[
                   "Personalised training plan",
                   "Proper exercise coaching",
@@ -1002,8 +1002,8 @@ export default function AboutPage() {
                   "Realistic approach to long term fitness",
                   "Professional coaching backed by experience"
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-3">
-                    <Check size={14} className="text-[#C5A059] shrink-0" />
+                  <li key={idx} className="flex items-center gap-3.5">
+                    <Check size={18} className="text-[#C5A059] shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -1021,10 +1021,10 @@ export default function AboutPage() {
               <span className="section-label justify-center">
                 <Users size={16} className="text-[#C5A059]" /> CREDENTIALS
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-syne">
+              <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase mb-4 font-syne text-white">
                 Professional Credentials
               </h2>
-              <p className="text-white max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+              <p className="text-gray-100 max-w-3xl mx-auto text-lg sm:text-xl md:text-2xl leading-relaxed font-sans font-normal">
                 With more than two decades of experience in Singapore’s fitness industry, Md Salaudin Adam (DONN) brings professional coaching, structured programming, discipline and practical guidance to help clients train safely, stay consistent and work towards real results.
               </p>
             </div>
@@ -1055,7 +1055,7 @@ export default function AboutPage() {
               }
             ].map((trn, idx) => (
               <ScrollReveal key={trn.name} className="reveal-hidden" delay={idx * 150}>
-                <div className="group relative aspect-[3/4] overflow-hidden border border-white/5 bg-[#0d0d0d]">
+                <div className="group relative aspect-[3/4] overflow-hidden border border-white/5 bg-[#0d0d0d] rounded-xl">
                   {/* Trainer Image */}
                   <img
                     src={trn.img}
@@ -1065,21 +1065,21 @@ export default function AboutPage() {
                   
                   {/* Bottom Text Panel */}
                   <div className="absolute bottom-0 left-0 right-0 bg-black/90 p-5 text-center z-20 border-t border-white/5 group-hover:border-[#C5A059]/30 transition-colors duration-300">
-                    <h3 className="font-oswald text-lg font-bold tracking-wide uppercase text-white group-hover:text-[#C5A059] transition-colors duration-300">
+                    <h3 className="font-oswald text-xl font-bold tracking-wide uppercase text-white group-hover:text-[#C5A059] transition-colors duration-300">
                       {trn.name}
                     </h3>
-                    <p className="text-xs uppercase tracking-widest text-[#C5A059] font-bold mt-1">
+                    <p className="text-xs sm:text-sm uppercase tracking-widest text-[#C5A059] font-bold mt-1">
                       {trn.role}
                     </p>
                   </div>
                   
                   {/* Hover Social Overlay Panel in Maroon */}
                   <div className="absolute inset-0 bg-[#800020]/80 flex items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                    <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
-                      <Phone size={16} />
+                    <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                      <Phone size={20} />
                     </a>
-                    <a href="mailto:donn@personaltrainer.sg" className="w-10 h-10 rounded-full bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
-                      <Mail size={16} />
+                    <a href="mailto:donn@personaltrainer.sg" className="w-12 h-12 rounded-full bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
+                      <Mail size={20} />
                     </a>
                   </div>
                 </div>
@@ -1107,11 +1107,11 @@ export default function AboutPage() {
             <span className="section-label">
               <Activity size={16} className="text-[#C5A059]" /> FINAL BRAND LINE
             </span>
-            <h2 className="text-3xl md:text-5xl font-black uppercase font-syne mb-6 leading-tight max-w-2xl">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase font-syne mb-6 leading-tight max-w-2xl text-white">
               Train With <br />
               <span className="text-[#800020]">Md Salaudin Adam (DONN)</span>
             </h2>
-            <div className="text-white text-base md:text-lg max-w-xl mb-8 leading-relaxed font-sans space-y-4">
+            <div className="text-gray-100 text-lg sm:text-xl md:text-2xl max-w-xl mb-8 leading-relaxed font-sans space-y-5 font-normal">
               <p>
                 Start your transformation journey with structured personal training, professional form correction, and a clear roadmap.
               </p>
@@ -1120,11 +1120,11 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="btn-primary group text-center">
+              <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="btn-primary group text-center text-base sm:text-lg px-8 py-4">
                 <span>WhatsApp PersonalTrainer.sg</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-300" />
               </a>
-              <Link href="/#trial" className="btn-outline group text-center">
+              <Link href="/#trial" className="btn-outline group text-center text-base sm:text-lg px-8 py-4">
                 <span>Book a Trial Session</span>
               </Link>
             </div>
@@ -1153,11 +1153,11 @@ export default function AboutPage() {
               <span className="section-label">
                 <MessageSquare size={16} className="text-[#C5A059]" /> TESTIMONIAL
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase font-syne mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black uppercase font-syne mb-6 leading-tight text-white">
                 Trusted by Our <br />
                 <span className="text-[#800020] whitespace-nowrap">Community</span>
               </h2>
-              <p className="text-white text-base leading-relaxed mb-8">
+              <p className="text-gray-100 text-lg sm:text-xl leading-relaxed mb-8 font-sans font-normal">
                 Discover the actual training experiences shared by clients who committed to structured personal training with PersonalTrainer.sg.
               </p>
               
@@ -1181,7 +1181,7 @@ export default function AboutPage() {
 
           <div className="lg:col-span-7">
             <ScrollReveal className="reveal-right-hidden">
-              <div className="relative bg-[#0d0d0d] border border-white/5 p-6 sm:p-8 md:p-12 rounded-lg">
+              <div className="relative bg-[#0d0d0d] border border-white/5 p-6 sm:p-8 md:p-12 rounded-xl">
                 
                 {/* Quote Icon watermark */}
                 <div className="absolute right-8 top-8 text-white/5 pointer-events-none">
@@ -1189,17 +1189,17 @@ export default function AboutPage() {
                 </div>
                 
                 {/* Sliding Card Content */}
-                <div className="min-h-[160px] flex flex-col justify-between">
-                  <p className="text-white text-lg md:text-xl italic leading-relaxed mb-6 font-syne">
+                <div className="min-h-[180px] flex flex-col justify-between">
+                  <p className="text-gray-100 text-xl sm:text-2xl md:text-3xl italic leading-relaxed mb-6 font-syne font-medium">
                     "{testimonials[testimonialIndex].quote}"
                   </p>
                   
                   <div className="flex items-center gap-4">
                     <div>
-                      <h4 className="font-oswald text-lg font-bold text-white uppercase">
+                      <h4 className="font-oswald text-xl font-bold text-white uppercase">
                         {testimonials[testimonialIndex].name}
                       </h4>
-                      <p className="text-xs uppercase tracking-widest text-[#C5A059] font-bold">
+                      <p className="text-sm uppercase tracking-widest text-[#C5A059] font-bold">
                         {testimonials[testimonialIndex].role}
                       </p>
                     </div>
@@ -1231,14 +1231,14 @@ export default function AboutPage() {
             <span className="section-label">
               <MessageSquare size={16} className="text-[#C5A059]" /> FAQS
             </span>
-            <h2 className="text-4xl md:text-5xl font-black uppercase font-syne mb-6 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-black uppercase font-syne mb-6 leading-tight text-white">
               Clear answers to <br />
               <span className="text-[#800020]">common inquiries.</span>
             </h2>
-            <p className="text-white text-sm leading-relaxed mb-8">
+            <p className="text-gray-100 text-lg sm:text-xl leading-relaxed mb-8 font-sans font-normal">
               Have questions about personal training packages, rates or locations? Contact PersonalTrainer.sg directly on WhatsApp or submit an enquiry.
             </p>
-            <Link href="/#contact" className="btn-outline inline-flex">
+            <Link href="/#contact" className="btn-outline inline-flex text-base sm:text-lg px-8 py-4">
               <span>GET IN TOUCH</span>
             </Link>
           </ScrollReveal>
@@ -1248,24 +1248,24 @@ export default function AboutPage() {
         <div className="lg:col-span-7 space-y-4">
           {faqs.map((faq, i) => (
             <ScrollReveal key={i} className="reveal-right-hidden">
-              <div className="bg-[#0d0d0d] border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+              <div className="bg-[#0d0d0d] border border-white/5 rounded-xl overflow-hidden transition-all duration-300">
                 <button
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
-                  className="w-full flex justify-between items-center p-6 text-left hover:text-[#C5A059] transition-colors duration-300 focus:outline-none"
+                  className="w-full flex justify-between items-center p-6 sm:p-7 text-left hover:text-[#C5A059] transition-colors duration-300 focus:outline-none"
                 >
-                  <span className="font-oswald text-lg font-bold tracking-wide uppercase text-white">
+                  <span className="font-oswald text-xl sm:text-2xl font-bold tracking-wide uppercase text-white">
                     {faq.q}
                   </span>
-                  <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center text-[#C5A059] transition-transform duration-300">
-                    {activeFaq === i ? <Minus size={16} /> : <Plus size={16} />}
+                  <div className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-[#C5A059] transition-transform duration-300 shrink-0">
+                    {activeFaq === i ? <Minus size={18} /> : <Plus size={18} />}
                   </div>
                 </button>
                 <div
                   className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                    activeFaq === i ? "max-h-[200px] border-t border-white/5 opacity-100" : "max-h-0 opacity-0"
+                    activeFaq === i ? "max-h-[800px] border-t border-white/5 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
-                  <div className="p-6 text-sm text-white leading-relaxed bg-[#050505]">
+                  <div className="p-6 sm:p-8 text-base sm:text-lg lg:text-xl text-gray-100 leading-relaxed bg-[#050505] font-sans font-normal">
                     {faq.a}
                   </div>
                 </div>

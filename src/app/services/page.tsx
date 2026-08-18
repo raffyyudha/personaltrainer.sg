@@ -109,7 +109,7 @@ const blueprints = [
     title: "Personal Training",
     subtitle: "One to one coaching for structure, accountability and results.",
     desc: "Personal Training is suitable for clients who want proper guidance, professional coaching and a clear training plan. Whether you are a beginner, returning to fitness after a long break, or already training but not seeing the results you want, Personal Training helps you train with better structure, better technique and better focus. Every session is planned according to your fitness level, body condition, goal and lifestyle. You will be guided on proper exercise technique, safe movement, training intensity, progression and consistency.",
-    img: "/donn-coaching-latpulldown.avif",
+    img: "/onepersonaltraining.avif",
     suitableFor: [
       "Beginners who need proper guidance",
       "Busy professionals who need structure",
@@ -163,7 +163,7 @@ const blueprints = [
     title: "Weight Loss Training",
     subtitle: "Structured coaching to help you reduce body fat and build healthier habits.",
     desc: "Weight Loss Training is designed for clients who want to reduce body fat, improve fitness, increase energy and build a stronger, healthier lifestyle. The goal is not extreme dieting or short term weight loss. The goal is sustainable progress through proper training, consistency, nutrition awareness and accountability. Your programme will include a combination of resistance training, conditioning, movement work and lifestyle guidance according to your current fitness level. This approach helps you burn calories, build strength, improve stamina and develop habits that support long term progress.",
-    img: "/donn-coaching-elliptical.avif",
+    img: "/weightlosstraining.avif",
     suitableFor: [
       "Clients who want Weight Loss",
       "Clients who want Fat Reduction",
