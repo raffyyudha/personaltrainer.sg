@@ -460,18 +460,21 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Center Logo Showcase */}
-              <div className="flex flex-col items-center text-center my-auto w-full">
-                <div className="relative mb-5 my-2">
-                  <PremiumShieldLogo imageClassName="w-52 sm:w-60 md:w-68 lg:w-72 h-auto" />
+              {/* Center Logo Showcase - Royal Medallion Display */}
+              <div className="flex flex-col items-center text-center my-auto w-full py-4">
+                <div className="relative mb-6 my-2">
+                  <PremiumShieldLogo imageClassName="w-52 sm:w-60 md:w-64 lg:w-72 h-auto" />
                 </div>
 
-                <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] px-4 py-1.5 bg-white/5 border border-[#C5A059]/30 inline-block mb-3 rounded whitespace-nowrap">
-                  Trusted in Singapore Since 2002
-                </span>
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-[#C5A059]/15 via-[#C5A059]/25 to-[#C5A059]/15 border border-[#C5A059]/40 mb-3 shadow-md">
+                  <Crown size={14} className="text-[#FFE5A3] shrink-0" />
+                  <span className="text-[#FFE5A3] font-oswald text-xs sm:text-sm uppercase tracking-[0.18em] font-extrabold whitespace-nowrap">
+                    Trusted in Singapore Since 2002
+                  </span>
+                </div>
 
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black font-oswald uppercase tracking-tight text-white mb-2 whitespace-nowrap">
-                  PERSONAL<span className="text-[#C5A059]">TRAINER.SG</span>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black font-oswald uppercase tracking-wider text-white mb-2 whitespace-nowrap">
+                  PERSONAL<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFE5A3] via-[#C5A059] to-[#D4AF37]">TRAINER.SG</span>
                 </h3>
 
                 <p className="text-gray-300 text-xs sm:text-sm font-sans max-w-sm leading-relaxed mb-4 font-normal">

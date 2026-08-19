@@ -176,20 +176,59 @@ div {
   }
 }
 
-.animate-shield-shine {
-  animation: shieldShineSweep 4.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+@keyframes spinSlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-.animate-glitter-sparkle {
-  animation: glitterSparkle 3s ease-in-out infinite;
+@keyframes spinSlowReverse {
+  0% { transform: rotate(360deg); }
+  100% { transform: rotate(0deg); }
 }
 
-.animate-ambient-backpulse {
-  animation: ambientBackPulse 5s ease-in-out infinite;
+@keyframes floorReflectGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scaleX(1);
+    filter: blur(10px) drop-shadow(0 0 15px rgba(197, 160, 89, 0.4));
+  }
+  50% {
+    opacity: 0.9;
+    transform: scaleX(1.15);
+    filter: blur(14px) drop-shadow(0 0 25px rgba(255, 229, 163, 0.7));
+  }
 }
 
-.animate-shield-float {
-  animation: shieldFloatGentle 6s ease-in-out infinite;
+@keyframes floatGlitterUp {
+  0% {
+    transform: translateY(0) scale(0.6) rotate(0deg);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-8px) scale(1.3) rotate(30deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(255, 230, 160, 0.95));
+  }
+  100% {
+    transform: translateY(-16px) scale(0.6) rotate(60deg);
+    opacity: 0.1;
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 35s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spinSlowReverse 45s linear infinite;
+}
+
+.animate-floor-reflect {
+  animation: floorReflectGlow 4s ease-in-out infinite;
+}
+
+.animate-float-glitter {
+  animation: floatGlitterUp 4s ease-in-out infinite;
 }
 
 .premium-shield-img {
