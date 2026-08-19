@@ -563,11 +563,11 @@ export default function ServicesPage() {
     },
     {
       q: "Is the trial session free?",
-      a: "The trial session is free only if the client signs up for a minimum 12-session package immediately after the trial session. If the client decides not to continue after the trial, the trial session fee is $144."
+      a: "The trial session fee is $144 and will be waived if you sign up for a minimum 12-session package immediately after the trial."
     },
     {
       q: "How long is the trial session?",
-      a: "The trial session is approximately 90 minutes. It includes around 30 minutes of assessment and consultation, followed by around 60 minutes of training."
+      a: "The trial session is approximately 75 minutes. It includes around 30 minutes of consultation, followed by around 45 minutes of hands-on training."
     },
     {
       q: "What are your opening hours?",
@@ -826,10 +826,10 @@ export default function ServicesPage() {
             <Award size={16} className="text-[#C5A059]" /> RATES & TRIAL SESSION
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase font-syne">
-            Personal Training Pricing & Trial Session
+            Personal Training Rates & Trial Session
           </h2>
           <p className="text-white text-sm sm:text-base max-w-3xl mx-auto leading-relaxed font-sans">
-            The trial session is approximately 90 minutes. It includes around 30 minutes of assessment and consultation, followed by around 60 minutes of training. The trial session is free only if the client signs up for a minimum 12-session package immediately after the trial session. If the client decides not to continue after the trial, the trial session fee is $144.
+            The trial session is approximately 75 minutes. It includes around 30 minutes of consultation, followed by around 45 minutes of hands-on training. The trial session fee is $144 and will be waived if you sign up for a minimum 12-session package immediately after the trial.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
             <Link href="/rates" className="btn-primary">
