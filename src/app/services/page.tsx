@@ -668,7 +668,7 @@ export default function ServicesPage() {
                           src={item.img} 
                           alt={item.title} 
                           className={`w-full h-full scale-100 hover:scale-105 transition-transform duration-700 ${
-                            item.img.includes('onepersonaltraining')
+                            item.img.includes('onepersonaltraining') || item.img.includes('donn-kickboxing') || item.img.includes('donn-coaching-barbell')
                               ? "object-cover object-top"
                               : "object-contain bg-[#0c0c0c] p-1"
                           }`}
