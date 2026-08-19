@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TikTokIcon from "@/components/TikTokIcon";
+import PremiumShieldLogo from "@/components/PremiumShieldLogo";
 import {
   Facebook,
   Instagram,
@@ -461,13 +462,8 @@ export default function Home() {
 
               {/* Center Logo Showcase */}
               <div className="flex flex-col items-center text-center my-auto w-full">
-                <div className="relative mb-4">
-                  <div className="absolute inset-0 bg-[#C5A059]/25 rounded-full blur-3xl transform scale-125 pointer-events-none" />
-                  <img
-                    src="/logopt.png"
-                    alt="PersonalTrainer.sg Official Crest"
-                    className="w-48 sm:w-56 md:w-64 h-auto object-contain relative z-10 drop-shadow-[0_0_35px_rgba(197,160,89,0.55)] transition-transform duration-500 group-hover:scale-105"
-                  />
+                <div className="relative mb-5 my-2">
+                  <PremiumShieldLogo imageClassName="w-52 sm:w-60 md:w-68 lg:w-72 h-auto" />
                 </div>
 
                 <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] px-4 py-1.5 bg-white/5 border border-[#C5A059]/30 inline-block mb-3 rounded whitespace-nowrap">

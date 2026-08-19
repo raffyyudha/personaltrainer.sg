@@ -377,7 +377,7 @@ export default function AboutPage() {
                 DONN Elite Performance System (DEPS) is the signature coaching methodology of PersonalTrainer.sg, developed by Md Salaudin Adam (DONN), Founder and Fitness Director.
               </p>
               <p>
-                Built from <strong className="text-white font-bold">24 Years of Coaching Experience</strong> and <strong className="text-white font-bold">Trusted in Singapore Since 2002</strong>, DEPS is designed to help clients train with purpose, move safely, build strength, improve stamina, reduce body fat and create long term lifestyle transformation.
+                <strong className="text-white font-bold">Trusted in Singapore Since 2002</strong>, DEPS is designed to help clients train with purpose, move safely, build strength, improve stamina, reduce body fat and create long term lifestyle transformation.
               </p>
             </div>
 
@@ -387,14 +387,14 @@ export default function AboutPage() {
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#C5A059] rounded-full blur-3xl opacity-20 pointer-events-none" />
               
               <p className="text-2xl sm:text-3xl font-black font-syne text-[#800020] uppercase tracking-wide mb-4">
-                DEPS is not random workout training.
+                DEPS IS NOT RANDOM EXERCISE.
               </p>
               <p className="text-gray-100 text-base sm:text-lg lg:text-xl font-sans max-w-3xl mx-auto leading-relaxed mb-6 font-normal">
-                It is a structured system that combines movement preparation, posture correction, core activation, stabilisation, strength training, metabolic conditioning and cardiovascular development.
+                It is a structured coaching system that combines movement preparation, posture correction, core activation, stabilisation, strength training, metabolic conditioning and cardiovascular development.
               </p>
               <div className="inline-block bg-[#800020] border border-[#C5A059]/40 px-8 py-3.5 rounded-full">
                 <span className="text-white font-oswald text-base sm:text-lg font-extrabold uppercase tracking-widest">
-                  Train properly. Progress safely. Build real results.
+                  TRAIN PROPERLY. PROGRESS SAFELY. BUILD REAL RESULTS.
                 </span>
               </div>
             </div>
@@ -410,7 +410,7 @@ export default function AboutPage() {
                 The DEPS Methodology
               </h3>
               <p className="text-gray-100 text-base sm:text-lg md:text-xl font-sans mt-2 leading-relaxed max-w-3xl font-normal">
-                A 7-stage progressive movement system designed to optimize performance, prevent injury, and maximize body transformation.
+                A 7-stage progressive movement system designed to optimise performance, reduce injury risk, improve movement quality and build long term results.
               </p>
             </div>
           </ScrollReveal>

@@ -24,8 +24,8 @@ h1, h2, h3, h4, h5, h6,
 p, span, a, li, td, th, label, blockquote {
   overflow-wrap: break-word !important;
   word-wrap: break-word !important;
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: manual !important;
+  hyphens: manual !important;
   max-width: 100%;
 }
 
@@ -123,6 +123,85 @@ div {
     margin-bottom: 0 !important;
     border-radius: 14px !important;
   }
+}
+
+/* Premium Full PT Shield Showcase Animations & Styles */
+@keyframes shieldShineSweep {
+  0% {
+    transform: translateX(-160%) skewX(-25deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.85;
+  }
+  38% {
+    transform: translateX(180%) skewX(-25deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(180%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+@keyframes glitterSparkle {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(0.6) rotate(0deg);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.35) rotate(45deg);
+    filter: drop-shadow(0 0 8px rgba(255, 230, 160, 0.9));
+  }
+}
+
+@keyframes ambientBackPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes shieldFloatGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-shield-shine {
+  animation: shieldShineSweep 4.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-glitter-sparkle {
+  animation: glitterSparkle 3s ease-in-out infinite;
+}
+
+.animate-ambient-backpulse {
+  animation: ambientBackPulse 5s ease-in-out infinite;
+}
+
+.animate-shield-float {
+  animation: shieldFloatGentle 6s ease-in-out infinite;
+}
+
+.premium-shield-img {
+  image-rendering: -webkit-optimize-contrast !important;
+  image-rendering: crisp-edges !important;
+  image-rendering: high-quality !important;
+  filter: contrast(1.12) brightness(1.1) drop-shadow(0 15px 35px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 25px rgba(197, 160, 89, 0.5)) !important;
+  transition: transform 0.5s ease, filter 0.5s ease !important;
+}
+
+.premium-shield-img:hover {
+  filter: contrast(1.15) brightness(1.15) drop-shadow(0 20px 45px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 35px rgba(255, 229, 163, 0.75)) !important;
 }
 
 /* Scroll margin top offset for fixed header navigation */
