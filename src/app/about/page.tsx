@@ -908,8 +908,9 @@ export default function AboutPage() {
               <span className="section-label">
                 <Users size={16} className="text-[#C5A059]" /> TRANSFORMATION BUILT AROUND YOU
               </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[2.5rem] font-black uppercase mb-4 font-syne leading-tight text-white">
-                Transformation Built Around You
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-black uppercase mb-4 font-syne leading-tight text-white">
+                <span className="block whitespace-nowrap">Transformation</span>
+                <span className="block">Built Around You</span>
               </h2>
               <p className="text-[#C5A059] font-oswald text-xl sm:text-2xl uppercase tracking-wider mb-6 font-bold">
                 Personal Training for Real People, Real Lifestyles and Real Goals
@@ -963,8 +964,8 @@ export default function AboutPage() {
               <span className="section-label">
                 <Activity size={16} className="text-[#C5A059]" /> THE DIFFERENCE
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.5rem] xl:text-[3.2rem] font-black uppercase mb-4 font-syne leading-tight text-white">
-                The <span className="whitespace-nowrap inline-block">PersonalTrainer.sg</span> <br className="hidden sm:inline" />
+              <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-3xl xl:text-4xl font-black uppercase mb-4 font-syne leading-tight text-white">
+                The <span className="text-lg sm:text-2xl md:text-2xl lg:text-[1.75rem] xl:text-[2.1rem] whitespace-nowrap text-white">PersonalTrainer.sg</span> <br className="hidden sm:inline" />
                 <span className="text-[#800020]">Difference</span>
               </h2>
               <p className="text-[#C5A059] font-oswald text-xl sm:text-2xl uppercase tracking-wider mb-6 font-bold">

@@ -667,7 +667,11 @@ export default function ServicesPage() {
                         <img 
                           src={item.img} 
                           alt={item.title} 
-                          className="w-full h-full object-contain bg-[#0c0c0c] p-1 scale-100 hover:scale-105 transition-transform duration-700"
+                          className={`w-full h-full scale-100 hover:scale-105 transition-transform duration-700 ${
+                            item.img.includes('onepersonaltraining')
+                              ? "object-cover object-top"
+                              : "object-contain bg-[#0c0c0c] p-1"
+                          }`}
                         />
                       </div>
                       <div className="lg:col-span-8 space-y-6">

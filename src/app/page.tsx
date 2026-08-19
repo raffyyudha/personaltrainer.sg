@@ -59,7 +59,7 @@ const ScrollReveal = ({
 };
 
 // Animated Stats Counter Component
-const AnimatedCounter = ({ end, duration = 2000 }: { end: number; duration?: number }) => {
+const AnimatedCounter = ({ end, duration = 2000, formatComma = false }: { end: number; duration?: number; formatComma?: boolean }) => {
   const [count, setCount] = useState(end);
   const ref = useRef<HTMLSpanElement | null>(null);
   const hasAnimated = useRef(false);
@@ -95,7 +95,7 @@ const AnimatedCounter = ({ end, duration = 2000 }: { end: number; duration?: num
     };
   }, [end, duration]);
 
-  return <span ref={ref}>{count}</span>;
+  return <span ref={ref}>{formatComma ? count.toLocaleString() : count}</span>;
 };
 
 const menuItems = [
@@ -360,31 +360,39 @@ export default function Home() {
       </section>
 
       {/* Stats Section - Centered with Vertical Dividers */}
-      <section className="bg-[#0a0a0a] py-16 px-6 md:px-12">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-0 text-center">
+      <section className="bg-[#0a0a0a] py-16 sm:py-20 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 text-center items-center">
             <ScrollReveal className="reveal-hidden" delay={0}>
-              <div className="py-6 md:border-r md:border-white/10">
-                <span className="text-6xl md:text-8xl font-extrabold font-oswald text-white tracking-tighter block">
+              <div className="py-6 lg:py-8 lg:border-r lg:border-white/10 lg:px-6 border-b border-white/10 sm:border-b-0">
+                <span className="text-6xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-8xl font-black font-oswald text-white tracking-tighter block leading-none">
                   <AnimatedCounter end={24} />+
                 </span>
-                <h4 className="font-oswald text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-2">Years of Coaching Experience</h4>
+                <h4 className="font-oswald text-xs sm:text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-4">Years of Coaching Experience</h4>
               </div>
             </ScrollReveal>
             <ScrollReveal className="reveal-hidden" delay={150}>
-              <div className="py-6 md:border-r md:border-white/10">
-                <span className="text-6xl md:text-8xl font-extrabold font-oswald text-white tracking-tighter block">
+              <div className="py-6 lg:py-8 lg:border-r lg:border-white/10 lg:px-6 border-b border-white/10 sm:border-b-0">
+                <span className="text-6xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-8xl font-black font-oswald text-white tracking-tighter block leading-none">
                   <AnimatedCounter end={2002} />
                 </span>
-                <h4 className="font-oswald text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-2">Trusted in Singapore Since 2002</h4>
+                <h4 className="font-oswald text-xs sm:text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-4">Trusted in Singapore Since 2002</h4>
               </div>
             </ScrollReveal>
             <ScrollReveal className="reveal-hidden" delay={300}>
-              <div className="py-6">
-                <span className="text-6xl md:text-8xl font-extrabold font-oswald text-white tracking-tighter block">
-                  <AnimatedCounter end={100} />%
+              <div className="py-6 lg:py-8 lg:border-r lg:border-white/10 lg:px-6 border-b border-white/10 sm:border-b-0">
+                <span className="text-6xl sm:text-7xl md:text-8xl lg:text-7xl xl:text-8xl font-black font-oswald text-white tracking-tighter block leading-none">
+                  <AnimatedCounter end={2000} formatComma={true} />+
                 </span>
-                <h4 className="font-oswald text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-2">Results Focused Coaching</h4>
+                <h4 className="font-oswald text-xs sm:text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-4">Clients Trained Since 2002</h4>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal className="reveal-hidden" delay={450}>
+              <div className="py-6 lg:py-8 lg:px-6 flex flex-col items-center justify-center">
+                <span className="text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl font-black font-oswald text-white tracking-tight uppercase leading-tight block">
+                  Results Driven
+                </span>
+                <h4 className="font-oswald text-xs sm:text-sm tracking-[0.2em] font-bold text-[#C5A059] uppercase mt-4">Personalised Coaching</h4>
               </div>
             </ScrollReveal>
           </div>
@@ -755,13 +763,13 @@ export default function Home() {
                 src={srv.img}
                 alt={srv.title}
                 className={`w-full h-full transition-all duration-700 ${
-                  srv.img.includes('senior-fitness') || srv.img.includes('corporate-wellness') || srv.img.includes('onepersonaltraining') || srv.img.includes('weightlosstraining')
+                  srv.img.includes('senior-fitness') || srv.img.includes('corporate-wellness') || srv.img.includes('weightlosstraining')
                     ? "object-contain bg-black p-1 scale-100 group-hover:scale-105"
                     : "object-cover object-top scale-100 group-hover:scale-105"
                 }`}
               />
               <div className={`absolute inset-0 transition-all duration-300 pointer-events-none ${
-                srv.img.includes('senior-fitness') || srv.img.includes('corporate-wellness') || srv.img.includes('onepersonaltraining') || srv.img.includes('weightlosstraining')
+                srv.img.includes('senior-fitness') || srv.img.includes('corporate-wellness') || srv.img.includes('weightlosstraining')
                   ? "bg-gradient-to-t from-black/80 via-transparent to-transparent group-hover:bg-black/40"
                   : "bg-gradient-to-t from-black via-black/40 to-transparent group-hover:bg-black/75"
               }`} />
@@ -871,7 +879,7 @@ export default function Home() {
                     src={cls.img}
                     alt={cls.title}
                     className={`w-full h-full scale-100 group-hover:scale-105 transition-transform duration-700 ${
-                      cls.img.includes('weightlosstraining') || cls.img.includes('onepersonaltraining')
+                      cls.img.includes('weightlosstraining')
                         ? "object-contain bg-black p-2"
                         : "object-cover object-top"
                     }`}
