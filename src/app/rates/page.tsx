@@ -338,51 +338,72 @@ export default function RatesPage() {
                 </thead>
                 <tbody className="divide-y divide-white/10 font-sans text-sm sm:text-base">
                   <tr className="hover:bg-white/5 transition-colors">
-                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">Trial</td>
+                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">Trial Session</td>
                     <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$144</td>
                     <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$216</td>
                   </tr>
                   <tr className="hover:bg-white/5 transition-colors">
-                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">Starter</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$96</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$144</td>
+                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">Starter Promotional Rate</td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$96 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$144 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
                   </tr>
                   <tr className="hover:bg-white/5 transition-colors">
                     <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">12 Sessions</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$136 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($1,632 total)</span></td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$204 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($2,448 total)</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$136 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$204 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
                   </tr>
                   <tr className="hover:bg-white/5 transition-colors">
                     <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">24 Sessions</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$126 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($3,024 total)</span></td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$189 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($4,536 total)</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$126 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$189 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
                   </tr>
                   <tr className="hover:bg-white/5 transition-colors">
                     <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">36 Sessions</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$116 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($4,176 total)</span></td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$174 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($6,264 total)</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$116 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$174 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
                   </tr>
                   <tr className="hover:bg-white/5 transition-colors">
                     <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">48 Sessions</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$106 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($5,088 total)</span></td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$159 <span className="text-xs text-gray-400 block font-sans font-normal">/ sess ($7,632 total)</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$106 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
+                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$159 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
                   </tr>
                   <tr className="bg-emerald-950/40 border-2 border-emerald-500/50 hover:bg-emerald-900/30 transition-colors">
                     <td className="py-4 px-4 font-black text-emerald-400 font-oswald text-lg sm:text-xl flex items-center gap-2">
                       <span>60 Sessions</span>
                       <span className="bg-emerald-500 text-black text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider font-sans">Best Rate</span>
                     </td>
-                    <td className="py-4 px-4 text-center font-black text-emerald-400 font-oswald text-xl sm:text-2xl">$96 <span className="text-xs text-emerald-300/80 block font-sans font-normal">/ sess ($5,760 total)</span></td>
-                    <td className="py-4 px-4 text-center font-black text-emerald-400 font-oswald text-xl sm:text-2xl">$144 <span className="text-xs text-emerald-300/80 block font-sans font-normal">/ sess ($8,640 total)</span></td>
+                    <td className="py-4 px-4 text-center font-black text-emerald-400 font-oswald text-xl sm:text-2xl">$96 <span className="text-xs text-emerald-300/80 font-sans font-normal block sm:inline">per session</span></td>
+                    <td className="py-4 px-4 text-center font-black text-emerald-400 font-oswald text-xl sm:text-2xl">$144 <span className="text-xs text-emerald-300/80 font-sans font-normal block sm:inline">per session</span></td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            {/* Footer Date Revision Notice */}
-            <div className="mt-6 pt-4 border-t border-white/10 text-center">
-              <p className="text-xs sm:text-sm text-gray-300 font-oswald uppercase tracking-wider">
-                Price revised from <strong className="text-white font-bold">27 DEC 2025</strong>
+            {/* Separate Highlighted Student Rate Box */}
+            <div className="mt-6 p-4 sm:p-5 bg-gradient-to-r from-[#800020]/20 via-[#0d0d0d] to-[#C5A059]/10 border border-[#C5A059]/40 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <span className="bg-[#C5A059] text-black text-[10px] font-oswald font-black uppercase px-2.5 py-0.5 rounded tracking-widest inline-block mb-1">STUDENT SPECIAL</span>
+                <h4 className="font-oswald text-lg font-bold text-white uppercase tracking-wide">Student Rate</h4>
+                <p className="text-xs text-gray-300 font-sans">Single Personal Training • Subject to verification & approval</p>
+              </div>
+              <div className="text-center sm:text-right">
+                <span className="text-[#C5A059] font-oswald text-2xl sm:text-3xl font-black block">$80 <span className="text-xs text-gray-300 font-sans font-normal">per session</span></span>
+              </div>
+            </div>
+
+            {/* Notes Below Rate Card */}
+            <div className="mt-6 pt-5 border-t border-white/10 text-xs sm:text-sm text-gray-300 font-sans space-y-2 leading-relaxed">
+              <p className="font-oswald text-xs sm:text-sm uppercase tracking-wider text-[#C5A059] font-bold">
+                • Price revised from 27 Dec 2025.
+              </p>
+              <p className="text-white/70">
+                • Starter promotional rate applies to first-time promotional arrangements and minimum package conditions.
+              </p>
+              <p className="text-white/70">
+                • Student rate is subject to approval and valid student verification.
+              </p>
+              <p className="text-white/70">
+                • Full package amount will be confirmed during enquiry based on the selected package, training arrangement and availability.
               </p>
             </div>
 
@@ -422,12 +443,10 @@ export default function RatesPage() {
                     <div>
                       <span className="text-xs text-gray-400 font-oswald uppercase block">Single Rate</span>
                       <span className="text-3xl font-extrabold font-oswald text-white">$136 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
-                      <span className="text-xs text-[#C5A059] block font-oswald mt-0.5">$1,632 total</span>
                     </div>
                     <div className="border-l border-white/10 pl-4">
                       <span className="text-xs text-gray-400 font-oswald uppercase block">Couple Rate</span>
                       <span className="text-3xl font-extrabold font-oswald text-white">$204 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
-                      <span className="text-xs text-[#C5A059] block font-oswald mt-0.5">$2,448 total</span>
                     </div>
                   </div>
                   <p className="text-gray-200 text-xs leading-relaxed font-sans mb-3 font-semibold">
@@ -461,12 +480,10 @@ export default function RatesPage() {
                     <div>
                       <span className="text-xs text-gray-400 font-oswald uppercase block">Single Rate</span>
                       <span className="text-3xl font-extrabold font-oswald text-white">$126 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
-                      <span className="text-xs text-[#C5A059] block font-oswald mt-0.5">$3,024 total</span>
                     </div>
                     <div className="border-l border-white/10 pl-4">
                       <span className="text-xs text-gray-400 font-oswald uppercase block">Couple Rate</span>
                       <span className="text-3xl font-extrabold font-oswald text-white">$189 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
-                      <span className="text-xs text-[#C5A059] block font-oswald mt-0.5">$4,536 total</span>
                     </div>
                   </div>
                   <p className="text-gray-200 text-xs leading-relaxed font-sans mb-3 font-semibold">
@@ -504,11 +521,11 @@ export default function RatesPage() {
                   <div className="my-4 border-y border-white/10 py-3 text-center">
                     <div className="flex justify-between items-center mb-1">
                       <span className="text-xs text-gray-400 font-oswald uppercase">Single:</span>
-                      <span className="text-xl font-bold font-oswald text-white">$116 <span className="text-xs text-gray-400 font-normal">/sess ($4,176)</span></span>
+                      <span className="text-xl font-bold font-oswald text-white">$116 <span className="text-xs text-gray-400 font-normal">/sess</span></span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-xs text-gray-400 font-oswald uppercase">Couple:</span>
-                      <span className="text-xl font-bold font-oswald text-white">$174 <span className="text-xs text-gray-400 font-normal">/sess ($6,264)</span></span>
+                      <span className="text-xl font-bold font-oswald text-white">$174 <span className="text-xs text-gray-400 font-normal">/sess</span></span>
                     </div>
                   </div>
                   <ul className="space-y-2 text-xs text-gray-300 font-sans mb-6">
@@ -539,11 +556,11 @@ export default function RatesPage() {
                   <div className="my-4 border-y border-white/10 py-3 text-center">
                     <div className="flex justify-between items-center mb-1">
                       <span className="text-xs text-gray-400 font-oswald uppercase">Single:</span>
-                      <span className="text-xl font-bold font-oswald text-white">$106 <span className="text-xs text-gray-400 font-normal">/sess ($5,088)</span></span>
+                      <span className="text-xl font-bold font-oswald text-white">$106 <span className="text-xs text-gray-400 font-normal">/sess</span></span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-xs text-gray-400 font-oswald uppercase">Couple:</span>
-                      <span className="text-xl font-bold font-oswald text-white">$159 <span className="text-xs text-gray-400 font-normal">/sess ($7,632)</span></span>
+                      <span className="text-xl font-bold font-oswald text-white">$159 <span className="text-xs text-gray-400 font-normal">/sess</span></span>
                     </div>
                   </div>
                   <ul className="space-y-2 text-xs text-gray-300 font-sans mb-6">
@@ -577,11 +594,11 @@ export default function RatesPage() {
                   <div className="my-4 border-y border-emerald-500/20 py-3 text-center bg-emerald-950/20 rounded px-3">
                     <div className="flex justify-between items-center mb-1">
                       <span className="text-xs text-emerald-300 font-oswald uppercase font-bold">Single:</span>
-                      <span className="text-xl font-bold font-oswald text-emerald-400">$96 <span className="text-xs text-emerald-300/80 font-normal">/sess ($5,760)</span></span>
+                      <span className="text-xl font-bold font-oswald text-emerald-400">$96 <span className="text-xs text-emerald-300/80 font-normal">/sess</span></span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-xs text-emerald-300 font-oswald uppercase font-bold">Couple:</span>
-                      <span className="text-xl font-bold font-oswald text-emerald-400">$144 <span className="text-xs text-emerald-300/80 font-normal">/sess ($8,640)</span></span>
+                      <span className="text-xl font-bold font-oswald text-emerald-400">$144 <span className="text-xs text-emerald-300/80 font-normal">/sess</span></span>
                     </div>
                   </div>
                   <ul className="space-y-2 text-xs text-gray-200 font-sans mb-6">
