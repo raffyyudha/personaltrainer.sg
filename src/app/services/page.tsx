@@ -863,11 +863,11 @@ export default function ServicesPage() {
               <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-syne">
                 Know Your Numbers.
               </h2>
-              <p className="text-[#C5A059] font-oswald text-lg uppercase tracking-wider mb-2">
-                BMI · BMR · Body Fat % · Ideal Weight · Calories
+              <p className="text-[#C5A059] font-oswald text-base sm:text-lg uppercase tracking-wider mb-3">
+                BMI • BMR • BODY FAT % • IDEAL WEIGHT • CALORIE NEEDS
               </p>
-              <p className="text-white/70 max-w-xl mx-auto text-sm font-sans leading-relaxed">
-                Use this free tool to understand your body better. Get your personalised results instantly — then discover which training programme fits your goals.
+              <p className="text-white/80 max-w-2xl mx-auto text-sm sm:text-base font-sans leading-relaxed">
+                Use this free fitness calculator to better understand your body, estimate your key fitness numbers and discover which PersonalTrainer.sg programme may suit your goal.
               </p>
             </div>
           </ScrollReveal>
@@ -879,7 +879,7 @@ export default function ServicesPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 border-b border-white/10">
                 {([
                   { id: "bmi", label: "BMI" },
-                  { id: "bmr", label: "BMR / TDEE" },
+                  { id: "bmr", label: "BMR" },
                   { id: "bodyfat", label: "Body Fat %" },
                   { id: "idealweight", label: "Ideal Weight" },
                 ] as const).map((tab) => (
@@ -904,7 +904,7 @@ export default function ServicesPage() {
                   <div className="space-y-5">
                     <h3 className="font-oswald text-xl font-bold uppercase text-[#C5A059] tracking-wider mb-6">
                       {calcTab === "bmi" && "Calculate Your BMI"}
-                      {calcTab === "bmr" && "Calculate Your BMR & TDEE"}
+                      {calcTab === "bmr" && "Calculate Your BMR"}
                       {calcTab === "bodyfat" && "Estimate Your Body Fat %"}
                       {calcTab === "idealweight" && "Find Your Ideal Weight"}
                     </h3>
@@ -1113,16 +1113,16 @@ export default function ServicesPage() {
                                 href={`https://wa.me/6591081781?text=${encodeURIComponent(waMsg)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="btn-primary py-3 px-6 text-xs w-full justify-center"
+                                className="btn-primary py-3.5 px-6 text-xs sm:text-sm w-full justify-center font-bold tracking-wider"
                               >
-                                <span>WhatsApp Us — Get Your Free Plan</span>
+                                <span>WHATSAPP PERSONALTRAINER.SG FOR GUIDANCE</span>
                                 <ArrowRight size={14} />
                               </a>
                             </div>
                           )}
 
-                          <p className="text-white/30 text-[10px] font-sans text-center leading-relaxed">
-                            * Results are estimates for educational purposes. Always consult a qualified trainer before starting any fitness programme.
+                          <p className="text-white/50 text-xs font-sans text-center leading-relaxed pt-2">
+                            Results are estimates for general guidance only. For proper assessment, training suitability and programme planning, consult PersonalTrainer.sg directly.
                           </p>
                         </div>
                       );
@@ -1135,15 +1135,15 @@ export default function ServicesPage() {
 
           {/* Bottom CTA strip */}
           <ScrollReveal className="reveal-hidden">
-            <div className="mt-10 text-center">
-              <p className="text-white/40 text-sm font-sans mb-4">Want a professional assessment instead of a calculator?</p>
+            <div className="mt-12 text-center pb-12 sm:pb-16">
+              <p className="text-white/50 text-sm font-sans mb-4">Want a professional assessment instead of a calculator?</p>
               <a
                 href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20a%20proper%20fitness%20assessment%20and%20Trial%20Session%20to%20understand%20my%20body%20and%20training%20needs."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline inline-flex gap-2 items-center text-sm"
+                className="btn-outline inline-flex gap-2 items-center text-sm font-bold tracking-wider"
               >
-                <span>Book a Trial Session</span>
+                <span>BOOK A TRIAL SESSION</span>
                 <ArrowRight size={14} />
               </a>
             </div>
