@@ -908,7 +908,7 @@ export default function AboutPage() {
               <span className="section-label">
                 <Users size={16} className="text-[#C5A059]" /> TRANSFORMATION BUILT AROUND YOU
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl font-black uppercase mb-4 font-syne leading-tight text-white">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[1.4rem] xl:text-[1.85rem] 2xl:text-3xl font-black uppercase mb-4 font-syne leading-tight text-white tracking-tight">
                 <span className="block whitespace-nowrap">Transformation</span>
                 <span className="block">Built Around You</span>
               </h2>
