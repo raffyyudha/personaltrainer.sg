@@ -1227,7 +1227,7 @@ export default function ServicesPage() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors duration-300">donn@personaltrainer.sg</a>
+                <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors duration-300 font-sans lowercase">donn@personaltrainer.sg</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-[#C5A059] shrink-0 mt-0.5" />

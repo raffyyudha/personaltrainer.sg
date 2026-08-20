@@ -387,14 +387,14 @@ export default function AboutPage() {
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#C5A059] rounded-full blur-3xl opacity-20 pointer-events-none" />
               
               <p className="text-2xl sm:text-3xl font-black font-syne text-[#800020] uppercase tracking-wide mb-4">
-                DEPS IS NOT RANDOM EXERCISE.
+                DEPS IS A STRUCTURED COACHING SYSTEM.
               </p>
               <p className="text-gray-100 text-base sm:text-lg lg:text-xl font-sans max-w-3xl mx-auto leading-relaxed mb-6 font-normal">
-                It is a structured coaching system that combines movement preparation, posture correction, core activation, stabilisation, strength training, metabolic conditioning and cardiovascular development.
+                DEPS combines movement preparation, posture correction, core activation, stabilisation, strength training, metabolic conditioning and cardiovascular development to help clients progress safely and effectively.
               </p>
               <div className="inline-block bg-[#800020] border border-[#C5A059]/40 px-8 py-3.5 rounded-full">
                 <span className="text-white font-oswald text-base sm:text-lg font-extrabold uppercase tracking-widest">
-                  TRAIN PROPERLY. PROGRESS SAFELY. BUILD REAL RESULTS.
+                  PURPOSEFUL TRAINING. SAFE PROGRESSION. REAL RESULTS.
                 </span>
               </div>
             </div>
@@ -407,7 +407,7 @@ export default function AboutPage() {
           <ScrollReveal className="reveal-hidden">
             <div className="border-l-4 border-[#C5A059] pl-6 mb-10">
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black uppercase font-oswald text-white tracking-wide">
-                The DEPS Methodology
+                THE DEPS METHODOLOGY
               </h3>
               <p className="text-gray-100 text-base sm:text-lg md:text-xl font-sans mt-2 leading-relaxed max-w-3xl font-normal">
                 A 7-stage progressive movement system designed to optimise performance, reduce injury risk, improve movement quality and build long term results.
@@ -1061,7 +1061,11 @@ export default function AboutPage() {
                     <img
                       src={trn.img}
                       alt={trn.title}
-                      className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
+                      className={`w-full h-full scale-100 group-hover:scale-105 transition-all duration-700 ${
+                        trn.img.includes('donn-coaching-barbell') || trn.img.includes('donn-flexing') || trn.img.includes('donn-coaching-latpulldown') || trn.img.includes('weightlosstraining')
+                          ? "object-contain bg-black p-2"
+                          : "object-cover object-top"
+                      }`}
                     />
                   </div>
                   <div className="p-5 text-center flex-1 flex flex-col justify-center bg-[#121212] min-h-[6rem]">
@@ -1381,7 +1385,7 @@ export default function AboutPage() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors duration-300">donn@personaltrainer.sg</a>
+                <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors duration-300 font-sans lowercase">donn@personaltrainer.sg</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-[#C5A059] shrink-0 mt-0.5" />

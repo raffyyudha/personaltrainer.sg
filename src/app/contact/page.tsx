@@ -485,7 +485,7 @@ export default function ContactPage() {
                       <div className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-[#800020] group-hover:border-[#800020] transition-all">
                         <Mail size={14} />
                       </div>
-                      <span className="font-oswald font-bold text-sm">donn@personaltrainer.sg</span>
+                      <span className="font-sans lowercase font-semibold text-sm">donn@personaltrainer.sg</span>
                     </a>
                     <div className="flex items-center gap-3 text-white">
                       <div className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center">

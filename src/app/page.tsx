@@ -878,7 +878,7 @@ export default function Home() {
                     src={cls.img}
                     alt={cls.title}
                     className={`w-full h-full scale-100 group-hover:scale-105 transition-transform duration-700 ${
-                      cls.img.includes('weightlosstraining')
+                      cls.img.includes('weightlosstraining') || cls.img.includes('donn-coaching-barbell') || cls.img.includes('donn-flexing')
                         ? "object-contain bg-black p-2"
                         : "object-cover object-top"
                     }`}
@@ -1160,7 +1160,11 @@ export default function Home() {
                     <img
                       src={trn.img}
                       alt={trn.title}
-                      className="w-full h-full object-cover object-top scale-100 group-hover:scale-105 transition-all duration-700"
+                      className={`w-full h-full scale-100 group-hover:scale-105 transition-all duration-700 ${
+                        trn.img.includes('donn-coaching-barbell') || trn.img.includes('donn-flexing') || trn.img.includes('donn-coaching-latpulldown') || trn.img.includes('weightlosstraining')
+                          ? "object-contain bg-black p-2"
+                          : "object-cover object-top"
+                      }`}
                     />
                   </div>
                   <div className="p-5 text-center flex-1 flex flex-col justify-center bg-[#121212] min-h-[6rem]">
@@ -1231,23 +1235,35 @@ export default function Home() {
           </p>
 
           {/* Trial Session Terms Box */}
-          <div className="bg-[#121212] border border-[#C5A059]/40 rounded-xl p-4 sm:p-5 max-w-3xl mx-auto text-left space-y-2.5 font-sans shadow-xl">
-            <div className="flex items-center gap-2 text-[#C5A059] font-oswald font-bold uppercase tracking-wider text-sm sm:text-base">
+          <div className="bg-[#121212] border border-[#C5A059]/40 rounded-xl p-5 sm:p-7 max-w-3xl mx-auto text-left space-y-3 font-sans shadow-xl">
+            <div className="flex items-center gap-2 text-[#C5A059] font-oswald font-bold uppercase tracking-wider text-base sm:text-lg">
               <CheckCircle size={18} className="shrink-0 text-[#C5A059]" />
               <span>Trial Session Details & Terms</span>
             </div>
-            <ul className="text-xs sm:text-sm text-gray-200 space-y-1.5 leading-relaxed">
-              <li className="flex items-start gap-2">
-                <span className="text-[#C5A059] font-bold">•</span>
-                <span>The trial session is approximately 90 minutes (30m assessment + 60m training).</span>
+            <ul className="text-xs sm:text-sm text-gray-200 space-y-2.5 leading-relaxed font-sans font-normal">
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#C5A059] font-bold shrink-0">•</span>
+                <span>The trial session is approximately 90 minutes.</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-[#C5A059] font-bold">•</span>
-                <span>FREE if you sign up for a minimum 12-session package immediately after the trial session.</span>
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#C5A059] font-bold shrink-0">•</span>
+                <span>It includes around 30 minutes of consultation to understand your fitness goal, body condition, lifestyle, training history and training suitability.</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="text-[#C5A059] font-bold">•</span>
-                <span>Trial session fee is $144 if you decide not to continue after the trial.</span>
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#C5A059] font-bold shrink-0">•</span>
+                <span>This is followed by around 45 minutes of hands-on personal training so you can experience the coaching style, exercise structure, technique guidance and professional approach used by PersonalTrainer.sg.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#C5A059] font-bold shrink-0">•</span>
+                <span>The final 15 minutes will be used to discuss training frequency, suitable programme direction, scheduling and how to move forward from there.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#C5A059] font-bold shrink-0">•</span>
+                <span>The trial session fee is $144.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#C5A059] font-bold shrink-0">•</span>
+                <span>The trial session fee will be waived if you sign up for a minimum 12-session package immediately after the trial session.</span>
               </li>
             </ul>
           </div>
@@ -1259,7 +1275,6 @@ export default function Home() {
             {
               name: "01. Fitness Assessment",
               desc: "Understand your current fitness level, body condition, movement quality and suitability for training.",
-              featured: false,
               focusBullets: [
                 "Body condition check",
                 "Fitness level assessment",
@@ -1271,7 +1286,6 @@ export default function Home() {
             {
               name: "02. Coaching Experience",
               desc: "Experience the structured and disciplined coaching approach used by PersonalTrainer.sg.",
-              featured: true,
               focusBullets: [
                 "Proper form coaching",
                 "Exercise control and technique",
@@ -1283,7 +1297,6 @@ export default function Home() {
             {
               name: "03. Custom Roadmap",
               desc: "Identify the training direction, coaching approach and programme structure suitable for your goal.",
-              featured: false,
               focusBullets: [
                 "Personalised programme outline",
                 "Progression planning",
@@ -1295,17 +1308,8 @@ export default function Home() {
           ].map((plan) => (
             <div
               key={plan.name}
-              className={`bg-[#0d0d0d] border rounded-xl p-6 flex flex-col justify-between h-full transition-all duration-300 relative shadow-2xl ${
-                plan.featured
-                  ? "border-[#C5A059] shadow-lg shadow-[#C5A059]/10"
-                  : "border-white/10 hover:border-[#800020]/50"
-              }`}
+              className="bg-[#0d0d0d] border border-white/10 hover:border-[#C5A059] rounded-xl p-6 flex flex-col justify-between h-full transition-all duration-300 relative shadow-2xl"
             >
-              {plan.featured && (
-                <span className="absolute top-4 right-4 bg-[#C5A059] text-black text-[11px] font-bold uppercase tracking-widest px-2.5 py-0.5 font-oswald rounded">
-                  RECOMMENDED
-                </span>
-              )}
               
               <div>
                 <h3 className="text-lg sm:text-xl font-bold font-oswald text-white mb-2.5 uppercase tracking-tight">
@@ -1612,7 +1616,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Mail size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                  <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors duration-300">donn@personaltrainer.sg</a>
+                  <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors duration-300 font-sans lowercase">donn@personaltrainer.sg</a>
                 </li>
                 <li className="flex items-start gap-3">
                   <MapPin size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
