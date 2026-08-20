@@ -1,699 +1,407 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TikTokIcon from "@/components/TikTokIcon";
 import {
-  Facebook,
-  Instagram,
+  Calendar,
+  GraduationCap,
+  Info,
+  Star,
   Phone,
   Mail,
-  ArrowRight,
-  CheckCircle,
-  Menu,
-  X,
-  ChevronDown,
-  User,
-  Shield,
-  Award,
-  Clock,
-  MapPin,
-  Check,
-  Dumbbell,
-  HelpCircle
+  Facebook,
+  Instagram
 } from "lucide-react";
 
-const ScrollReveal = ({
-  children,
-  className = "reveal-hidden",
-  delay = 0
-}: {
-  children: React.ReactNode;
-  className?: string;
-  delay?: number;
-}) => {
-  return (
-    <div className={className} data-delay={delay > 0 ? delay : undefined}>
-      {children}
-    </div>
-  );
-};
+// Shield Badge Component for 5 package cards (Larger & Bolder)
+const PackageShieldIcon = ({ number }: { number: string | number }) => (
+  <div className="relative w-12 h-14 sm:w-14 sm:h-16 shrink-0 flex items-center justify-center">
+    <svg viewBox="0 0 40 48" className="w-full h-full drop-shadow-lg" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M20 2L4 9V22C4 32.5 20 44 20 44C20 44 36 32.5 36 22V9L20 2Z"
+        fill="#3A060D"
+        stroke="#C5A059"
+        strokeWidth="2.5"
+      />
+      <path
+        d="M20 5.5L7.5 11V21.5C7.5 29.8 20 39 20 39C20 39 32.5 29.8 32.5 21.5V11L20 5.5Z"
+        fill="#200307"
+        stroke="#C5A059"
+        strokeWidth="1"
+        strokeOpacity="0.6"
+      />
+    </svg>
+    <span className="absolute inset-0 flex items-center justify-center font-oswald font-black text-base sm:text-lg text-[#C5A059] tracking-tight">
+      {number}
+    </span>
+  </div>
+);
 
-const menuItems = [
+// Clean Authentic WhatsApp Icon SVG
+const WhatsAppIcon = ({ className = "w-6 h-6", style }: { className?: string; style?: React.CSSProperties }) => (
+  <svg className={className} style={style} viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.76.459 3.474 1.333 4.988l-1.417 5.176 5.297-1.39c1.46.797 3.107 1.217 4.773 1.218h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.038-5.177-2.925-7.064s-4.395-2.927-7.064-2.927zm5.72 14.184c-.244.688-1.427 1.314-1.966 1.396-.51.077-1.168.109-1.89-.124-.442-.143-1.011-.328-1.742-.647-3.072-1.332-5.077-4.437-5.231-4.644-.153-.207-1.252-1.666-1.252-3.18 0-1.514.789-2.259 1.069-2.564.281-.305.612-.382.816-.382.204 0 .408.003.586.012.189.01.442-.072.692.529.255.613.867 2.115.943 2.268.077.153.128.331.026.535-.102.204-.153.331-.306.51-.153.178-.321.375-.459.504-.153.144-.313.301-.135.607.178.306.792 1.307 1.7 2.116 1.168 1.042 2.153 1.365 2.46 1.518.306.153.484.128.663-.077.179-.204.765-.893.969-1.2.204-.306.408-.255.689-.153.281.102 1.785.842 2.091.995.306.153.51.229.586.357.077.127.077.739-.167 1.427z" />
+  </svg>
+);
+
+const packageCards = [
   {
-    name: "Home",
-    url: "/"
-  },
-  {
-    name: "About Us",
-    url: "/about",
-    submenu: [
-      { name: "DONN’s Elite Performance System (DEPS)", url: "/about#system" },
-      { name: "FAQ", url: "/about#faq" }
+    number: "12",
+    sessions: "12 SESSIONS",
+    title: "FOUNDATION",
+    singleRate: "$136",
+    coupleRate: "$204",
+    features: [
+      "Initial InBody Analysis",
+      "Personalised Training Programme",
+      "Nutrition & Dietary Guidance"
     ]
   },
   {
-    name: "Services",
-    url: "/services",
-    submenu: [
-      { name: "Personal Training", url: "/services#personal-training" },
-      { name: "Couple Training", url: "/services#couple-training" },
-      { name: "Weight Loss Training", url: "/services#weight-loss" },
-      { name: "Strength Training", url: "/services#strength-training" },
-      { name: "Kickboxing Fitness", url: "/services#kickboxing" },
-      { name: "Home and Condo Gym Training", url: "/services#home-condo-training" },
-      { name: "Gym Management", url: "/services#gym-management" },
-      { name: "Senior Fitness Training", url: "/services#senior-fitness" },
-      { name: "Corporate Wellness", url: "/services#corporate-wellness" },
-      { name: "Fitness Calculator", url: "/services#fitness-calculator" },
-      { name: "Rates", url: "/rates" }
+    number: "24",
+    sessions: "24 SESSIONS",
+    title: "PROGRESS",
+    singleRate: "$126",
+    coupleRate: "$189",
+    features: [
+      "InBody Analysis Progress Report",
+      "Personalised Training Programme",
+      "Nutrition & Dietary Guidance"
     ]
   },
   {
-    name: "Results",
-    url: "/results",
-    submenu: [
-      { name: "Client Transformations", url: "/results#transformations" },
-      { name: "Testimonials", url: "/results#testimonials" },
-      { name: "Gallery", url: "/results#gallery" }
+    number: "36",
+    sessions: "36 SESSIONS",
+    title: "TRANSFORMATION",
+    singleRate: "$116",
+    coupleRate: "$174",
+    features: [
+      "InBody Analysis Progress Report",
+      "Advanced Training Programme",
+      "Nutrition & Dietary Guidance"
     ]
   },
   {
-    name: "Contact Us",
-    url: "/contact",
-    submenu: [
-      { name: "Book a Trial Session", url: "/contact#trial" },
-      { name: "WhatsApp Enquiry", url: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Personal%20Training.%20Can%20you%20advise%20on%20availability%20and%20Trial%20Session%3F" }
+    number: "48",
+    sessions: "48 SESSIONS",
+    title: "ADVANCED",
+    singleRate: "$106",
+    coupleRate: "$159",
+    features: [
+      "Advanced Training Programme",
+      "Nutrition & Dietary Guidance",
+      "Progress Tracking & Support"
+    ]
+  },
+  {
+    number: "60",
+    sessions: "60 SESSIONS",
+    title: "SIGNATURE",
+    singleRate: "$96",
+    coupleRate: "$144",
+    features: [
+      "Comprehensive Training Programme",
+      "Nutrition & Dietary Guidance",
+      "Ongoing Progress Tracking"
     ]
   }
 ];
 
 export default function RatesPage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-[#800020] selection:text-white font-sans antialiased overflow-x-hidden">
-      {/* Top Utility Bar */}
-      <div className="bg-[#050505] border-b border-white/10 py-2 px-6 hidden md:block">
-        <div className="max-w-7xl mx-auto flex justify-between items-center text-xs text-white">
-          <div className="flex items-center gap-6">
-            <span className="flex items-center gap-2">
-              <Phone size={14} className="text-[#C5A059]" />
-              <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="hover:text-[#C5A059] transition-colors">
-                +65 9108 1781
-              </a>
-            </span>
-            <span className="flex items-center gap-2">
-              <Mail size={14} className="text-[#C5A059]" />
-              <a href="mailto:info@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors">
-                info@personaltrainer.sg
-              </a>
-            </span>
-          </div>
-          <div className="flex items-center gap-4 text-xs font-oswald uppercase tracking-wider text-[#C5A059]">
-            <span>Trusted in Singapore Since 2002</span>
-            <span>•</span>
-            <span>24 Years Coaching Experience</span>
-          </div>
-        </div>
-      </div>
-
+    <div className="min-h-screen text-white selection:bg-[#800020] selection:text-white font-sans antialiased overflow-x-hidden" style={{ backgroundColor: "#050505" }}>
       {/* Main Navigation */}
       <Navbar activePage="services" />
 
-      {/* Hero Banner Section */}
-      <section className="relative py-20 bg-[#0d0d0d] border-b border-white/5 text-center overflow-hidden">
-        <div className="relative z-10 max-w-4xl mx-auto px-6">
-          <ScrollReveal className="reveal-hidden">
-            <span className="section-label justify-center">
-              <Award size={16} className="text-[#C5A059]" /> PRICING & INVESTMENT
-            </span>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-black font-syne uppercase tracking-tight mb-6 leading-tight">
-              Personal Training Rates <br />
-              <span className="text-[#800020]">in Singapore</span>
+      {/* Main Content Area matching Client Design Graphic */}
+      <main className="pt-24 sm:pt-28 pb-16 px-4 sm:px-8 md:px-12 max-w-[1550px] mx-auto">
+        
+        {/* Header Title Section with Gold Ornamental Wings */}
+        <div className="text-center mb-10 sm:mb-12 mt-4">
+          <div className="flex items-center justify-center gap-4 sm:gap-8 mb-3">
+            <div className="flex items-center gap-2 opacity-80">
+              <div className="h-[2px] w-16 sm:w-32 md:w-48" style={{ background: "linear-gradient(to right, transparent, #C5A059)" }} />
+              <div className="w-2.5 h-2.5 rotate-45 border" style={{ borderColor: "#C5A059", backgroundColor: "#C5A059" }} />
+              <div className="h-[2px] w-8 sm:w-16" style={{ backgroundColor: "#C5A059" }} />
+            </div>
+
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black font-oswald uppercase tracking-widest text-white drop-shadow-xl" style={{ color: "#ffffff" }}>
+              PERSONAL TRAINING RATES
             </h1>
-            <p className="text-white text-base md:text-lg max-w-3xl mx-auto mb-8 leading-relaxed font-sans font-normal">
-              Invest in your health, strength, body transformation and long-term confidence with structured 1-on-1 coaching led by Md Salaudin Adam (DONN), Founder & Fitness Director with 24 Years of Coaching Experience.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+            <div className="flex items-center gap-2 opacity-80">
+              <div className="h-[2px] w-8 sm:w-16" style={{ backgroundColor: "#C5A059" }} />
+              <div className="w-2.5 h-2.5 rotate-45 border" style={{ borderColor: "#C5A059", backgroundColor: "#C5A059" }} />
+              <div className="h-[2px] w-16 sm:w-32 md:w-48" style={{ background: "linear-gradient(to left, transparent, #C5A059)" }} />
+            </div>
+          </div>
+          <p className="text-gray-200 font-sans text-base sm:text-lg md:text-2xl tracking-wider font-semibold" style={{ color: "#e5e7eb" }}>
+            Premium Training. Proven Results.
+          </p>
+        </div>
+
+        {/* Top 3 Special Rates Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6 max-w-[1450px] mx-auto mb-8 items-stretch">
+          
+          {/* Card 1: Trial Session */}
+          <div className="rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl transition-all duration-300" style={{ backgroundColor: "#0a0a0a", border: "1.5px solid rgba(197, 160, 89, 0.75)" }}>
+            <div className="flex items-center gap-3.5 mb-5 justify-center">
+              <Calendar className="w-7 h-7 shrink-0" style={{ color: "#C5A059" }} />
+              <h2 className="font-oswald text-xl sm:text-2xl font-black uppercase tracking-wider" style={{ color: "#C5A059" }}>
+                TRIAL SESSION
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 border-t pt-5 text-center" style={{ borderTopColor: "rgba(255, 255, 255, 0.18)" }}>
+              <div>
+                <span className="block text-xs sm:text-sm font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
+                  SINGLE
+                </span>
+                <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
+                  $144
+                </span>
+              </div>
+              <div className="border-l pl-4" style={{ borderLeftColor: "rgba(255, 255, 255, 0.18)" }}>
+                <span className="block text-xs sm:text-sm font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
+                  COUPLE
+                </span>
+                <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
+                  $216
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 2: Starter Promotional Rate (Highlighted Deep Burgundy Card) */}
+          <div className="relative rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl overflow-hidden transition-all duration-300" style={{ backgroundColor: "#4A0A13", border: "2.5px solid #C5A059" }}>
+            {/* Gold Ribbon Tag */}
+            <div
+              className="absolute top-0 left-6 w-10 h-16 shadow-lg flex items-center justify-center rounded-b-sm z-10"
+              style={{
+                backgroundColor: "#C5A059",
+                borderLeft: "1px solid rgba(255, 229, 163, 0.7)",
+                borderRight: "1px solid rgba(255, 229, 163, 0.7)",
+                borderBottom: "1px solid rgba(255, 229, 163, 0.7)",
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 76%, 0 100%)"
+              }}
+            >
+              <Star size={20} style={{ color: "#3A060D", fill: "#3A060D", marginTop: "-4px" }} />
+            </div>
+
+            <div className="pl-6 text-center mb-5">
+              <h2 className="font-oswald text-xl sm:text-2xl font-black uppercase tracking-wider drop-shadow-md" style={{ color: "#C5A059" }}>
+                STARTER PROMOTIONAL RATE
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 border-t pt-5 text-center" style={{ borderTopColor: "rgba(197, 160, 89, 0.55)" }}>
+              <div>
+                <span className="block text-xs sm:text-sm font-oswald uppercase text-gray-100 font-bold tracking-wider mb-1">
+                  SINGLE
+                </span>
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
+                    $96
+                  </span>
+                  <span className="text-xs sm:text-sm text-gray-200 font-sans tracking-tight font-medium">/ SESSION</span>
+                </div>
+              </div>
+              <div className="border-l pl-4" style={{ borderLeftColor: "rgba(197, 160, 89, 0.55)" }}>
+                <span className="block text-xs sm:text-sm font-oswald uppercase text-gray-100 font-bold tracking-wider mb-1">
+                  COUPLE
+                </span>
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
+                    $144
+                  </span>
+                  <span className="text-xs sm:text-sm text-gray-200 font-sans tracking-tight font-medium">/ SESSION</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card 3: Student Rate */}
+          <div className="rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl transition-all duration-300" style={{ backgroundColor: "#0a0a0a", border: "1.5px solid rgba(197, 160, 89, 0.75)" }}>
+            <div className="flex items-center gap-3.5 mb-5 justify-center">
+              <GraduationCap className="w-7 h-7 shrink-0" style={{ color: "#C5A059" }} />
+              <h2 className="font-oswald text-xl sm:text-2xl font-black uppercase tracking-wider" style={{ color: "#C5A059" }}>
+                STUDENT RATE
+              </h2>
+            </div>
+
+            <div className="border-t pt-5 text-center" style={{ borderTopColor: "rgba(255, 255, 255, 0.18)" }}>
+              <span className="block text-xs sm:text-sm font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
+                SINGLE
+              </span>
+              <div className="flex items-baseline justify-center gap-1">
+                <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
+                  $80
+                </span>
+                <span className="text-xs sm:text-sm text-gray-300 font-sans tracking-tight font-medium">/ SESSION</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* 5 Columns Package Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5 max-w-[1500px] mx-auto mb-10 items-stretch">
+          {packageCards.map((pkg) => (
+            <div
+              key={pkg.number}
+              className="rounded-2xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl transition-all duration-300 group"
+              style={{ backgroundColor: "#0a0a0a", border: "1.5px solid rgba(197, 160, 89, 0.7)" }}
+            >
+              <div>
+                {/* Header: Shield Icon + Title */}
+                <div className="flex items-center gap-3.5 mb-4 border-b pb-4" style={{ borderBottomColor: "rgba(255, 255, 255, 0.15)" }}>
+                  <PackageShieldIcon number={pkg.number} />
+                  <div className="leading-tight">
+                    <span className="block font-oswald text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider">
+                      {pkg.sessions}
+                    </span>
+                    <span className="block font-oswald text-sm sm:text-base font-black uppercase tracking-wider" style={{ color: "#C5A059" }}>
+                      {pkg.title}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Rates (Centered Vertically Stacked as in client design) */}
+                <div className="text-center space-y-3 my-4 py-3.5 border-y" style={{ borderColor: "rgba(255, 255, 255, 0.15)" }}>
+                  <div>
+                    <span className="block text-xs font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
+                      SINGLE
+                    </span>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="text-3xl sm:text-4xl font-black font-oswald text-white tracking-tight">
+                        {pkg.singleRate}
+                      </span>
+                      <span className="text-xs text-gray-300 font-sans font-medium">/ SESSION</span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span className="block text-xs font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
+                      COUPLE
+                    </span>
+                    <div className="flex items-baseline justify-center gap-1">
+                      <span className="text-3xl sm:text-4xl font-black font-oswald text-white tracking-tight">
+                        {pkg.coupleRate}
+                      </span>
+                      <span className="text-xs text-gray-300 font-sans font-medium">/ SESSION</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Features List (High Contrast & Clear Fonts) */}
+                <ul className="space-y-3 mb-6 text-xs sm:text-sm text-gray-100 font-sans font-medium">
+                  {pkg.features.map((feat, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5">
+                      <span className="w-4.5 h-4.5 rounded-full flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black" style={{ border: "1.5px solid #C5A059", color: "#C5A059" }}>✓</span>
+                      <span className="leading-snug text-gray-100">{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Enquire Now Button (Deep Burgundy Fill + Gold Border + Gold Text) */}
               <a
-                href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20Personal%20Training%20rates%20and%20packages."
+                href={`https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20the%20${pkg.sessions}%20${pkg.title}%20package.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary group"
+                className="w-full py-3.5 sm:py-4 font-oswald text-xs sm:text-sm font-black uppercase tracking-widest rounded-lg text-center transition-all duration-300 block shadow-lg hover:brightness-125"
+                style={{
+                  backgroundColor: "#4A0A13",
+                  border: "1.5px solid rgba(197, 160, 89, 0.85)",
+                  color: "#C5A059"
+                }}
               >
-                <span>WhatsApp PersonalTrainer.sg</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+                ENQUIRE NOW
               </a>
-              <Link href="/contact#trial" className="btn-outline">
-                <span>Book a Trial Session</span>
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Moving Red Strip Section */}
-      <div className="w-full bg-[#800020] py-4 sm:py-5 overflow-hidden border-t border-b border-[#C5A059]/30 whitespace-nowrap flex select-none relative z-20 shadow-md">
-        <div className="animate-marquee flex items-center shrink-0">
-          {[1, 2].map((groupKey) => (
-            <div key={groupKey} className="flex items-center shrink-0 font-oswald font-extrabold uppercase tracking-wider text-white text-base sm:text-lg md:text-xl">
-              <span className="mx-3 sm:mx-5">IF RESULTS MATTERS</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">TRUSTED IN SINGAPORE SINCE 2002</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">24 YEARS OF COACHING EXPERIENCE</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">PREMIUM PERSONAL TRAINING</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">WEIGHT LOSS TRAINING</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">STRENGTH TRAINING</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">SENIOR FITNESS TRAINING</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">COUPLE TRAINING</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">DISCIPLINE</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">STRUCTURE</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">ACCOUNTABILITY</span>
-              <span className="text-[#C5A059] font-black">•</span>
-              <span className="mx-3 sm:mx-5">REAL RESULTS</span>
-              <span className="text-[#C5A059] font-black">•</span>
             </div>
           ))}
         </div>
-      </div>
 
-      {/* Trial Session Card Feature */}
-      <section className="py-16 px-6 md:px-12 max-w-5xl mx-auto">
-        <ScrollReveal className="reveal-hidden">
-          <div className="bg-[#0d0d0d] border-2 border-[#C5A059]/60 p-8 sm:p-12 rounded-2xl shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-[#800020] text-white text-xs font-oswald font-extrabold uppercase px-6 py-2 rounded-bl-xl tracking-widest">
-              TRIAL SESSION DETAILS
-            </div>
-            <h2 className="font-oswald text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase text-white mb-6">
-              Start With a 90-Minute Trial Session
-            </h2>
-            <div className="space-y-4 text-white text-base sm:text-lg leading-relaxed font-sans font-normal">
-              <p>
-                The trial session is approximately 90 minutes.
-              </p>
-              <p>
-                It includes around 30 minutes of assessment and consultation, followed by around 60 minutes of training.
-              </p>
-              <div className="bg-black/80 border-l-4 border-[#C5A059] p-6 rounded-r-xl space-y-3 mt-4">
-                <p className="text-[#C5A059] font-oswald font-bold uppercase tracking-wider text-lg">
-                  Trial Session Terms & Conditions:
-                </p>
-                <p className="text-white text-base">
-                  The trial session is free only if the client signs up for a minimum 12 session package immediately after the trial session.
-                </p>
-                <p className="text-gray-300 text-sm font-semibold">
-                  If the client decides not to continue after the trial, the trial session fee is $144.
-                </p>
-              </div>
-            </div>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20book%20a%2090-minute%20Trial%20Session."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary text-center group"
-              >
-                <span>WhatsApp PersonalTrainer.sg</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
-              <Link href="/contact#trial" className="btn-outline text-center">
-                <span>Book a Trial Session</span>
-              </Link>
-            </div>
-          </div>
-        </ScrollReveal>
-      </section>
-
-      {/* Factors Affecting Rates & Package Value */}
-      <section className="py-16 px-6 md:px-12 bg-[#050505] border-t border-b border-white/5">
-        <div className="max-w-6xl mx-auto">
-          <ScrollReveal className="reveal-hidden">
-            <div className="text-center mb-16">
-              <span className="section-label justify-center">
-                <Shield size={16} className="text-[#C5A059]" /> TRANSPARENT APPROACH
-              </span>
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-syne">
-                What Determines Personal Training Cost?
-              </h2>
-              <p className="text-gray-200 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed font-normal">
-                Rather than generic, mass-market gym memberships, PersonalTrainer.sg offers dedicated, 1-on-1 structured coaching tailored around your body, schedule and training location.
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <ScrollReveal className="reveal-hidden">
-              <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl h-full flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 rounded-full bg-[#800020]/20 border border-[#800020] flex items-center justify-center mb-6">
-                    <MapPin className="text-[#C5A059]" size={24} />
-                  </div>
-                  <h3 className="font-oswald text-xl font-bold uppercase text-white mb-3">Location & Setup</h3>
-                  <p className="text-gray-200 text-sm sm:text-base leading-relaxed font-sans font-normal">
-                    Training arranged at your condo gym, selected ActiveSG gyms, approved private gym spaces or doorstep home training across Singapore with equipment provided.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal className="reveal-hidden" delay={150}>
-              <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl h-full flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 rounded-full bg-[#800020]/20 border border-[#800020] flex items-center justify-center mb-6">
-                    <Clock className="text-[#C5A059]" size={24} />
-                  </div>
-                  <h3 className="font-oswald text-xl font-bold uppercase text-white mb-3">Structure & Accountability</h3>
-                  <p className="text-gray-200 text-sm sm:text-base leading-relaxed font-sans font-normal">
-                    Packages are customized according to your training frequency per week (1x, 2x, or 3x) and target objectives (Weight Loss, Strength, Senior Fitness, Couple Training).
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal className="reveal-hidden" delay={300}>
-              <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl h-full flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 rounded-full bg-[#800020]/20 border border-[#800020] flex items-center justify-center mb-6">
-                    <Award className="text-[#C5A059]" size={24} />
-                  </div>
-                  <h3 className="font-oswald text-xl font-bold uppercase text-white mb-3">Coaching Expertise</h3>
-                  <p className="text-gray-200 text-sm sm:text-base leading-relaxed font-sans font-normal">
-                    Direct coaching from Founder Md Salaudin Adam (DONN), NASM | SOE | TRX | FMT | CPR | AED Certified Transformation Specialist with 24 Years of Coaching Experience in Singapore.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
+        {/* Center WhatsApp Button - Wide Horizontal Pill Button */}
+        <div className="flex justify-center my-10">
+          <a
+            href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20your%20Personal%20Training%20rates%20and%20packages."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full max-w-md py-4 px-8 rounded-xl font-oswald font-black text-base sm:text-lg tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-3.5 shadow-2xl hover:scale-105"
+            style={{
+              backgroundColor: "#0a0a0a",
+              border: "1.5px solid #C5A059",
+              color: "#C5A059"
+            }}
+          >
+            <WhatsAppIcon className="w-6 h-6 shrink-0" style={{ color: "#C5A059" }} />
+            <span className="whitespace-nowrap">WHATSAPP TO ENQUIRE</span>
+          </a>
         </div>
-      </section>
 
-      {/* Official Personal Training Rate Schedule Table */}
-      <section id="official-rates" className="py-16 px-6 md:px-12 max-w-5xl mx-auto">
-        <ScrollReveal className="reveal-hidden">
-          <div className="text-center mb-10">
-            <span className="section-label justify-center mb-3">
-              <Award size={16} className="text-[#C5A059]" /> OFFICIAL RATE CARD
+        {/* Footer Notes & Disclaimer Bar */}
+        <div className="max-w-[1500px] mx-auto rounded-xl p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-sans shadow-xl" style={{ backgroundColor: "#0a0a0a", border: "1.5px solid rgba(197, 160, 89, 0.55)", color: "#e5e7eb" }}>
+          <div className="flex items-center gap-3 text-center md:text-left">
+            <Calendar size={18} className="shrink-0" style={{ color: "#C5A059" }} />
+            <span className="font-oswald text-xs sm:text-sm uppercase tracking-wider font-bold text-gray-100">
+              Price revised from 27 Dec 2025
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-syne text-white">
-              Official Personal Training Rates
-            </h2>
-            <p className="text-gray-200 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed font-sans font-normal">
-              Structured 1-on-1 and Couple Personal Training session rates in Singapore.
-            </p>
           </div>
 
-          {/* Rate Table Container matching Official Graphic */}
-          <div className="bg-[#0e0e0e] border-2 border-[#C5A059]/60 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-hidden relative">
-            
-            {/* Header Badge */}
-            <div className="text-center mb-6 pb-6 border-b border-white/10">
-              <h3 className="font-oswald text-2xl sm:text-3xl font-extrabold uppercase text-white tracking-wider flex items-center justify-center gap-2">
-                <span>PERSONALTRAINER<span className="text-[#C5A059]">.SG</span></span>
-              </h3>
-              <p className="text-xs uppercase tracking-widest text-[#C5A059] font-oswald font-bold mt-1">
-                IF RESULTS MATTERS
-              </p>
-            </div>
-
-            {/* Table */}
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b border-white/20 text-white font-oswald text-base sm:text-lg uppercase tracking-wider">
-                    <th className="py-3 px-4 font-black">Package</th>
-                    <th className="py-3 px-4 text-center font-black">Single</th>
-                    <th className="py-3 px-4 text-center font-black">Couple</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-white/10 font-sans text-sm sm:text-base">
-                  <tr className="hover:bg-white/5 transition-colors">
-                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">Trial Session</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$144</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$216</td>
-                  </tr>
-                  <tr className="hover:bg-white/5 transition-colors">
-                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">Starter Promotional Rate</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$96 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$144 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
-                  </tr>
-                  <tr className="hover:bg-white/5 transition-colors">
-                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">12 Sessions</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$136 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$204 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
-                  </tr>
-                  <tr className="hover:bg-white/5 transition-colors">
-                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">24 Sessions</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$126 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$189 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
-                  </tr>
-                  <tr className="hover:bg-white/5 transition-colors">
-                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">36 Sessions</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$116 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$174 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
-                  </tr>
-                  <tr className="hover:bg-white/5 transition-colors">
-                    <td className="py-3.5 px-4 font-bold text-white font-oswald text-base sm:text-lg">48 Sessions</td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$106 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
-                    <td className="py-3.5 px-4 text-center font-bold text-white font-oswald text-base sm:text-lg">$159 <span className="text-xs text-gray-400 font-sans font-normal block sm:inline">per session</span></td>
-                  </tr>
-                  <tr className="bg-emerald-950/40 border-2 border-emerald-500/50 hover:bg-emerald-900/30 transition-colors">
-                    <td className="py-4 px-4 font-black text-emerald-400 font-oswald text-lg sm:text-xl flex items-center gap-2">
-                      <span>60 Sessions</span>
-                      <span className="bg-emerald-500 text-black text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider font-sans">Best Rate</span>
-                    </td>
-                    <td className="py-4 px-4 text-center font-black text-emerald-400 font-oswald text-xl sm:text-2xl">$96 <span className="text-xs text-emerald-300/80 font-sans font-normal block sm:inline">per session</span></td>
-                    <td className="py-4 px-4 text-center font-black text-emerald-400 font-oswald text-xl sm:text-2xl">$144 <span className="text-xs text-emerald-300/80 font-sans font-normal block sm:inline">per session</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            {/* Separate Highlighted Student Rate Box */}
-            <div className="mt-6 p-4 sm:p-5 bg-gradient-to-r from-[#800020]/20 via-[#0d0d0d] to-[#C5A059]/10 border border-[#C5A059]/40 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div>
-                <span className="bg-[#C5A059] text-black text-[10px] font-oswald font-black uppercase px-2.5 py-0.5 rounded tracking-widest inline-block mb-1">STUDENT SPECIAL</span>
-                <h4 className="font-oswald text-lg font-bold text-white uppercase tracking-wide">Student Rate</h4>
-                <p className="text-xs text-gray-300 font-sans">Single Personal Training • Subject to verification & approval</p>
-              </div>
-              <div className="text-center sm:text-right">
-                <span className="text-[#C5A059] font-oswald text-2xl sm:text-3xl font-black block">$80 <span className="text-xs text-gray-300 font-sans font-normal">per session</span></span>
-              </div>
-            </div>
-
-            {/* Notes Below Rate Card */}
-            <div className="mt-6 pt-5 border-t border-white/10 text-xs sm:text-sm text-gray-300 font-sans space-y-2 leading-relaxed">
-              <p className="font-oswald text-xs sm:text-sm uppercase tracking-wider text-[#C5A059] font-bold">
-                • Price revised from 27 Dec 2025.
-              </p>
-              <p className="text-white/70">
-                • Starter promotional rate applies to first-time promotional arrangements and minimum package conditions.
-              </p>
-              <p className="text-white/70">
-                • Student rate is subject to approval and valid student verification.
-              </p>
-              <p className="text-white/70">
-                • Full package amount will be confirmed during enquiry based on the selected package, training arrangement and availability.
-              </p>
-            </div>
-
-          </div>
-        </ScrollReveal>
-      </section>
-
-      {/* Package Options Breakdown */}
-      <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5">
-        <ScrollReveal className="reveal-hidden">
-          <div className="text-center mb-16">
-            <span className="section-label justify-center">
-              <Dumbbell size={16} className="text-[#C5A059]" /> TAILORED PACKAGES
+          <div className="flex items-center gap-3 text-center md:text-left">
+            <Info size={18} className="shrink-0" style={{ color: "#C5A059" }} />
+            <span className="text-xs sm:text-sm text-gray-200 font-medium">
+              Full package amount will be confirmed during enquiry based on the selected arrangement.
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-4 font-syne">
-              Personalised Coaching Packages
-            </h2>
-            <p className="text-gray-200 max-w-3xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed font-normal">
-              We recommend discussing your goals during an initial free consultation or trial session so we can suggest the most effective package for your needs.
-            </p>
           </div>
-        </ScrollReveal>
-
-        {/* All Packages Grid */}
-        <div className="space-y-12">
-          
-          {/* Row 1: 12 Sessions & 24 Sessions */}
-          <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            
-            {/* Package 1: 12 Sessions */}
-            <ScrollReveal className="reveal-hidden">
-              <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
-                <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">12 Sessions Package</span>
-                  <h3 className="font-oswald text-2xl sm:text-3xl font-bold uppercase text-white mb-2">12 Sessions Foundation</h3>
-                  <div className="my-4 border-y border-white/10 py-4 grid grid-cols-2 gap-4 text-center">
-                    <div>
-                      <span className="text-xs text-gray-400 font-oswald uppercase block">Single Rate</span>
-                      <span className="text-3xl font-extrabold font-oswald text-white">$136 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
-                    </div>
-                    <div className="border-l border-white/10 pl-4">
-                      <span className="text-xs text-gray-400 font-oswald uppercase block">Couple Rate</span>
-                      <span className="text-3xl font-extrabold font-oswald text-white">$204 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
-                    </div>
-                  </div>
-                  <p className="text-gray-200 text-xs leading-relaxed font-sans mb-3 font-semibold">
-                    Includes initial InBody Analysis Screening Report:
-                  </p>
-                  <ul className="space-y-2 text-xs text-gray-300 font-sans mb-6">
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Present, Appropriate & Target Weight</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Overall Body Fat %, Body Age & RMR</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Goal Setting & Nutrition Plan</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Once In 3 Weeks InBody Tracking</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2012-Session%20Package."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-center block text-xs"
-                >
-                  Enquire 12-Session Package
-                </a>
-              </div>
-            </ScrollReveal>
-
-            {/* Package 2: 24 Sessions */}
-            <ScrollReveal className="reveal-hidden" delay={150}>
-              <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
-                <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">24 Sessions Package</span>
-                  <h3 className="font-oswald text-2xl sm:text-3xl font-bold uppercase text-white mb-2">24 Sessions Progress</h3>
-                  <div className="my-4 border-y border-white/10 py-4 grid grid-cols-2 gap-4 text-center">
-                    <div>
-                      <span className="text-xs text-gray-400 font-oswald uppercase block">Single Rate</span>
-                      <span className="text-3xl font-extrabold font-oswald text-white">$126 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
-                    </div>
-                    <div className="border-l border-white/10 pl-4">
-                      <span className="text-xs text-gray-400 font-oswald uppercase block">Couple Rate</span>
-                      <span className="text-3xl font-extrabold font-oswald text-white">$189 <span className="text-xs text-gray-400 font-sans font-normal">/sess</span></span>
-                    </div>
-                  </div>
-                  <p className="text-gray-200 text-xs leading-relaxed font-sans mb-3 font-semibold">
-                    Includes initial InBody Analysis Screening Report:
-                  </p>
-                  <ul className="space-y-2 text-xs text-gray-300 font-sans mb-6">
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Full Body Fat % & Muscle Mass Report</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Customised Nutrition & Dietary Plan</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Weight Loss & Resistance Guidance</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Once In 3 Weeks InBody Tracking</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2024-Session%20Package."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-center block text-xs"
-                >
-                  Enquire 24-Session Package
-                </a>
-              </div>
-            </ScrollReveal>
-
-          </div>
-
-          {/* Row 2: 36, 48, and 60 Sessions */}
-          <div className="grid md:grid-cols-3 gap-8 items-stretch pt-6 border-t border-white/10">
-            
-            {/* Package 3: 36 Sessions */}
-            <ScrollReveal className="reveal-hidden">
-              <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
-                <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">36 Sessions Package</span>
-                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">36 Sessions Transformation</h3>
-                  <div className="my-4 border-y border-white/10 py-3 text-center">
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="text-xs text-gray-400 font-oswald uppercase">Single:</span>
-                      <span className="text-xl font-bold font-oswald text-white">$116 <span className="text-xs text-gray-400 font-normal">/sess</span></span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-gray-400 font-oswald uppercase">Couple:</span>
-                      <span className="text-xl font-bold font-oswald text-white">$174 <span className="text-xs text-gray-400 font-normal">/sess</span></span>
-                    </div>
-                  </div>
-                  <ul className="space-y-2 text-xs text-gray-300 font-sans mb-6">
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Initial InBody Analysis Screening Report</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Personalised Training Program & Goal Setting</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Nutrition & Dietary Plan + Weight Loss Advice</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Before & After Professional Photographs</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Fortnightly InBody Analysis Tracking</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2036-Session%20Package."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-center block text-xs"
-                >
-                  Enquire 36-Session Package
-                </a>
-              </div>
-            </ScrollReveal>
-
-            {/* Package 4: 48 Sessions */}
-            <ScrollReveal className="reveal-hidden" delay={150}>
-              <div className="bg-[#0d0d0d] border border-white/10 p-8 rounded-xl flex flex-col justify-between hover:border-[#C5A059]/40 transition-all duration-300 h-full">
-                <div>
-                  <span className="text-xs uppercase tracking-widest text-[#C5A059] font-bold block mb-2 font-oswald">48 Sessions Package</span>
-                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">48 Sessions Turbo Charge</h3>
-                  <div className="my-4 border-y border-white/10 py-3 text-center">
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="text-xs text-gray-400 font-oswald uppercase">Single:</span>
-                      <span className="text-xl font-bold font-oswald text-white">$106 <span className="text-xs text-gray-400 font-normal">/sess</span></span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-gray-400 font-oswald uppercase">Couple:</span>
-                      <span className="text-xl font-bold font-oswald text-white">$159 <span className="text-xs text-gray-400 font-normal">/sess</span></span>
-                    </div>
-                  </div>
-                  <ul className="space-y-2 text-xs text-gray-300 font-sans mb-6">
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Initial InBody Analysis Screening Report</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Personalised Training Program & Goal Setting</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Nutrition & Dietary Plan + Weight Loss Advice</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Before & After Professional Photographs</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-[#C5A059]" /> Fortnightly InBody Analysis Tracking</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2048-Session%20Package."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary text-center block text-xs"
-                >
-                  Enquire 48-Session Package
-                </a>
-              </div>
-            </ScrollReveal>
-
-            {/* Package 5: 60 Sessions (BEST RATE) */}
-            <ScrollReveal className="reveal-hidden" delay={300}>
-              <div className="bg-[#0d0d0d] border-2 border-emerald-500/60 p-8 rounded-xl flex flex-col justify-between shadow-2xl relative h-full">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-black text-[10px] font-oswald font-extrabold uppercase px-4 py-1 rounded-full tracking-widest shadow-md">
-                  BEST VALUE • $96 / SESS
-                </div>
-                <div>
-                  <span className="text-xs uppercase tracking-widest text-emerald-400 font-bold block mb-2 font-oswald">60 Sessions Package</span>
-                  <h3 className="font-oswald text-2xl font-bold uppercase text-white mb-2">60 Sessions Signature</h3>
-                  <div className="my-4 border-y border-emerald-500/20 py-3 text-center bg-emerald-950/20 rounded px-3">
-                    <div className="flex justify-between items-center mb-1">
-                      <span className="text-xs text-emerald-300 font-oswald uppercase font-bold">Single:</span>
-                      <span className="text-xl font-bold font-oswald text-emerald-400">$96 <span className="text-xs text-emerald-300/80 font-normal">/sess</span></span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-xs text-emerald-300 font-oswald uppercase font-bold">Couple:</span>
-                      <span className="text-xl font-bold font-oswald text-emerald-400">$144 <span className="text-xs text-emerald-300/80 font-normal">/sess</span></span>
-                    </div>
-                  </div>
-                  <ul className="space-y-2 text-xs text-gray-200 font-sans mb-6">
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-emerald-400" /> Complete InBody Screening & Body Age Report</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-emerald-400" /> Full Personalised Training Program & Goal Setting</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-emerald-400" /> Advanced Nutrition & Dietary Guidance</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-emerald-400" /> Before & After Transformation Photo Suite</li>
-                    <li className="flex items-center gap-2"><CheckCircle size={14} className="text-emerald-400" /> Weekly InBody Analysis Tracking</li>
-                  </ul>
-                </div>
-                <a
-                  href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20the%2060-Session%20Signature%20Package."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-3.5 text-center font-bold tracking-wider font-oswald uppercase text-xs transition-all duration-300 bg-emerald-500 text-black hover:bg-emerald-400 rounded-lg block"
-                >
-                  Enquire 60-Session Package
-                </a>
-              </div>
-            </ScrollReveal>
-
-          </div>
-
         </div>
-      </section>
 
-      {/* CTA Direct Enquiry Banner */}
-      <section className="py-20 px-6 md:px-12 bg-[#0c0c0c] border-t border-white/5 text-center">
-        <div className="max-w-4xl mx-auto">
-          <ScrollReveal className="reveal-hidden">
-            <h2 className="text-3xl md:text-5xl font-black uppercase font-syne mb-6">
-              Ready to Discuss Your Fitness Goals?
-            </h2>
-            <p className="text-white text-base max-w-2xl mx-auto mb-8 leading-relaxed font-sans">
-              Send us a message on WhatsApp with your target goal, location and schedule. We will recommend the best training arrangement for you.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20ready%20to%20discuss%20my%20fitness%20goals%20and%20rates."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary group"
-              >
-                <span>WhatsApp PersonalTrainer.sg</span>
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
-              <Link href="/contact#trial" className="btn-outline">
-                <span>Book a Trial Session</span>
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      </main>
 
       {/* Footer Section */}
-      <footer id="contact" className="bg-[#050505] py-16 px-6 md:px-12 border-t border-white/5">
+      <footer id="contact" className="bg-[#030303] py-14 px-6 md:px-12 border-t border-white/10" style={{ backgroundColor: "#030303" }}>
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-white/5 pb-12 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 border-b border-white/5 pb-10 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <img
                   src="/logopt.png"
                   alt="PersonalTrainer.sg"
-                  className="h-12 w-auto logo-glow"
+                  className="h-10 w-auto"
                 />
                 <div className="flex flex-col text-left">
-                  <span className="text-white uppercase font-oswald font-extrabold text-lg">PERSONALTRAINER.SG</span>
-                  <span className="text-[#C5A059] uppercase font-oswald text-xs">Trusted in Singapore Since 2002</span>
+                  <span className="text-white uppercase font-oswald font-extrabold text-base">PERSONALTRAINER.SG</span>
+                  <span className="uppercase font-oswald text-[10px]" style={{ color: "#C5A059" }}>Trusted in Singapore Since 2002</span>
                 </div>
               </div>
-              <p className="text-white text-sm leading-relaxed mb-4">
+              <p className="text-gray-400 text-xs leading-relaxed mb-3">
                 Led by Md Salaudin Adam (DONN)
               </p>
-              <ul className="text-white text-xs space-y-1.5 mb-6 font-sans">
+              <ul className="text-gray-400 text-[11px] space-y-1 mb-4 font-sans">
                 <li>• Founder and Fitness Director</li>
                 <li>• Transformation Specialist</li>
                 <li>• Trusted in Singapore Since 2002</li>
                 <li>• 24 Years of Coaching Experience</li>
               </ul>
               <div className="flex gap-2">
-                <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
-                  <Facebook size={16} />
+                <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 text-black flex items-center justify-center hover:bg-white transition-colors duration-300 rounded" style={{ backgroundColor: "#C5A059" }}>
+                  <Facebook size={14} />
                 </a>
-                <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
-                  <Instagram size={16} />
+                <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 text-black flex items-center justify-center hover:bg-white transition-colors duration-300 rounded" style={{ backgroundColor: "#C5A059" }}>
+                  <Instagram size={14} />
                 </a>
-                <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-10 h-10 bg-[#C5A059] text-black flex items-center justify-center hover:bg-white transition-colors duration-300">
-                  <TikTokIcon size={16} />
+                <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-8 h-8 text-black flex items-center justify-center hover:bg-white transition-colors duration-300 rounded" style={{ backgroundColor: "#C5A059" }}>
+                  <TikTokIcon size={14} />
                 </a>
               </div>
             </div>
 
             <div>
-              <h4 className="font-oswald text-lg font-bold text-white mb-6 uppercase tracking-wider">Quick Links</h4>
-              <ul className="space-y-3 text-sm text-white font-oswald">
+              <h4 className="font-oswald text-base font-bold text-white mb-4 uppercase tracking-wider">Quick Links</h4>
+              <ul className="space-y-2 text-xs text-gray-300 font-oswald">
                 {[
                   { name: "Home", url: "/" },
                   { name: "About Us", url: "/about" },
@@ -702,7 +410,7 @@ export default function RatesPage() {
                   { name: "Contact Us", url: "/contact" }
                 ].map((link) => (
                   <li key={link.name}>
-                    <Link href={link.url} className="hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest text-xs">
+                    <Link href={link.url} className="hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest text-[11px]">
                       {link.name}
                     </Link>
                   </li>
@@ -711,44 +419,37 @@ export default function RatesPage() {
             </div>
 
             <div>
-              <h4 className="font-oswald text-lg font-bold text-white mb-6 uppercase tracking-wider">Open Hours</h4>
-              <p className="text-white text-sm tracking-wider font-oswald uppercase leading-relaxed">
+              <h4 className="font-oswald text-base font-bold text-white mb-4 uppercase tracking-wider">Open Hours</h4>
+              <p className="text-gray-400 text-xs tracking-wide font-oswald uppercase leading-relaxed">
                 PersonalTrainer.sg operates by appointment only. Training sessions are arranged based on trainer availability, client schedule, location suitability and confirmed booking.
               </p>
             </div>
 
             <div>
-              <h4 className="font-oswald text-lg font-bold text-white mb-6 uppercase tracking-wider">Get In Touch</h4>
-              <ul className="space-y-4 text-xs text-white font-sans">
-                <li className="flex items-start gap-3">
-                  <MapPin size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                  <span>Training locations arranged across Singapore</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Phone size={16} className="text-[#C5A059] shrink-0" />
+              <h4 className="font-oswald text-base font-bold text-white mb-4 uppercase tracking-wider">Contact Info</h4>
+              <ul className="space-y-2.5 text-xs text-gray-300 font-sans">
+                <li className="flex items-center gap-2">
+                  <Phone size={14} className="shrink-0" style={{ color: "#C5A059" }} />
                   <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="hover:text-[#C5A059] transition-colors">
                     +65 9108 1781
                   </a>
                 </li>
-                <li className="flex items-center gap-3">
-                  <Mail size={16} className="text-[#C5A059] shrink-0" />
-                  <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors">
-                    donn@personaltrainer.sg
+                <li className="flex items-center gap-2">
+                  <Mail size={14} className="shrink-0" style={{ color: "#C5A059" }} />
+                  <a href="mailto:info@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors">
+                    info@personaltrainer.sg
                   </a>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 font-sans gap-4">
-            <p>© 2026 PersonalTrainer.sg. All Rights Reserved. Led by Md Salaudin Adam (DONN).</p>
-            <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-[#C5A059] transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-[#C5A059] transition-colors">Terms of Service</Link>
-            </div>
+          <div className="text-center text-gray-500 text-[11px] font-sans">
+            <p>© {new Date().getFullYear()} PersonalTrainer.sg. All rights reserved.</p>
           </div>
         </div>
       </footer>
     </div>
   );
 }
+
