@@ -656,13 +656,14 @@ h1, h2, h3, h4, h5, h6, p, span, a, li {
   }
   /* WhatsApp button smaller and shifted on mobile */
   a[aria-label*="WhatsApp"] {
-    bottom: 20px !important;
-    right: 16px !important;
-    transform: scale(0.85) !important;
+    bottom: 12px !important;
+    right: 12px !important;
+    transform: scale(0.78) !important;
+    transform-origin: bottom right !important;
   }
   a[aria-label*="WhatsApp"] > div:first-of-type {
-    width: 50px !important;
-    height: 50px !important;
+    width: 48px !important;
+    height: 48px !important;
   }
   a[aria-label*="WhatsApp"] > span {
     display: none !important;

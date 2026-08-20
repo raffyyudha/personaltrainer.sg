@@ -41,7 +41,7 @@ const PackageShieldIcon = ({ number }: { number: string | number }) => (
 
 // Clean Authentic WhatsApp Icon SVG
 const WhatsAppIcon = ({ className = "w-6 h-6", style }: { className?: string; style?: React.CSSProperties }) => (
-  <svg className={className} style={style} viewBox="0 0 24 24" fill="currentColor">
+  <svg width="24" height="24" className={className} style={{ width: "24px", height: "24px", minWidth: "24px", minHeight: "24px", ...style }} viewBox="0 0 24 24" fill="currentColor">
     <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.76.459 3.474 1.333 4.988l-1.417 5.176 5.297-1.39c1.46.797 3.107 1.217 4.773 1.218h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.038-5.177-2.925-7.064s-4.395-2.927-7.064-2.927zm5.72 14.184c-.244.688-1.427 1.314-1.966 1.396-.51.077-1.168.109-1.89-.124-.442-.143-1.011-.328-1.742-.647-3.072-1.332-5.077-4.437-5.231-4.644-.153-.207-1.252-1.666-1.252-3.18 0-1.514.789-2.259 1.069-2.564.281-.305.612-.382.816-.382.204 0 .408.003.586.012.189.01.442-.072.692.529.255.613.867 2.115.943 2.268.077.153.128.331.026.535-.102.204-.153.331-.306.51-.153.178-.321.375-.459.504-.153.144-.313.301-.135.607.178.306.792 1.307 1.7 2.116 1.168 1.042 2.153 1.365 2.46 1.518.306.153.484.128.663-.077.179-.204.765-.893.969-1.2.204-.306.408-.255.689-.153.281.102 1.785.842 2.091.995.306.153.51.229.586.357.077.127.077.739-.167 1.427z" />
   </svg>
 );
@@ -116,28 +116,28 @@ export default function RatesPage() {
       <Navbar activePage="services" />
 
       {/* Main Content Area matching Client Design Graphic */}
-      <main className="pt-24 sm:pt-28 pb-16 px-4 sm:px-8 md:px-12 max-w-[1550px] mx-auto">
+      <main className="pt-20 sm:pt-28 pb-24 sm:pb-16 px-3.5 sm:px-8 md:px-12 max-w-[1550px] mx-auto">
         
         {/* Header Title Section with Gold Ornamental Wings */}
-        <div className="text-center mb-10 sm:mb-12 mt-4">
-          <div className="flex items-center justify-center gap-4 sm:gap-8 mb-3">
-            <div className="flex items-center gap-2 opacity-80">
-              <div className="h-[2px] w-16 sm:w-32 md:w-48" style={{ background: "linear-gradient(to right, transparent, #C5A059)" }} />
-              <div className="w-2.5 h-2.5 rotate-45 border" style={{ borderColor: "#C5A059", backgroundColor: "#C5A059" }} />
-              <div className="h-[2px] w-8 sm:w-16" style={{ backgroundColor: "#C5A059" }} />
+        <div className="text-center mb-8 sm:mb-12 mt-2 sm:mt-4">
+          <div className="flex items-center justify-center gap-2 sm:gap-8 mb-3">
+            <div className="hidden sm:flex items-center gap-2 opacity-80">
+              <div className="h-[2px] w-12 sm:w-32 md:w-48" style={{ background: "linear-gradient(to right, transparent, #C5A059)" }} />
+              <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rotate-45 border" style={{ borderColor: "#C5A059", backgroundColor: "#C5A059" }} />
+              <div className="h-[2px] w-6 sm:w-16" style={{ backgroundColor: "#C5A059" }} />
             </div>
 
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-black font-oswald uppercase tracking-widest text-white drop-shadow-xl" style={{ color: "#ffffff" }}>
+            <h1 className="text-2xl sm:text-5xl md:text-6xl font-black font-oswald uppercase tracking-widest text-white drop-shadow-xl" style={{ color: "#ffffff" }}>
               PERSONAL TRAINING RATES
             </h1>
 
-            <div className="flex items-center gap-2 opacity-80">
-              <div className="h-[2px] w-8 sm:w-16" style={{ backgroundColor: "#C5A059" }} />
-              <div className="w-2.5 h-2.5 rotate-45 border" style={{ borderColor: "#C5A059", backgroundColor: "#C5A059" }} />
-              <div className="h-[2px] w-16 sm:w-32 md:w-48" style={{ background: "linear-gradient(to left, transparent, #C5A059)" }} />
+            <div className="hidden sm:flex items-center gap-2 opacity-80">
+              <div className="h-[2px] w-6 sm:w-16" style={{ backgroundColor: "#C5A059" }} />
+              <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rotate-45 border" style={{ borderColor: "#C5A059", backgroundColor: "#C5A059" }} />
+              <div className="h-[2px] w-12 sm:w-32 md:w-48" style={{ background: "linear-gradient(to left, transparent, #C5A059)" }} />
             </div>
           </div>
-          <p className="text-gray-200 font-sans text-base sm:text-lg md:text-2xl tracking-wider font-semibold" style={{ color: "#e5e7eb" }}>
+          <p className="text-gray-200 font-sans text-sm sm:text-lg md:text-2xl tracking-wider font-semibold" style={{ color: "#e5e7eb" }}>
             Premium Training. Proven Results.
           </p>
         </div>
@@ -154,7 +154,7 @@ export default function RatesPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 border-t pt-5 text-center" style={{ borderTopColor: "rgba(255, 255, 255, 0.18)" }}>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 border-t pt-4 sm:pt-5 text-center" style={{ borderTopColor: "rgba(255, 255, 255, 0.18)" }}>
               <div>
                 <span className="block text-xs sm:text-sm font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
                   SINGLE
@@ -163,7 +163,7 @@ export default function RatesPage() {
                   $144
                 </span>
               </div>
-              <div className="border-l pl-4" style={{ borderLeftColor: "rgba(255, 255, 255, 0.18)" }}>
+              <div className="border-l pl-3 sm:pl-4" style={{ borderLeftColor: "rgba(255, 255, 255, 0.18)" }}>
                 <span className="block text-xs sm:text-sm font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
                   COUPLE
                 </span>
@@ -175,10 +175,10 @@ export default function RatesPage() {
           </div>
 
           {/* Card 2: Starter Promotional Rate (Highlighted Deep Burgundy Card) */}
-          <div className="relative rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl overflow-hidden transition-all duration-300" style={{ backgroundColor: "#4A0A13", border: "2.5px solid #C5A059" }}>
+          <div className="relative rounded-2xl p-5 sm:p-8 flex flex-col justify-between shadow-2xl overflow-hidden transition-all duration-300" style={{ backgroundColor: "#4A0A13", border: "2.5px solid #C5A059" }}>
             {/* Gold Ribbon Tag */}
             <div
-              className="absolute top-0 left-6 w-10 h-16 shadow-lg flex items-center justify-center rounded-b-sm z-10"
+              className="absolute top-0 left-5 sm:left-6 w-9 h-14 sm:w-10 sm:h-16 shadow-lg flex items-center justify-center rounded-b-sm z-10"
               style={{
                 backgroundColor: "#C5A059",
                 borderLeft: "1px solid rgba(255, 229, 163, 0.7)",
@@ -187,59 +187,59 @@ export default function RatesPage() {
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 76%, 0 100%)"
               }}
             >
-              <Star size={20} style={{ color: "#3A060D", fill: "#3A060D", marginTop: "-4px" }} />
+              <Star size={18} style={{ color: "#3A060D", fill: "#3A060D", marginTop: "-4px" }} />
             </div>
 
-            <div className="pl-6 text-center mb-5">
-              <h2 className="font-oswald text-xl sm:text-2xl font-black uppercase tracking-wider drop-shadow-md" style={{ color: "#C5A059" }}>
+            <div className="pl-6 text-center mb-4 sm:mb-5">
+              <h2 className="font-oswald text-lg sm:text-2xl font-black uppercase tracking-wider drop-shadow-md" style={{ color: "#C5A059" }}>
                 STARTER PROMOTIONAL RATE
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 border-t pt-5 text-center" style={{ borderTopColor: "rgba(197, 160, 89, 0.55)" }}>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 border-t pt-4 sm:pt-5 text-center" style={{ borderTopColor: "rgba(197, 160, 89, 0.55)" }}>
               <div>
                 <span className="block text-xs sm:text-sm font-oswald uppercase text-gray-100 font-bold tracking-wider mb-1">
                   SINGLE
                 </span>
-                <div className="flex items-baseline justify-center gap-1">
+                <div className="flex items-baseline justify-center gap-1 flex-wrap">
                   <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
                     $96
                   </span>
-                  <span className="text-xs sm:text-sm text-gray-200 font-sans tracking-tight font-medium">/ SESSION</span>
+                  <span className="text-[11px] sm:text-xs text-gray-200 font-sans tracking-normal font-medium">/ session</span>
                 </div>
               </div>
-              <div className="border-l pl-4" style={{ borderLeftColor: "rgba(197, 160, 89, 0.55)" }}>
+              <div className="border-l pl-3 sm:pl-4" style={{ borderLeftColor: "rgba(197, 160, 89, 0.55)" }}>
                 <span className="block text-xs sm:text-sm font-oswald uppercase text-gray-100 font-bold tracking-wider mb-1">
                   COUPLE
                 </span>
-                <div className="flex items-baseline justify-center gap-1">
+                <div className="flex items-baseline justify-center gap-1 flex-wrap">
                   <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
                     $144
                   </span>
-                  <span className="text-xs sm:text-sm text-gray-200 font-sans tracking-tight font-medium">/ SESSION</span>
+                  <span className="text-[11px] sm:text-xs text-gray-200 font-sans tracking-normal font-medium">/ session</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Card 3: Student Rate */}
-          <div className="rounded-2xl p-6 sm:p-8 flex flex-col justify-between shadow-2xl transition-all duration-300" style={{ backgroundColor: "#0a0a0a", border: "1.5px solid rgba(197, 160, 89, 0.75)" }}>
-            <div className="flex items-center gap-3.5 mb-5 justify-center">
-              <GraduationCap className="w-7 h-7 shrink-0" style={{ color: "#C5A059" }} />
-              <h2 className="font-oswald text-xl sm:text-2xl font-black uppercase tracking-wider" style={{ color: "#C5A059" }}>
+          <div className="rounded-2xl p-5 sm:p-8 flex flex-col justify-between shadow-2xl transition-all duration-300" style={{ backgroundColor: "#0a0a0a", border: "1.5px solid rgba(197, 160, 89, 0.75)" }}>
+            <div className="flex items-center gap-3 mb-4 sm:mb-5 justify-center">
+              <GraduationCap className="w-6 h-6 sm:w-7 sm:h-7 shrink-0" style={{ color: "#C5A059" }} />
+              <h2 className="font-oswald text-lg sm:text-2xl font-black uppercase tracking-wider" style={{ color: "#C5A059" }}>
                 STUDENT RATE
               </h2>
             </div>
 
-            <div className="border-t pt-5 text-center" style={{ borderTopColor: "rgba(255, 255, 255, 0.18)" }}>
+            <div className="border-t pt-4 sm:pt-5 text-center" style={{ borderTopColor: "rgba(255, 255, 255, 0.18)" }}>
               <span className="block text-xs sm:text-sm font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
                 SINGLE
               </span>
-              <div className="flex items-baseline justify-center gap-1">
+              <div className="flex items-baseline justify-center gap-1 flex-wrap">
                 <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
                   $80
                 </span>
-                <span className="text-xs sm:text-sm text-gray-300 font-sans tracking-tight font-medium">/ SESSION</span>
+                <span className="text-[11px] sm:text-xs text-gray-300 font-sans tracking-normal font-medium">/ session</span>
               </div>
             </div>
           </div>
@@ -247,16 +247,16 @@ export default function RatesPage() {
         </div>
 
         {/* 5 Columns Package Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-5 max-w-[1500px] mx-auto mb-10 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-4 lg:gap-5 max-w-[1500px] mx-auto mb-10 items-stretch">
           {packageCards.map((pkg) => (
             <div
               key={pkg.number}
-              className="rounded-2xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl transition-all duration-300 group"
+              className="rounded-2xl p-4 sm:p-5 flex flex-col justify-between shadow-2xl transition-all duration-300 group hover:border-[#C5A059]"
               style={{ backgroundColor: "#0a0a0a", border: "1.5px solid rgba(197, 160, 89, 0.7)" }}
             >
               <div>
                 {/* Header: Shield Icon + Title */}
-                <div className="flex items-center gap-3.5 mb-4 border-b pb-4" style={{ borderBottomColor: "rgba(255, 255, 255, 0.15)" }}>
+                <div className="flex items-center gap-3 mb-3 border-b pb-3" style={{ borderBottomColor: "rgba(255, 255, 255, 0.15)" }}>
                   <PackageShieldIcon number={pkg.number} />
                   <div className="leading-tight">
                     <span className="block font-oswald text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider">
@@ -268,38 +268,44 @@ export default function RatesPage() {
                   </div>
                 </div>
 
-                {/* Rates (Centered Vertically Stacked as in client design) */}
-                <div className="text-center space-y-3 my-4 py-3.5 border-y" style={{ borderColor: "rgba(255, 255, 255, 0.15)" }}>
-                  <div>
-                    <span className="block text-xs font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
+                {/* Rates Display: 2 Clean Stacked Rows (Single & Couple) */}
+                <div
+                  className="my-3 py-2.5 px-3 rounded-xl flex flex-col gap-1.5 shadow-inner"
+                  style={{
+                    backgroundColor: "rgba(255, 255, 255, 0.03)",
+                    border: "1px solid rgba(197, 160, 89, 0.3)"
+                  }}
+                >
+                  <div className="flex items-center justify-between border-b border-white/10 pb-1.5">
+                    <span className="font-oswald uppercase text-gray-300 font-bold tracking-wider text-xs">
                       SINGLE
                     </span>
-                    <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-3xl sm:text-4xl font-black font-oswald text-white tracking-tight">
+                    <div className="flex items-baseline gap-1">
+                      <span className="font-oswald font-black text-white text-base sm:text-lg tracking-tight">
                         {pkg.singleRate}
                       </span>
-                      <span className="text-xs text-gray-300 font-sans font-medium">/ SESSION</span>
+                      <span className="text-[10px] sm:text-[11px] text-gray-400 font-sans font-medium">/ session</span>
                     </div>
                   </div>
 
-                  <div>
-                    <span className="block text-xs font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
+                  <div className="flex items-center justify-between pt-0.5">
+                    <span className="font-oswald uppercase text-gray-300 font-bold tracking-wider text-xs">
                       COUPLE
                     </span>
-                    <div className="flex items-baseline justify-center gap-1">
-                      <span className="text-3xl sm:text-4xl font-black font-oswald text-white tracking-tight">
+                    <div className="flex items-baseline gap-1">
+                      <span className="font-oswald font-black text-white text-base sm:text-lg tracking-tight">
                         {pkg.coupleRate}
                       </span>
-                      <span className="text-xs text-gray-300 font-sans font-medium">/ SESSION</span>
+                      <span className="text-[10px] sm:text-[11px] text-gray-400 font-sans font-medium">/ session</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Features List (High Contrast & Clear Fonts) */}
-                <ul className="space-y-3 mb-6 text-xs sm:text-sm text-gray-100 font-sans font-medium">
+                {/* 3 Key Inclusions (High Contrast & Clean Spacing) */}
+                <ul className="space-y-2 mb-4 mt-3 text-xs sm:text-sm text-gray-100 font-sans font-medium">
                   {pkg.features.map((feat, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5">
-                      <span className="w-4.5 h-4.5 rounded-full flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black" style={{ border: "1.5px solid #C5A059", color: "#C5A059" }}>✓</span>
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="w-4 h-4 rounded-full flex items-center justify-center text-[10px] shrink-0 mt-0.5 font-black" style={{ border: "1.5px solid #C5A059", color: "#C5A059" }}>✓</span>
                       <span className="leading-snug text-gray-100">{feat}</span>
                     </li>
                   ))}
@@ -311,7 +317,7 @@ export default function RatesPage() {
                 href={`https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20the%20${pkg.sessions}%20${pkg.title}%20package.`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 sm:py-4 font-oswald text-xs sm:text-sm font-black uppercase tracking-widest rounded-lg text-center transition-all duration-300 block shadow-lg hover:brightness-125"
+                className="w-full py-3 font-oswald text-xs sm:text-sm font-black uppercase tracking-widest rounded-lg text-center transition-all duration-300 block shadow-lg hover:brightness-125 mt-2"
                 style={{
                   backgroundColor: "#4A0A13",
                   border: "1.5px solid rgba(197, 160, 89, 0.85)",
@@ -325,19 +331,19 @@ export default function RatesPage() {
         </div>
 
         {/* Center WhatsApp Button - Wide Horizontal Pill Button */}
-        <div className="flex justify-center my-10">
+        <div className="flex justify-center my-8 sm:my-10">
           <a
             href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20your%20Personal%20Training%20rates%20and%20packages."
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full max-w-md py-4 px-8 rounded-xl font-oswald font-black text-base sm:text-lg tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-3.5 shadow-2xl hover:scale-105"
+            className="w-full max-w-md py-3.5 sm:py-4 px-6 sm:px-8 rounded-xl font-oswald font-black text-sm sm:text-lg tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:scale-105"
             style={{
               backgroundColor: "#0a0a0a",
               border: "1.5px solid #C5A059",
               color: "#C5A059"
             }}
           >
-            <WhatsAppIcon className="w-6 h-6 shrink-0" style={{ color: "#C5A059" }} />
+            <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" style={{ color: "#C5A059" }} />
             <span className="whitespace-nowrap">WHATSAPP TO ENQUIRE</span>
           </a>
         </div>

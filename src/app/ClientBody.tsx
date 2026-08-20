@@ -118,6 +118,7 @@ function WhatsAppButton() {
           background: "#25D366",
           animation: "wa-pulse 2s ease-out infinite",
           zIndex: -1,
+          pointerEvents: "none",
         }}
       />
     </a>
