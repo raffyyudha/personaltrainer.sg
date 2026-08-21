@@ -1158,7 +1158,7 @@ export default function ServicesPage() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/logopt.png"
+                src="/logopt.avif"
                 alt="PersonalTrainer.sg"
                 className="h-10 w-auto logo-glow"
               />

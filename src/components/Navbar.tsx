@@ -86,7 +86,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
           <Link href="/" className="flex items-center group shrink-0" id="site-logo">
             <div className="brand-logo-wrapper group-hover:scale-105 transition-transform duration-300">
               <img
-                src="/logopt.png"
+                src="/logopt.avif"
                 alt="PersonalTrainer.sg Shield"
               />
             </div>
@@ -172,7 +172,7 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
             <div className="flex justify-between items-center mb-8 pb-4 border-b border-white/10">
               <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center group">
                 <div className="brand-logo-wrapper">
-                  <img src="/logopt.png" alt="PersonalTrainer.sg Shield" />
+                  <img src="/logopt.avif" alt="PersonalTrainer.sg Shield" />
                 </div>
                 <div className="brand-text-container">
                   <span className="brand-text-title">PERSONALTRAINER.SG</span>

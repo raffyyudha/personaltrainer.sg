@@ -59,7 +59,7 @@ export default function PremiumShieldLogo({
       {/* 4. CRYSTAL CLEAR, BRILLIANT GOLD PT SHIELD EMBLEM (No Overlays / No Fog) */}
       <div className="relative z-10 p-2">
         <img
-          src="/logopt.png"
+          src="/logopt.avif"
           alt="PersonalTrainer.sg Official Crest"
           className={`object-contain relative z-10 transition-all duration-500 hover:scale-105 ${imageClassName}`}
           style={{

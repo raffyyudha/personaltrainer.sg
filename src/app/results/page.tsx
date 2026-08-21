@@ -300,6 +300,13 @@ export default function ResultPage() {
               tagline: "Strength & Mobility Transformation",
               quote: "Built lean strength, enhanced joint stability and established long-term fitness consistency.",
               img: "/testimonial5.avif"
+            },
+            {
+              num: "6",
+              title: "Client Transformation #6",
+              tagline: "Body Sculpting & Fitness Transformation",
+              quote: "Remarkable physical progress, improved muscle definition and overall vitality through consistent coaching.",
+              img: "/testimonial6.avif"
             }
           ].map((item) => (
             <ScrollReveal key={item.num} className="reveal-hidden">
@@ -367,7 +374,7 @@ export default function ResultPage() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="/logopt.png"
+                src="/logopt.avif"
                 alt="PersonalTrainer.sg"
                 className="h-10 w-auto logo-glow"
               />
