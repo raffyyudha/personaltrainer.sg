@@ -172,27 +172,37 @@ export default function ContactPage() {
   ];
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.fullName || !formData.phone || !formData.email || !formData.message) {
+      setFormStatus("error");
+      setTimeout(() => setFormStatus("idle"), 4000);
+      return;
+    }
+
     setFormStatus("submitting");
-    // Simulate API request delay
+
+    const messageLines = [
+      `*NEW WEBSITE ENQUIRY - PersonalTrainer.sg*`,
+      ``,
+      `👤 *Name:* ${formData.fullName.trim()}`,
+      `📱 *Phone:* ${formData.phone.trim()}`,
+      `📧 *Email:* ${formData.email.trim()}`,
+      formData.city ? `📍 *City / Area:* ${formData.city.trim()}` : null,
+      formData.fitnessGoal ? `🎯 *Fitness Goal:* ${formData.fitnessGoal}` : null,
+      formData.trainingLocation ? `🏋️ *Preferred Training Location:* ${formData.trainingLocation}` : null,
+      formData.trainingDaysTime ? `📅 *Preferred Days & Time:* ${formData.trainingDaysTime.trim()}` : null,
+      ``,
+      `💬 *Message:*`,
+      `${formData.message.trim()}`
+    ].filter(Boolean).join("\n");
+
+    const whatsappUrl = `https://wa.me/6591081781?text=${encodeURIComponent(messageLines)}`;
+
+    window.open(whatsappUrl, "_blank");
+
+    setFormStatus("success");
     setTimeout(() => {
-      if (formData.fullName && formData.phone && formData.email && formData.message) {
-        setFormStatus("success");
-        setFormData({
-          fullName: "",
-          phone: "",
-          email: "",
-          city: "",
-          fitnessGoal: "",
-          trainingLocation: "",
-          trainingDaysTime: "",
-          message: ""
-        });
-        setTimeout(() => setFormStatus("idle"), 4000);
-      } else {
-        setFormStatus("error");
-        setTimeout(() => setFormStatus("idle"), 4000);
-      }
-    }, 1500);
+      setFormStatus("idle");
+    }, 6000);
   };
 
   const whatsappMessage = "Hi PersonalTrainer.sg, I am interested in Personal Training. My goal is to improve my fitness and I would like to know more about the training options, availability and Trial Session.";
@@ -205,7 +215,7 @@ export default function ContactPage() {
       <Navbar activePage="contactus" />
 
       {/* Breadcrumb Header Banner / Hero Section */}
-      <section className="relative py-24 bg-[#0d0d0d] border-b border-white/5 flex flex-col items-center justify-center text-center overflow-hidden">
+      <section className="relative pt-28 pb-16 sm:pt-32 md:py-24 bg-[#0d0d0d] border-b border-white/5 flex flex-col items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-35 pointer-events-none" />
         <div className="absolute left-[-10%] top-[10%] w-[350px] h-[350px] bg-[#800020] rounded-full blur-[150px] opacity-10 pointer-events-none" />
         
@@ -279,8 +289,8 @@ export default function ContactPage() {
       </div>
 
       {/* Main Form & Information Section */}
-      <section id="trial" className="py-16 md:py-24 px-6 md:px-12 bg-[#050505]">
-        <div className="max-w-6xl mx-auto">
+      <section id="enquiry" className="py-16 md:py-24 px-6 md:px-12 bg-[#050505]">
+        <div id="trial" className="scroll-mt-24 max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-12 gap-16 items-start">
 
             {/* LEFT: Form */}
@@ -290,10 +300,10 @@ export default function ContactPage() {
                   <Mail size={16} className="text-[#C5A059]" /> ENQUIRY FORM
                 </span>
                 <h2 className="text-3xl md:text-5xl font-black uppercase mb-3 font-syne">
-                  Send an Enquiry
+                  Send an Enquiry via WhatsApp
                 </h2>
                 <p className="text-gray-400 text-sm mb-10 leading-relaxed font-sans">
-                  Fill in your details and PersonalTrainer.sg will recommend the most suitable training direction for your goal.
+                  Fill in your details below and submit. Your enquiry will be automatically formatted and sent directly to PersonalTrainer.sg via WhatsApp (+65 9108 1781).
                 </p>
 
                 <form onSubmit={handleFormSubmit} className="space-y-5">
@@ -422,9 +432,12 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={formStatus === "submitting"}
-                      className="btn-primary py-4 px-10 text-sm disabled:opacity-60"
+                      className="btn-primary py-4 px-8 text-sm disabled:opacity-60 flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white border-none shadow-[0_4px_20px_rgba(37,211,102,0.35)] transition-all duration-300 font-bold"
                     >
-                      {formStatus === "submitting" ? "SENDING..." : "SUBMIT ENQUIRY"}
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" className="shrink-0">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                      </svg>
+                      <span>{formStatus === "submitting" ? "REDIRECTING..." : "SUBMIT ENQUIRY VIA WHATSAPP"}</span>
                     </button>
                     <p className="text-gray-600 text-xs pt-2 font-sans">Fields marked <span className="text-[#800020]">*</span> are required</p>
                   </div>
@@ -432,7 +445,7 @@ export default function ContactPage() {
                   {formStatus === "success" && (
                     <div className="flex items-center gap-3 text-green-400 text-sm bg-green-400/10 border border-green-400/20 rounded-lg px-4 py-3 animate-fadeIn">
                       <CheckCircle size={16} />
-                      <span>Enquiry sent! PersonalTrainer.sg will be in touch with you shortly.</span>
+                      <span>Redirecting to WhatsApp! Your enquiry details have been pre-filled.</span>
                     </div>
                   )}
                   {formStatus === "error" && (

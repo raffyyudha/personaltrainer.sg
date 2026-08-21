@@ -116,7 +116,7 @@ export default function RatesPage() {
       <Navbar activePage="services" />
 
       {/* Main Content Area matching Client Design Graphic */}
-      <main className="pt-20 sm:pt-28 pb-24 sm:pb-16 px-3.5 sm:px-8 md:px-12 max-w-[1550px] mx-auto">
+      <main className="pt-28 sm:pt-32 pb-24 sm:pb-16 px-3.5 sm:px-8 md:px-12 max-w-[1550px] mx-auto">
         
         {/* Header Title Section with Gold Ornamental Wings */}
         <div className="text-center mb-8 sm:mb-12 mt-2 sm:mt-4">
