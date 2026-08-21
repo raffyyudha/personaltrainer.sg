@@ -795,6 +795,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Fitness Calculator Highlight Section */}
+      <section id="fitness-calculator-highlight" className="py-14 sm:py-16 md:py-20 px-6 md:px-12 bg-[#080808] border-t border-b border-[#C5A059]/30 relative overflow-hidden">
+        {/* Subtle maroon glow background element */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#800020] rounded-full blur-[150px] opacity-20 pointer-events-none" />
+
+        <div className="max-w-4xl mx-auto relative z-10 text-center">
+          <ScrollReveal className="reveal-hidden">
+            <span className="section-label justify-center mb-3">
+              <Activity size={16} className="text-[#C5A059]" /> FREE FITNESS CALCULATOR
+            </span>
+
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase font-syne text-white mb-3 tracking-tight">
+              KNOW YOUR FITNESS NUMBERS
+            </h2>
+
+            {/* Parameter badge pill */}
+            <div className="inline-block bg-[#800020]/25 border border-[#C5A059]/40 px-4 py-1.5 rounded-full mb-5 shadow-md">
+              <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-bold uppercase tracking-widest">
+                BMI • BMR • Body Fat % • Ideal Weight • Calorie Needs
+              </span>
+            </div>
+
+            <p className="text-gray-200 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 font-sans leading-relaxed">
+              Use our free fitness calculator to understand your body better and find out which PersonalTrainer.sg training programme may suit your goal.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/services#fitness-calculator"
+                className="btn-primary group text-center flex items-center justify-center gap-2.5 py-4 px-8"
+              >
+                <span>Use Free Fitness Calculator</span>
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
+              </Link>
+              <a
+                href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20guidance%20on%20my%20fitness%20calculator%20results."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline group text-center flex items-center justify-center gap-2.5 py-4 px-8"
+              >
+                <span>WhatsApp PersonalTrainer.sg for Guidance</span>
+                <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+              </a>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Results Section */}
       <section id="results" className="bg-[#0c0c0c] py-12 md:py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
