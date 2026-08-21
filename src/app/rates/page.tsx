@@ -442,8 +442,8 @@ export default function RatesPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <Mail size={14} className="shrink-0" style={{ color: "#C5A059" }} />
-                  <a href="mailto:info@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors">
-                    info@personaltrainer.sg
+                  <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors">
+                    donn@personaltrainer.sg
                   </a>
                 </li>
               </ul>
