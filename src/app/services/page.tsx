@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import RateCardsGrid from "@/components/RateCardsGrid";
 import TikTokIcon from "@/components/TikTokIcon";
 import {
   Facebook,
@@ -819,31 +820,22 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── View Rates & Trial Session CTA ── */}
-      <section className="py-16 px-6 md:px-12 bg-[#050505] border-b border-white/5">
-        <div className="max-w-5xl mx-auto bg-[#0d0d0d] border border-[#C5A059]/40 p-8 md:p-12 rounded-2xl text-center space-y-6">
-          <span className="section-label justify-center">
-            <Award size={16} className="text-[#C5A059]" /> RATES & TRIAL SESSION
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase font-syne">
-            Personal Training Rates & Trial Session
-          </h2>
-          <p className="text-white text-sm sm:text-base max-w-3xl mx-auto leading-relaxed font-sans">
-            The trial session is approximately 75 minutes. It includes around 30 minutes of consultation, followed by around 45 minutes of hands-on training. The trial session fee is $144 and will be waived if you sign up for a minimum 12-session package immediately after the trial.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-2">
-            <Link href="/rates" className="btn-primary">
-              <span>View Personal Training Rates</span>
-            </Link>
-            <a
-              href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20rates%20and%20book%20a%20Trial%20Session."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-outline"
-            >
-              <span>WhatsApp PersonalTrainer.sg</span>
-            </a>
+      {/* ── View Rates & Trial Session Section ── */}
+      <section id="rates" className="py-16 md:py-24 px-4 sm:px-8 md:px-12 bg-[#050505] border-b border-white/5">
+        <div className="max-w-[1500px] mx-auto space-y-8">
+          <div className="text-center mb-6">
+            <span className="section-label justify-center">
+              <Award size={16} className="text-[#C5A059]" /> RATES & PACKAGES
+            </span>
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase font-syne text-white mt-2">
+              Personal Training Rates
+            </h2>
+            <p className="text-gray-300 text-sm sm:text-base max-w-2xl mx-auto mt-2 font-sans font-medium">
+              Transparent, structured pricing packages tailored to your fitness goals.
+            </p>
           </div>
+
+          <RateCardsGrid />
         </div>
       </section>
       {/* ══════════════════════════════════════════════════════════════════
