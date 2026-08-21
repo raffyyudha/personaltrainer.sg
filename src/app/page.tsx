@@ -796,7 +796,7 @@ export default function Home() {
       </section>
 
       {/* Fitness Calculator Highlight Section */}
-      <section id="fitness-calculator-highlight" className="py-14 sm:py-16 md:py-20 px-6 md:px-12 bg-[#080808] border-t border-b border-[#C5A059]/30 relative overflow-hidden">
+      <section id="fitness-calculator-highlight" className="py-8 sm:py-10 md:py-12 px-6 md:px-12 bg-[#080808] border-t border-b border-[#C5A059]/30 relative overflow-hidden">
         {/* Subtle maroon glow background element */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#800020] rounded-full blur-[150px] opacity-20 pointer-events-none" />
 
@@ -826,7 +826,7 @@ export default function Home() {
                 href="/services#fitness-calculator"
                 className="btn-primary group text-center flex items-center justify-center gap-2.5 py-4 px-8"
               >
-                <span>Use Free Fitness Calculator</span>
+                <span>Use The Free Fitness Calculator</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform duration-300" />
               </Link>
               <a
