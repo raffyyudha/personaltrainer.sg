@@ -250,7 +250,7 @@ export default function AboutPage() {
       <Navbar activePage="aboutus" />
 
       {/* Breadcrumb Header Banner */}
-      <section className="relative py-20 bg-[#0d0d0d] border-b border-white/5 flex flex-col items-center justify-center text-center overflow-hidden">
+      <section className="relative pt-28 pb-16 sm:pt-32 md:py-24 bg-[#0d0d0d] border-b border-white/5 flex flex-col items-center justify-center text-center overflow-hidden">
         {/* Background grid overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#111_1px,transparent_1px),linear-gradient(to_bottom,#111_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-35 pointer-events-none" />
         <div className="absolute left-[-10%] top-[10%] w-[350px] h-[350px] bg-[#800020] rounded-full blur-[150px] opacity-10 pointer-events-none" />
