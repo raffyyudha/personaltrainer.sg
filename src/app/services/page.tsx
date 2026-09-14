@@ -129,7 +129,12 @@ const blueprints = [
       "Long term consistency"
     ],
     ctaText: "Enquire About Personal Training",
-    ctaUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Personal%20Training.%20Please%20advise%20on%20the%20details%20and%20availability."
+    ctaUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Personal%20Training.%20Please%20advise%20on%20the%20details%20and%20availability.",
+    guideLink: {
+      label: "Pricing & Rates Guide",
+      title: "Personal Trainer Cost in Singapore 2026",
+      url: "/personal-trainer-cost-singapore"
+    }
   },
   {
     id: 2,
@@ -183,7 +188,12 @@ const blueprints = [
       "Confidence building"
     ],
     ctaText: "Enquire About Weight Loss Training",
-    ctaUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Weight%20Loss%20Training.%20Please%20advise%20on%20the%20details%20and%20availability."
+    ctaUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Weight%20Loss%20Training.%20Please%20advise%20on%20the%20details%20and%20availability.",
+    guideLink: {
+      label: "Specialized Medical Weight Loss Support",
+      title: "Strength Training During Medical Weight Loss in Singapore",
+      url: "/strength-training-medical-weight-loss-singapore"
+    }
   },
   {
     id: 4,
@@ -210,7 +220,12 @@ const blueprints = [
       "Training progression"
     ],
     ctaText: "Enquire About Strength Training",
-    ctaUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Strength%20Training.%20Please%20advise%20on%20the%20details%20and%20availability."
+    ctaUrl: "https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20Strength%20Training.%20Please%20advise%20on%20the%20details%20and%20availability.",
+    guideLink: {
+      label: "Muscle Preservation Guide",
+      title: "Strength Training During Medical Weight Loss",
+      url: "/strength-training-medical-weight-loss-singapore"
+    }
   },
   {
     id: 5,
@@ -718,6 +733,27 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     
+                    {/* In-Depth SEO Guide Link */}
+                    {item.guideLink && (
+                      <div className="w-full bg-[#121212] border border-[#C5A059]/30 p-4 rounded-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-md">
+                        <div>
+                          <span className="text-[10px] font-oswald uppercase text-[#C5A059] tracking-widest font-bold block mb-0.5">
+                            {item.guideLink.label}
+                          </span>
+                          <p className="text-white text-xs sm:text-sm font-sans font-semibold">
+                            {item.guideLink.title}
+                          </p>
+                        </div>
+                        <Link
+                          href={item.guideLink.url}
+                          className="text-xs font-oswald uppercase text-[#C5A059] hover:text-white flex items-center gap-1.5 shrink-0 transition-colors font-bold"
+                        >
+                          <span>Read Full Guide</span>
+                          <ArrowRight size={13} />
+                        </Link>
+                      </div>
+                    )}
+
                     {/* Bottom Full-Width CTA Box */}
                     <div className="w-full bg-[#0c0c0c] border border-white/10 p-5 sm:p-6 rounded-xl flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
                       <div className="w-full md:w-auto text-center md:text-left flex-1 min-w-0">

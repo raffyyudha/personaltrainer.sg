@@ -170,7 +170,22 @@ export default function AboutPage() {
   const faqs = [
     {
       q: "What is the cost of your personal training?",
-      a: "The Personal Trainer cost is a function of which package is purchased. In order for me to suggest which Personal Training package suits you most, I have found it most effective to start with a free consultation where we meet in order to get more background information from you, to see you in person, and to see how well the Personal Training program will fit your interests and goals. I also give you more detailed information about the Personal Training, how the Personal Training programs are done. For a concise description of Personal Trainer Cost, to learn more about Personal Training with PersonalTrainer.sg or want more information on Personal Fitness Training, do feel free to drop me a line at donn@personaltrainer.sg or WhatsApp +65 9108 1781 and I’ll get back to your queries immediately."
+      a: (
+        <span className="space-y-2 block">
+          <span>
+            The Personal Trainer cost is a function of which package is purchased. In order for me to suggest which Personal Training package suits you most, I have found it most effective to start with a consultation where we meet in order to understand your fitness background and goals.
+          </span>{" "}
+          <span>
+            For our complete 2026 price breakdown, trial session fees, and per-session rates, explore our{" "}
+            <Link href="/personal-trainer-cost-singapore" className="text-[#C5A059] underline hover:text-white font-semibold">
+              Personal Trainer Cost in Singapore 2026 Guide
+            </Link>.
+          </span>{" "}
+          <span>
+            Feel free to WhatsApp +65 9108 1781 or email donn@personaltrainer.sg for immediate advice.
+          </span>
+        </span>
+      )
     },
     {
       q: "Where do you offer your personal training?",
@@ -396,6 +411,15 @@ export default function AboutPage() {
                 <span className="text-white font-oswald text-base sm:text-lg font-extrabold uppercase tracking-widest">
                   PURPOSEFUL TRAINING. SAFE PROGRESSION. REAL RESULTS.
                 </span>
+              </div>
+              <div className="mt-5">
+                <Link
+                  href="/strength-training-medical-weight-loss-singapore"
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-oswald uppercase text-[#C5A059] hover:text-white transition-colors tracking-wider underline underline-offset-4"
+                >
+                  <span>See How DEPS Protects Muscle During Medical Weight Loss</span>
+                  <ArrowRight size={14} />
+                </Link>
               </div>
             </div>
           </div>

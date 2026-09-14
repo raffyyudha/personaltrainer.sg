@@ -12,6 +12,8 @@ const mainPages = [
   { url: `${baseUrl}/rates`, priority: "0.8", changefreq: "monthly" },
   { url: `${baseUrl}/results`, priority: "0.8", changefreq: "weekly" },
   { url: `${baseUrl}/contact`, priority: "0.7", changefreq: "monthly" },
+  { url: `${baseUrl}/personal-trainer-cost-singapore`, priority: "0.8", changefreq: "weekly" },
+  { url: `${baseUrl}/strength-training-medical-weight-loss-singapore`, priority: "0.8", changefreq: "weekly" },
   { url: `${baseUrl}/privacy`, priority: "0.3", changefreq: "yearly" },
   { url: `${baseUrl}/terms`, priority: "0.3", changefreq: "yearly" },
 ];

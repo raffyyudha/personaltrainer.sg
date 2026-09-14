@@ -11,7 +11,9 @@ import {
   Phone,
   Mail,
   Facebook,
-  Instagram
+  Instagram,
+  ArrowRight,
+  Sparkles
 } from "lucide-react";
 
 // Clean Authentic WhatsApp Icon SVG
@@ -89,6 +91,54 @@ export default function RatesPage() {
             <span className="text-xs sm:text-sm text-gray-200 font-medium">
               Full package amount will be confirmed during enquiry based on the selected arrangement.
             </span>
+          </div>
+        </div>
+
+        {/* In-Depth Fitness & Pricing Guides */}
+        <div className="max-w-[1500px] mx-auto mt-10 pt-8 border-t border-white/10">
+          <div className="flex items-center gap-2 mb-4">
+            <Sparkles size={16} className="text-[#C5A059]" />
+            <h2 className="font-oswald text-base sm:text-lg uppercase tracking-wider text-white font-bold">
+              Related Fitness & Pricing Guides
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link
+              href="/personal-trainer-cost-singapore"
+              className="p-5 rounded-xl bg-[#080808] border border-white/10 hover:border-[#C5A059]/50 transition-all group flex items-center justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-oswald uppercase text-[#C5A059] tracking-widest font-bold block mb-1">
+                  Complete 2026 Price Breakdown
+                </span>
+                <h3 className="font-oswald text-base sm:text-lg font-bold uppercase text-white group-hover:text-[#C5A059] transition-colors">
+                  Personal Trainer Cost Singapore 2026 Guide
+                </h3>
+                <p className="text-xs text-gray-400 font-sans mt-1">
+                  Explore 90-minute trial breakdowns, student concessions, factor analyses, and single vs couple rates.
+                </p>
+              </div>
+              <ArrowRight size={20} className="text-[#C5A059] group-hover:translate-x-1 transition-transform shrink-0 ml-4" />
+            </Link>
+
+            <Link
+              href="/strength-training-medical-weight-loss-singapore"
+              className="p-5 rounded-xl bg-[#080808] border border-white/10 hover:border-[#C5A059]/50 transition-all group flex items-center justify-between"
+            >
+              <div>
+                <span className="text-[11px] font-oswald uppercase text-[#C5A059] tracking-widest font-bold block mb-1">
+                  Clinical Support & Muscle Preservation
+                </span>
+                <h3 className="font-oswald text-base sm:text-lg font-bold uppercase text-white group-hover:text-[#C5A059] transition-colors">
+                  Strength Training During Medical Weight Loss
+                </h3>
+                <p className="text-xs text-gray-400 font-sans mt-1">
+                  How structured resistance training protects lean muscle, posture, and resting metabolism during weight loss.
+                </p>
+              </div>
+              <ArrowRight size={20} className="text-[#C5A059] group-hover:translate-x-1 transition-transform shrink-0 ml-4" />
+            </Link>
           </div>
         </div>
 
