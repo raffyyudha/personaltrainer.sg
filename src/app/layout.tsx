@@ -15,8 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://personaltrainer.sg"),
   title: "Personal Trainer Singapore | PersonalTrainer.sg | Md Salaudin Adam (DONN)",
   description: "PersonalTrainer.sg provides premium Personal Training in Singapore for Weight Loss, Strength Training, Senior Fitness, Couple Training, Kickboxing Fitness and Lifestyle Transformation. Led by Md Salaudin Adam (DONN), Founder and Fitness Director, Trusted in Singapore Since 2002 with 24 Years of Coaching Experience.",
+  alternates: {
+    canonical: "https://personaltrainer.sg"
+  },
   verification: {
     google: "google9ff6ae450a261cc5"
   }
