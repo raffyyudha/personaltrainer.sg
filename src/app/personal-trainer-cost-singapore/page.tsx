@@ -70,6 +70,7 @@ export default function PersonalTrainerCostSingaporePage() {
         "headline": "Personal Trainer Cost in Singapore 2026",
         "description": "Understand personal training rates, trial session fees and package options with PersonalTrainer.sg, Trusted in Singapore Since 2002.",
         "url": "https://personaltrainer.sg/personal-trainer-cost-singapore",
+        "image": "https://personaltrainer.sg/personal-trainer-cost-singapore-2026.avif",
         "datePublished": "2026-01-01T00:00:00+08:00",
         "dateModified": "2026-02-01T00:00:00+08:00",
         "author": {
@@ -162,37 +163,37 @@ export default function PersonalTrainerCostSingaporePage() {
           <span className="text-[#C5A059]">Cost Singapore 2026</span>
         </nav>
 
-        {/* ── HERO SECTION ── */}
-        <header className="text-center mb-14 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#161616] border border-[#C5A059]/40 mb-4 shadow-lg">
-            <Sparkles size={14} className="text-[#C5A059]" />
-            <span className="text-[11px] sm:text-xs font-oswald uppercase tracking-widest text-[#C5A059] font-bold">
-              Singapore Fitness Pricing Guide 2026
-            </span>
-          </div>
-
-          <div className="flex items-center justify-center gap-3 sm:gap-6 mb-4">
-            <div className="hidden md:flex items-center gap-2 opacity-70">
-              <div className="h-[2px] w-16 lg:w-32 bg-gradient-to-r from-transparent to-[#C5A059]" />
-              <div className="w-2 h-2 rotate-45 bg-[#C5A059]" />
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-oswald uppercase tracking-tight text-white drop-shadow-xl leading-tight">
-              Personal Trainer Cost in Singapore 2026
-            </h1>
-
-            <div className="hidden md:flex items-center gap-2 opacity-70">
-              <div className="w-2 h-2 rotate-45 bg-[#C5A059]" />
-              <div className="h-[2px] w-16 lg:w-32 bg-gradient-to-l from-transparent to-[#C5A059]" />
+        {/* ── HERO BANNER IMAGE ── */}
+        <header className="mb-14 sm:mb-16">
+          <div className="flex justify-center mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#161616] border border-[#C5A059]/40 shadow-lg">
+              <Sparkles size={14} className="text-[#C5A059]" />
+              <span className="text-[11px] sm:text-xs font-oswald uppercase tracking-widest text-[#C5A059] font-bold">
+                Singapore Fitness Pricing Guide 2026
+              </span>
             </div>
           </div>
 
-          <p className="text-gray-200 text-base sm:text-xl lg:text-2xl font-sans max-w-3xl mx-auto leading-relaxed mb-8">
-            Understand personal training rates, trial session fees and package options with PersonalTrainer.sg, <span className="text-[#C5A059] font-semibold">Trusted in Singapore Since 2002</span>.
-          </p>
+          <h1 className="sr-only">Personal Trainer Cost in Singapore 2026 by PersonalTrainer.sg</h1>
+
+          {/* Top Hero Banner Graphic */}
+          <div className="relative w-full rounded-2xl overflow-hidden border border-[#C5A059]/40 shadow-2xl bg-[#0a0a0a] group">
+            <a href="#rates" title="View Personal Training Rates" className="block cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C5A059]">
+              <img
+                src="/personal-trainer-cost-singapore-2026.avif"
+                alt="Personal Trainer Cost in Singapore 2026 by PersonalTrainer.sg"
+                width={1672}
+                height={941}
+                loading="eager"
+                {...{ fetchPriority: "high" }}
+                decoding="sync"
+                className="w-full h-auto block object-contain select-none transition-transform duration-500 group-hover:scale-[1.01]"
+              />
+            </a>
+          </div>
 
           {/* Credibility Key Highlights */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto pt-2 text-left">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-6 text-left">
             <div className="bg-[#0a0a0a] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3">
               <Shield className="w-6 h-6 sm:w-7 sm:h-7 text-[#C5A059] shrink-0" />
               <div>
@@ -394,7 +395,7 @@ export default function PersonalTrainerCostSingaporePage() {
         </section>
 
         {/* ── SECTION 3: PERSONAL TRAINING RATES ── */}
-        <section className="mb-16 sm:mb-20">
+        <section id="rates" className="mb-16 sm:mb-20 scroll-mt-24">
           <div className="text-center mb-10">
             <span className="text-[#C5A059] font-oswald text-xs uppercase tracking-widest font-bold block mb-1">
               Transparent Per-Session Structure
@@ -638,7 +639,7 @@ export default function PersonalTrainerCostSingaporePage() {
 
         {/* ── SECTION 4: WHAT AFFECTS PERSONAL TRAINER COST? ── */}
         <section className="mb-16 sm:mb-20">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8 sm:mb-10">
             <span className="text-[#C5A059] font-oswald text-xs uppercase tracking-widest font-bold block mb-1">
               Pricing Factors
             </span>
@@ -648,6 +649,19 @@ export default function PersonalTrainerCostSingaporePage() {
             <p className="text-gray-300 text-xs sm:text-sm max-w-xl mx-auto mt-2">
               Understanding the key variables that influence personal fitness coaching investments across Singapore.
             </p>
+          </div>
+
+          {/* Infographic Banner: 4 Key Factors (Experience, Personalised Programme, Location Convenience, Results Focused Coaching) */}
+          <div className="mb-8 sm:mb-10 rounded-2xl overflow-hidden border border-[#C5A059]/30 shadow-2xl bg-[#0a0a0a]">
+            <img
+              src="/what-affects-personal-trainer-cost-singapore.avif"
+              alt="What affects personal trainer cost in Singapore by PersonalTrainer.sg"
+              width={1672}
+              height={941}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-auto block object-contain select-none"
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -872,26 +886,53 @@ export default function PersonalTrainerCostSingaporePage() {
         </section>
 
         {/* ── FINAL CTA SECTION ── */}
-        <section className="mb-16 sm:mb-20 bg-gradient-to-r from-[#190508] via-[#0d0d0d] to-[#190508] border-2 border-[#C5A059] rounded-2xl p-8 sm:p-12 text-center shadow-2xl relative overflow-hidden">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-2xl sm:text-4xl font-black font-oswald uppercase tracking-wide text-white mb-3">
-              Not Sure Which Package Is Suitable?
-            </h2>
-            <p className="text-gray-200 text-sm sm:text-base leading-relaxed mb-6 font-sans">
-              Send a WhatsApp message with your goal, preferred location, schedule and current fitness condition. PersonalTrainer.sg will recommend the most suitable training arrangement for you.
-            </p>
+        <section className="mb-16 sm:mb-20">
+          {/* Guidance CTA Banner Image */}
+          <div className="mb-8 rounded-2xl overflow-hidden border border-[#C5A059]/40 shadow-2xl bg-[#0a0a0a] group">
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 sm:px-10 py-4 rounded-xl font-oswald uppercase tracking-wider font-bold text-base sm:text-lg bg-[#C5A059] text-black hover:bg-[#d4af37] transition-all duration-300 shadow-2xl hover:scale-105"
+              title="WhatsApp PersonalTrainer.sg for package guidance"
+              className="block cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#C5A059]"
             >
-              <WhatsAppIcon className="w-6 h-6 text-black shrink-0" />
-              <span>WhatsApp PersonalTrainer.sg</span>
+              <img
+                src="/not-sure-which-package-suitable.avif"
+                alt="Not sure which personal training package is suitable by PersonalTrainer.sg"
+                width={1672}
+                height={941}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-auto block object-contain select-none transition-transform duration-500 group-hover:scale-[1.01]"
+              />
             </a>
-            <p className="text-gray-400 text-xs mt-3">
-              Fast response • Direct consultation with Founder DONN (+65 9108 1781)
-            </p>
+          </div>
+
+          {/* WhatsApp Action Box */}
+          <div className="bg-gradient-to-r from-[#190508] via-[#0d0d0d] to-[#190508] border-2 border-[#C5A059] rounded-2xl p-8 sm:p-12 text-center shadow-2xl relative overflow-hidden">
+            <div className="max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-4xl font-black font-oswald uppercase tracking-wide text-white mb-2">
+                Not Sure Which Package Is Suitable?
+              </h2>
+              <p className="text-[#C5A059] font-oswald uppercase font-bold text-sm sm:text-base tracking-wider mb-4">
+                Get proper guidance before you decide.
+              </p>
+              <p className="text-gray-200 text-sm sm:text-base leading-relaxed mb-6 font-sans">
+                Send a WhatsApp message with your goal, preferred location, schedule and current fitness condition. PersonalTrainer.sg will recommend the most suitable training arrangement for you.
+              </p>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 sm:px-10 py-4 rounded-xl font-oswald uppercase tracking-wider font-bold text-base sm:text-lg bg-[#C5A059] text-black hover:bg-[#d4af37] transition-all duration-300 shadow-2xl hover:scale-105"
+              >
+                <WhatsAppIcon className="w-6 h-6 text-black shrink-0" />
+                <span>WhatsApp PersonalTrainer.sg</span>
+              </a>
+              <p className="text-gray-400 text-xs mt-3">
+                Fast response • Direct consultation with Founder DONN (+65 9108 1781)
+              </p>
+            </div>
           </div>
         </section>
 
