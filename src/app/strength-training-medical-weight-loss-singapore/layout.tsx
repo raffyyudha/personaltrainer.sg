@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     siteName: "PersonalTrainer.sg",
     images: [
       {
-        url: "https://personaltrainer.sg/weightlosstraining.avif",
-        width: 1200,
-        height: 630,
+        url: "https://personaltrainer.sg/strength-training-during-medical-weight-loss-singapore.avif",
+        width: 1672,
+        height: 941,
         alt: "Strength Training During Medical Weight Loss in Singapore - PersonalTrainer.sg"
       }
     ],
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Strength Training During Medical Weight Loss in Singapore | PersonalTrainer.sg",
     description: "Support your weight loss journey with structured strength training, safe progression and professional coaching by PersonalTrainer.sg.",
-    images: ["https://personaltrainer.sg/weightlosstraining.avif"]
+    images: ["https://personaltrainer.sg/strength-training-during-medical-weight-loss-singapore.avif"]
   },
   robots: {
     index: true,

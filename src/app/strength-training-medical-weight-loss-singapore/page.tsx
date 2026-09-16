@@ -24,8 +24,10 @@ import {
   BrainCircuit,
   Zap,
   ChevronRight,
-  Calculator,
-  Compass
+  Compass,
+  Target,
+  BarChart3,
+  Stethoscope
 } from "lucide-react";
 
 // Authentic WhatsApp icon
@@ -48,7 +50,7 @@ export default function StrengthTrainingMedicalWeightLossPage() {
         "description": "Support your weight loss journey with structured strength training, safe progression and professional coaching by PersonalTrainer.sg.",
         "url": "https://personaltrainer.sg/strength-training-medical-weight-loss-singapore",
         "datePublished": "2026-01-01T00:00:00+08:00",
-        "dateModified": "2026-02-01T00:00:00+08:00",
+        "dateModified": "2026-03-01T00:00:00+08:00",
         "author": {
           "@type": "Person",
           "name": "Md Salaudin Adam (DONN)",
@@ -76,7 +78,7 @@ export default function StrengthTrainingMedicalWeightLossPage() {
             "name": "Why is strength training crucial during medical weight loss?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Medical weight loss significantly cuts caloric consumption and reduces body scale weight quickly. However, without progressive resistance stimulus, a significant proportion of that lost weight comes from skeletal muscle mass. Strength training signals the body to preserve lean muscle, maintain resting metabolism, support proper posture, and avoid a weak or flat appearance."
+              "text": "Medical weight loss significantly reduces total body weight. However, without progressive resistance stimulus, a significant proportion of that lost weight comes from skeletal muscle mass. Strength training signals the body to preserve lean muscle, maintain resting metabolism, support proper posture, and avoid a weak or flat appearance."
             }
           },
           {
@@ -130,11 +132,11 @@ export default function StrengthTrainingMedicalWeightLossPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Navigation */}
+      {/* 1. Website Header with PersonalTrainer.sg Logo, Navigation and WhatsApp Button */}
       <Navbar activePage="services" />
 
-      {/* Main Container */}
-      <main className="pt-28 sm:pt-32 pb-20 px-4 sm:px-6 md:px-12 max-w-6xl mx-auto">
+      {/* Main Container - 1200px to 1400px layout width */}
+      <main className="pt-28 sm:pt-32 pb-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
         
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="mb-6 flex items-center gap-2 text-xs text-gray-400 font-oswald uppercase tracking-wider">
@@ -145,8 +147,8 @@ export default function StrengthTrainingMedicalWeightLossPage() {
           <span className="text-[#C5A059]">Medical Weight Loss Strength Training</span>
         </nav>
 
-        {/* ── HERO SECTION ── */}
-        <header className="text-center mb-14 sm:mb-16">
+        {/* ── 2. LIVE H1 HEADING SECTION ── */}
+        <header className="text-center mb-6 sm:mb-8">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#161616] border border-[#C5A059]/40 mb-4 shadow-lg">
             <HeartPulse size={14} className="text-[#C5A059]" />
             <span className="text-[11px] sm:text-xs font-oswald uppercase tracking-widest text-[#C5A059] font-bold">
@@ -154,29 +156,64 @@ export default function StrengthTrainingMedicalWeightLossPage() {
             </span>
           </div>
 
-          <div className="flex items-center justify-center gap-3 sm:gap-6 mb-4">
+          <div className="flex items-center justify-center gap-3 sm:gap-6">
             <div className="hidden md:flex items-center gap-2 opacity-70">
-              <div className="h-[2px] w-16 lg:w-32 bg-gradient-to-r from-transparent to-[#C5A059]" />
+              <div className="h-[2px] w-12 lg:w-24 bg-gradient-to-r from-transparent to-[#C5A059]" />
               <div className="w-2 h-2 rotate-45 bg-[#C5A059]" />
             </div>
 
+            {/* Live H1 Heading for SEO and Accessibility */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black font-oswald uppercase tracking-tight text-white drop-shadow-xl leading-tight max-w-5xl mx-auto">
               Strength Training During Medical Weight Loss in Singapore
             </h1>
 
             <div className="hidden md:flex items-center gap-2 opacity-70">
               <div className="w-2 h-2 rotate-45 bg-[#C5A059]" />
-              <div className="h-[2px] w-16 lg:w-32 bg-gradient-to-l from-transparent to-[#C5A059]" />
+              <div className="h-[2px] w-12 lg:w-24 bg-gradient-to-l from-transparent to-[#C5A059]" />
             </div>
           </div>
+        </header>
 
-          <p className="text-gray-200 text-base sm:text-xl lg:text-2xl font-sans max-w-3xl mx-auto leading-relaxed mb-8">
-            Support your weight loss journey with structured strength training, safe progression and professional coaching by PersonalTrainer.sg.
-          </p>
+        {/* ── 3. PICTURE 1: MAIN HERO IMAGE (DIRECTLY BELOW H1) ── */}
+        {/* Full width hero image across main content width (~1200-1400px), responsive on mobile */}
+        <div className="mb-10 sm:mb-12">
+          <div className="relative w-full rounded-2xl overflow-hidden border border-[#C5A059]/40 shadow-2xl bg-[#0a0a0a]">
+            <picture>
+              <source srcSet="/strength-training-during-medical-weight-loss-singapore.avif" type="image/avif" />
+              <img
+                src="/strength-training-during-medical-weight-loss-singapore.jpeg"
+                alt="Strength Training During Medical Weight Loss in Singapore - PersonalTrainer.sg"
+                width={1672}
+                height={941}
+                loading="eager"
+                {...{ fetchPriority: "high" }}
+                decoding="sync"
+                className="w-full h-auto block object-contain select-none"
+              />
+            </picture>
+          </div>
+        </div>
 
-          {/* Value Badges */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto pt-2 text-left">
-            <div className="bg-[#0a0a0a] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3">
+        {/* ── 4. OPENING ARTICLE TEXT (IMMEDIATELY BELOW PICTURE 1) ── */}
+        <section className="mb-14 sm:mb-16 bg-[#0d0d0d] border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl">
+          <div className="max-w-5xl mx-auto space-y-5 text-gray-200 text-sm sm:text-base lg:text-lg leading-relaxed font-sans">
+            <p className="text-base sm:text-xl font-medium text-white leading-relaxed">
+              Medical weight loss treatment can be helpful for suitable patients when it is prescribed and monitored by a qualified medical practitioner.
+            </p>
+            <p>
+              These medical treatments can significantly curb appetite and produce noticeable reductions in total scale weight. However, when rapid weight loss occurs without structured resistance loading, a large percentage of that lost weight is frequently drawn from metabolically vital skeletal muscle tissue rather than stored body fat alone.
+            </p>
+            <p>
+              When lean tissue declines, the body’s resting metabolic rate slows down, posture weakens, joints lose critical muscular stabilization, and individuals often end up feeling fatigued or looking soft, flat, and diminished instead of energized and toned.
+            </p>
+            <p>
+              <strong>PersonalTrainer.sg provides structured, science-backed strength training to ensure your weight loss leads to a stronger, firmer, and healthier physique.</strong> By signaling your body to preserve muscle while burning fat, strength training transforms your physical composition, builds upright postural confidence, and creates sustainable, lifelong physical conditioning.
+            </p>
+          </div>
+
+          {/* Core Value Badges */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto mt-8 pt-8 border-t border-white/10 text-left">
+            <div className="bg-[#070707] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3">
               <Dumbbell className="w-6 h-6 sm:w-7 sm:h-7 text-[#C5A059] shrink-0" />
               <div>
                 <p className="text-xs uppercase font-oswald text-gray-400 tracking-wider">Muscle</p>
@@ -184,7 +221,7 @@ export default function StrengthTrainingMedicalWeightLossPage() {
               </div>
             </div>
 
-            <div className="bg-[#0a0a0a] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3">
+            <div className="bg-[#070707] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3">
               <Flame className="w-6 h-6 sm:w-7 sm:h-7 text-[#C5A059] shrink-0" />
               <div>
                 <p className="text-xs uppercase font-oswald text-gray-400 tracking-wider">Metabolism</p>
@@ -192,7 +229,7 @@ export default function StrengthTrainingMedicalWeightLossPage() {
               </div>
             </div>
 
-            <div className="bg-[#0a0a0a] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3">
+            <div className="bg-[#070707] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3">
               <Scale className="w-6 h-6 sm:w-7 sm:h-7 text-[#C5A059] shrink-0" />
               <div>
                 <p className="text-xs uppercase font-oswald text-gray-400 tracking-wider">Tone & Shape</p>
@@ -200,7 +237,7 @@ export default function StrengthTrainingMedicalWeightLossPage() {
               </div>
             </div>
 
-            <div className="bg-[#0a0a0a] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3">
+            <div className="bg-[#070707] border border-white/10 rounded-xl p-3.5 sm:p-4 flex items-center gap-3">
               <Award className="w-6 h-6 sm:w-7 sm:h-7 text-[#C5A059] shrink-0" />
               <div>
                 <p className="text-xs uppercase font-oswald text-gray-400 tracking-wider">Coach DONN</p>
@@ -208,22 +245,57 @@ export default function StrengthTrainingMedicalWeightLossPage() {
               </div>
             </div>
           </div>
-        </header>
+        </section>
 
-        {/* ── SECTION 1: WHY STRENGTH TRAINING MATTERS DURING WEIGHT LOSS ── */}
+        {/* ── 5. OUR ROLE IS EXERCISE, NOT MEDICATION ── */}
+        <section className="mb-16 sm:mb-20 bg-gradient-to-r from-[#1f0206] via-[#120204] to-[#1f0206] border-2 border-[#800020] rounded-2xl p-6 sm:p-10 shadow-2xl relative">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
+            <div className="w-12 h-12 rounded-xl bg-[#800020] border border-[#C5A059]/40 flex items-center justify-center shrink-0 text-[#C5A059]">
+              <ShieldAlert size={26} />
+            </div>
+            <div>
+              <span className="text-xs font-oswald uppercase tracking-widest text-[#C5A059] font-bold block">
+                Safety & Health Transparency
+              </span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black font-oswald uppercase tracking-wide text-white">
+                Our Role Is Exercise, Not Medication
+              </h2>
+            </div>
+          </div>
+
+          <div className="bg-[#0a0a0a]/85 border border-white/10 rounded-xl p-6 sm:p-8 space-y-4 font-sans text-sm sm:text-base text-gray-200 leading-relaxed">
+            <p className="font-semibold text-white flex items-start gap-2.5">
+              <span className="text-[#C5A059] text-base font-bold">•</span>
+              <span>PersonalTrainer.sg does not provide medical advice, prescribe medication, or replace medical treatment.</span>
+            </p>
+            <p className="flex items-start gap-2.5">
+              <span className="text-[#C5A059] text-base font-bold">•</span>
+              <span>Clients who are on medical weight loss support should always follow their doctor’s medical advice and clinical recommendations.</span>
+            </p>
+            <p className="flex items-start gap-2.5">
+              <span className="text-[#C5A059] text-base font-bold">•</span>
+              <span>PersonalTrainer.sg provides exercise coaching, structured strength training, fitness guidance, and healthy lifestyle support based strictly on each client’s individual training suitability.</span>
+            </p>
+            <p className="pt-2 text-xs sm:text-sm text-gray-400 border-t border-white/10">
+              Our professional mission is to collaborate with your personal health journey by applying correct biomechanics, injury prevention, movement preparation, and progressive resistance loading so that your weight loss journey results in a firmer, stronger, and more resilient body.
+            </p>
+          </div>
+        </section>
+
+        {/* ── 6. WHY STRENGTH TRAINING MATTERS SECTION ── */}
         <section className="mb-16 sm:mb-20 bg-[#0d0d0d] border border-white/10 rounded-2xl p-6 sm:p-10 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 left-0 w-1.5 h-full bg-[#800020]" />
           
-          <div className="mb-6">
+          <div className="mb-8">
             <span className="text-[#C5A059] font-oswald text-xs uppercase tracking-widest font-bold block mb-1">
               Muscle Preservation & Body Composition
             </span>
             <h2 className="text-2xl sm:text-4xl font-black font-oswald uppercase tracking-wide text-white">
-              Why Strength Training Matters During Weight Loss
+              Why Strength Training Matters
             </h2>
           </div>
 
-          <div className="space-y-4 text-gray-200 text-sm sm:text-base leading-relaxed font-sans">
+          <div className="space-y-4 text-gray-200 text-sm sm:text-base leading-relaxed font-sans mb-8">
             <p>
               When clients embark on medical weight loss support—whether through physician-supervised clinical programs, calorie-suppressing therapies, or dietary adjustments—the primary metric observed is rapid loss on the weighing scale.
             </p>
@@ -238,7 +310,8 @@ export default function StrengthTrainingMedicalWeightLossPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 pt-6 border-t border-white/10">
+          {/* Three Key Focus Highlights */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 pt-6 border-t border-white/10">
             <div className="p-4 rounded-xl bg-[#070707] border border-white/5">
               <p className="font-oswald uppercase text-[#C5A059] font-bold text-sm mb-1">Protect Metabolic Health</p>
               <p className="text-xs text-gray-300">
@@ -258,162 +331,358 @@ export default function StrengthTrainingMedicalWeightLossPage() {
               </p>
             </div>
           </div>
-        </section>
 
-        {/* ── SECTION 2: IMPORTANT MEDICAL DISCLAIMER ── */}
-        <section className="mb-16 sm:mb-20 bg-gradient-to-r from-[#1f0206] via-[#120204] to-[#1f0206] border-2 border-[#800020] rounded-2xl p-6 sm:p-9 shadow-2xl relative">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
-            <div className="w-12 h-12 rounded-xl bg-[#800020] border border-[#C5A059]/40 flex items-center justify-center shrink-0 text-[#C5A059]">
-              <ShieldAlert size={26} />
-            </div>
-            <div>
-              <span className="text-xs font-oswald uppercase tracking-widest text-[#C5A059] font-bold block">
-                Safety & Health Transparency
+          {/* Complete Benefit Points Under Why Strength Training Matters */}
+          <div className="pt-6 border-t border-white/10">
+            <div className="mb-6">
+              <span className="text-[#C5A059] font-oswald text-xs uppercase tracking-widest font-bold block mb-1">
+                Comprehensive Health Adaptations
               </span>
-              <h2 className="text-xl sm:text-3xl font-black font-oswald uppercase tracking-wide text-white">
-                Important Medical Disclaimer
-              </h2>
-            </div>
-          </div>
-
-          <div className="bg-[#0a0a0a]/80 border border-white/10 rounded-xl p-5 sm:p-6 space-y-3 font-sans text-xs sm:text-sm text-gray-200 leading-relaxed">
-            <p className="font-semibold text-white">
-              • PersonalTrainer.sg does not provide medical advice, prescribe medication or replace medical treatment.
-            </p>
-            <p>
-              • Clients who are on medical weight loss support should follow their doctor’s advice.
-            </p>
-            <p>
-              • PersonalTrainer.sg provides exercise coaching, strength training, fitness guidance and lifestyle support based on the client’s training suitability.
-            </p>
-          </div>
-        </section>
-
-        {/* ── SECTION 3: BENEFITS OF STRENGTH TRAINING DURING MEDICAL WEIGHT LOSS ── */}
-        <section className="mb-16 sm:mb-20">
-          <div className="text-center mb-10">
-            <span className="text-[#C5A059] font-oswald text-xs uppercase tracking-widest font-bold block mb-1">
-              Holistic Physical Adaptation
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-black font-oswald uppercase tracking-wide text-white">
-              Benefits of Strength Training During Medical Weight Loss
-            </h2>
-            <p className="text-gray-300 text-xs sm:text-sm max-w-xl mx-auto mt-2">
-              Why structured resistance workouts are an indispensable companion to any medical or calorie-assisted weight reduction.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {/* Benefit 1 */}
-            <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
-              <div>
-                <div className="text-[#C5A059] mb-3">
-                  <Dumbbell className="w-6 h-6" />
-                </div>
-                <h3 className="font-oswald font-bold uppercase text-white text-base mb-2">
-                  Helps Maintain Lean Muscle While Losing Weight
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Direct resistance stimulus instructs your metabolism to burn stored fat reserves for fuel while protecting active skeletal muscle fibers from atrophy.
-                </p>
-              </div>
+              <h3 className="text-xl sm:text-2xl font-black font-oswald uppercase tracking-wide text-white">
+                Key Benefits of Strength Training During Weight Loss
+              </h3>
             </div>
 
-            {/* Benefit 2 */}
-            <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
-              <div>
-                <div className="text-[#C5A059] mb-3">
-                  <UserCheck className="w-6 h-6" />
-                </div>
-                <h3 className="font-oswald font-bold uppercase text-white text-base mb-2">
-                  Supports Better Posture and Movement Quality
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Reinforces posterior chain muscles, spinal erecters, scapular retractors, and pelvic balance so you move smoothly with natural poise.
-                </p>
-              </div>
-            </div>
-
-            {/* Benefit 3 */}
-            <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
-              <div>
-                <div className="text-[#C5A059] mb-3">
-                  <Sparkles className="w-6 h-6" />
-                </div>
-                <h3 className="font-oswald font-bold uppercase text-white text-base mb-2">
-                  Improves Strength, Tone and Body Shape
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Shapes arms, shoulders, waistline, and glutes, creating visible firmness and definition as your body fat percentage drops.
-                </p>
-              </div>
-            </div>
-
-            {/* Benefit 4 */}
-            <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
-              <div>
-                <div className="text-[#C5A059] mb-3">
-                  <Scale className="w-6 h-6" />
-                </div>
-                <h3 className="font-oswald font-bold uppercase text-white text-base mb-2">
-                  Helps Reduce the Weak or Flat Look After Weight Loss
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Prevents the sunken, deflated, or “skinny-fat” aesthetic by maintaining fullness in muscle bellies beneath slimming subcutaneous tissue.
-                </p>
-              </div>
-            </div>
-
-            {/* Benefit 5 */}
-            <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
-              <div>
-                <div className="text-[#C5A059] mb-3">
-                  <TrendingUp className="w-6 h-6" />
-                </div>
-                <h3 className="font-oswald font-bold uppercase text-white text-base mb-2">
-                  Supports Long Term Weight Management
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Preserving muscle keeps baseline metabolic rate intact, significantly diminishing the likelihood of rapid rebound weight gain once clinical phases conclude.
-                </p>
-              </div>
-            </div>
-
-            {/* Benefit 6 */}
-            <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
-              <div>
-                <div className="text-[#C5A059] mb-3">
-                  <Zap className="w-6 h-6" />
-                </div>
-                <h3 className="font-oswald font-bold uppercase text-white text-base mb-2">
-                  Builds Confidence and Functional Fitness
-                </h3>
-                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                  Enhances everyday vigor—climbing stairs effortlessly, lifting heavy groceries, engaging in sports, and moving with physical assurance.
-                </p>
-              </div>
-            </div>
-
-            {/* Benefit 7 */}
-            <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between md:col-span-2 lg:col-span-3">
-              <div className="flex items-start gap-4">
-                <div className="text-[#C5A059] mt-1 shrink-0">
-                  <Activity className="w-6 h-6" />
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {/* Benefit 1 */}
+              <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
                 <div>
-                  <h3 className="font-oswald font-bold uppercase text-white text-base mb-1">
-                    Improves Training Consistency and Physical Conditioning
-                  </h3>
+                  <div className="text-[#C5A059] mb-3">
+                    <Dumbbell className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-oswald font-bold uppercase text-white text-base mb-2">
+                    Helps Maintain Lean Muscle While Losing Weight
+                  </h4>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                    Builds regular exercise routines that seamlessly become enduring life habits, ensuring the physical vitality achieved during weight loss stays permanent.
+                    Direct resistance stimulus instructs your metabolism to burn stored fat reserves for fuel while protecting active skeletal muscle fibers from atrophy.
                   </p>
                 </div>
               </div>
+
+              {/* Benefit 2 */}
+              <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="text-[#C5A059] mb-3">
+                    <UserCheck className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-oswald font-bold uppercase text-white text-base mb-2">
+                    Supports Better Posture and Movement Quality
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                    Reinforces posterior chain muscles, spinal erecters, scapular retractors, and pelvic balance so you move smoothly with natural poise.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 3 */}
+              <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="text-[#C5A059] mb-3">
+                    <Sparkles className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-oswald font-bold uppercase text-white text-base mb-2">
+                    Improves Strength, Tone and Body Shape
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                    Shapes arms, shoulders, waistline, and glutes, creating visible firmness and definition as your body fat percentage drops.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 4 */}
+              <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="text-[#C5A059] mb-3">
+                    <Scale className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-oswald font-bold uppercase text-white text-base mb-2">
+                    Helps Reduce the Weak or Flat Look After Weight Loss
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                    Prevents the sunken, deflated, or “skinny-fat” aesthetic by maintaining fullness in muscle bellies beneath slimming subcutaneous tissue.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 5 */}
+              <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="text-[#C5A059] mb-3">
+                    <TrendingUp className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-oswald font-bold uppercase text-white text-base mb-2">
+                    Supports Long Term Weight Management
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                    Preserving muscle keeps baseline metabolic rate intact, significantly diminishing the likelihood of rapid rebound weight gain once clinical phases conclude.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 6 */}
+              <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between">
+                <div>
+                  <div className="text-[#C5A059] mb-3">
+                    <Zap className="w-6 h-6" />
+                  </div>
+                  <h4 className="font-oswald font-bold uppercase text-white text-base mb-2">
+                    Builds Confidence and Functional Fitness
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                    Enhances everyday vigor—climbing stairs effortlessly, lifting heavy groceries, engaging in sports, and moving with physical assurance.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 7 */}
+              <div className="bg-[#090909] border border-white/10 rounded-xl p-5 hover:border-[#C5A059]/40 transition-all flex flex-col justify-between md:col-span-2 lg:col-span-3">
+                <div className="flex items-start gap-4">
+                  <div className="text-[#C5A059] mt-1 shrink-0">
+                    <Activity className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="font-oswald font-bold uppercase text-white text-base mb-1">
+                      Improves Training Consistency and Physical Conditioning
+                    </h4>
+                    <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                      Builds regular exercise routines that seamlessly become enduring life habits, ensuring the physical vitality achieved during weight loss stays permanent.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── SECTION 4: PERSONALTRAINER.SG TRAINING APPROACH ── */}
+        {/* ── 7. PICTURE 2: LARGE FULL-WIDTH BANNER (BETWEEN WHY STRENGTH TRAINING MATTERS & WHAT THE PROGRAMME MAY INCLUDE) ── */}
+        {/* Prominently displayed as a full-width visual break with ample spacing above and below */}
+        <div className="my-16 sm:my-20">
+          <div className="relative w-full rounded-2xl overflow-hidden border border-[#C5A059]/40 shadow-2xl bg-[#0a0a0a]">
+            <picture>
+              <source srcSet="/train-smarter-get-stronger-during-medical-weight-loss.avif" type="image/avif" />
+              <img
+                src="/train-smarter-get-stronger-during-medical-weight-loss.jpeg"
+                alt="Train Smarter Get Stronger During Medical Weight Loss - PersonalTrainer.sg"
+                width={1672}
+                height={941}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-auto block object-contain select-none"
+              />
+            </picture>
+          </div>
+        </div>
+
+        {/* ── 8. WHAT THE PROGRAMME MAY INCLUDE ── */}
+        <section className="mb-16 sm:mb-20 bg-[#090909] border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <span className="text-[#C5A059] font-oswald text-xs uppercase tracking-widest font-bold block mb-1">
+              Comprehensive Curriculum
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-black font-oswald uppercase tracking-wide text-white">
+              What the Programme May Include
+            </h2>
+            <p className="text-gray-300 text-xs sm:text-sm mt-2">
+              A balanced, science-led training regimen calibrated to support safe weight reduction, protect lean mass, and develop athletic strength.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* 1. Progressive Weight Training */}
+            <div className="bg-[#0f0f0f] border border-white/10 rounded-xl p-6 hover:border-[#C5A059]/40 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-[#1a0508] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] mb-4">
+                <Dumbbell className="w-6 h-6" />
+              </div>
+              <span className="text-[11px] font-oswald uppercase tracking-wider text-[#C5A059] font-bold block mb-1">Element 01</span>
+              <h3 className="font-oswald font-bold uppercase text-white text-lg mb-2">
+                Progressive Weight Training
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                Structured resistance workouts using dumbbells, barbells, cable systems, and guided machines. Resistance loads are safely progressed to stimulate muscle preservation without causing joint distress or excessive recovery strain.
+              </p>
+            </div>
+
+            {/* 2. Functional Strength */}
+            <div className="bg-[#0f0f0f] border border-white/10 rounded-xl p-6 hover:border-[#C5A059]/40 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-[#1a0508] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] mb-4">
+                <Target className="w-6 h-6" />
+              </div>
+              <span className="text-[11px] font-oswald uppercase tracking-wider text-[#C5A059] font-bold block mb-1">Element 02</span>
+              <h3 className="font-oswald font-bold uppercase text-white text-lg mb-2">
+                Functional Strength
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                Movement patterns that mirror everyday activities—squatting, hinging, pushing, pulling, and carrying. Builds full-body coordination, joint resilience, and real-world physical capability so you feel agile and energized throughout your day.
+              </p>
+            </div>
+
+            {/* 3. Cardiovascular Conditioning */}
+            <div className="bg-[#0f0f0f] border border-white/10 rounded-xl p-6 hover:border-[#C5A059]/40 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-[#1a0508] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] mb-4">
+                <HeartPulse className="w-6 h-6" />
+              </div>
+              <span className="text-[11px] font-oswald uppercase tracking-wider text-[#C5A059] font-bold block mb-1">Element 03</span>
+              <h3 className="font-oswald font-bold uppercase text-white text-lg mb-2">
+                Cardiovascular Conditioning
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                Appropriately managed aerobic sessions and low-impact cardiovascular work designed to support heart-lung endurance, enhance fat metabolism, and improve recovery capacity without draining energy reserves needed for muscle retention.
+              </p>
+            </div>
+
+            {/* 4. Mobility and Stability */}
+            <div className="bg-[#0f0f0f] border border-white/10 rounded-xl p-6 hover:border-[#C5A059]/40 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-[#1a0508] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] mb-4">
+                <Activity className="w-6 h-6" />
+              </div>
+              <span className="text-[11px] font-oswald uppercase tracking-wider text-[#C5A059] font-bold block mb-1">Element 04</span>
+              <h3 className="font-oswald font-bold uppercase text-white text-lg mb-2">
+                Mobility and Stability
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                Focused joint mobilization, dynamic stretching, and core stability drills. Corrects common postural imbalances, reinforces deep spinal support, and maintains fluid movement as body proportions change rapidly.
+              </p>
+            </div>
+
+            {/* 5. InBody Monitoring */}
+            <div className="bg-[#0f0f0f] border border-white/10 rounded-xl p-6 hover:border-[#C5A059]/40 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-[#1a0508] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] mb-4">
+                <BarChart3 className="w-6 h-6" />
+              </div>
+              <span className="text-[11px] font-oswald uppercase tracking-wider text-[#C5A059] font-bold block mb-1">Element 05</span>
+              <h3 className="font-oswald font-bold uppercase text-white text-lg mb-2">
+                InBody Monitoring
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                Accurate body composition assessments to evaluate skeletal muscle mass, body fat percentage, and segmental lean analysis over time. Provides tangible data ensuring that weight lost is primarily stored fat while muscle tissue is preserved.
+              </p>
+            </div>
+
+            {/* 6. Practical Lifestyle Guidance */}
+            <div className="bg-[#0f0f0f] border border-white/10 rounded-xl p-6 hover:border-[#C5A059]/40 transition-all">
+              <div className="w-12 h-12 rounded-lg bg-[#1a0508] border border-[#C5A059]/30 flex items-center justify-center text-[#C5A059] mb-4">
+                <Compass className="w-6 h-6" />
+              </div>
+              <span className="text-[11px] font-oswald uppercase tracking-wider text-[#C5A059] font-bold block mb-1">Element 06</span>
+              <h3 className="font-oswald font-bold uppercase text-white text-lg mb-2">
+                Practical Lifestyle Guidance
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                Actionable support covering optimal daily protein distribution, adequate hydration habits, sleep hygiene, and daily non-exercise physical activity. Helps establish enduring lifestyle routines that sustain long-term health and weight maintenance.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 9. PICTURE 3: LARGE FULL-WIDTH BANNER (AFTER WHAT THE PROGRAMME MAY INCLUDE & BEFORE A PROGRAMME MUST MATCH THE INDIVIDUAL) ── */}
+        {/* Prominently placed to reinforce the personalised programme concept */}
+        <div className="my-16 sm:my-20">
+          <div className="relative w-full rounded-2xl overflow-hidden border border-[#C5A059]/40 shadow-2xl bg-[#0a0a0a]">
+            <picture>
+              <source srcSet="/personalised-programme-for-medical-weight-loss.avif" type="image/avif" />
+              <img
+                src="/personalised-programme-for-medical-weight-loss.jpeg"
+                alt="Personalised Programme For Medical Weight Loss - PersonalTrainer.sg"
+                width={1672}
+                height={941}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-auto block object-contain select-none"
+              />
+            </picture>
+          </div>
+        </div>
+
+        {/* ── 10. A PROGRAMME MUST MATCH THE INDIVIDUAL ── */}
+        <section className="mb-16 sm:mb-20 bg-[#0d0d0d] border border-white/10 rounded-2xl p-6 sm:p-10 relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 left-0 w-1.5 h-full bg-[#C5A059]" />
+
+          <div className="mb-6">
+            <span className="text-[#C5A059] font-oswald text-xs uppercase tracking-widest font-bold block mb-1">
+              Personalised Programming
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-black font-oswald uppercase tracking-wide text-white">
+              A Programme Must Match the Individual
+            </h2>
+          </div>
+
+          <div className="space-y-4 text-gray-200 text-sm sm:text-base leading-relaxed font-sans mb-8">
+            <p>
+              No two individuals responding to medical weight loss experience the same daily energy fluctuations, muscle retention challenges, or metabolic responses. That is why a one-size-fits-all workout plan is neither safe nor effective for clients undergoing clinical weight reduction.
+            </p>
+            <p>
+              <strong>A successful training programme must match the individual’s current fitness level, health history, daily recovery capacity, and specific medical guidance.</strong> Workouts are carefully calibrated so they challenge muscles without draining energy, causing injury, or compromising recovery.
+            </p>
+            <p>
+              At PersonalTrainer.sg, our coaching approach assesses your joint movement, current physical endurance, and medical background first. We then curate a tailored progression of resistance exercises, cardiovascular work, and recovery intervals that seamlessly fit your lifestyle and keep you feeling revitalized.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-6 border-t border-white/10">
+            <div className="p-4 rounded-xl bg-[#070707] border border-white/5">
+              <p className="font-oswald uppercase text-[#C5A059] font-bold text-sm mb-1">Energy-Calibrated Loading</p>
+              <p className="text-xs text-gray-300">
+                Adjusting workout intensity and volume based on your caloric intake, avoiding burnout while keeping muscle stimulus high.
+              </p>
+            </div>
+            <div className="p-4 rounded-xl bg-[#070707] border border-white/5">
+              <p className="font-oswald uppercase text-[#C5A059] font-bold text-sm mb-1">Joint-Friendly Biomechanics</p>
+              <p className="text-xs text-gray-300">
+                Selecting exercise angles and movement patterns that protect vulnerable knees, hips, and lower back during weight transitions.
+              </p>
+            </div>
+            <div className="p-4 rounded-xl bg-[#070707] border border-white/5">
+              <p className="font-oswald uppercase text-[#C5A059] font-bold text-sm mb-1">Continuous Adaptation</p>
+              <p className="text-xs text-gray-300">
+                Regularly refining your exercise selections and resistance targets as your strength, endurance, and body shape evolve.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 11. GUIDED BY DONN ELITE PERFORMANCE SYSTEM (DEPS) ── */}
+        <section className="mb-16 sm:mb-20 bg-gradient-to-b from-[#121212] to-[#080808] border-2 border-[#C5A059]/40 rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+          <div className="absolute -top-16 -right-16 w-52 h-52 bg-[#800020] rounded-full blur-3xl opacity-20 pointer-events-none" />
+          <div className="absolute -bottom-16 -left-16 w-52 h-52 bg-[#C5A059] rounded-full blur-3xl opacity-15 pointer-events-none" />
+
+          <div className="text-center max-w-3xl mx-auto mb-8 relative z-10">
+            <span className="inline-block bg-[#800020] text-[#C5A059] text-[11px] font-oswald uppercase font-bold tracking-widest px-3 py-1 rounded-full mb-2">
+              Signature Coaching Methodology
+            </span>
+            <h2 className="text-2xl sm:text-4xl font-black font-oswald uppercase tracking-wide text-white mb-2">
+              Guided by DONN Elite Performance System
+            </h2>
+            <p className="text-[#C5A059] font-oswald uppercase tracking-wider font-bold text-sm sm:text-base mb-6">
+              Also known as DEPS • Developed by Md Salaudin Adam (DONN)
+            </p>
+
+            <div className="bg-[#050505] border border-[#C5A059]/40 rounded-xl p-6 text-gray-200 text-sm sm:text-base leading-relaxed font-sans text-left space-y-4">
+              <p>
+                <strong>Training is guided by the DONN Elite Performance System, also known as DEPS.</strong>
+              </p>
+              <p>
+                <strong>DEPS is a structured coaching system that combines movement preparation, posture correction, core activation, stabilisation, strength training, metabolic conditioning and cardiovascular development to help clients progress safely and effectively.</strong>
+              </p>
+              <p className="text-xs sm:text-sm text-gray-300">
+                Rather than throwing an unconditioned body into high-impact workouts, DEPS establishes joint alignment, movement literacy, and neuromuscular activation first. This systematic progression protects you from exercise-induced injuries, joint inflammation, and fatigue while maximizing body recomposition results.
+              </p>
+            </div>
+
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-oswald uppercase tracking-wider text-gray-300">
+              <span className="px-3 py-1 rounded bg-[#161616] border border-white/10">Movement Prep</span>
+              <span className="text-[#C5A059]">→</span>
+              <span className="px-3 py-1 rounded bg-[#161616] border border-white/10">Posture Correction</span>
+              <span className="text-[#C5A059]">→</span>
+              <span className="px-3 py-1 rounded bg-[#161616] border border-white/10">Core Activation</span>
+              <span className="text-[#C5A059]">→</span>
+              <span className="px-3 py-1 rounded bg-[#161616] border border-white/10">Stabilisation</span>
+              <span className="text-[#C5A059]">→</span>
+              <span className="px-3 py-1 rounded bg-[#161616] border border-[#C5A059]/40 text-[#C5A059] font-bold">Strength Training</span>
+            </div>
+          </div>
+        </section>
+
+        {/* ── 12. PERSONALTRAINER.SG TRAINING APPROACH (8 PHASES) ── */}
         <section className="mb-16 sm:mb-20 bg-[#090909] border border-white/10 rounded-2xl p-6 sm:p-10 shadow-2xl">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <span className="text-[#C5A059] font-oswald text-xs uppercase tracking-widest font-bold block mb-1">
@@ -518,49 +787,7 @@ export default function StrengthTrainingMedicalWeightLossPage() {
           </div>
         </section>
 
-        {/* ── SECTION 5: GUIDED BY DONN ELITE PERFORMANCE SYSTEM (DEPS) ── */}
-        <section className="mb-16 sm:mb-20 bg-gradient-to-b from-[#121212] to-[#080808] border-2 border-[#C5A059]/40 rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
-          <div className="absolute -top-16 -right-16 w-52 h-52 bg-[#800020] rounded-full blur-3xl opacity-20 pointer-events-none" />
-          <div className="absolute -bottom-16 -left-16 w-52 h-52 bg-[#C5A059] rounded-full blur-3xl opacity-15 pointer-events-none" />
-
-          <div className="text-center max-w-3xl mx-auto mb-8 relative z-10">
-            <span className="inline-block bg-[#800020] text-[#C5A059] text-[11px] font-oswald uppercase font-bold tracking-widest px-3 py-1 rounded-full mb-2">
-              Signature Coaching Methodology
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-black font-oswald uppercase tracking-wide text-white mb-2">
-              Guided by DONN Elite Performance System
-            </h2>
-            <p className="text-[#C5A059] font-oswald uppercase tracking-wider font-bold text-sm sm:text-base mb-6">
-              Also known as DEPS • Developed by Md Salaudin Adam (DONN)
-            </p>
-
-            <div className="bg-[#050505] border border-[#C5A059]/40 rounded-xl p-6 text-gray-200 text-sm sm:text-base leading-relaxed font-sans text-left space-y-4">
-              <p>
-                <strong>Training is guided by the DONN Elite Performance System, also known as DEPS.</strong>
-              </p>
-              <p>
-                <strong>DEPS is a structured coaching system that combines movement preparation, posture correction, core activation, stabilisation, strength training, metabolic conditioning and cardiovascular development to help clients progress safely and effectively.</strong>
-              </p>
-              <p className="text-xs sm:text-sm text-gray-300">
-                Rather than throwing an unconditioned body into high-impact workouts, DEPS establishes joint alignment, movement literacy, and neuromuscular activation first. This systematic progression protects you from exercise-induced injuries, joint inflammation, and fatigue while maximizing body recomposition results.
-              </p>
-            </div>
-
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-oswald uppercase tracking-wider text-gray-300">
-              <span className="px-3 py-1 rounded bg-[#161616] border border-white/10">Movement Prep</span>
-              <span className="text-[#C5A059]">→</span>
-              <span className="px-3 py-1 rounded bg-[#161616] border border-white/10">Posture Correction</span>
-              <span className="text-[#C5A059]">→</span>
-              <span className="px-3 py-1 rounded bg-[#161616] border border-white/10">Core Activation</span>
-              <span className="text-[#C5A059]">→</span>
-              <span className="px-3 py-1 rounded bg-[#161616] border border-white/10">Stabilisation</span>
-              <span className="text-[#C5A059]">→</span>
-              <span className="px-3 py-1 rounded bg-[#161616] border border-[#C5A059]/40 text-[#C5A059] font-bold">Strength Training</span>
-            </div>
-          </div>
-        </section>
-
-        {/* ── SECTION 6: WHO THIS IS SUITABLE FOR ── */}
+        {/* ── 13. WHO THIS IS SUITABLE FOR ── */}
         <section className="mb-16 sm:mb-20">
           <div className="text-center mb-10">
             <span className="text-[#C5A059] font-oswald text-xs uppercase tracking-widest font-bold block mb-1">
@@ -655,7 +882,7 @@ export default function StrengthTrainingMedicalWeightLossPage() {
           </div>
         </section>
 
-        {/* ── FINAL CTA SECTION ── */}
+        {/* ── 14. FINAL CTA SECTION ── */}
         <section className="mb-16 sm:mb-20 bg-gradient-to-r from-[#190508] via-[#0d0d0d] to-[#190508] border-2 border-[#C5A059] rounded-2xl p-8 sm:p-12 text-center shadow-2xl relative overflow-hidden">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-2xl sm:text-4xl font-black font-oswald uppercase tracking-wide text-white mb-3">
@@ -679,7 +906,7 @@ export default function StrengthTrainingMedicalWeightLossPage() {
           </div>
         </section>
 
-        {/* ── INTERNAL LINKS SECTION ── */}
+        {/* ── 15. INTERNAL LINKS SECTION ── */}
         <section className="border-t border-white/10 pt-10 pb-4">
           <div className="mb-6 text-center md:text-left">
             <span className="text-xs font-oswald uppercase tracking-widest text-[#C5A059] font-bold block mb-1">
