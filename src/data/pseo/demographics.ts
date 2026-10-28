@@ -99,7 +99,7 @@ export const PSEO_DEMOGRAPHICS: Record<string, PseoDemographic> = {
       "Finding time for fitness while caring for a baby"
     ],
     customBenefits: [
-      "OBGYN-approved rehabilitation exercises for safe recovery",
+      "Exercise guidance adapted to medical recommendations for safe recovery",
       "Core wall tightening and lower back support routines",
       "In-home or condo training allowing mother to stay near baby"
     ]

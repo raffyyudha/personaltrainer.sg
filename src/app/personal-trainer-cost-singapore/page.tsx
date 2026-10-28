@@ -833,7 +833,7 @@ export default function PersonalTrainerCostSingaporePage() {
                 2,000+ Clients Trained Since 2002
               </h3>
               <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                Extensive proven track record transforming bodies, relieving chronic muscular imbalances, and rejuvenating active lifestyles.
+                Extensive proven track record providing exercise guidance adapted to the client’s current condition, physical limitations and medical recommendations, and rejuvenating active lifestyles.
               </p>
             </div>
 

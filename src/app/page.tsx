@@ -214,7 +214,7 @@ export default function Home() {
     },
     {
       q: "Do I need a condo gym or private gym access?",
-      a: "No, not always. Training can be arranged at suitable locations across Singapore, including condo gyms, selected ActiveSG gyms, suitable private gym spaces, outdoor training areas, multi storey car park training areas and other approved training environments. Location suitability can be discussed during enquiry."
+      a: "No, not always. Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore. The most suitable location can be discussed during your enquiry."
     },
     {
       q: "How do I book a trial session?",
@@ -644,7 +644,7 @@ export default function Home() {
               {/* Asset Block 2: 3 Core Pillars Checklist */}
               <div className="bg-[#141414] border border-white/10 p-5 rounded-xl space-y-3">
                 <span className="text-[#C5A059] font-oswald text-xs sm:text-sm font-extrabold uppercase tracking-widest block mb-2">
-                  OUR CORE GUARANTEE TO EVERY CLIENT
+                  OUR CORE COMMITMENT TO EVERY CLIENT
                 </span>
                 {[
                   "Dedicated 1-on-1 Personal Attention at Every Session",
@@ -1276,44 +1276,41 @@ export default function Home() {
             <Dumbbell size={16} className="text-[#C5A059]" /> TRIAL SESSION
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-3 font-oswald text-white tracking-tight">
-            Start With a Trial Session
+            90 Minute Professional Fitness Assessment and Personal Training Session
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-200 leading-relaxed max-w-3xl mx-auto font-sans font-normal mb-6">
-            The trial session is designed to understand your current fitness level, body condition, goals, lifestyle and training suitability. Experience our structured coaching style and professional approach.
+            Includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training.
           </p>
 
           {/* Trial Session Terms Box */}
-          <div className="bg-[#121212] border border-[#C5A059]/40 rounded-xl p-5 sm:p-7 max-w-3xl mx-auto text-left space-y-3 font-sans shadow-xl">
+          <div className="bg-[#121212] border border-[#C5A059]/40 rounded-xl p-5 sm:p-7 max-w-3xl mx-auto text-left space-y-4 font-sans shadow-xl">
             <div className="flex items-center gap-2 text-[#C5A059] font-oswald font-bold uppercase tracking-wider text-base sm:text-lg">
               <CheckCircle size={18} className="shrink-0 text-[#C5A059]" />
-              <span>Trial Session Details & Terms</span>
+              <span>Trial Session Pricing & Conditions</span>
             </div>
-            <ul className="text-xs sm:text-sm text-gray-200 space-y-2.5 leading-relaxed font-sans font-normal">
-              <li className="flex items-start gap-2.5">
-                <span className="text-[#C5A059] font-bold shrink-0">•</span>
-                <span>The trial session is approximately 90 minutes.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-[#C5A059] font-bold shrink-0">•</span>
-                <span>It includes around 30 minutes of consultation to understand your fitness goal, body condition, lifestyle, training history and training suitability.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-[#C5A059] font-bold shrink-0">•</span>
-                <span>This is followed by around 45 minutes of hands-on personal training so you can experience the coaching style, exercise structure, technique guidance and professional approach used by PersonalTrainer.sg.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-[#C5A059] font-bold shrink-0">•</span>
-                <span>The final 15 minutes will be used to discuss training frequency, suitable programme direction, scheduling and how to move forward from there.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-[#C5A059] font-bold shrink-0">•</span>
-                <span>The trial session fee is $144.</span>
-              </li>
-              <li className="flex items-start gap-2.5">
-                <span className="text-[#C5A059] font-bold shrink-0">•</span>
-                <span>The trial session fee will be waived if you sign up for a minimum 12-session package immediately after the trial session.</span>
-              </li>
-            </ul>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 py-2">
+              <div className="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                <span className="block text-xs font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
+                  Single Trial Session
+                </span>
+                <span className="text-3xl font-black font-oswald text-white tracking-tight">
+                  $144
+                </span>
+              </div>
+              <div className="bg-white/5 border border-white/10 rounded-lg p-3 text-center">
+                <span className="block text-xs font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
+                  Couple Trial Session
+                </span>
+                <span className="text-3xl font-black font-oswald text-white tracking-tight">
+                  $216
+                </span>
+              </div>
+            </div>
+
+            <p className="text-xs sm:text-sm text-[#C5A059] font-medium leading-relaxed border-t border-white/10 pt-3">
+              The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial.
+            </p>
           </div>
         </div>
 

@@ -32,7 +32,7 @@ export default function TermsOfServicePage() {
               2. Trial Session Policy
             </h2>
             <p>
-              Trial sessions are approximately 90 minutes (30 minutes of assessment/consultation and 60 minutes of training). The trial session is complimentary if the client signs up for a minimum 12-session package immediately post-trial. If the client chooses not to sign up, the single trial session fee is $144.
+              A 90 Minute Professional Fitness Assessment and Personal Training Session includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training. Pricing: Single Trial Session: $144, Couple Trial Session: $216. The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial.
             </p>
           </section>
 

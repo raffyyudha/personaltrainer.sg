@@ -29,6 +29,23 @@ interface VariantProps {
   demographic?: PseoDemographic;
   intentModifier?: string;
 }
+
+function getGalleryServiceLabel(serviceSlug: string, serviceName: string): string {
+  switch (serviceSlug) {
+    case "couple-training":
+      return "Couple Personal Training";
+    case "senior-fitness":
+      return "Senior Fitness Training";
+    case "weight-loss":
+      return "Weight Loss and Fitness Training";
+    case "strength-training":
+      return "Strength and Muscle Building";
+    case "personal-training":
+      return "1 on 1 Personal Training";
+    default:
+      return serviceName;
+  }
+}
 import {
   Check,
   CheckCircle,
@@ -506,8 +523,8 @@ function VariantA({
             <div className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Custom Workouts</div>
           </div>
           <div>
-            <div className="text-3xl font-extrabold text-[#D4AF37]">1,500+</div>
-            <div className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Clients Transformed</div>
+            <div className="text-3xl font-extrabold text-[#D4AF37]">2,000+</div>
+            <div className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Clients Trained</div>
           </div>
           <div>
             <div className="text-3xl font-extrabold text-white">5.0 ★</div>
@@ -575,7 +592,7 @@ function VariantA({
                   className="object-cover group-hover:scale-110 transition duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-4 flex items-end">
-                  <span className="text-xs font-medium text-white">{service.name} Coaching</span>
+                  <span className="text-xs font-medium text-white">{getGalleryServiceLabel(service.slug, service.name)}</span>
                 </div>
               </div>
             ))}
@@ -774,7 +791,7 @@ function VariantC({
             <div className="bg-white/5 p-6 rounded-2xl border border-white/5 space-y-3">
               <span className="text-xs font-bold text-[#D4AF37] uppercase">Step 04</span>
               <h3 className="text-lg font-semibold text-white">Weekly Tracking</h3>
-              <p className="text-xs text-gray-400">Progressive overload tracking to guarantee physical changes.</p>
+              <p className="text-xs text-gray-400">Structured progress tracking based on your programme, consistency, lifestyle and individual response.</p>
             </div>
           </div>
         </div>

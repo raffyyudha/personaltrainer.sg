@@ -120,50 +120,48 @@ export default function RateCardsGrid() {
         >
           <div>
             {/* Header */}
-            <div className="flex items-center justify-center gap-2.5 mb-2">
-              <CalendarDownIcon className="w-6 h-6 text-[#C5A059]" />
-              <h3 className="font-oswald text-xl sm:text-2xl font-black uppercase tracking-wider text-[#C5A059]">
+            <div className="flex items-center justify-center gap-2 mb-1.5 text-center">
+              <CalendarDownIcon className="w-5 h-5 text-[#C5A059] shrink-0" />
+              <h3 className="font-oswald text-lg sm:text-xl font-black uppercase tracking-wider text-[#C5A059]">
                 TRIAL SESSION
               </h3>
             </div>
 
-            {/* Subtitle Divider: 90 MINUTES */}
-            <div className="flex items-center gap-3 my-3">
-              <div className="h-[1px] bg-white/20 flex-1" />
-              <span className="text-[11px] sm:text-xs font-oswald font-extrabold uppercase tracking-widest text-gray-200">
-                90 MINUTES
-              </span>
-              <div className="h-[1px] bg-white/20 flex-1" />
-            </div>
+            {/* Exact Required Title */}
+            <p className="text-center font-oswald text-xs sm:text-sm font-bold uppercase text-white tracking-wide mb-2">
+              90 Minute Professional Fitness Assessment and Personal Training Session
+            </p>
 
             {/* Rates Columns */}
-            <div className="grid grid-cols-2 gap-2 text-center py-2">
+            <div className="grid grid-cols-2 gap-2 text-center py-2 bg-white/5 rounded-lg border border-white/10 mb-3">
               <div>
-                <span className="block text-xs font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
-                  SINGLE
+                <span className="block text-[11px] font-oswald uppercase text-gray-300 font-bold tracking-wider mb-0.5">
+                  SINGLE TRIAL SESSION
                 </span>
-                <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
+                <span className="text-3xl sm:text-4xl font-black font-oswald text-white tracking-tight">
                   $144
                 </span>
               </div>
               <div className="border-l border-white/20 pl-2">
-                <span className="block text-xs font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
-                  COUPLE
+                <span className="block text-[11px] font-oswald uppercase text-gray-300 font-bold tracking-wider mb-0.5">
+                  COUPLE TRIAL SESSION
                 </span>
-                <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
+                <span className="text-3xl sm:text-4xl font-black font-oswald text-white tracking-tight">
                   $216
                 </span>
               </div>
             </div>
+
+            {/* Inclusions */}
+            <p className="text-[11px] sm:text-xs text-gray-300 leading-relaxed font-sans text-center mb-3">
+              Includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training.
+            </p>
           </div>
 
-          {/* Details / Inclusions Below */}
-          <div className="border-t border-white/15 pt-3.5 mt-3 space-y-2 text-center">
-            <p className="text-xs sm:text-[13px] text-gray-200 leading-snug font-sans font-medium">
-              Fully waived if a minimum 12-session package is purchased immediately after the trial.
-            </p>
-            <p className="text-[11px] sm:text-xs text-gray-400 leading-snug font-sans">
-              If you decide to continue later or not proceed after the trial, the above trial fee applies.
+          {/* Details / Condition Below */}
+          <div className="border-t border-white/15 pt-3 mt-1 text-center">
+            <p className="text-xs text-[#C5A059] leading-snug font-sans font-medium">
+              The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial.
             </p>
           </div>
         </div>

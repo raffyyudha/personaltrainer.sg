@@ -539,7 +539,7 @@ export default function ServicesPage() {
     },
     {
       q: "Where do you offer your personal training?",
-      a: "I offer my Personal Training services at your Doorsteps across Singapore, fully equipped. Training can be conducted at your condo gym, suitable home space, selected ActiveSG gyms, approved private gym spaces, outdoor training areas, or other suitable locations."
+      a: "Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore. The most suitable location can be discussed during your enquiry."
     },
     {
       q: "What kinds of people do you often suggest to have your personal training with?",
@@ -579,11 +579,11 @@ export default function ServicesPage() {
     },
     {
       q: "Is the trial session free?",
-      a: "The trial session fee is $144 and will be waived if you sign up for a minimum 12-session package immediately after the trial."
+      a: "The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial. Single Trial Session: $144, Couple Trial Session: $216."
     },
     {
       q: "How long is the trial session?",
-      a: "The trial session is approximately 75 minutes. It includes around 30 minutes of consultation, followed by around 45 minutes of hands-on training."
+      a: "The trial session is a 90 Minute Professional Fitness Assessment and Personal Training Session. It includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training."
     },
     {
       q: "What are your opening hours?",
@@ -817,7 +817,7 @@ export default function ServicesPage() {
                 <span className="text-3xl font-extrabold font-oswald text-[#C5A059] block mb-3">03</span>
                 <h3 className="font-oswald text-sm font-bold uppercase text-white mb-2 tracking-wide">Trial Session</h3>
               </div>
-              <p className="text-gray-400 text-[11px] leading-relaxed font-sans mt-2">The 90-minute Trial Session helps assess your fitness level, movement, training suitability and programme direction.</p>
+              <p className="text-gray-400 text-[11px] leading-relaxed font-sans mt-2">90 Minute Professional Fitness Assessment and Personal Training Session. Includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training.</p>
             </div>
           </ScrollReveal>
           <ScrollReveal className="reveal-hidden">
@@ -850,7 +850,7 @@ export default function ServicesPage() {
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-6 font-syne">Training Locations in Singapore</h2>
             <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-3xl mx-auto font-sans">
-              PersonalTrainer.sg provides fitness at your doorstep across Singapore where suitable. Training can be conducted at your condo gym, suitable home space, selected ActiveSG gyms, approved private gym spaces, outdoor training areas, multi-storey car park training areas or other suitable locations. Location arrangements can be discussed during enquiry.
+              Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore.
             </p>
           </ScrollReveal>
         </div>

@@ -165,7 +165,7 @@ export default function ResultPage() {
     },
     {
       q: "Where do you offer your personal training?",
-      a: "I offer my Personal Training services at your Doorsteps across Singapore, fully equipped. Training can be conducted at your condo gym, suitable home space, selected ActiveSG gyms, approved private gym spaces, outdoor training areas, or other suitable locations."
+      a: "Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore. The most suitable location can be discussed during your enquiry."
     },
     {
       q: "What kinds of people do you often suggest to have your personal training with?",
@@ -205,11 +205,11 @@ export default function ResultPage() {
     },
     {
       q: "Is the trial session free?",
-      a: "The trial session is free only if the client signs up for a minimum 12-session package immediately after the trial session. If the client decides not to continue after the trial, the trial session fee is $144."
+      a: "The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial. Single Trial Session: $144, Couple Trial Session: $216."
     },
     {
       q: "How long is the trial session?",
-      a: "The trial session is approximately 90 minutes. It includes around 30 minutes of assessment and consultation, followed by around 60 minutes of training."
+      a: "The trial session is a 90 Minute Professional Fitness Assessment and Personal Training Session. Includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training."
     },
     {
       q: "What are your opening hours?",

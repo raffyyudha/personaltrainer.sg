@@ -119,7 +119,7 @@ export default function ContactPage() {
     },
     {
       q: "Where do you offer your personal training?",
-      a: "I offer my Personal Training services at your Doorsteps across Singapore, fully equipped. Training can be conducted at your condo gym, suitable home space, selected ActiveSG gyms, approved private gym spaces, outdoor training areas, or other suitable locations."
+      a: "Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore. The most suitable location can be discussed during your enquiry."
     },
     {
       q: "What kinds of people do you often suggest to have your personal training with?",
@@ -392,10 +392,10 @@ export default function ContactPage() {
                         >
                           <option value="">Select location type...</option>
                           <option value="Condo Gym">Condo Gym</option>
-                          <option value="ActiveSG Gym">ActiveSG Gym</option>
-                          <option value="Private Gym">Private Gym</option>
-                          <option value="Outdoor">Outdoor / Park</option>
-                          <option value="Home">Home Training</option>
+                          <option value="Home Space">Home Space</option>
+                          <option value="Private Gym">Private Training Facility</option>
+                          <option value="Outdoor">Outdoor / Park Training Area</option>
+                          <option value="Multi Storey Car Park">Multi Storey Car Park Area</option>
                         </select>
                       </div>
                     </div>
@@ -546,20 +546,24 @@ export default function ContactPage() {
               <Dumbbell size={16} className="text-[#C5A059]" /> INTRODUCTORY SESSION
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-6 font-syne">
-              Trial Session Enquiry
+              90 Minute Professional Fitness Assessment and Personal Training Session
             </h2>
             <div className="text-white text-sm md:text-base leading-relaxed space-y-4 max-w-3xl mx-auto font-sans mb-8">
               <p>
-                The Trial Session is designed to understand your current fitness level, movement, body condition, goals and training suitability.
+                Includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training.
               </p>
-              <p>
-                During the Trial Session, you will experience the coaching style, training structure and professional approach used at PersonalTrainer.sg. This helps both trainer and client decide the most suitable programme before starting a proper training package.
-              </p>
-              <p>
-                The Trial Session is suitable for clients who want to understand how PersonalTrainer.sg can help with Weight Loss Training, Strength Training, Senior Fitness Training, Couple Training, Kickboxing Fitness or general fitness improvement.
-              </p>
-              <p className="text-[#C5A059] font-oswald text-sm uppercase tracking-wider">
-                Send a WhatsApp message to check Trial Session availability and the most suitable training arrangement.
+              <div className="bg-[#121212] border border-[#C5A059]/40 rounded-xl p-5 max-w-xl mx-auto grid grid-cols-2 gap-4 text-center my-4">
+                <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                  <span className="block text-xs uppercase font-oswald text-gray-300 font-bold mb-1">Single Trial Session</span>
+                  <span className="text-2xl sm:text-3xl font-black font-oswald text-white">$144</span>
+                </div>
+                <div className="bg-white/5 p-3 rounded-lg border border-white/10">
+                  <span className="block text-xs uppercase font-oswald text-gray-300 font-bold mb-1">Couple Trial Session</span>
+                  <span className="text-2xl sm:text-3xl font-black font-oswald text-white">$216</span>
+                </div>
+              </div>
+              <p className="text-[#C5A059] font-medium text-sm">
+                The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial.
               </p>
             </div>
             <a
@@ -589,7 +593,7 @@ export default function ContactPage() {
             </h2>
             <div className="text-white text-sm leading-relaxed space-y-4 font-sans">
               <p className="text-base text-gray-200 leading-relaxed font-sans font-medium">
-                Training locations can be arranged across Singapore, including condo gyms, selected ActiveSG gyms, suitable private gym spaces, outdoor training areas and other approved training environments.
+                Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore.
               </p>
               <p className="text-sm text-gray-400 leading-relaxed font-sans">
                 Location arrangements can be discussed during enquiry. Please share your preferred training area or full location details when contacting PersonalTrainer.sg.
@@ -626,7 +630,7 @@ export default function ContactPage() {
             <MapPin size={32} className="mx-auto text-[#C5A059] mb-4" />
             <h3 className="font-oswald text-lg font-bold text-white mb-2 uppercase">VISIT OUR STATIONS</h3>
             <p className="text-white text-xs leading-relaxed mb-4 font-sans">
-              Training locations are fully flexible across Singapore, specializing in Condo Gyms and ActiveSG Gyms.
+              Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore.
             </p>
             <a
               href={`https://wa.me/6591081781?text=${encodedWhatsappMessage}`}

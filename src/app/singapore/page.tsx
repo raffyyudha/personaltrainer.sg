@@ -38,7 +38,7 @@ export default function SingaporeDirectoryPage() {
             Personal Trainer <span className="text-[#D4AF37]">Singapore Directory</span>
           </h1>
           <p className="text-gray-300 max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-            Find certified 1-on-1 personal training, weight loss programs, and condo gym coaching across all districts, planning areas, MRT stations, and private residences in Singapore.
+            Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore.
           </p>
 
           <div className="pt-4 flex flex-wrap justify-center gap-4 text-xs font-medium text-gray-400">

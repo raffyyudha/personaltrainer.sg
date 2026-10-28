@@ -18,9 +18,9 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
   "personal-training": {
     id: "pt-1on1",
     slug: "personal-training",
-    name: "1-on-1 Personal Training",
-    shortDesc: "Customized 1-on-1 fitness coaching tailored to your body type, fitness level, and personal goals.",
-    heroTagline: "Achieve Peak Fitness with Dedicated 1-on-1 Personal Coaching in Singapore",
+    name: "1 on 1 Personal Training",
+    shortDesc: "Customized 1 on 1 fitness coaching tailored to your body type, fitness level, and personal goals.",
+    heroTagline: "Achieve Peak Fitness with Dedicated 1 on 1 Personal Coaching in Singapore",
     fullDesc: "Our 1-on-1 Personal Training program is engineered for individuals who demand structure, elite exercise instruction, and real accountability. Led by master trainer Md Salaudin Adam (DONN) with 24 years of experience in Singapore, every program begins with a complete biomechanical and lifestyle assessment to map out your exact path to success.",
     image: "/onepersonaltraining.avif",
     secondaryImages: ["/donn-coaching-barbell.avif", "/donn-coaching-elliptical.avif", "/donn-flexing.avif"],
@@ -52,12 +52,12 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
         answer: "No prior experience is necessary. All sessions are adapted strictly to your starting baseline level."
       }
     ],
-    whatsappText: "Hi PersonalTrainer.sg, I am interested in 1-on-1 Personal Training."
+    whatsappText: "Hi PersonalTrainer.sg, I am interested in 1 on 1 Personal Training."
   },
   "weight-loss": {
     id: "pt-weightloss",
     slug: "weight-loss",
-    name: "Weight Loss & Fat Loss Training",
+    name: "Weight Loss and Fitness Training",
     shortDesc: "Science-backed fat reduction programs combining strength training, metabolic conditioning, and sustainable nutrition guidance.",
     heroTagline: "Burn Body Fat & Transform Your Physique Safely with Singapore's Leading Fitness Experts",
     fullDesc: "Shed stubborn visceral fat and build lean muscle tone without extreme starvation diets. Our Weight Loss program utilizes high-metabolic training, progressive resistance workouts, and daily accountability to transform your body composition sustainably.",
@@ -91,12 +91,12 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
         answer: "We provide practical, realistic nutritional coaching based on Singaporean food choices, hawker options, and dining habits so you don't have to eat plain chicken breast every day."
       }
     ],
-    whatsappText: "Hi PersonalTrainer.sg, I am interested in Weight Loss & Fat Loss Training."
+    whatsappText: "Hi PersonalTrainer.sg, I am interested in Weight Loss and Fitness Training."
   },
   "strength-training": {
     id: "pt-strength",
     slug: "strength-training",
-    name: "Strength & Muscle Building",
+    name: "Strength and Muscle Building",
     shortDesc: "Hypertrophy and functional strength programs designed to sculpt muscle, enhance metabolic health, and increase physical resilience.",
     heroTagline: "Build Real Muscle & Superior Strength Under Expert Supervision",
     fullDesc: "Whether your goal is hyper-sculpted lean muscle mass, raw strength, or functional power for daily life, our Strength Training program provides technical precision, progressive overload tracking, and safe movement execution.",
@@ -126,12 +126,12 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
         answer: "No. Women do not have the hormonal profile (testosterone levels) to get bulky naturally. Instead, strength training tones muscle, tightens curves, and burns body fat efficiently."
       }
     ],
-    whatsappText: "Hi PersonalTrainer.sg, I am interested in Strength & Muscle Building Training."
+    whatsappText: "Hi PersonalTrainer.sg, I am interested in Strength and Muscle Building."
   },
   "senior-fitness": {
     id: "pt-senior",
     slug: "senior-fitness",
-    name: "Senior Fitness & Active Aging",
+    name: "Senior Fitness Training",
     shortDesc: "Gentle, low-impact exercise programs tailored for adults 50+, 60+, and 70+ to boost mobility, joint stability, and vitality.",
     heroTagline: "Maintain Independence, Vitality & Joint Health with Specialized Senior Fitness Coaching",
     fullDesc: "Fitness has no age limit. Our Senior Fitness program focuses on balance restoration, joint flexibility, osteoporosis prevention, and functional strength so mature adults in Singapore can move freely without pain and live life to the fullest.",
@@ -161,12 +161,12 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
         answer: "Yes, our trainers conduct health screenings and adapt exercises specifically around medical clearance, ensuring zero high-impact stress on vulnerable joints."
       }
     ],
-    whatsappText: "Hi PersonalTrainer.sg, I am interested in Senior Fitness & Active Aging Training."
+    whatsappText: "Hi PersonalTrainer.sg, I am interested in Senior Fitness Training."
   },
   "couple-training": {
     id: "pt-couple",
     slug: "couple-training",
-    name: "Couple & Partner Personal Training",
+    name: "Couple Personal Training",
     shortDesc: "Train together with a spouse, partner, or friend for shared accountability, fun, and mutual motivation.",
     heroTagline: "Achieve Fitness Goals Together with Personalized Partner Workouts",
     fullDesc: "Couple Training is designed for two people—partners, spouses, siblings, or best friends—who want to get fit together. Workouts are customized so that both individuals get an optimal workout suited to their respective fitness levels while enjoying the camaraderie and motivation of training as a team.",
@@ -195,13 +195,13 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
         answer: "Our coach adjusts the weights, reps, and exercise variations independently for each of you during the same session so both receive an ideal challenge."
       }
     ],
-    whatsappText: "Hi PersonalTrainer.sg, I am interested in Couple & Partner Personal Training."
+    whatsappText: "Hi PersonalTrainer.sg, I am interested in Couple Personal Training."
   },
   "kickboxing": {
     id: "pt-kickboxing",
     slug: "kickboxing",
     name: "Kickboxing & Boxing Fitness",
-    shortDesc: "High-energy pad work, boxing combinations, and martial-arts inspired conditioning for stress relief and rapid fat loss.",
+    shortDesc: "High-energy pad work, boxing combinations, and martial-arts inspired conditioning for stress relief and support sustainable fat loss through structured exercise, nutrition guidance and consistent progress tracking.",
     heroTagline: "Unleash Energy, Burn Maximum Calories & Master Boxing Technique",
     fullDesc: "Kickboxing Fitness delivers an exhilarating combination of authentic boxing pad work, kick combinations, agility drills, and core conditioning. Perfect for relieving work stress while getting an intensive cardiovascular and full-body workout.",
     image: "/donn-kickboxing.avif",
@@ -270,7 +270,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
   "posture-rehab": {
     id: "pt-posture-rehab",
     slug: "posture-rehab",
-    name: "Posture Correction & Rehab Fitness",
+    name: "Posture Correction & Movement Fitness",
     shortDesc: "Correct rounded shoulders, anterior pelvic tilt, and chronic back/neck pain through targeted biomechanical corrective exercises.",
     heroTagline: "Eliminate Pain, Fix Postural Misalignments & Move Freedom in Singapore",
     fullDesc: "Hours of computer work and smartphone usage create severe postural distortions such as text-neck, rounded shoulders, and lower back pain. Our Posture Correction program restores muscle balance, releases tight fascia, and strengthens weak stabilizer muscles.",
@@ -279,7 +279,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     suitableFor: [
       "Office workers sitting 8+ hours a day",
       "Individuals experiencing lower back, neck, or shoulder discomfort",
-      "Post-injury clients cleared by doctors for physical rehab",
+      "Exercise guidance adapted to the client’s current condition, physical limitations and medical recommendations",
       "Anyone wanting to stand taller and move gracefully"
     ],
     keyBenefits: [
@@ -300,7 +300,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
         answer: "Yes! Most non-structural back pain is caused by muscle imbalances and weak core stabilizers. Corrective strength exercises re-align your spine and eliminate strain."
       }
     ],
-    whatsappText: "Hi PersonalTrainer.sg, I am interested in Posture Correction & Rehab Fitness."
+    whatsappText: "Hi PersonalTrainer.sg, I am interested in Posture Correction & Movement Fitness."
   },
   "prenatal-postnatal": {
     id: "pt-prenatal-postnatal",
@@ -308,7 +308,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     name: "Pre & Post Natal Fitness Coaching",
     shortDesc: "Safe, doctor-aligned exercise programs for mothers during pregnancy and safe postpartum recovery (diastasis recti, pelvic floor).",
     heroTagline: "Empowering Expectant & New Mothers with Safe, Specialized Prenatal & Postnatal Coaching",
-    fullDesc: "Designed specifically for expectant mothers and new mums in Singapore. We focus on safe pelvic floor strength, core rehabilitation, pregnancy stamina, and gradual postpartum fat loss under gentle expert guidance.",
+    fullDesc: "Designed specifically for expectant mothers and new mums in Singapore. We focus on safe pelvic floor strength, core recovery, pregnancy stamina, and gradual postpartum fat loss under gentle expert guidance.",
     image: "/testimonial2.avif",
     secondaryImages: ["/weightlosstraining.avif", "/coupletraining.avif", "/testimonial3.avif"],
     suitableFor: [
@@ -320,7 +320,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     keyBenefits: [
       "Safe exercise adaptation tailored for each trimester",
       "Pelvic floor strengthening to aid labor and post-birth recovery",
-      "Targeted rehabilitation for diastasis recti and core wall",
+      "Targeted exercise guidance for core wall and pelvic stability",
       "Energy boost and relief from pregnancy back tightness"
     ],
     sampleExercises: [
@@ -411,7 +411,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     id: "pt-body-transformation",
     slug: "body-transformation",
     name: "Body Transformation & Wedding Prep",
-    shortDesc: "Intensive 12-week overhaul designed for rapid, dramatic, photo-ready changes in body composition and tone.",
+    shortDesc: "Intensive 12-week overhaul designed to support sustainable changes in body composition and tone through structured exercise, nutrition guidance and consistent progress tracking.",
     heroTagline: "Dramatically Transform Your Body Composition in 12 Weeks for Milestones & Weddings",
     fullDesc: "A complete 360-degree lifestyle and physique transformation program. Combines precision strength training, metabolic fat stripping, weekly bio-metric tracking, and strict nutritional coaching to deliver head-turning results for weddings, photoshoots, or personal milestones.",
     image: "/donn-flexing.avif",
@@ -516,7 +516,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     name: "HIIT & High Intensity Conditioning",
     shortDesc: "Fast-paced interval training to maximize cardiovascular endurance, burn high calories, and boost metabolic rate.",
     heroTagline: "Push Limits, Skyrocket Endurance & Torment Fat with High Intensity Interval Training",
-    fullDesc: "Experience metabolic conditioning at its finest. High Intensity Interval Training (HIIT) alternates intense bursts of exercise with short recovery periods to spike your metabolic rate, increase VO2 max, and melt body fat fast.",
+    fullDesc: "Experience metabolic conditioning at its finest. High Intensity Interval Training (HIIT) alternates intense bursts of exercise with short recovery periods to spike your metabolic rate, increase VO2 max, and support sustainable fat loss through structured exercise, nutrition guidance and consistent progress tracking.",
     image: "/donn-coaching-elliptical.avif",
     secondaryImages: ["/donn-kickboxing.avif", "/weightlosstraining.avif", "/testimonial6.avif"],
     suitableFor: [

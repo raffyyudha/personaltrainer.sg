@@ -189,7 +189,7 @@ export default function AboutPage() {
     },
     {
       q: "Where do you offer your personal training?",
-      a: "I offer my Personal Training services at your Doorsteps across Singapore, fully equipped. Training can be conducted at your condo gym, suitable home space, selected ActiveSG gyms, approved private gym spaces, outdoor training areas, or other suitable locations."
+      a: "Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore. The most suitable location can be discussed during your enquiry."
     },
     {
       q: "What kinds of people do you often suggest to have your personal training with?",
