@@ -16,7 +16,7 @@ export const metadata = {
   title: "Personal Training Singapore Directory | All Locations, MRTs & Condos",
   description: "Browse certified personal training services across all 55 Singapore planning areas, 145+ MRT stations, and 300+ condominiums. Mobile doorstep, condo gym & studio coaching.",
   alternates: {
-    canonical: "https://personaltrainer.sg/singapore"
+    canonical: "https://www.personaltrainer.sg/singapore"
   }
 };
 

@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/"]
     },
-    sitemap: "https://personaltrainer.sg/sitemap.xml"
+    sitemap: "https://www.personaltrainer.sg/sitemap.xml"
   };
 }

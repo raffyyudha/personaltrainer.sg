@@ -100,7 +100,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     notFound();
   }
 
-  const canonicalUrl = `https://personaltrainer.sg/singapore/${pageData.slug}`;
+  const canonicalUrl = `https://www.personaltrainer.sg/singapore/${pageData.slug}`;
 
   return {
     title: pageData.metaTitle,
@@ -175,10 +175,10 @@ export default async function PseoSlugPage({ params }: PageProps) {
     "@graph": [
       {
         "@type": "ExerciseGym",
-        "@id": `https://personaltrainer.sg/singapore/${slug}#gym`,
+        "@id": `https://www.personaltrainer.sg/singapore/${slug}#gym`,
         "name": `PersonalTrainer.sg - ${locationName}`,
         "description": pageData.metaDesc,
-        "url": `https://personaltrainer.sg/singapore/${slug}`,
+        "url": `https://www.personaltrainer.sg/singapore/${slug}`,
         "telephone": "+6591081781",
         "priceRange": "$$$",
         "address": {
@@ -233,19 +233,19 @@ export default async function PseoSlugPage({ params }: PageProps) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://personaltrainer.sg"
+            "item": "https://www.personaltrainer.sg"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Singapore Locations",
-            "item": "https://personaltrainer.sg/singapore"
+            "item": "https://www.personaltrainer.sg/singapore"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": h1,
-            "item": `https://personaltrainer.sg/singapore/${slug}`
+            "item": `https://www.personaltrainer.sg/singapore/${slug}`
           }
         ]
       }

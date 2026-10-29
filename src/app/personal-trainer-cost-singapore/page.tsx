@@ -66,11 +66,11 @@ export default function PersonalTrainerCostSingaporePage() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://personaltrainer.sg/personal-trainer-cost-singapore#article",
+        "@id": "https://www.personaltrainer.sg/personal-trainer-cost-singapore#article",
         "headline": "Personal Trainer Cost in Singapore 2026",
         "description": "Understand personal training rates, trial session fees and package options with PersonalTrainer.sg, Trusted in Singapore Since 2002.",
-        "url": "https://personaltrainer.sg/personal-trainer-cost-singapore",
-        "image": "https://personaltrainer.sg/personal-trainer-cost-singapore-2026.avif",
+        "url": "https://www.personaltrainer.sg/personal-trainer-cost-singapore",
+        "image": "https://www.personaltrainer.sg/personal-trainer-cost-singapore-2026.avif",
         "datePublished": "2026-01-01T00:00:00+08:00",
         "dateModified": "2026-02-01T00:00:00+08:00",
         "author": {
@@ -87,13 +87,13 @@ export default function PersonalTrainerCostSingaporePage() {
           "name": "PersonalTrainer.sg",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://personaltrainer.sg/logopt.avif"
+            "url": "https://www.personaltrainer.sg/logopt.avif"
           }
         }
       },
       {
         "@type": "FAQPage",
-        "@id": "https://personaltrainer.sg/personal-trainer-cost-singapore#faq",
+        "@id": "https://www.personaltrainer.sg/personal-trainer-cost-singapore#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -128,13 +128,13 @@ export default function PersonalTrainerCostSingaporePage() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://personaltrainer.sg/"
+            "item": "https://www.personaltrainer.sg/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Personal Trainer Cost Singapore 2026",
-            "item": "https://personaltrainer.sg/personal-trainer-cost-singapore"
+            "item": "https://www.personaltrainer.sg/personal-trainer-cost-singapore"
           }
         ]
       }
@@ -379,7 +379,7 @@ export default function PersonalTrainerCostSingaporePage() {
               ★ Full Trial Fee Waiver Available
             </p>
             <p className="text-xs sm:text-sm text-gray-200 leading-relaxed">
-              The trial session fee will be <strong>fully waived</strong> if a minimum 12-session package is purchased immediately after the trial session. If the client decides to continue later or does not proceed after the trial, the trial session fee applies.
+              The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial. If the client decides to continue later or does not proceed after the trial, the trial session fee applies.
             </p>
           </div>
 
@@ -781,7 +781,7 @@ export default function PersonalTrainerCostSingaporePage() {
                     Trial Session and Assessment Needs
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                    Comprehensive movement screening, posture assessment, and consultation ensure training begins safely and precisely. At PersonalTrainer.sg, trial session fees are 100% waivable upon immediate package sign-up.
+                    Comprehensive movement screening, posture assessment, and consultation ensure training begins safely and precisely. The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial.
                   </p>
                 </div>
               </div>

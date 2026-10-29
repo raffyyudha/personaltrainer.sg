@@ -210,7 +210,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
       "Executives needing high-intensity stress relief",
       "Anyone tired of monotonous treadmill cardio",
       "Clients wanting to build reflex speed, core power, and body agility",
-      "All fitness levels (no spar contact, 100% safe pad work)"
+      "Non-contact pad work adapted to your fitness level and ability"
     ],
     keyBenefits: [
       "Massive calorie expenditure (600–900 kcal per hour)",
@@ -236,9 +236,9 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     id: "pt-home-condo",
     slug: "home-condo-training",
     name: "Home & Condo Gym Personal Training",
-    shortDesc: "Private personal trainer comes directly to your condo gym or home residence anywhere in Singapore with portable equipment.",
+    shortDesc: "Personal training at suitable home spaces and approved condominium gyms across Singapore, subject to location suitability and estate rules.",
     heroTagline: "Elite Personal Training Brought Right to Your Doorstep or Condo Gym in Singapore",
-    fullDesc: "Save commuting time and eliminate gym crowds. Our mobile personal training service brings certified personal trainers straight to your condominium gym, private home residence, or outdoor estate facilities across Singapore equipped with resistance bands, dumbbells, and specialized training gear.",
+    fullDesc: "Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore. Training at condominium facilities is subject to estate rules, facility conditions and management arrangements. Please confirm that the intended training arrangement is permitted before the first session.",
     image: "/donn-facility.avif",
     secondaryImages: ["/heroimage.avif", "/aboutus.avif", "/donn-coaching-elliptical.avif"],
     suitableFor: [
@@ -349,7 +349,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     suitableFor: [
       "CEOs, Directors, Finance Executives, Tech Leaders",
       "Professionals traveling frequently across Asia",
-      "Individuals working 60+ hour work weeks needing fast results",
+      "Individuals working 60+ hour work weeks seeking structured, time-efficient training",
       "Anyone wanting peak mental sharpness and energy"
     ],
     keyBenefits: [
@@ -482,7 +482,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     name: "Functional Movement & Core Stability",
     shortDesc: "Train movements, not just muscles. Improve agility, rotational power, balance, and real-world movement efficiency.",
     heroTagline: "Build a Bulletproof Core & Real-World Athletic Movement Efficiency",
-    fullDesc: "Functional fitness prepares your body for real-life activities—lifting heavy objects, playing sports, sprinting, and moving seamlessly without injury. We focus on multi-planar movements, core rotational stability, and movement flow.",
+    fullDesc: "Functional fitness prepares your body for real-life activities—lifting heavy objects, playing sports, sprinting, and practising controlled movement according to your current ability. We focus on multi-planar movements, core rotational stability, and movement flow.",
     image: "/heroimage.avif",
     secondaryImages: ["/donn-coaching-latpulldown.avif", "/onepersonaltraining.avif", "/trainwith.avif"],
     suitableFor: [
@@ -492,7 +492,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     ],
     keyBenefits: [
       "Enhanced athletic endurance and multi-directional speed",
-      "Deep core stabilization preventing spinal strain",
+      "Progressive core strength and movement control",
       "Improved joint mobility across hips, shoulders, and ankles",
       "Injury prevention for daily active living"
     ],

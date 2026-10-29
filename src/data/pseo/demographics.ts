@@ -28,7 +28,7 @@ export const PSEO_DEMOGRAPHICS: Record<string, PseoDemographic> = {
     slug: "seniors",
     title: "Seniors & Active Adults (50+, 60+, 70+)",
     targetAudience: "Mature adults in Singapore aiming to maintain vitality, independence, and strong joints",
-    focusArea: "Low-impact balance restoration, joint lubrication, bone density maintenance, and mobility",
+    focusArea: "Low-impact balance practice, posture awareness, strength, mobility and general fitness, adapted to current ability and medical recommendations",
     painPoints: [
       "Fear of joint injury or falling",
       "Knee, hip, or lower back stiffness during daily walking and stairs",
@@ -116,7 +116,7 @@ export const PSEO_DEMOGRAPHICS: Record<string, PseoDemographic> = {
     ],
     customBenefits: [
       "Fluent English communication with international coaching standards",
-      "Seamless door-to-door coaching inside your private condo",
+      "Coaching at suitable home spaces or approved condominium facilities, subject to estate rules",
       "Flexible international travel scheduling adjustments"
     ]
   }

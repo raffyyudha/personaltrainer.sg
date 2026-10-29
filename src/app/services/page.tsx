@@ -547,7 +547,7 @@ export default function ServicesPage() {
     },
     {
       q: "What kind of a fitness training can I expect?",
-      a: "Your Personal Training program you can expect is a function of where you are right now/ your initial level of fitness, where you want to be / your fitness goal, what you have been doing up to now / your fitness history, your diet / nutrition, and your genetics. Most of my Personal Training programs don’t require as high intensity workouts, as many people think, and in fact, may not be as effective as other workouts. My Personal Training is fun, and it should be to make it more of a lifestyle change, so it becomes a regular part of your life after Personal Training with a Personal Trainer, so you will continue with the benefits regular exercise and healthy eating. You can expect the best, most effective workout and diet nutrition program for your unique body and individual goals. My Personal Training will make you achieve your goals faster, safer, and more efficiently. My Personal Training will give you the most effective workouts, to optimize your time to maximize your results. You will get what you paid for!"
+      a: "Your programme will be planned according to your current fitness level, ability, goals, training history, nutrition and lifestyle. Sessions focus on appropriate exercise selection, controlled technique, gradual progression and consistent progress tracking. Results vary according to your programme, consistency, lifestyle and individual response."
     },
     {
       q: "How are you different from other personal trainers?",

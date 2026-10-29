@@ -15,16 +15,16 @@ export const metadata: Metadata = {
     "Md Salaudin Adam DONN"
   ],
   alternates: {
-    canonical: "https://personaltrainer.sg/strength-training-medical-weight-loss-singapore"
+    canonical: "https://www.personaltrainer.sg/strength-training-medical-weight-loss-singapore"
   },
   openGraph: {
     title: "Strength Training During Medical Weight Loss in Singapore | PersonalTrainer.sg",
     description: "Support your weight loss journey with structured strength training, safe progression and professional coaching by PersonalTrainer.sg. Maintain muscle, posture & tone.",
-    url: "https://personaltrainer.sg/strength-training-medical-weight-loss-singapore",
+    url: "https://www.personaltrainer.sg/strength-training-medical-weight-loss-singapore",
     siteName: "PersonalTrainer.sg",
     images: [
       {
-        url: "https://personaltrainer.sg/strength-training-during-medical-weight-loss-singapore.avif",
+        url: "https://www.personaltrainer.sg/strength-training-during-medical-weight-loss-singapore.avif",
         width: 1672,
         height: 941,
         alt: "Strength Training During Medical Weight Loss in Singapore - PersonalTrainer.sg"
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Strength Training During Medical Weight Loss in Singapore | PersonalTrainer.sg",
     description: "Support your weight loss journey with structured strength training, safe progression and professional coaching by PersonalTrainer.sg.",
-    images: ["https://personaltrainer.sg/strength-training-during-medical-weight-loss-singapore.avif"]
+    images: ["https://www.personaltrainer.sg/strength-training-during-medical-weight-loss-singapore.avif"]
   },
   robots: {
     index: true,

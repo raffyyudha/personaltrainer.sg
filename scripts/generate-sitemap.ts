@@ -2,10 +2,10 @@ import fs from "fs";
 import path from "path";
 import { generatePseoMatrix } from "../src/data/pseo/matrix";
 
-const baseUrl = "https://personaltrainer.sg";
+const baseUrl = "https://www.personaltrainer.sg";
 
 const mainPages = [
-  { url: baseUrl, priority: "1.0", changefreq: "daily" },
+  { url: `${baseUrl}/`, priority: "1.0", changefreq: "daily" },
   { url: `${baseUrl}/singapore`, priority: "0.9", changefreq: "daily" },
   { url: `${baseUrl}/services`, priority: "0.9", changefreq: "weekly" },
   { url: `${baseUrl}/about`, priority: "0.7", changefreq: "monthly" },

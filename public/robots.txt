@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
-Sitemap: https://personaltrainer.sg/sitemap.xml
+Sitemap: https://www.personaltrainer.sg/sitemap.xml

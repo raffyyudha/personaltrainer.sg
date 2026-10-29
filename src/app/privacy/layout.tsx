@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy | PersonalTrainer.sg",
   description: "Privacy Policy for PersonalTrainer.sg. Learn how we handle and protect your personal information.",
   alternates: {
-    canonical: "https://personaltrainer.sg/privacy"
+    canonical: "https://www.personaltrainer.sg/privacy"
   }
 };
 

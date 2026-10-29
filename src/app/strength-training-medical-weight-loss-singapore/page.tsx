@@ -45,10 +45,10 @@ export default function StrengthTrainingMedicalWeightLossPage() {
     "@graph": [
       {
         "@type": "Article",
-        "@id": "https://personaltrainer.sg/strength-training-medical-weight-loss-singapore#article",
+        "@id": "https://www.personaltrainer.sg/strength-training-medical-weight-loss-singapore#article",
         "headline": "Strength Training During Medical Weight Loss in Singapore",
         "description": "Support your weight loss journey with structured strength training, safe progression and professional coaching by PersonalTrainer.sg.",
-        "url": "https://personaltrainer.sg/strength-training-medical-weight-loss-singapore",
+        "url": "https://www.personaltrainer.sg/strength-training-medical-weight-loss-singapore",
         "datePublished": "2026-01-01T00:00:00+08:00",
         "dateModified": "2026-03-01T00:00:00+08:00",
         "author": {
@@ -65,13 +65,13 @@ export default function StrengthTrainingMedicalWeightLossPage() {
           "name": "PersonalTrainer.sg",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://personaltrainer.sg/logopt.avif"
+            "url": "https://www.personaltrainer.sg/logopt.avif"
           }
         }
       },
       {
         "@type": "FAQPage",
-        "@id": "https://personaltrainer.sg/strength-training-medical-weight-loss-singapore#faq",
+        "@id": "https://www.personaltrainer.sg/strength-training-medical-weight-loss-singapore#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -106,19 +106,19 @@ export default function StrengthTrainingMedicalWeightLossPage() {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://personaltrainer.sg/"
+            "item": "https://www.personaltrainer.sg/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Services",
-            "item": "https://personaltrainer.sg/services"
+            "item": "https://www.personaltrainer.sg/services"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Strength Training During Medical Weight Loss",
-            "item": "https://personaltrainer.sg/strength-training-medical-weight-loss-singapore"
+            "item": "https://www.personaltrainer.sg/strength-training-medical-weight-loss-singapore"
           }
         ]
       }

@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Terms and Conditions | PersonalTrainer.sg",
   description: "Terms and Conditions for PersonalTrainer.sg personal fitness training services and website use.",
   alternates: {
-    canonical: "https://personaltrainer.sg/terms"
+    canonical: "https://www.personaltrainer.sg/terms"
   }
 };
 
