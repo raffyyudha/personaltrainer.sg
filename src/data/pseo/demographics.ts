@@ -36,8 +36,8 @@ export const PSEO_DEMOGRAPHICS: Record<string, PseoDemographic> = {
     ],
     customBenefits: [
       "Gentle, patient, low-impact exercise progression monitored continuously",
-      "Fall prevention balance drills and osteoporosis defense routines",
-      "Flexibility restoration allowing painless mobility"
+      "Balance and general strength practice adapted to medical recommendations",
+      "Mobility practice adapted to individual ability"
     ]
   },
   "women": {
@@ -91,8 +91,8 @@ export const PSEO_DEMOGRAPHICS: Record<string, PseoDemographic> = {
   "postpartum": {
     slug: "postpartum",
     title: "Postpartum Mothers & Pre/Post Natal",
-    targetAudience: "Mothers regaining core stability, rebuilding pelvic floor, and dropping pregnancy weight safely",
-    focusArea: "Diastasis recti healing, pelvic floor re-strengthening, core wall restoration, and safe fat loss",
+    targetAudience: "Mothers returning gradually to exercise with appropriate medical clearance",
+    focusArea: "Postpartum strength, pelvic floor awareness, gradual core strengthening, mobility and safe return to exercise, subject to medical clearance where required",
     painPoints: [
       "Abdominal separation (diastasis recti) post delivery",
       "Lower back aches from nursing and carrying newborns",
@@ -100,7 +100,7 @@ export const PSEO_DEMOGRAPHICS: Record<string, PseoDemographic> = {
     ],
     customBenefits: [
       "Exercise guidance adapted to medical recommendations for safe recovery",
-      "Core wall tightening and lower back support routines",
+      "Gradual core strengthening and posture awareness exercises",
       "In-home or condo training allowing mother to stay near baby"
     ]
   },

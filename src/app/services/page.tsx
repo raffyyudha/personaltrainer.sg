@@ -539,11 +539,11 @@ export default function ServicesPage() {
     },
     {
       q: "Where do you offer your personal training?",
-      a: "Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore. The most suitable location can be discussed during your enquiry."
+      a: "PersonalTrainer.sg provides fitness training at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore. The most suitable training arrangement can be discussed during the enquiry. The most suitable location can be discussed during your enquiry."
     },
     {
       q: "What kinds of people do you often suggest to have your personal training with?",
-      a: "My Personal Training is for anyone who wants to optimize their time & effort in the gym and to accomplish their fitness goals the most effective way possible. Even though some of my Personal Training clients have been professional athletes, Olympic athletes, and local stars, many of my Personal Training clients are people who want to lose weight, tone their muscles, to look good and feel good. Even though most of my Personal Training is focused on body sculpting, weight loss, and muscle toning, it’s also for body balancing, injury recovery and injury prevention."
+      a: "Exercise guidance designed to support better movement, posture awareness, strength, mobility and general fitness. Training will be adjusted according to the client’s current condition, ability and medical clearance where required. Personal training does not replace medical treatment, physiotherapy or rehabilitation services."
     },
     {
       q: "What kind of a fitness training can I expect?",
@@ -555,11 +555,11 @@ export default function ServicesPage() {
     },
     {
       q: "How long will it take for me to see results with a personal trainer?",
-      a: "The length of time you will see results depends on your initial level of fitness, diet nutrition, genetics, and your commitment. If you are committed, I can promise you to see your fitness results in a shorter amount of time you are realistically expecting. Most people want results instantly or don’t think they can look a certain way because of bone structure or how they always have looked. If I have a client who is committed to achieving their fitness results, I have transformed their bodies better than they had thought was possible."
+      a: "The time required to see results differs for every client. Progress depends on the client’s starting condition, training frequency, nutrition, lifestyle, recovery, genetics and consistency. PersonalTrainer.sg provides structured coaching, progress tracking and appropriate programme adjustments, but no specific result or timeframe can be guaranteed."
     },
     {
       q: "What kind of fitness results can I expect to see from personal training?",
-      a: "You will see and feel results the first day you start Personal Training on my Personal Training program. You will be shown proper exercise form and correct exercise technique, which optimizes the efficiency of the exercise movement. Ninety eight percent of my Personal Training clients, from professional athletes, bodybuilders, to doctors, chiropractors say they never felt many of the exercises the correct way before. If it feels natural, it’s usually not the most effective exercise technique since the body has many defenses from pain, from utilizing mostly joints, which are stronger than muscles and protect the muscles from tearing off the bones, to exercise momentum. The body doesn’t like pain and will do what it can to not have it, but there is a distinct difference between good pain, 'feeling the burn', to bad pain, which stems from injury. Focusing on correct exercise form and technique incorporates more muscle throughout the exercise workouts which results in increased lean muscle, muscle toning, muscle strength, metabolism, and weight loss. Using correct exercise form and technique also increases muscle balance, which increases injury recovery and injury prevention. Your body will also feel more balanced and therefore, you will become much stronger."
+      a: "Personal training can help clients work towards improved exercise technique, strength, stamina, mobility, posture awareness, body composition, confidence and healthier lifestyle habits. The actual results will vary according to the individual’s starting condition, consistency, nutrition, recovery and programme adherence."
     },
     {
       q: "Do I need a personal trainer?",
@@ -850,7 +850,7 @@ export default function ServicesPage() {
             </span>
             <h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-6 font-syne">Training Locations in Singapore</h2>
             <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-3xl mx-auto font-sans">
-              Training can be arranged at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore.
+              PersonalTrainer.sg provides fitness training at suitable home spaces, approved condominium gyms, private training facilities, outdoor training areas, multi storey car park training areas and other suitable training environments across Singapore. The most suitable training arrangement can be discussed during the enquiry.
             </p>
           </ScrollReveal>
         </div>

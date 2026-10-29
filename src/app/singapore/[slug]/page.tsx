@@ -30,6 +30,15 @@ interface VariantProps {
   intentModifier?: string;
 }
 
+function CondominiumNotice({ locationType }: Pick<VariantProps, "locationType">) {
+  if (locationType !== "Condominium") return null;
+  return (
+    <p className="text-sm text-gray-300 leading-relaxed">
+      Training at condominium facilities is subject to the individual estate’s rules, facility conditions and management arrangements. Clients should confirm that the intended training arrangement is permitted before the first session.
+    </p>
+  );
+}
+
 function getGalleryServiceLabel(serviceSlug: string, serviceName: string): string {
   switch (serviceSlug) {
     case "couple-training":
@@ -88,9 +97,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const pageData = getPseoPageBySlug(slug);
 
   if (!pageData) {
-    return {
-      title: "Page Not Found | PersonalTrainer.sg"
-    };
+    notFound();
   }
 
   const canonicalUrl = `https://personaltrainer.sg/singapore/${pageData.slug}`;
@@ -339,6 +346,11 @@ export default async function PseoSlugPage({ params }: PageProps) {
         />
       )}
 
+      {/* SHARED EXPERIENCE FIGURE FOR ALL LAYOUTS */}
+      <p className="text-center text-[#D4AF37] font-semibold py-6 border-t border-white/5">
+        2,000+ Clients Trained Since 2002
+      </p>
+
       {/* COMMON RATES SECTION */}
       <section className="py-20 bg-gradient-to-b from-[#0a0a0c] via-[#121216] to-[#0a0a0c] border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
@@ -401,7 +413,7 @@ export default async function PseoSlugPage({ params }: PageProps) {
             Ready to Start Your Transformation in {locationName}?
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8 text-base">
-            Book your initial consultation and physical assessment with Master Trainer DONN. Available for mobile home, condo gym, and private studio sessions in {locationName}.
+            Book your initial consultation and physical assessment with Master Trainer DONN. Training arrangements at suitable homes, approved condominium gyms, private facilities and outdoor areas in {locationName} can be discussed during your enquiry.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
@@ -475,6 +487,7 @@ function VariantA({
               <p className="text-lg text-gray-300 leading-relaxed">
                 {introParagraph}
               </p>
+              <CondominiumNotice locationType={locationType} />
               <div className="pt-4 flex flex-wrap gap-4 items-center">
                 <a
                   href={whatsappUrl}
@@ -524,7 +537,7 @@ function VariantA({
           </div>
           <div>
             <div className="text-3xl font-extrabold text-[#D4AF37]">2,000+</div>
-            <div className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Clients Trained</div>
+            <div className="text-xs text-gray-400 mt-1 uppercase tracking-wider">Clients Trained Since 2002</div>
           </div>
           <div>
             <div className="text-3xl font-extrabold text-white">5.0 ★</div>
@@ -580,7 +593,7 @@ function VariantA({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h3 className="text-2xl font-bold text-white">Training Sessions in Action</h3>
-            <p className="text-xs text-gray-400 mt-1">Real clients, real environment around {landmarks[0] || locationName}</p>
+            <p className="text-xs text-gray-400 mt-1">Training and fitness gallery for {locationName}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {galleryImages.map((imgUrl: string, idx: number) => (
@@ -637,6 +650,7 @@ function VariantB({
                 <p className="text-gray-300 text-base leading-relaxed">
                   {introParagraph}
                 </p>
+              <CondominiumNotice locationType={locationType} />
                 <div className="flex flex-wrap gap-4 pt-2">
                   <a
                     href={whatsappUrl}
@@ -750,6 +764,7 @@ function VariantC({
           <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
             {introParagraph}
           </p>
+              <CondominiumNotice locationType={locationType} />
           <div className="pt-4 flex justify-center">
             <a
               href={whatsappUrl}
@@ -833,6 +848,7 @@ function VariantD({
               <p className="text-gray-300 text-base leading-relaxed">
                 {introParagraph}
               </p>
+              <CondominiumNotice locationType={locationType} />
               <a
                 href={whatsappUrl}
                 target="_blank"
@@ -875,7 +891,7 @@ function VariantD({
               <tbody className="divide-y divide-white/5">
                 <tr>
                   <td className="py-3.5 px-4 font-semibold text-white">Location Flexibility</td>
-                  <td className="py-3.5 px-4 text-emerald-400 font-medium">Your Home, Condo, or Partner Gym in {locationName}</td>
+                  <td className="py-3.5 px-4 text-emerald-400 font-medium">Suitable Homes, Approved Condominium Gyms, or Private Facilities in {locationName}</td>
                   <td className="py-3.5 px-4 text-gray-500">Fixed Crowded Gym Floor Only</td>
                 </tr>
                 <tr>

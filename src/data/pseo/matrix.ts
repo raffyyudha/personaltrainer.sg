@@ -132,7 +132,9 @@ export function generatePseoMatrix(): PseoPageData[] {
         landmarks: area.landmarks,
         heroImage: svc.image || img1,
         galleryImages: gallery,
-        introParagraph: cleanRepeatedWords(`PersonalTrainer.sg provides customised personal training at suitable homes, approved condominium gyms, private training facilities and outdoor training areas around ${area.name} and surrounding neighbourhoods. Looking for structured ${svc.name.toLowerCase()} in ${area.name}? PersonalTrainer.sg delivers customised coaching led by master trainer Md Salaudin Adam (DONN) with 24+ years of experience, tailored to your physical condition, schedule and personal fitness goals.`),
+        introParagraph: slug === "personal-training-tampines-singapore"
+          ? "Looking for structured one to one personal training in Tampines? PersonalTrainer.sg provides personalised coaching around Tampines, including suitable home spaces, approved condominium gyms, private training facilities and outdoor training areas. Whether your goal is weight management, strength improvement, better stamina, body toning or general fitness, your programme will be planned according to your current fitness level, ability, goals and schedule."
+          : cleanRepeatedWords(`PersonalTrainer.sg provides customised personal training at suitable homes, approved condominium gyms, private training facilities and outdoor training areas around ${area.name} and surrounding neighbourhoods. Looking for structured ${svc.name.toLowerCase()} in ${area.name}? PersonalTrainer.sg delivers customised coaching led by master trainer Md Salaudin Adam (DONN) with 24+ years of experience, tailored to your physical condition, schedule and personal fitness goals.`),
         faqs: [
           ...svc.faqs,
           {
@@ -212,12 +214,12 @@ export function generatePseoMatrix(): PseoPageData[] {
         landmarks: [condo.name, condo.area, condo.district],
         heroImage: svc.image || img1,
         galleryImages: gallery,
-        introParagraph: cleanRepeatedWords(`Maximize your private residence gym at ${condo.name} in ${condo.area} (${condo.district}). PersonalTrainer.sg brings elite ${svc.slug === "personal-training" ? "" : "1-on-1 "}${svc.name.toLowerCase()} straight to your doorstep, utilizing your condo's fitness facilities for ultimate convenience, privacy, and results.`),
+        introParagraph: cleanRepeatedWords(`PersonalTrainer.sg provides customised ${svc.name.toLowerCase()} around ${condo.name} in ${condo.area} (${condo.district}). Sessions can be arranged at suitable homes, approved condominium gyms, private training facilities and outdoor training areas, according to your goals, ability and schedule.`),
         faqs: [
           ...svc.faqs,
           {
             question: cleanRepeatedWords(`Does the trainer visit my condo gym at ${condo.name}?`),
-            answer: `Yes! Our trainer brings all necessary specialized gear to conduct sessions safely inside approved condominium gyms at ${condo.name} according to estate guidelines.`
+            answer: `Training at ${condo.name} can be discussed during your enquiry. Use of condominium facilities is subject to the estate’s rules, facility conditions and management arrangements. Please confirm that your intended training arrangement is permitted before the first session.`
           }
         ],
         whatsappUrl: `https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20${encodeURIComponent(svc.name)}%20at%20${encodeURIComponent(condo.name)}.`
@@ -436,12 +438,12 @@ export function generatePseoMatrix(): PseoPageData[] {
         intentModifier: intent.label,
         heroImage: condoSvc.image || img1,
         galleryImages: gallery,
-        introParagraph: cleanRepeatedWords(`Exclusive ${intent.label.toLowerCase()} personal coaching designed for residents at ${condo.name} in ${condo.area}. We optimize your condo's private fitness facilities to deliver high-yield results right inside your estate.`),
+        introParagraph: cleanRepeatedWords(`PersonalTrainer.sg provides customised personal training at suitable homes, approved condominium gyms, private training facilities and outdoor training areas around ${condo.name} in ${condo.area}. Coaching is planned according to your current fitness level, ability, goals and schedule.`),
         faqs: [
           ...condoSvc.faqs,
           {
             question: cleanRepeatedWords(`Do you coach inside ${condo.name}?`),
-            answer: `Yes, we conduct private 1-on-1 sessions inside ${condo.name}'s gym or private residence facilities according to approved condominium resident guidelines.`
+            answer: `Training at ${condo.name} can be discussed during your enquiry. Use of condominium facilities is subject to the estate’s rules, facility conditions and management arrangements. Please confirm that your intended training arrangement is permitted before the first session.`
           }
         ],
         whatsappUrl: `https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20${encodeURIComponent(intent.label)}%20Condo%20Personal%20Trainer%20at%20${encodeURIComponent(condo.name)}.`

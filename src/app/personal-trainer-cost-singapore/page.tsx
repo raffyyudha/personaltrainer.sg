@@ -108,7 +108,7 @@ export default function PersonalTrainerCostSingaporePage() {
             "name": "What is included in the PersonalTrainer.sg trial session?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The trial session is approximately 90 minutes. It includes around 30 minutes of consultation to review fitness goals and medical suitability, 45 minutes of hands-on coaching to evaluate movement mechanics and experience the training style, and 15 minutes to discuss the recommended training roadmap. Fees are $144 for Single and $216 for Couple, fully waived if a 12+ session package is confirmed immediately."
+              "text": "90 Minute Professional Fitness Assessment and Personal Training Session. Includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training. Single Trial Session: $144. Couple Trial Session: $216. The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial."
             }
           },
           {
@@ -214,7 +214,7 @@ export default function PersonalTrainerCostSingaporePage() {
               <Users className="w-6 h-6 sm:w-7 sm:h-7 text-[#C5A059] shrink-0" />
               <div>
                 <p className="text-xs uppercase font-oswald text-gray-400 tracking-wider">Track Record</p>
-                <p className="text-xs sm:text-sm font-bold text-white font-oswald uppercase">2,000+ Clients</p>
+                <p className="text-xs sm:text-sm font-bold text-white font-oswald uppercase">2,000+ Clients Trained Since 2002</p>
               </div>
             </div>
 
@@ -303,10 +303,13 @@ export default function PersonalTrainerCostSingaporePage() {
             <div className="flex items-center justify-center gap-2 mb-6">
               <Clock className="w-5 h-5 text-[#C5A059]" />
               <span className="font-oswald text-base sm:text-lg font-black uppercase tracking-wider text-[#C5A059]">
-                The Comprehensive 90-Minute Trial Breakdown
+                90 Minute Professional Fitness Assessment and Personal Training Session
               </span>
             </div>
 
+            <p className="text-sm text-gray-300 leading-relaxed text-center mb-6">
+              Includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training.
+            </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
               {/* Step 1 */}
               <div className="flex flex-col bg-[#141414] border border-white/5 p-5 rounded-xl text-center">
@@ -693,7 +696,7 @@ export default function PersonalTrainerCostSingaporePage() {
                     Training Goal and Programme Complexity
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
-                    Clients addressing complex needs—such as postural corrections, slip disc management, senior mobility, or medical weight loss—require customized programming and heightened vigilance compared to generic workouts.
+                    Clients with physical limitations or medical recommendations require exercise guidance adapted to their current condition, ability and medical clearance where required. Personal training does not replace medical treatment, physiotherapy or rehabilitation services.
                   </p>
                 </div>
               </div>

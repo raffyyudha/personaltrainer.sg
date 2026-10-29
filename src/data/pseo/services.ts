@@ -45,7 +45,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     faqs: [
       {
         question: "How quickly can I expect to see results with 1-on-1 Personal Training?",
-        answer: "Most clients notice improved strength, energy, and postural changes within 3 to 4 weeks, with visible body composition changes in 8 to 12 weeks of consistent sessions."
+        answer: "The time required to see results differs for every client. Progress depends on the client’s starting condition, training frequency, nutrition, lifestyle, recovery, genetics and consistency. PersonalTrainer.sg provides structured coaching, progress tracking and appropriate programme adjustments, but no specific result or timeframe can be guaranteed."
       },
       {
         question: "Do I need prior gym experience before starting?",
@@ -134,7 +134,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     name: "Senior Fitness Training",
     shortDesc: "Gentle, low-impact exercise programs tailored for adults 50+, 60+, and 70+ to boost mobility, joint stability, and vitality.",
     heroTagline: "Maintain Independence, Vitality & Joint Health with Specialized Senior Fitness Coaching",
-    fullDesc: "Fitness has no age limit. Our Senior Fitness program focuses on balance restoration, joint flexibility, osteoporosis prevention, and functional strength so mature adults in Singapore can move freely without pain and live life to the fullest.",
+    fullDesc: "Fitness has no age limit. Our Senior Fitness program focuses on balance practice, mobility and general strength, adapted to each client’s ability and medical recommendations.",
     image: "/senior-fitness.avif",
     secondaryImages: ["/donn-facility.avif", "/testimonial4.avif", "/aboutus.avif"],
     suitableFor: [
@@ -145,7 +145,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     ],
     keyBenefits: [
       "Enhanced balance, coordination, and fall prevention",
-      "Reduced joint pain from arthritis or cartilage wear",
+      "Mobility exercises adapted to physical limitations and medical recommendations",
       "Improved cardiovascular stamina and energy levels",
       "Safely monitored by experienced certified trainers"
     ],
@@ -158,7 +158,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     faqs: [
       {
         question: "Is personal training safe for seniors with medical conditions like hypertension or osteoarthritis?",
-        answer: "Yes, our trainers conduct health screenings and adapt exercises specifically around medical clearance, ensuring zero high-impact stress on vulnerable joints."
+        answer: "Exercise guidance designed to support better movement, posture awareness, strength, mobility and general fitness. Training will be adjusted according to the client’s current condition, ability and medical clearance where required. Personal training does not replace medical treatment, physiotherapy or rehabilitation services."
       }
     ],
     whatsappText: "Hi PersonalTrainer.sg, I am interested in Senior Fitness Training."
@@ -270,10 +270,10 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
   "posture-rehab": {
     id: "pt-posture-rehab",
     slug: "posture-rehab",
-    name: "Posture Correction & Movement Fitness",
-    shortDesc: "Correct rounded shoulders, anterior pelvic tilt, and chronic back/neck pain through targeted biomechanical corrective exercises.",
-    heroTagline: "Eliminate Pain, Fix Postural Misalignments & Move Freedom in Singapore",
-    fullDesc: "Hours of computer work and smartphone usage create severe postural distortions such as text-neck, rounded shoulders, and lower back pain. Our Posture Correction program restores muscle balance, releases tight fascia, and strengthens weak stabilizer muscles.",
+    name: "Posture Awareness & Movement Fitness",
+    shortDesc: "Exercise guidance designed to support better movement, posture awareness, strength, mobility and general fitness. Training will be adjusted according to the client’s current condition, ability and medical clearance where required. Personal training does not replace medical treatment, physiotherapy or rehabilitation services.",
+    heroTagline: "Build Posture Awareness, Strength & Mobility with Personalised Exercise Guidance",
+    fullDesc: "Exercise guidance designed to support better movement, posture awareness, strength, mobility and general fitness. Training will be adjusted according to the client’s current condition, ability and medical clearance where required. Personal training does not replace medical treatment, physiotherapy or rehabilitation services.",
     image: "/donn-coaching-latpulldown.avif",
     secondaryImages: ["/senior-fitness.avif", "/aboutus.avif", "/testimonial1.avif"],
     suitableFor: [
@@ -283,10 +283,10 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
       "Anyone wanting to stand taller and move gracefully"
     ],
     keyBenefits: [
-      "Relief from chronic neck stiffness and lower back ache",
-      "Correction of upper cross syndrome and anterior pelvic tilt",
-      "Rebalancing of asymmetric muscle groups",
-      "Improved spinal alignment and breathing capacity"
+      "Movement and posture awareness for everyday activities",
+      "Exercise guidance adapted to current ability and medical recommendations",
+      "Progressive strength and mobility exercises",
+      "General fitness and controlled exercise technique"
     ],
     sampleExercises: [
       "Face Pulls & Scapular Retractions",
@@ -296,32 +296,32 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     ],
     faqs: [
       {
-        question: "Can posture correction help with back pain?",
-        answer: "Yes! Most non-structural back pain is caused by muscle imbalances and weak core stabilizers. Corrective strength exercises re-align your spine and eliminate strain."
+        question: "Can training be adapted if I have back discomfort?",
+        answer: "Exercise guidance designed to support better movement, posture awareness, strength, mobility and general fitness. Training will be adjusted according to the client’s current condition, ability and medical clearance where required. Personal training does not replace medical treatment, physiotherapy or rehabilitation services."
       }
     ],
-    whatsappText: "Hi PersonalTrainer.sg, I am interested in Posture Correction & Movement Fitness."
+    whatsappText: "Hi PersonalTrainer.sg, I am interested in Posture Awareness & Movement Fitness."
   },
   "prenatal-postnatal": {
     id: "pt-prenatal-postnatal",
     slug: "prenatal-postnatal",
     name: "Pre & Post Natal Fitness Coaching",
-    shortDesc: "Safe, doctor-aligned exercise programs for mothers during pregnancy and safe postpartum recovery (diastasis recti, pelvic floor).",
+    shortDesc: "Exercise guidance during pregnancy and postpartum, adjusted to the client’s condition and medical clearance where required.",
     heroTagline: "Empowering Expectant & New Mothers with Safe, Specialized Prenatal & Postnatal Coaching",
-    fullDesc: "Designed specifically for expectant mothers and new mums in Singapore. We focus on safe pelvic floor strength, core recovery, pregnancy stamina, and gradual postpartum fat loss under gentle expert guidance.",
+    fullDesc: "Postpartum strength, pelvic floor awareness, gradual core strengthening, mobility and safe return to exercise, subject to medical clearance where required",
     image: "/testimonial2.avif",
     secondaryImages: ["/weightlosstraining.avif", "/coupletraining.avif", "/testimonial3.avif"],
     suitableFor: [
       "Expectant mothers in 1st, 2nd, or 3rd trimester",
-      "Postpartum mothers (6+ weeks after delivery)",
-      "Moms dealing with diastasis recti (abdominal separation)",
+      "Postpartum mothers with medical clearance to return to exercise",
+      "Mothers seeking gradual core strengthening subject to medical guidance",
       "New mothers looking to regain pre-pregnancy fitness levels safely"
     ],
     keyBenefits: [
       "Safe exercise adaptation tailored for each trimester",
-      "Pelvic floor strengthening to aid labor and post-birth recovery",
+      "Appropriate pelvic floor and general strength exercises based on the client’s condition, stage of pregnancy or postpartum recovery and medical clearance",
       "Targeted exercise guidance for core wall and pelvic stability",
-      "Energy boost and relief from pregnancy back tightness"
+      "Mobility and general fitness exercises adapted to pregnancy"
     ],
     sampleExercises: [
       "Pelvic Tilt & Transverse Abdominis Activation",
@@ -332,7 +332,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     faqs: [
       {
         question: "When can I start postnatal personal training after giving birth?",
-        answer: "Generally, clients can begin 6 weeks after a natural vaginal delivery or 8–10 weeks after a C-section, following clearance from their OBGYN physician."
+        answer: "The appropriate time to return to exercise depends on your individual condition and medical clearance. Sessions are adapted to your clinician’s recommendations and current ability."
       }
     ],
     whatsappText: "Hi PersonalTrainer.sg, I am interested in Pre & Post Natal Fitness Coaching."
@@ -411,22 +411,22 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     id: "pt-body-transformation",
     slug: "body-transformation",
     name: "Body Transformation & Wedding Prep",
-    shortDesc: "Intensive 12-week overhaul designed to support sustainable changes in body composition and tone through structured exercise, nutrition guidance and consistent progress tracking.",
-    heroTagline: "Dramatically Transform Your Body Composition in 12 Weeks for Milestones & Weddings",
-    fullDesc: "A complete 360-degree lifestyle and physique transformation program. Combines precision strength training, metabolic fat stripping, weekly bio-metric tracking, and strict nutritional coaching to deliver head-turning results for weddings, photoshoots, or personal milestones.",
+    shortDesc: "Support sustainable fat loss through structured exercise, nutrition guidance and consistent progress tracking.",
+    heroTagline: "Work Towards Your Fitness Goals for Milestones & Weddings",
+    fullDesc: "Structured exercise, nutrition guidance and consistent progress tracking for weddings, photoshoots or personal milestones. Progress depends on your programme, consistency, lifestyle and individual response.",
     image: "/donn-flexing.avif",
     secondaryImages: ["/testimonial1.avif", "/testimonial3.avif", "/testimonial5.avif"],
     suitableFor: [
       "Brides & grooms preparing for upcoming weddings",
       "Clients preparing for beach vacations, photoshoots, or reunions",
-      "Individuals wanting a total 12-week body reset",
+      "Individuals working towards sustainable body composition goals",
       "Anyone committed to maximum aesthetic changes"
     ],
     keyBenefits: [
       "12-Week structured progressive transformation roadmap",
       "Weekly body composition, photo progress, and waist tracking",
       "Custom nutrition macros with daily check-ins",
-      "Dramatic reduction in body fat + visible muscle definition"
+      "Support for sustainable body composition goals"
     ],
     sampleExercises: [
       "Hypertrophy Giant Sets & Drop Sets",
@@ -437,7 +437,7 @@ export const PSEO_SERVICES: Record<string, PseoService> = {
     faqs: [
       {
         question: "How long before my wedding or event should I start?",
-        answer: "We recommend starting 12 to 16 weeks prior to your event date for maximum aesthetic impact and comfortable sustainable progress."
+        answer: "The time required to see results differs for every client. Progress depends on the client’s starting condition, training frequency, nutrition, lifestyle, recovery, genetics and consistency. PersonalTrainer.sg provides structured coaching, progress tracking and appropriate programme adjustments, but no specific result or timeframe can be guaranteed."
       }
     ],
     whatsappText: "Hi PersonalTrainer.sg, I am interested in Body Transformation & Wedding Prep."
