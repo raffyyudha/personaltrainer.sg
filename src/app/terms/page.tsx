@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function TermsOfServicePage() {
   return (
@@ -60,9 +61,7 @@ export default function TermsOfServicePage() {
         </div>
       </main>
 
-      <footer className="bg-[#050505] py-12 px-6 md:px-12 border-t border-white/10 text-center text-xs text-gray-500 font-sans">
-        <p>© 2026 PersonalTrainer.sg. All Rights Reserved. Led by Md Salaudin Adam (DONN).</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

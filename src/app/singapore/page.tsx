@@ -3,6 +3,7 @@ import Metadata from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import {
   SINGAPORE_AREAS,
   SINGAPORE_MRTS,
@@ -174,12 +175,7 @@ export default function SingaporeDirectoryPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-12 bg-black border-t border-white/10 text-gray-400 text-xs sm:text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
-          <p className="text-white font-semibold">PersonalTrainer.sg &bull; Singapore Personal Training Directory</p>
-          <p className="text-gray-500 text-xs">&copy; {new Date().getFullYear()} PersonalTrainer.sg. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

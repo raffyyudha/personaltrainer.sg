@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import TikTokIcon from "@/components/TikTokIcon";
 import {
   Calendar,
@@ -1020,94 +1021,7 @@ export default function PersonalTrainerCostSingaporePage() {
       </main>
 
       {/* ── FOOTER ── */}
-      <footer id="contact" className="bg-[#030303] py-14 px-6 md:px-12 border-t border-white/10">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 border-b border-white/5 pb-10 mb-8">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <img
-                  src="/logopt.avif"
-                  alt="PersonalTrainer.sg Logo"
-                  className="h-10 w-auto"
-                />
-                <div className="flex flex-col text-left">
-                  <span className="text-white uppercase font-oswald font-extrabold text-base">PERSONALTRAINER.SG</span>
-                  <span className="uppercase font-oswald text-[10px] text-[#C5A059]">Trusted in Singapore Since 2002</span>
-                </div>
-              </div>
-              <p className="text-gray-400 text-xs leading-relaxed mb-3">
-                Led by Md Salaudin Adam (DONN)
-              </p>
-              <ul className="text-gray-400 text-[11px] space-y-1 mb-4 font-sans">
-                <li>• Founder and Fitness Director</li>
-                <li>• Transformation Specialist</li>
-                <li>• Trusted in Singapore Since 2002</li>
-                <li>• 24 Years of Coaching Experience</li>
-              </ul>
-              <div className="flex gap-2">
-                <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 text-black flex items-center justify-center hover:bg-white transition-colors duration-300 rounded bg-[#C5A059]">
-                  <Facebook size={14} />
-                </a>
-                <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 text-black flex items-center justify-center hover:bg-white transition-colors duration-300 rounded bg-[#C5A059]">
-                  <Instagram size={14} />
-                </a>
-                <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-8 h-8 text-black flex items-center justify-center hover:bg-white transition-colors duration-300 rounded bg-[#C5A059]">
-                  <TikTokIcon size={14} />
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-oswald text-base font-bold text-white mb-4 uppercase tracking-wider">Quick Links</h4>
-              <ul className="space-y-2 text-xs text-gray-300 font-oswald">
-                {[
-                  { name: "Home", url: "/" },
-                  { name: "About Us", url: "/about" },
-                  { name: "Services", url: "/services" },
-                  { name: "Rates", url: "/rates" },
-                  { name: "Results", url: "/results" },
-                  { name: "Contact Us", url: "/contact" }
-                ].map((link) => (
-                  <li key={link.name}>
-                    <Link href={link.url} className="hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest text-[11px]">
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-oswald text-base font-bold text-white mb-4 uppercase tracking-wider">Open Hours</h4>
-              <p className="text-gray-400 text-xs tracking-wide font-oswald uppercase leading-relaxed">
-                PersonalTrainer.sg operates by appointment only. Training sessions are arranged based on trainer availability, client schedule, location suitability and confirmed booking.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-oswald text-base font-bold text-white mb-4 uppercase tracking-wider">Contact Info</h4>
-              <ul className="space-y-2.5 text-xs text-gray-300 font-sans">
-                <li className="flex items-center gap-2">
-                  <Phone size={14} className="shrink-0 text-[#C5A059]" />
-                  <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="hover:text-[#C5A059] transition-colors">
-                    +65 9108 1781
-                  </a>
-                </li>
-                <li className="flex items-center gap-2">
-                  <Mail size={14} className="shrink-0 text-[#C5A059]" />
-                  <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors">
-                    donn@personaltrainer.sg
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center text-gray-500 text-[11px] font-sans">
-            <p>© {new Date().getFullYear()} PersonalTrainer.sg. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

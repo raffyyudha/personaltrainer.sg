@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import TikTokIcon from "@/components/TikTokIcon";
 import {
   Facebook,
@@ -367,102 +368,7 @@ export default function ResultPage() {
                         />
                       ))}
                     </div></div></ScrollReveal></div></div></section><section className="py-12 md:py-20 px-6 md:px-12 max-w-7xl mx-auto border-t border-white/5"><div className="grid lg:grid-cols-12 gap-12 items-center"><div className="lg:col-span-5"><ScrollReveal className="reveal-left-hidden"><span className="section-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-activity text-[#C5A059]"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg> LIFESTYLE</span><h2 className="text-2xl sm:text-3xl md:text-5xl font-black uppercase mb-6 font-syne leading-tight">More Than <br/><span className="text-[#800020]">Physical Results</span></h2><div className="text-white text-sm leading-relaxed mb-6 font-sans space-y-4"><p>A successful transformation is not only about body weight or appearance. It is also about confidence, energy, movement, discipline and lifestyle.</p><p>Many clients begin with low motivation, poor consistency or lack of direction. Through proper coaching, they start building better habits, better movement and better confidence in themselves.</p><p className="text-xs text-gray-500 italic">The body changes when training, mindset and habits improve together.</p></div></ScrollReveal></div><div className="lg:col-span-7 bg-[#0d0d0d] border border-white/5 p-8 rounded-xl"><ScrollReveal className="reveal-right-hidden"><h3 className="font-oswald text-lg font-bold uppercase tracking-wider text-white mb-6">Personal Training Helps Improve:</h3><ul className="grid sm:grid-cols-2 gap-4 text-sm text-white font-sans"><li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check text-[#C5A059] shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span>Self Confidence</span></li><li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check text-[#C5A059] shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span>Body Awareness</span></li><li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check text-[#C5A059] shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span>Training Discipline</span></li><li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check text-[#C5A059] shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span>Lifestyle Habits</span></li><li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check text-[#C5A059] shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span>Energy Levels</span></li><li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check text-[#C5A059] shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span>Movement Confidence</span></li><li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check text-[#C5A059] shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span>Fitness Consistency</span></li><li className="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-check text-[#C5A059] shrink-0"><path d="M20 6 9 17l-5-5"></path></svg><span>Control Over Health and Fitness</span></li></ul></ScrollReveal></div></div></section><section className="py-8 px-6 md:px-12 max-w-4xl mx-auto mb-12"><ScrollReveal className="reveal-hidden"><div className="bg-[#800020]/10 border border-[#800020]/30 p-6 rounded-xl text-center"><h4 className="font-oswald text-lg font-bold text-white uppercase tracking-wider mb-3">Important Results Note</h4><div className="text-white text-xs leading-relaxed font-sans space-y-2"><p>Every client’s result is different. Progress depends on the client’s starting point, training frequency, nutrition habits, lifestyle, health condition and level of commitment.</p><p>PersonalTrainer.sg does not promise overnight results or unrealistic transformations. The focus is on proper coaching, safe training, realistic progress and long term improvement.</p></div></div></ScrollReveal></section><section className="relative py-24 px-6 md:px-12 bg-black overflow-hidden border-t border-b border-white/5"><div className="absolute inset-0 bg-cover bg-center opacity-20 pointer-events-none" style={{backgroundImage: "url('https://ext.same-assets.com/3485311241/2686555212.jpeg')", backgroundAttachment: "fixed" as const}}></div><div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div><div className="max-w-7xl mx-auto relative z-10"><ScrollReveal className="reveal-left-hidden"><span className="section-label"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-activity text-[#C5A059]"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg> FINAL BRAND LINE</span><h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase font-syne mb-6 leading-tight max-w-2xl tracking-tight">Ready to Start Your <br/><span className="text-[#800020]">Own </span><span className="text-[#800020] inline-block whitespace-nowrap">Transformation?</span></h2><div className="text-white text-sm md:text-base max-w-xl mb-8 leading-relaxed font-sans space-y-4"><p>Your fitness journey does not need to start perfectly. It needs to start properly.</p><p>If you are ready to improve your body, health, fitness, strength and confidence, PersonalTrainer.sg can help you begin with structure, coaching and accountability.</p><p>Send a WhatsApp message today and let us discuss your goal, current condition and the most suitable training direction for you.</p></div><div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"><a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="btn-primary group text-center"><span>WhatsApp PersonalTrainer.sg</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right group-hover:translate-x-1 transition-transform duration-300"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a><a className="btn-outline group text-center" href="/#trial"><span>Book a Trial Session</span></a></div></ScrollReveal></div></section>
-      <footer id="contact" className="bg-[#050505] py-16 px-6 md:px-12 border-t border-white/5">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 border-b border-white/5 pb-12 mb-12">
-          
-          {/* Footer Logo and About */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <img
-                src="/logopt.avif"
-                alt="PersonalTrainer.sg"
-                className="h-10 w-auto logo-glow"
-              />
-              <div className="flex flex-col text-left">
-                <span className="text-white uppercase font-bold font-oswald text-lg">PersonalTrainer.sg</span>
-                <span className="text-[#C5A059] uppercase text-xs">Trusted in Singapore Since 2002</span>
-              </div>
-            </div>
-            <p className="text-white text-sm leading-relaxed mb-4 font-sans">
-              Led by Md Salaudin Adam (DONN)
-            </p>
-            <ul className="text-white text-xs space-y-1.5 mb-6 font-sans">
-              <li>• Founder and Fitness Director</li>
-              <li>• Transformation Specialist</li>
-              <li>• Trusted in Singapore Since 2002</li>
-              <li>• 24 Years of Coaching Experience</li>
-            </ul>
-            <div className="flex gap-2">
-              <a href="https://www.facebook.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300">
-                <Facebook size={14} />
-              </a>
-              <a href="https://www.instagram.com/personaltrainer.sg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300">
-                <Instagram size={14} />
-              </a>
-              <a href="https://www.tiktok.com/@personaltrainer.sg" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#800020] hover:text-white transition-colors duration-300">
-                <TikTokIcon size={14} />
-              </a>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-oswald text-lg font-bold text-[#C5A059] mb-6 uppercase tracking-wider">Quick Links</h4>
-            <ul className="space-y-3 text-sm text-white">
-              {[
-                { name: "Home", url: "/" },
-                { name: "About Us", url: "/about" },
-                { name: "Services", url: "/services" },
-                { name: "Results", url: "/results" },
-                { name: "Contact Us", url: "/contact" }
-              ].map((link) => (
-                <li key={link.name}>
-                  <Link href={link.url} className="hover:text-[#C5A059] transition-colors duration-300 uppercase tracking-widest text-xs">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Open Hours */}
-          <div>
-            <h4 className="font-oswald text-lg font-bold text-white mb-6 uppercase tracking-wider">Open Hours</h4>
-            <p className="text-white text-sm tracking-wider font-oswald uppercase">
-              By Appointment Only
-            </p>
-          </div>
-
-          {/* Get in touch */}
-          <div>
-            <h4 className="font-oswald text-lg font-bold text-white mb-6 uppercase tracking-wider">Get in Touch</h4>
-            <ul className="space-y-4 text-sm text-white">
-              <li className="flex items-start gap-3">
-                <Phone size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                <a href="https://wa.me/6591081781" target="_blank" rel="noopener noreferrer" className="hover:text-[#C5A059] transition-colors duration-300">WhatsApp: +65 9108 1781</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                <a href="mailto:donn@personaltrainer.sg" className="hover:text-[#C5A059] transition-colors duration-300 font-sans lowercase">donn@personaltrainer.sg</a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-[#C5A059] shrink-0 mt-0.5" />
-                <span>Training locations arranged across Singapore</span>
-              </li>
-            </ul>
-          </div>
-
-        </div>
-
-        {/* Copyrights and Terms */}
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-xs text-gray-400 gap-4 font-sans">
-          <p>© 2026 PersonalTrainer.sg. All Rights Reserved. Led by Md Salaudin Adam (DONN).</p>
-          <div className="flex gap-6">
-            <Link href="/privacy" className="hover:text-[#C5A059] transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-[#C5A059] transition-colors">Terms of Service</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
     </div>
   );

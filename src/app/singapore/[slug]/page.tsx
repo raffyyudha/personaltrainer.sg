@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import RateCardsGrid from "@/components/RateCardsGrid";
 import TikTokIcon from "@/components/TikTokIcon";
 import {
@@ -436,20 +437,7 @@ export default async function PseoSlugPage({ params }: PageProps) {
       </section>
 
       {/* FOOTER */}
-      <footer className="py-12 bg-black border-t border-white/10 text-gray-400 text-xs sm:text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <p className="text-white font-semibold text-base mb-1">PersonalTrainer.sg</p>
-            <p>Singapore&apos;s Elite Personal Training Service &bull; Led by Md Salaudin Adam (DONN)</p>
-            <p className="text-gray-500 text-xs mt-1">&copy; {new Date().getFullYear()} PersonalTrainer.sg. All rights reserved. Servicing {locationName} &amp; all districts in Singapore.</p>
-          </div>
-          <div className="flex items-center space-x-6 text-gray-400">
-            <Link href="/privacy" className="hover:text-white transition">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition">Terms &amp; Conditions</Link>
-            <Link href="/singapore" className="hover:text-white transition">All Singapore Locations</Link>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

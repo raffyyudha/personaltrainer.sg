@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { ArrowLeft, Home, Dumbbell } from "lucide-react";
 
 export const metadata = {
@@ -53,9 +54,7 @@ export default function NotFound() {
         </div>
       </main>
 
-      <footer className="py-8 border-t border-white/5 text-center text-xs text-gray-400">
-        <p>&copy; {new Date().getFullYear()} PersonalTrainer.sg. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
