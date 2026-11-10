@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Star, GraduationCap, Check, Calendar } from "lucide-react";
+import styles from "./RateCardsGrid.module.css";
+import { Star, GraduationCap, Check } from "lucide-react";
 
 // Calendar icon with a small down arrow inside for Trial Session
 const CalendarDownIcon = ({ className = "w-7 h-7", style }: { className?: string; style?: React.CSSProperties }) => (
@@ -16,90 +17,86 @@ const CalendarDownIcon = ({ className = "w-7 h-7", style }: { className?: string
   </div>
 );
 
-// Shield Badge Component for the 5 package cards (Gold outline shield with number)
-const PackageShieldIcon = ({ number }: { number: string | number }) => (
-  <div className="relative shrink-0 flex items-center justify-center" style={{ width: "38px", height: "46px", minWidth: "38px", minHeight: "46px" }}>
-    <svg viewBox="0 0 40 48" style={{ width: "38px", height: "46px" }} className="drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M20 2L4 9V22C4 32.5 20 44 20 44C20 44 36 32.5 36 22V9L20 2Z"
-        fill="#3A060D"
-        stroke="#C5A059"
-        strokeWidth="2.5"
-      />
-      <path
-        d="M20 5.5L7.5 11V21.5C7.5 29.8 20 39 20 39C20 39 32.5 29.8 32.5 21.5V11L20 5.5Z"
-        fill="#1f0206"
-        stroke="#C5A059"
-        strokeWidth="1"
-        strokeOpacity="0.6"
-      />
-    </svg>
-    <span className="absolute inset-0 flex items-center justify-center font-oswald font-black text-xs sm:text-sm text-[#C5A059] tracking-tight">
-      {number}
-    </span>
-  </div>
-);
-
 const packageCards = [
   {
     number: "12",
-    sessions: "12 SESSIONS",
-    title: "FOUNDATION",
+    title: "Foundation",
     singleRate: "$136",
     coupleRate: "$204",
+    badge: null,
+    benefitsHeading: "FOUNDATION BENEFITS",
     features: [
+      "7 Day Personalised Meal Plan",
       "Initial InBody Analysis",
       "Personalised Training Programme",
       "Nutrition & Dietary Guidance"
-    ]
+    ],
+    description: "Best for clients who want a structured and professional start with personalised training, InBody analysis and a 7 Day Personalised Meal Plan."
   },
   {
     number: "24",
-    sessions: "24 SESSIONS",
-    title: "PROGRESS",
+    title: "Progress",
     singleRate: "$126",
     coupleRate: "$189",
+    badge: null,
+    benefitsHeading: "Includes the full Foundation experience, Plus:",
     features: [
-      "InBody Analysis Progress Report",
-      "Personalised Training Programme",
-      "Nutrition & Dietary Guidance"
-    ]
+      "14 Day Personalised Meal Plan",
+      "InBody Progress Review",
+      "Personalised Programme Adjustment",
+      "Progress Monitoring and Review"
+    ],
+    description: "Ideal for clients who want more time to build consistency, track measurable progress and refine both training and nutrition."
   },
   {
     number: "36",
-    sessions: "36 SESSIONS",
-    title: "TRANSFORMATION",
+    title: "Transformation",
     singleRate: "$116",
     coupleRate: "$174",
+    badge: "MOST POPULAR",
+    benefitsHeading: "Includes the full Progress experience, Plus:",
     features: [
-      "InBody Analysis Progress Report",
-      "Advanced Training Programme",
-      "Nutrition & Dietary Guidance"
-    ]
+      "21 Day Personalised Meal Plan",
+      "Scheduled Programme Reassessment",
+      "Body Composition Progress Tracking",
+      "Progressive Training Programme Development",
+      "Structured Transformation Review"
+    ],
+    description: "Designed for clients who want a more complete transformation journey with structured reassessment, body composition tracking and a 21 Day Personalised Meal Plan."
   },
   {
     number: "48",
-    sessions: "48 SESSIONS",
-    title: "ADVANCED",
+    title: "Advanced",
     singleRate: "$106",
     coupleRate: "$159",
+    badge: null,
+    benefitsHeading: "Includes the full Transformation experience, Plus:",
     features: [
-      "Advanced Training Programme",
-      "Nutrition & Dietary Guidance",
-      "Progress Tracking & Support"
-    ]
+      "28 Day Personalised Meal Plan",
+      "Regular InBody Progress Reviews",
+      "Advanced Programme Recalibration",
+      "Enhanced Accountability Support",
+      "Extended Progress Monitoring"
+    ],
+    description: "Built for clients who want deeper progression, regular reviews, advanced programme adjustments and extended accountability support."
   },
   {
     number: "60",
-    sessions: "60 SESSIONS",
-    title: "SIGNATURE",
+    title: "Signature",
     singleRate: "$96",
     coupleRate: "$144",
+    badge: "BEST VALUE",
+    benefitsHeading: "Includes the full Advanced experience, Plus:",
     features: [
-      "Comprehensive Training Programme",
-      "Nutrition & Dietary Guidance",
-      "Ongoing Progress Tracking"
-    ]
+      "Ongoing Personalised Meal Plan Support",
+      "Regular Meal Plan Review and Refinement",
+      "Ongoing InBody Progress Monitoring",
+      "Regular Programme Recalibration",
+      "Priority Scheduling",
+      "Comprehensive Accountability Support",
+      "Full Transformation Progress Review"
+    ],
+    description: "Our most comprehensive package for clients committed to long term results, with ongoing nutrition support, continuous programme refinement, priority scheduling and full transformation monitoring."
   }
 ];
 
@@ -107,7 +104,7 @@ export default function RateCardsGrid() {
   return (
     <div className="w-full max-w-[1500px] mx-auto space-y-6 sm:space-y-8 select-none font-sans">
       
-      {/* ── ROW 1: TOP 3 SPECIAL CARDS ── */}
+      {/* Special offers */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 items-stretch">
 
         {/* CARD 1: TRIAL SESSION */}
@@ -305,98 +302,70 @@ export default function RateCardsGrid() {
 
       </div>
 
-      {/* ── ROW 2: 5 PACKAGES GRID (12, 24, 36, 48, 60 SESSIONS) ── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 sm:gap-4 items-stretch">
+      {/* Session packages */}
+      <div data-package-grid className={styles.grid}>
         {packageCards.map((pkg) => (
-          <div
+          <article
             key={pkg.number}
-            className="rounded-xl p-4 sm:p-5 flex flex-col justify-between shadow-2xl transition-all duration-300 group hover:border-[#C5A059]"
-            style={{
-              backgroundColor: "#070707",
-              border: "1.5px solid rgba(197, 160, 89, 0.75)"
-            }}
+            data-package={pkg.number}
+            className={`${styles.card} ${pkg.badge ? styles.featured : ""}`}
           >
-            <div>
-              {/* Header: Shield Icon + Title */}
-              <div className="flex items-center gap-3 mb-2">
-                <PackageShieldIcon number={pkg.number} />
-                <div className="leading-tight">
-                  <span className="block font-oswald text-xs sm:text-sm font-extrabold text-white uppercase tracking-wider">
-                    {pkg.sessions}
-                  </span>
-                  <span className="block font-oswald text-sm sm:text-base font-black uppercase tracking-wider text-[#C5A059]">
-                    {pkg.title}
-                  </span>
-                </div>
-              </div>
-
-              {/* Subtitle Divider: 60 MINUTES */}
-              <div className="flex items-center gap-2 my-2.5">
-                <div className="h-[1px] bg-white/20 flex-1" />
-                <span className="text-[10px] font-oswald font-extrabold uppercase tracking-widest text-gray-300">
-                  60 MINUTES
+            <div className={styles.header}>
+              {pkg.badge && (
+                <span className={styles.badge}>
+                  {pkg.badge}
                 </span>
-                <div className="h-[1px] bg-white/20 flex-1" />
-              </div>
+              )}
+              <h3 className={styles.title}>
+                <span className={styles.sessions}>{pkg.number} Sessions</span>
+                <span className={styles.name}>
+                  <span className={styles.separator}> &ndash; </span>{pkg.title}
+                </span>
+              </h3>
+              <p className={styles.duration}>60 Minutes</p>
+            </div>
 
-              {/* Pricing Rows: SINGLE & COUPLE */}
-              <div className="space-y-1.5 py-1">
-                <div className="flex items-center justify-between border-b border-white/10 pb-1.5">
-                  <span className="font-oswald uppercase text-gray-300 font-bold tracking-wider text-xs">
-                    SINGLE
-                  </span>
-                  <div className="flex items-baseline gap-1">
-                    <span className="font-oswald font-black text-white text-base sm:text-lg tracking-tight">
-                      {pkg.singleRate}
-                    </span>
-                    <span className="text-[10px] text-gray-400 font-sans italic">/ session</span>
+            <div className={styles.body}>
+              <dl className={styles.prices}>
+                {[["Single", pkg.singleRate], ["Couple", pkg.coupleRate]].map(([label, rate]) => (
+                  <div key={label} className={styles.priceRow}>
+                    <dt className={styles.priceLabel}>{label}</dt>
+                    <dd className={styles.priceValue}>
+                      <span className={styles.amount}>{rate}</span>{" / session"}
+                    </dd>
                   </div>
-                </div>
+                ))}
+              </dl>
 
-                <div className="flex items-center justify-between pt-0.5">
-                  <span className="font-oswald uppercase text-gray-300 font-bold tracking-wider text-xs">
-                    COUPLE
-                  </span>
-                  <div className="flex items-baseline gap-1">
-                    <span className="font-oswald font-black text-white text-base sm:text-lg tracking-tight">
-                      {pkg.coupleRate}
-                    </span>
-                    <span className="text-[10px] text-gray-400 font-sans italic">/ session</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Inclusions List */}
-              <ul className="space-y-2 mt-3 mb-4 text-xs text-gray-200 font-sans font-medium">
-                {pkg.features.map((feat, idx) => (
-                  <li key={idx} className="flex items-start gap-2">
-                    <span className="w-3.5 h-3.5 rounded-full border border-[#C5A059] flex items-center justify-center shrink-0 mt-0.5">
-                      <Check size={9} className="text-[#C5A059]" />
-                    </span>
-                    <span className="leading-tight text-gray-200">{feat}</span>
+              <p className={styles.benefitsHeading}>
+                {pkg.benefitsHeading}
+              </p>
+              <ul className={styles.benefits}>
+                {pkg.features.map((feature) => (
+                  <li key={feature} className={feature.includes("Meal Plan") ? styles.mealPlan : styles.benefit}>
+                    <Check aria-hidden="true" size={14} className={styles.check} />
+                    <span>{feature}</span>
                   </li>
                 ))}
               </ul>
-            </div>
 
-            {/* Enquire Now Button */}
-            <a
-              href={`https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20the%20${pkg.sessions}%20${pkg.title}%20package.`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-2.5 px-3 font-oswald text-xs font-black uppercase tracking-widest rounded-lg text-center transition-all duration-300 block shadow-md hover:brightness-125 mt-2"
-              style={{
-                backgroundColor: "#4A0A13",
-                border: "1.5px solid #C5A059",
-                color: "#C5A059"
-              }}
-            >
-              ENQUIRE NOW
-            </a>
-          </div>
+              <div className={styles.closing}>
+                <p className={styles.description}>
+                  {pkg.description}
+                </p>
+                <a
+                  href={`https://wa.me/6591081781?text=${encodeURIComponent(`Hi PersonalTrainer.sg, I am interested in the ${pkg.number} Sessions ${pkg.title} package.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.button}
+                >
+                  ENQUIRE NOW
+                </a>
+              </div>
+            </div>
+          </article>
         ))}
       </div>
-
     </div>
   );
 }

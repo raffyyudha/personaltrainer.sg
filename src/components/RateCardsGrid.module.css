@@ -1,0 +1,63 @@
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px 20px;
+  padding-top: 12px;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1px solid #c5a05999;
+  border-radius: 12px;
+  background: #fff;
+  color: #171717;
+  text-align: left;
+  box-shadow: 0 12px 30px #0003;
+}
+.featured {
+  border-color: #c5a059;
+  box-shadow: 0 0 0 1px #c5a059, 0 12px 30px #c5a05926;
+}
+.header {
+  padding: 40px 16px 16px;
+  border-radius: 11px 11px 0 0;
+  background: linear-gradient(#520914, #30060c);
+  color: #fff;
+}
+.badge {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: #c5a059;
+  color: #30060c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+.title { text-transform: none; font-family: Oswald, sans-serif; font-weight: 700; line-height: 1.25; }
+.sessions { display: block; font-size: 24px; }
+.name { display: block; padding-top: 4px; font-size: 18px; color: #e4c584; }
+.separator { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.duration { margin-top: 12px; font-size: 14px; color: #ffffffe6; }
+.body { display: flex; flex: 1; flex-direction: column; padding: 16px; }
+.prices { font-size: 14px; }
+.priceRow { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 8px 0; border-bottom: 1px solid #30060c1a; }
+.priceLabel { font-weight: 600; }
+.priceValue { white-space: nowrap; text-align: right; color: #650e20; }
+.amount { font-weight: 700; }
+.benefitsHeading { display: flex; align-items: center; min-height: 72px; margin-top: 16px; padding: 8px 12px; border-radius: 6px; background: #4a0a13; color: #fff; font-size: 14px; font-weight: 700; line-height: 1.375; }
+.benefits { display: flex; flex-direction: column; gap: 12px; margin: 12px 0 20px; list-style: none; font-size: 14px; line-height: 1.375; }
+.benefit, .mealPlan { display: flex; align-items: flex-start; gap: 8px; padding: 0 8px; }
+.mealPlan { padding: 8px; border-radius: 6px; background: #c5a05933; font-weight: 600; }
+.check { flex-shrink: 0; margin-top: 2px; color: #956f2e; }
+.closing { margin-top: auto; }
+.description { padding: 12px; border-radius: 6px; background: #f7f2e9; font-size: 14px; line-height: 1.625; }
+.button { display: block; width: 100%; margin-top: 16px; padding: 12px; border: 1px solid #c5a059; border-radius: 8px; background: #4a0a13; color: #fff; text-align: center; font-family: Oswald, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: .025em; transition: background .2s; }
+.button:hover { background: #650e20; }
+.button:focus-visible { outline: 2px solid #956f2e; outline-offset: 4px; }
+@media (min-width: 640px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1280px) { .grid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
