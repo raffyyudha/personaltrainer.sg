@@ -33,32 +33,7 @@ export default function RatesPage() {
       {/* Main Content Area matching Client Design Graphic */}
       <main className="pt-28 sm:pt-32 pb-24 sm:pb-16 px-3.5 sm:px-8 md:px-12 max-w-[1550px] mx-auto">
         
-        {/* Header Title Section with Gold Ornamental Wings */}
-        <div className="text-center mb-8 sm:mb-12 mt-2 sm:mt-4">
-          <div className="flex items-center justify-center gap-2 sm:gap-8 mb-3">
-            <div className="hidden sm:flex items-center gap-2 opacity-80">
-              <div className="h-[2px] w-12 sm:w-32 md:w-48" style={{ background: "linear-gradient(to right, transparent, #C5A059)" }} />
-              <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rotate-45 border" style={{ borderColor: "#C5A059", backgroundColor: "#C5A059" }} />
-              <div className="h-[2px] w-6 sm:w-16" style={{ backgroundColor: "#C5A059" }} />
-            </div>
-
-            <h1 className="text-2xl sm:text-5xl md:text-6xl font-black font-oswald uppercase tracking-widest text-white drop-shadow-xl" style={{ color: "#ffffff" }}>
-              PERSONAL TRAINING RATES
-            </h1>
-
-            <div className="hidden sm:flex items-center gap-2 opacity-80">
-              <div className="h-[2px] w-6 sm:w-16" style={{ backgroundColor: "#C5A059" }} />
-              <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rotate-45 border" style={{ borderColor: "#C5A059", backgroundColor: "#C5A059" }} />
-              <div className="h-[2px] w-12 sm:w-32 md:w-48" style={{ background: "linear-gradient(to left, transparent, #C5A059)" }} />
-            </div>
-          </div>
-          <p className="text-gray-200 font-sans text-sm sm:text-lg md:text-2xl tracking-wider font-semibold" style={{ color: "#e5e7eb" }}>
-            Premium Training. Proven Results.
-          </p>
-        </div>
-
-        {/* Rate Cards Grid Matching Reference Design */}
-        <RateCardsGrid />
+        <RateCardsGrid referenceLayout />
 
         {/* Center WhatsApp Button - Wide Horizontal Pill Button */}
         <div className="flex justify-center my-8 sm:my-10">

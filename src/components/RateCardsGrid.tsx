@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./RateCardsGrid.module.css";
-import { Star, GraduationCap, Check } from "lucide-react";
+import { Star, GraduationCap, Check, Clock3, Crown, ArrowRight, UserRound, UsersRound, ClipboardList, ChartNoAxesCombined, Dumbbell, Target, Handshake } from "lucide-react";
 
 // Calendar icon with a small down arrow inside for Trial Session
 const CalendarDownIcon = ({ className = "w-7 h-7", style }: { className?: string; style?: React.CSSProperties }) => (
@@ -100,12 +100,9 @@ const packageCards = [
   }
 ];
 
-export default function RateCardsGrid() {
-  return (
-    <div className="w-full max-w-[1500px] mx-auto space-y-6 sm:space-y-8 select-none font-sans">
-      
-      {/* Special offers */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 items-stretch">
+export default function RateCardsGrid({ referenceLayout = false }: { referenceLayout?: boolean }) {
+  const specialOffers = (
+      <div className={referenceLayout ? styles.extraGrid : "grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 items-stretch"}>
 
         {/* CARD 1: TRIAL SESSION */}
         <div
@@ -163,6 +160,7 @@ export default function RateCardsGrid() {
           </div>
         </div>
 
+        {!referenceLayout && <>
         {/* CARD 2: STARTER PROMOTIONAL RATE (Deep Red Highlighted Card with Gold Ribbon) */}
         <div
           className="relative rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl overflow-hidden transition-all duration-300"
@@ -243,6 +241,7 @@ export default function RateCardsGrid() {
           </div>
         </div>
 
+        </>}
         {/* CARD 3: STUDENT RATE */}
         <div
           className="rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl transition-all duration-300 relative overflow-hidden"
@@ -302,7 +301,30 @@ export default function RateCardsGrid() {
 
       </div>
 
+  );
+  return (
+    <div className="w-full max-w-[1500px] mx-auto space-y-6 sm:space-y-8 font-sans">
+      {!referenceLayout && specialOffers}
+      <section className={styles.poster} data-rates-poster>
+      {referenceLayout && <>
+        <div className={styles.posterHeader}>
+          <div className={styles.brand}>
+            <img src="/logopt.avif" alt="PT" />
+            <div><strong>PERSONALTRAINER.SG</strong><span>SINCE 2002</span></div>
+          </div>
+          <div className={styles.headline}>
+            <h1>PERSONAL TRAINING <span>PACKAGES</span></h1>
+            <p><span>STRUCTURED</span><i /><span>PERSONALISED</span><i /><span>RESULTS DRIVEN</span></p>
+          </div>
+        </div>
+        <div className={styles.starter}>
+          <div className={styles.starterTitle}>STARTER<br />PACKAGE<small>(NEW CLIENTS &ndash; ONE TIME ONLY)</small></div>
+          <div className={styles.starterPrice}><UserRound aria-hidden="true" /><strong>SINGLE</strong><div><b>$96 <small>/ SESSION</small></b><span>(MINIMUM 12 SESSIONS)</span></div></div>
+          <div className={styles.starterPrice}><UsersRound aria-hidden="true" /><strong>COUPLE <small>(2 PAX)</small></strong><div><b>$144 <small>/ SESSION</small></b><span>(MINIMUM 12 SESSIONS)</span></div></div>
+        </div>
+      </>}
       {/* Session packages */}
+
       <div data-package-grid className={styles.grid}>
         {packageCards.map((pkg) => (
           <article
@@ -313,7 +335,7 @@ export default function RateCardsGrid() {
             <div className={styles.header}>
               {pkg.badge && (
                 <span className={styles.badge}>
-                  {pkg.badge}
+                  <Crown size={15} aria-hidden="true" />{pkg.badge}
                 </span>
               )}
               <h3 className={styles.title}>
@@ -322,10 +344,11 @@ export default function RateCardsGrid() {
                   <span className={styles.separator}> &ndash; </span>{pkg.title}
                 </span>
               </h3>
-              <p className={styles.duration}>60 Minutes</p>
+
             </div>
 
             <div className={styles.body}>
+              <p className={styles.duration}><Clock3 aria-hidden="true" />60 Minutes</p>
               <dl className={styles.prices}>
                 {[["Single", pkg.singleRate], ["Couple", pkg.coupleRate]].map(([label, rate]) => (
                   <div key={label} className={styles.priceRow}>
@@ -342,7 +365,7 @@ export default function RateCardsGrid() {
               </p>
               <ul className={styles.benefits}>
                 {pkg.features.map((feature) => (
-                  <li key={feature} className={feature.includes("Meal Plan") ? styles.mealPlan : styles.benefit}>
+                  <li key={feature} className={feature === pkg.features[0] ? styles.mealPlan : styles.benefit}>
                     <Check aria-hidden="true" size={14} className={styles.check} />
                     <span>{feature}</span>
                   </li>
@@ -359,13 +382,23 @@ export default function RateCardsGrid() {
                   rel="noopener noreferrer"
                   className={styles.button}
                 >
-                  ENQUIRE NOW
+                  ENQUIRE NOW <ArrowRight aria-hidden="true" size={18} />
                 </a>
               </div>
             </div>
           </article>
         ))}
       </div>
+      {referenceLayout && <div className={styles.posterFooter}>
+        <div><ClipboardList /><span>PERSONALISED<br />MEAL PLAN</span></div>
+        <div><ChartNoAxesCombined /><span>INBODY<br />ANALYSIS &amp; TRACKING</span></div>
+        <div><Dumbbell /><span>STRUCTURED<br />TRAINING PROGRAMME</span></div>
+        <div><Target /><span>PROGRESS<br />MONITORING</span></div>
+        <div><Handshake /><span>ACCOUNTABILITY<br />&amp; FULL SUPPORT</span></div>
+        <strong>IF RESULTS MATTERS</strong>
+      </div>}
+      </section>
+      {referenceLayout && <div className={styles.additionalOffers}>{specialOffers}</div>}
     </div>
   );
 }
