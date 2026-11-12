@@ -117,7 +117,7 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
             <div className="flex items-center justify-center gap-2 mb-1.5 text-center">
               <CalendarDownIcon className="w-5 h-5 text-[#C5A059] shrink-0" />
               <h3 className="font-oswald text-lg sm:text-xl font-black uppercase tracking-wider text-[#C5A059]">
-                TRIAL SESSION
+                TRIAL SESSION &ndash; 90 MINUTES
               </h3>
             </div>
 
@@ -288,12 +288,6 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
               <span className="w-4 h-4 rounded-full border border-[#C5A059] flex items-center justify-center shrink-0">
                 <Check size={10} className="text-[#C5A059]" />
               </span>
-              <span>Flat rate for any number of sessions</span>
-            </div>
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-200 font-sans font-medium">
-              <span className="w-4 h-4 rounded-full border border-[#C5A059] flex items-center justify-center shrink-0">
-                <Check size={10} className="text-[#C5A059]" />
-              </span>
               <span>Minimum 12 sessions</span>
             </div>
           </div>
@@ -304,7 +298,7 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
   );
   return (
     <div className="w-full max-w-[1500px] mx-auto space-y-6 sm:space-y-8 font-sans">
-      {!referenceLayout && specialOffers}
+      {specialOffers}
       <section className={styles.poster} data-rates-poster>
       {referenceLayout && <>
         <div className={styles.posterHeader}>
@@ -318,7 +312,7 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
           </div>
         </div>
         <div className={styles.starter}>
-          <div className={styles.starterTitle}>STARTER<br />PACKAGE<small>(NEW CLIENTS &ndash; ONE TIME ONLY)</small></div>
+          <div className={styles.starterTitle}>STARTER PROMOTIONAL RATE<small>60 MINUTES</small><small>(NEW CLIENTS &ndash; ONE TIME ONLY)</small></div>
           <div className={styles.starterPrice}><UserRound aria-hidden="true" /><strong>SINGLE</strong><div><b>$96 <small>/ SESSION</small></b><span>(MINIMUM 12 SESSIONS)</span></div></div>
           <div className={styles.starterPrice}><UsersRound aria-hidden="true" /><strong>COUPLE <small>(2 PAX)</small></strong><div><b>$144 <small>/ SESSION</small></b><span>(MINIMUM 12 SESSIONS)</span></div></div>
         </div>
@@ -373,9 +367,7 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
               </ul>
 
               <div className={styles.closing}>
-                <p className={styles.description}>
-                  {pkg.description}
-                </p>
+                {!referenceLayout && <p className={styles.description}>{pkg.description}</p>}
                 <a
                   href={`https://wa.me/6591081781?text=${encodeURIComponent(`Hi PersonalTrainer.sg, I am interested in the ${pkg.number} Sessions ${pkg.title} package.`)}`}
                   target="_blank"
@@ -398,7 +390,6 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
         <strong>IF RESULTS MATTERS</strong>
       </div>}
       </section>
-      {referenceLayout && <div className={styles.additionalOffers}>{specialOffers}</div>}
     </div>
   );
 }

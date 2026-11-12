@@ -31,44 +31,9 @@ export default function RatesPage() {
       <Navbar activePage="services" />
 
       {/* Main Content Area matching Client Design Graphic */}
-      <main className="pt-28 sm:pt-32 pb-24 sm:pb-16 px-3.5 sm:px-8 md:px-12 max-w-[1550px] mx-auto">
+      <main style={{ paddingTop: "160px" }} className="pb-24 sm:pb-16 px-3.5 sm:px-8 md:px-12 max-w-[1550px] mx-auto">
         
         <RateCardsGrid referenceLayout />
-
-        {/* Center WhatsApp Button - Wide Horizontal Pill Button */}
-        <div className="flex justify-center my-8 sm:my-10">
-          <a
-            href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20your%20Personal%20Training%20rates%20and%20packages."
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full max-w-md py-3.5 sm:py-4 px-6 sm:px-8 rounded-xl font-oswald font-black text-sm sm:text-lg tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:scale-105"
-            style={{
-              backgroundColor: "#0a0a0a",
-              border: "1.5px solid #C5A059",
-              color: "#C5A059"
-            }}
-          >
-            <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" style={{ color: "#C5A059" }} />
-            <span className="whitespace-nowrap">WHATSAPP TO ENQUIRE</span>
-          </a>
-        </div>
-
-        {/* Footer Notes & Disclaimer Bar */}
-        <div className="max-w-[1500px] mx-auto rounded-xl p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-sans shadow-xl" style={{ backgroundColor: "#0a0a0a", border: "1.5px solid rgba(197, 160, 89, 0.55)", color: "#e5e7eb" }}>
-          <div className="flex items-center gap-3 text-center md:text-left">
-            <Calendar size={18} className="shrink-0" style={{ color: "#C5A059" }} />
-            <span className="font-oswald text-xs sm:text-sm uppercase tracking-wider font-bold text-gray-100">
-              Price revised from 27 Dec 2025
-            </span>
-          </div>
-
-          <div className="flex items-center gap-3 text-center md:text-left">
-            <Info size={18} className="shrink-0" style={{ color: "#C5A059" }} />
-            <span className="text-xs sm:text-sm text-gray-200 font-medium">
-              Full package amount will be confirmed during enquiry based on the selected arrangement.
-            </span>
-          </div>
-        </div>
 
         {/* In-Depth Fitness & Pricing Guides */}
         <div className="max-w-[1500px] mx-auto mt-10 pt-8 border-t border-white/10">
@@ -117,6 +82,42 @@ export default function RatesPage() {
             </Link>
           </div>
         </div>
+
+        {/* Center WhatsApp Button - Wide Horizontal Pill Button */}
+        <div className="flex justify-center my-8 sm:my-10">
+          <a
+            href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20your%20Personal%20Training%20rates%20and%20packages."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full max-w-md py-3.5 sm:py-4 px-6 sm:px-8 rounded-xl font-oswald font-black text-sm sm:text-lg tracking-widest uppercase transition-all duration-300 flex items-center justify-center gap-3 shadow-2xl hover:scale-105"
+            style={{
+              backgroundColor: "#0a0a0a",
+              border: "1.5px solid #C5A059",
+              color: "#C5A059"
+            }}
+          >
+            <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" style={{ color: "#C5A059" }} />
+            <span className="whitespace-nowrap">WHATSAPP TO ENQUIRE</span>
+          </a>
+        </div>
+
+        {/* Footer Notes & Disclaimer Bar */}
+        <div className="max-w-[1500px] mx-auto rounded-xl p-4 sm:p-5 flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-sans shadow-xl" style={{ backgroundColor: "#0a0a0a", border: "1.5px solid rgba(197, 160, 89, 0.55)", color: "#e5e7eb" }}>
+          <div className="flex items-center gap-3 text-center md:text-left">
+            <Calendar size={18} className="shrink-0" style={{ color: "#C5A059" }} />
+            <span className="font-oswald text-xs sm:text-sm uppercase tracking-wider font-bold text-gray-100">
+              Price revised from 27 Dec 2025
+            </span>
+          </div>
+
+          <div className="flex items-center gap-3 text-center md:text-left">
+            <Info size={18} className="shrink-0" style={{ color: "#C5A059" }} />
+            <span className="text-xs sm:text-sm text-gray-200 font-medium">
+              Full package amount will be confirmed during enquiry based on the selected arrangement.
+            </span>
+          </div>
+        </div>
+
 
       </main>
 
