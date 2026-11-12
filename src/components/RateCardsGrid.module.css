@@ -9,31 +9,31 @@
 .brand { display: flex; align-items: center; gap: 12px; flex: 0 0 39%; border-right: 2px solid #c5a059; padding-right: 24px; }
 .brand img { width: 72px; height: 80px; object-fit: contain; }
 .brand strong { font-size: clamp(18px, 2vw, 29px); font-style: italic; font-weight: 900; white-space: nowrap; }
-.brand span { display: block; text-align: center; color: #FFE5A3; font-size: 17px; font-style: italic; font-weight: 800; letter-spacing: 2px; }
+.brand span { display: block; text-align: center; color: #C5A059; font-size: 17px; font-style: italic; font-weight: 800; letter-spacing: 2px; }
 .headline { flex: 1; }
 .headline h1 { font-family: Oswald, Arial, sans-serif; font-size: clamp(22px, 2.25vw, 35px); line-height: 1.1; font-weight: 900; font-style: italic; white-space: normal; }
-.headline h1 span { color: #FFE5A3; }
+.headline h1 span { color: #C5A059; }
 .headline p { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 12px; letter-spacing: 3px; }
 .headline i { height: 12px; border-left: 1px solid #C5A059; }
-.starter { display: flex; align-items: center; margin: 0 6% 30px; border: 2px solid #C5A059; border-radius: 18px; background: #070707; box-shadow: 0 2px 9px #ffcd6755; }
-.starterTitle { flex: 0 0 23%; align-self: stretch; display: flex; flex-direction: column; justify-content: center; padding: 7px 10px; background: linear-gradient(120deg,#fff4b1,#f5ce53 70%,#b17b1b); border-radius: 15px; text-align: center; color: #360006; font-size: 27px; font-style: italic; font-weight: 900; line-height: .9; }
+.starter { display: flex; align-items: center; margin: 0 6% 30px; border: 2px solid #C5A059; border-radius: 18px; background: #070707; box-shadow: 0 2px 9px #C5A05955; }
+.starterTitle { flex: 0 0 23%; align-self: stretch; display: flex; flex-direction: column; justify-content: center; padding: 7px 10px; background: #C5A059; border-radius: 15px; text-align: center; color: #360006; font-size: 27px; font-style: italic; font-weight: 900; line-height: .9; }
 .starterTitle small { margin-top: 6px; font-size: 10px; line-height: 1.1; }
 .starterPrice { flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 9px 12px; }
 .starterPrice + .starterPrice { border-left: 1px solid #c5a059; }
-.starterPrice > svg { width: 38px; height: 38px; fill: #edc354; stroke: #edc354; }
+.starterPrice > svg { width: 38px; height: 38px; fill: #C5A059; stroke: #C5A059; }
 .starterPrice strong { font-size: 20px; white-space: nowrap; }
 .starterPrice small { font-size: 12px; }
 .starterPrice b { display: block; padding: 2px 12px; border-radius: 30px; background: linear-gradient(#a60020,#54000b); font-size: 27px; white-space: nowrap; }
 .starterPrice div > span { display: block; margin-top: 4px; text-align: center; font-size: 10px; }
-.grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 26px 8px; padding-top: 8px; }
+.grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 54px 8px; padding-top: 8px; }
 .card { position: relative; display: flex; flex-direction: column; min-width: 0; border: 2px solid #C5A059; border-radius: 20px; background: linear-gradient(150deg, #101010, #050505); color: #fff; text-align: left; box-shadow: 0 3px 4px #0008; }
-.featured { border-color: #FFE5A3; }
+.featured { border-color: #C5A059; }
 .card[data-package="36"] { box-shadow: 0 0 0 2px #C5A059, 0 0 16px #C5A05999; }
 .header { padding: 8px 10px 10px; border-radius: 17px 17px 0 0; background: transparent; border-bottom: 1px solid #C5A059; margin: 0 10px; color: #fff; }
-.badge { position: absolute; top: -19px; left: 50%; transform: translateX(-50%) skew(-8deg); display: flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 6px; background: linear-gradient(#fff3a3,#efb92d); color: #230b00; font-size: 13px; font-weight: 900; font-style: italic; white-space: nowrap; box-shadow: 0 2px 5px #5c1700; }
+.badge { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%) skew(-8deg); display: flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 6px; background: #C5A059; color: #230b00; font-size: 13px; font-weight: 900; font-style: italic; white-space: nowrap; box-shadow: 0 2px 5px #5c1700; }
 .title { text-transform: uppercase; font-family: Oswald, Arial, sans-serif; font-weight: 900; line-height: 1.05; text-align: center; }
 .sessions { display: block; font-size: clamp(20px, 2.1vw, 29px); letter-spacing: -.8px; }
-.name { display: block; padding-top: 3px; font-size: clamp(15px, 1.4vw, 20px); font-style: italic; letter-spacing: -.5px; color: #FFE5A3; }
+.name { display: block; padding-top: 3px; font-size: clamp(15px, 1.4vw, 20px); font-style: italic; letter-spacing: -.5px; color: #C5A059; }
 .separator { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .body { display: flex; flex: 1; flex-direction: column; padding: 7px; }
 .duration { display: flex; align-items: center; gap: 5px; margin: 0 5px 4px; font-size: 12px; font-weight: 700; }
@@ -45,18 +45,18 @@
 .benefitsHeading { display: flex; align-items: center; min-height: 36px; margin-top: 6px; padding: 5px 8px; border-radius: 8px; background: linear-gradient(110deg,#800020,#400810); color: #fff; font-size: 12px; font-weight: 700; line-height: 1.08; }
 .benefits { display: flex; flex-direction: column; gap: 4px; margin: 6px 0 9px; list-style: none; font-size: 13px; font-weight: 400; letter-spacing: -.35px; line-height: 1.15; }
 .benefit, .mealPlan { display: flex; align-items: flex-start; gap: 5px; padding: 0 5px; }
-.mealPlan { padding: 3px 5px; border-radius: 6px; background: #800020; color: #FFE5A3; font-weight: 700; }
-.check { width: 13px; height: 13px; flex-shrink: 0; padding: 1px; border: 1px solid #C5A059; border-radius: 50%; background: transparent; color: #FFE5A3; stroke-width: 3; }
+.mealPlan { padding: 3px 5px; border-radius: 6px; background: #800020; color: #C5A059; font-weight: 700; }
+.check { width: 13px; height: 13px; flex-shrink: 0; padding: 1px; border: 1px solid #C5A059; border-radius: 50%; background: transparent; color: #C5A059; stroke-width: 3; }
 .closing { margin-top: 4px; }
 .description { padding: 9px 7px; border-radius: 6px; background: #fcf0de; font-size: 11.5px; font-style: italic; font-weight: 600; letter-spacing: -.25px; line-height: 1.17; }
 .button { display: flex; align-items: center; justify-content: center; gap: 9px; width: calc(100% - 12px); margin: 9px auto 1px; padding: 7px 8px; border: 1px solid #C5A059; border-radius: 30px; background: linear-gradient(#800020,#400810); color: #fff; text-align: center; font-family: Oswald, Arial, sans-serif; font-size: 14px; font-weight: 700; line-height: 1.15; box-shadow: inset 0 1px 1px #ffffff44; }
 .button:hover { filter: brightness(1.2); }
-.button:focus-visible { outline: 2px solid #956f2e; outline-offset: 4px; }
-.posterFooter { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 20px 24px 0; padding-top: 8px; border-top: 1px solid #d8a84633; }
+.button:focus-visible { outline: 2px solid #C5A059; outline-offset: 4px; }
+.posterFooter { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 20px 24px 0; padding-top: 8px; border-top: 1px solid #C5A05933; }
 .posterFooter > div { display: flex; align-items: center; gap: 7px; padding-right: 12px; border-right: 1px solid #C5A059; }
-.posterFooter svg { width: 36px; height: 36px; color: #FFE5A3; flex-shrink: 0; }
+.posterFooter svg { width: 36px; height: 36px; color: #C5A059; flex-shrink: 0; }
 .posterFooter span { font-size: 10px; line-height: 1.2; }
-.posterFooter strong { font-size: 22px; font-style: italic; color: #FFE5A3; white-space: nowrap; }
+.posterFooter strong { font-size: 22px; font-style: italic; color: #C5A059; white-space: nowrap; }
 .additionalOffers { margin-top: 32px; }
 .extraGrid { display: grid; grid-template-columns: minmax(0,1fr); gap: 20px; }
 @media (min-width: 640px) { .grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
@@ -109,7 +109,7 @@
 /* Preserve comfortable tap targets and prevent cramped starter pricing. */
 .button { min-height: 44px; }
 .starterTitle { font-size: 23px; line-height: 1.1; }
-.grid { align-items: stretch; padding: 22px 4px 8px; }
+.grid { align-items: stretch; padding: 48px 4px 8px; }
 /* Share spare height between benefits so cards and enquiry buttons align. */
 @media (min-width: 640px) {
   .benefits { flex: 1; justify-content: space-between; }
