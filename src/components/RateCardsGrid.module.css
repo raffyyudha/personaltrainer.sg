@@ -47,7 +47,7 @@
 .benefit, .mealPlan { display: flex; align-items: flex-start; gap: 5px; padding: 0 5px; }
 .mealPlan { padding: 3px 5px; border-radius: 6px; background: #800020; color: #FFE5A3; font-weight: 700; }
 .check { width: 13px; height: 13px; flex-shrink: 0; padding: 1px; border: 1px solid #C5A059; border-radius: 50%; background: transparent; color: #FFE5A3; stroke-width: 3; }
-.closing { margin-top: auto; }
+.closing { margin-top: 4px; }
 .description { padding: 9px 7px; border-radius: 6px; background: #fcf0de; font-size: 11.5px; font-style: italic; font-weight: 600; letter-spacing: -.25px; line-height: 1.17; }
 .button { display: flex; align-items: center; justify-content: center; gap: 9px; width: calc(100% - 12px); margin: 9px auto 1px; padding: 7px 8px; border: 1px solid #C5A059; border-radius: 30px; background: linear-gradient(#800020,#400810); color: #fff; text-align: center; font-family: Oswald, Arial, sans-serif; font-size: 14px; font-weight: 700; line-height: 1.15; box-shadow: inset 0 1px 1px #ffffff44; }
 .button:hover { filter: brightness(1.2); }
@@ -86,7 +86,7 @@
 @media (max-width: 639px) { .extraGrid { grid-template-columns: 1fr; } .brand img { width: 54px; height: 62px; } }
 
 /* Keep the reference typography isolated from the site's global text rules. */
-.poster .description { font-family: Oswald, Arial, sans-serif; font-size: 11.5px; line-height: 1.17; }
+.poster .description { color: #111; font-family: Arial, Helvetica, sans-serif; font-size: 11.5px; line-height: 1.35; }
 .poster .benefitsHeading { line-height: 1.08; }
 .poster .title, .poster .amount, .poster .starterTitle, .poster .starterPrice b, .poster .brand strong { font-family: Oswald, Arial, sans-serif; }
 @media (max-width: 1099px) {
@@ -109,7 +109,11 @@
 /* Preserve comfortable tap targets and prevent cramped starter pricing. */
 .button { min-height: 44px; }
 .starterTitle { font-size: 23px; line-height: 1.1; }
-.grid { padding: 22px 4px 8px; }
+.grid { align-items: stretch; padding: 22px 4px 8px; }
+/* Share spare height between benefits so cards and enquiry buttons align. */
+@media (min-width: 640px) {
+  .benefits { flex: 1; justify-content: space-between; }
+}
 @media (max-width: 639px) {
   .poster { padding-left: 0 !important; padding-right: 0 !important; }
   .starterPrice { flex-basis: 100%; }
