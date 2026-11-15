@@ -139,3 +139,14 @@
   .starterPrice + .starterPrice { border-left: 0; border-top: 1px solid #C5A05980; }
   .brand strong { white-space: normal; }
 }
+
+/* Student offer on Rates, using the same palette as the package cards. */
+.studentOffer { padding: 0 !important; border-radius: 20px; }
+.studentOffer > div:first-child { padding: 0 24px 20px; }
+.studentOffer .studentHeading { width: calc(100% + 48px); max-width: none; margin: 0 -24px 18px; padding: 16px 24px; background: linear-gradient(110deg, #800020, #400810); border-bottom: 1px solid #C5A059; gap: 10px; }
+.studentOffer .studentHeading h3 { font-size: 24px; line-height: 1.2; }
+.studentOffer .studentPrice { max-width: 360px; margin: 0 auto; padding: 12px 20px; border: 1px solid #C5A05966; border-radius: 12px; background: #ffffff05; }
+.studentOffer .studentPrice > div { align-items: baseline; gap: 6px; }
+.studentOffer .studentPrice > div > span:first-child { font-size: 40px; line-height: 1.2; }
+.studentOffer .studentMinimum { margin: 0; padding: 12px 20px; border-top: 1px solid #C5A05955; background: #80002026; }
+.studentOffer .studentMinimum > div { justify-content: center; color: #C5A059; }

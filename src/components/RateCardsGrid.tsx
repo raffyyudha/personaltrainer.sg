@@ -246,7 +246,7 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
         <section
           aria-label="Student Rate"
           id={referenceLayout ? "student-rate" : undefined}
-          className="rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl transition-all duration-300 relative overflow-hidden"
+          className={`${referenceLayout ? styles.studentOffer : ""} rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl transition-all duration-300 relative overflow-hidden`}
           style={{
             backgroundColor: "#070707",
             border: "1.5px solid rgba(197, 160, 89, 0.75)"
@@ -254,7 +254,7 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
         >
           <div>
             {/* Header */}
-            <div className="flex items-center justify-center gap-2.5 mb-2">
+            <div className={`${styles.studentHeading} flex items-center justify-center gap-2.5 mb-2`}>
               <GraduationCap className="w-6 h-6 text-[#C5A059]" />
               <h3 className="font-oswald text-xl sm:text-2xl font-black uppercase tracking-wider text-[#C5A059]">
                 STUDENT RATE
@@ -271,7 +271,7 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
             </div>
 
             {/* Rate Column */}
-            <div className="text-center py-2">
+            <div className={`${styles.studentPrice} text-center py-2`}>
               <span className="block text-xs font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
                 SINGLE
               </span>
@@ -285,7 +285,7 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
           </div>
 
           {/* Checklist */}
-          <div className="border-t border-white/15 pt-3.5 mt-3 space-y-2">
+          <div className={`${styles.studentMinimum} border-t border-white/15 pt-3.5 mt-3 space-y-2`}>
             <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-200 font-sans font-medium">
               <span className="w-4 h-4 rounded-full border border-[#C5A059] flex items-center justify-center shrink-0">
                 <Check size={10} className="text-[#C5A059]" />
