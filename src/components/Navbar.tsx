@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
-import { ArrowUpRight, Menu, X, Phone, Mail, Facebook, Instagram } from "lucide-react";
+import Link from "@/components/SiteLink";
+import { ArrowUpRight, Menu, X, Phone, Mail, Facebook, Instagram, ChartNoAxesCombined, Target } from "lucide-react";
+import styles from "./RateCardsGrid.module.css";
 import TikTokIcon from "@/components/TikTokIcon";
 
 interface SubMenuItem {
@@ -163,6 +164,10 @@ export default function Navbar({ activePage = "home" }: NavbarProps) {
             <Menu size={24} className="text-[#C5A059]" />
           </button>
         </div>
+        <ul className={styles.mobileHighlights} aria-label="Training benefits">
+          <li><ChartNoAxesCombined aria-hidden="true" /><span>INBODY<br />ANALYSIS &amp; TRACKING</span></li>
+          <li><Target aria-hidden="true" /><span>PROGRESS<br />MONITORING</span></li>
+        </ul>
       </header>
 
       {/* Mobile Drawer Overlay */}

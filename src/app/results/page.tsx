@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import TikTokIcon from "@/components/TikTokIcon";

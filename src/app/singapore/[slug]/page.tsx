@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -81,11 +81,11 @@ import {
   Clock
 } from "lucide-react";
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
-// Pre-render top 1,000 pages during build, while remaining 18,000+ render on-demand (ISR)
+// Pages has no Next.js server: export every valid URL, not only the first 1,000.
 export async function generateStaticParams() {
-  const topSlugs = getPseoSlugsChunk(0, 1000);
+  const topSlugs = getPseoSlugsChunk(0, getPseoTotalCount());
   return topSlugs.map(slug => ({ slug }));
 }
 

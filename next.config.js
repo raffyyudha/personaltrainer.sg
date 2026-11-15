@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
+const pagesExport = process.env.PAGES_STATIC_EXPORT === "1";
 const nextConfig = {
+  ...(pagesExport ? {
+    output: "export",
+    distDir: ".next-pages",
+    experimental: { cpus: 2 },
+  } : {}),
+  env: {
+    NEXT_PUBLIC_STATIC_EXPORT: pagesExport ? "1" : "0",
+  },
   allowedDevOrigins: ["*.preview.same-app.com"],
   images: {
     unoptimized: true,

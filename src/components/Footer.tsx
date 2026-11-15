@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import { usePathname } from "next/navigation";
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import TikTokIcon from "@/components/TikTokIcon";

@@ -2,6 +2,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+For the complete pSEO site on Cloudflare Pages Free, use `npm run build:pages`
+and upload `out`. See [Cloudflare Pages setup](docs/cloudflare-pages.md).
+
 First, run the development server:
 
 ```bash

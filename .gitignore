@@ -15,7 +15,9 @@
 
 # next.js
 /.next/
+/.next-pages/
 /out/
+/.wrangler/
 
 # production
 /build
@@ -42,4 +44,3 @@ next-env.d.ts
 
 # large media files
 *.mp4
-

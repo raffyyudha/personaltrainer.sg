@@ -242,8 +242,10 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
         </div>
 
         </>}
-        {/* CARD 3: STUDENT RATE */}
-        <div
+        {/* Student Rate follows the trial on the Rates page. */}
+        <section
+          aria-label="Student Rate"
+          id={referenceLayout ? "student-rate" : undefined}
           className="rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl transition-all duration-300 relative overflow-hidden"
           style={{
             backgroundColor: "#070707",
@@ -291,7 +293,7 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
               <span>Minimum 12 sessions</span>
             </div>
           </div>
-        </div>
+        </section>
 
       </div>
 
@@ -310,11 +312,6 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
             <h1>PERSONAL TRAINING <span>PACKAGES</span></h1>
             <p><span>STRUCTURED</span><i /><span>PERSONALISED</span><i /><span>RESULTS DRIVEN</span></p>
           </div>
-        </div>
-        <div className={styles.starter}>
-          <div className={styles.starterTitle}>STARTER PROMOTIONAL RATE<small>60 MINUTES</small><small>(NEW CLIENTS &ndash; ONE TIME ONLY)</small></div>
-          <div className={styles.starterPrice}><UserRound aria-hidden="true" /><strong>SINGLE</strong><div><b>$96 <small>/ SESSION</small></b><span>(MINIMUM 12 SESSIONS)</span></div></div>
-          <div className={styles.starterPrice}><UsersRound aria-hidden="true" /><strong>COUPLE <small>(2 PAX)</small></strong><div><b>$144 <small>/ SESSION</small></b><span>(MINIMUM 12 SESSIONS)</span></div></div>
         </div>
       </>}
       {/* Session packages */}
@@ -381,6 +378,15 @@ export default function RateCardsGrid({ referenceLayout = false }: { referenceLa
           </article>
         ))}
       </div>
+      {referenceLayout && (
+        <div className="pt-8">
+        <div className={styles.starter}>
+          <div className={styles.starterTitle}>STARTER PROMOTIONAL RATE<small>60 MINUTES</small><small>(NEW CLIENTS &ndash; ONE TIME ONLY)</small></div>
+          <div className={styles.starterPrice}><UserRound aria-hidden="true" /><strong>SINGLE</strong><div><b>$96 <small>/ SESSION</small></b><span>(MINIMUM 12 SESSIONS)</span></div></div>
+          <div className={styles.starterPrice}><UsersRound aria-hidden="true" /><strong>COUPLE <small>(2 PAX)</small></strong><div><b>$144 <small>/ SESSION</small></b><span>(MINIMUM 12 SESSIONS)</span></div></div>
+        </div>
+        </div>
+      )}
       {referenceLayout && <div className={styles.posterFooter}>
         <div><ClipboardList /><span>PERSONALISED<br />MEAL PLAN</span></div>
         <div><ChartNoAxesCombined /><span>INBODY<br />ANALYSIS &amp; TRACKING</span></div>

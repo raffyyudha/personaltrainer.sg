@@ -5,6 +5,25 @@
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
+.ratesMain { padding-top: 160px; }
+.mobileHighlights { display: none; }
+@media (max-width: 767px) {
+  .ratesMain { padding-top: 168px; }
+  .mobileHighlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 12px 16px;
+    background: #050505;
+    border-top: 1px solid #C5A05933;
+    border-bottom: 1px solid #C5A05933;
+  }
+  .mobileHighlights li { display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .mobileHighlights svg { width: 30px; height: 30px; flex-shrink: 0; color: #C5A059; }
+  .mobileHighlights span { color: #fff; font-family: Arial, Helvetica, sans-serif; font-size: clamp(9px, 2.7vw, 11px); line-height: 1.4; }
+}
 .posterHeader { display: flex; align-items: center; gap: 28px; margin: 0 28px 14px; }
 .brand { display: flex; align-items: center; gap: 12px; flex: 0 0 39%; border-right: 2px solid #c5a059; padding-right: 24px; }
 .brand img { width: 72px; height: 80px; object-fit: contain; }

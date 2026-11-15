@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
+import Link from "@/components/SiteLink";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import RateCardsGrid from "@/components/RateCardsGrid";
+import styles from "@/components/RateCardsGrid.module.css";
 import TikTokIcon from "@/components/TikTokIcon";
 import {
   Calendar,
@@ -31,8 +32,7 @@ export default function RatesPage() {
       <Navbar activePage="services" />
 
       {/* Main Content Area matching Client Design Graphic */}
-      <main style={{ paddingTop: "160px" }} className="pb-24 sm:pb-16 px-3.5 sm:px-8 md:px-12 max-w-[1550px] mx-auto">
-        
+      <main className={`${styles.ratesMain} pb-24 sm:pb-16 px-3.5 sm:px-8 md:px-12 max-w-[1550px] mx-auto`}>
         <RateCardsGrid referenceLayout />
 
         {/* In-Depth Fitness & Pricing Guides */}
