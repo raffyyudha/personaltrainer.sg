@@ -5,24 +5,62 @@
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
-.ratesMain { padding-top: 160px; }
-.mobileHighlights { display: none; }
+.ratesMain { padding-top: 130px; }
 @media (max-width: 767px) {
-  .ratesMain { padding-top: 168px; }
-  .mobileHighlights {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    list-style: none;
-    margin: 0;
-    padding: 12px 16px;
-    background: #050505;
-    border-top: 1px solid #C5A05933;
-    border-bottom: 1px solid #C5A05933;
+  .ratesMain { padding-top: 110px; }
+}
+
+.packagesBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 22px 24px;
+  background: #080808;
+  border: 1.5px solid #C5A059;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(197, 160, 89, 0.15);
+  margin: 0 0 28px;
+}
+.packagesBannerTitle {
+  font-family: Oswald, Arial, sans-serif;
+  font-size: clamp(22px, 2.8vw, 36px);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #C5A059;
+  letter-spacing: 1.5px;
+  line-height: 1.1;
+  margin: 0;
+}
+.packagesBannerSubtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(10px, 1.2vw, 13px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.packagesBannerSubtitle i {
+  height: 12px;
+  border-left: 1px solid #C5A059;
+}
+@media (max-width: 639px) {
+  .packagesBanner {
+    padding: 16px 14px;
+    margin-bottom: 20px;
   }
-  .mobileHighlights li { display: flex; align-items: center; justify-content: center; gap: 8px; }
-  .mobileHighlights svg { width: 30px; height: 30px; flex-shrink: 0; color: #C5A059; }
-  .mobileHighlights span { color: #fff; font-family: Arial, Helvetica, sans-serif; font-size: clamp(9px, 2.7vw, 11px); line-height: 1.4; }
+  .packagesBannerSubtitle {
+    gap: 8px;
+    letter-spacing: 1.5px;
+    font-size: 10px;
+  }
 }
 .posterHeader { display: flex; align-items: center; gap: 28px; margin: 0 28px 14px; }
 .brand { display: flex; align-items: center; gap: 12px; flex: 0 0 39%; border-right: 2px solid #c5a059; padding-right: 24px; }
@@ -34,7 +72,7 @@
 .headline h1 span { color: #C5A059; }
 .headline p { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 12px; font-size: 12px; letter-spacing: 3px; }
 .headline i { height: 12px; border-left: 1px solid #C5A059; }
-.starter { display: flex; align-items: center; margin: 0 6% 30px; border: 2px solid #C5A059; border-radius: 18px; background: #070707; box-shadow: 0 2px 9px #C5A05955; }
+.starter { display: flex; align-items: center; margin: 0 0 30px; border: 2px solid #C5A059; border-radius: 18px; background: #070707; box-shadow: 0 2px 9px #C5A05955; }
 .starterTitle { flex: 0 0 23%; align-self: stretch; display: flex; flex-direction: column; justify-content: center; padding: 7px 10px; background: #C5A059; border-radius: 15px; text-align: center; color: #360006; font-size: 27px; font-style: italic; font-weight: 900; line-height: .9; }
 .starterTitle small { margin-top: 6px; font-size: 10px; line-height: 1.1; }
 .starterPrice { flex: 1; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 9px 12px; }
@@ -140,13 +178,4 @@
   .brand strong { white-space: normal; }
 }
 
-/* Student offer on Rates, using the same palette as the package cards. */
-.studentOffer { padding: 0 !important; border-radius: 20px; }
-.studentOffer > div:first-child { padding: 0 24px 20px; }
-.studentOffer .studentHeading { width: calc(100% + 48px); max-width: none; margin: 0 -24px 18px; padding: 16px 24px; background: linear-gradient(110deg, #800020, #400810); border-bottom: 1px solid #C5A059; gap: 10px; }
-.studentOffer .studentHeading h3 { font-size: 24px; line-height: 1.2; }
-.studentOffer .studentPrice { max-width: 360px; margin: 0 auto; padding: 12px 20px; border: 1px solid #C5A05966; border-radius: 12px; background: #ffffff05; }
-.studentOffer .studentPrice > div { align-items: baseline; gap: 6px; }
-.studentOffer .studentPrice > div > span:first-child { font-size: 40px; line-height: 1.2; }
-.studentOffer .studentMinimum { margin: 0; padding: 12px 20px; border-top: 1px solid #C5A05955; background: #80002026; }
-.studentOffer .studentMinimum > div { justify-content: center; color: #C5A059; }
+

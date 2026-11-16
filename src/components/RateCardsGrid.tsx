@@ -101,300 +101,263 @@ const packageCards = [
 ];
 
 export default function RateCardsGrid({ referenceLayout = false }: { referenceLayout?: boolean }) {
-  const specialOffers = (
-      <div className={referenceLayout ? styles.extraGrid : "grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 items-stretch"}>
+  const trialCard = (
+    <div
+      className="rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl transition-all duration-300 relative overflow-hidden"
+      style={{
+        backgroundColor: "#070707",
+        border: "1.5px solid rgba(197, 160, 89, 0.75)"
+      }}
+    >
+      <div>
+        {/* Header */}
+        <div className="flex items-center justify-center gap-2 mb-1.5 text-center">
+          <CalendarDownIcon className="w-5 h-5 text-[#C5A059] shrink-0" />
+          <h3 className="font-oswald text-lg sm:text-xl font-black uppercase tracking-wider text-[#C5A059]">
+            TRIAL SESSION &ndash; 90 MINUTES
+          </h3>
+        </div>
 
-        {/* CARD 1: TRIAL SESSION */}
-        <div
-          className="rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl transition-all duration-300 relative overflow-hidden"
-          style={{
-            backgroundColor: "#070707",
-            border: "1.5px solid rgba(197, 160, 89, 0.75)"
-          }}
-        >
+        {/* Exact Required Title */}
+        <p className="text-center font-oswald text-xs sm:text-sm font-bold uppercase text-white tracking-wide mb-2">
+          90 Minute Professional Fitness Assessment and Personal Training Session
+        </p>
+
+        {/* Rates Columns */}
+        <div className="grid grid-cols-2 gap-2 text-center py-2 bg-white/5 rounded-lg border border-white/10 mb-3">
           <div>
-            {/* Header */}
-            <div className="flex items-center justify-center gap-2 mb-1.5 text-center">
-              <CalendarDownIcon className="w-5 h-5 text-[#C5A059] shrink-0" />
-              <h3 className="font-oswald text-lg sm:text-xl font-black uppercase tracking-wider text-[#C5A059]">
-                TRIAL SESSION &ndash; 90 MINUTES
-              </h3>
-            </div>
-
-            {/* Exact Required Title */}
-            <p className="text-center font-oswald text-xs sm:text-sm font-bold uppercase text-white tracking-wide mb-2">
-              90 Minute Professional Fitness Assessment and Personal Training Session
-            </p>
-
-            {/* Rates Columns */}
-            <div className="grid grid-cols-2 gap-2 text-center py-2 bg-white/5 rounded-lg border border-white/10 mb-3">
-              <div>
-                <span className="block text-[11px] font-oswald uppercase text-gray-300 font-bold tracking-wider mb-0.5">
-                  SINGLE TRIAL SESSION
-                </span>
-                <span className="text-3xl sm:text-4xl font-black font-oswald text-white tracking-tight">
-                  $144
-                </span>
-              </div>
-              <div className="border-l border-white/20 pl-2">
-                <span className="block text-[11px] font-oswald uppercase text-gray-300 font-bold tracking-wider mb-0.5">
-                  COUPLE TRIAL SESSION
-                </span>
-                <span className="text-3xl sm:text-4xl font-black font-oswald text-white tracking-tight">
-                  $216
-                </span>
-              </div>
-            </div>
-
-            {/* Inclusions */}
-            <p className="text-[11px] sm:text-xs text-gray-300 leading-relaxed font-sans text-center mb-3">
-              Includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training.
-            </p>
+            <span className="block text-[11px] font-oswald uppercase text-gray-300 font-bold tracking-wider mb-0.5">
+              SINGLE TRIAL SESSION
+            </span>
+            <span className="text-3xl sm:text-4xl font-black font-oswald text-white tracking-tight">
+              $144
+            </span>
           </div>
-
-          {/* Details / Condition Below */}
-          <div className="border-t border-white/15 pt-3 mt-1 text-center">
-            <p className="text-xs text-[#C5A059] leading-snug font-sans font-medium">
-              The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial.
-            </p>
+          <div className="border-l border-white/20 pl-2">
+            <span className="block text-[11px] font-oswald uppercase text-gray-300 font-bold tracking-wider mb-0.5">
+              COUPLE TRIAL SESSION
+            </span>
+            <span className="text-3xl sm:text-4xl font-black font-oswald text-white tracking-tight">
+              $216
+            </span>
           </div>
         </div>
 
-        {!referenceLayout && <>
-        {/* CARD 2: STARTER PROMOTIONAL RATE (Deep Red Highlighted Card with Gold Ribbon) */}
-        <div
-          className="relative rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl overflow-hidden transition-all duration-300"
-          style={{
-            backgroundColor: "#400810",
-            backgroundImage: "linear-gradient(to bottom, #520914, #36050b)",
-            border: "2px solid #C5A059"
-          }}
-        >
-          {/* Gold Ribbon Tag in Top-Left Corner */}
-          <div
-            className="absolute top-0 left-4 sm:left-5 w-8 h-12 sm:w-9 sm:h-14 shadow-lg flex items-center justify-center rounded-b-sm z-10"
-            style={{
-              backgroundColor: "#C5A059",
-              clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 75%, 0 100%)"
-            }}
-          >
-            <Star size={16} fill="#3A060D" style={{ color: "#3A060D", marginTop: "-4px" }} />
-          </div>
-
-          <div>
-            {/* Header */}
-            <div className="pl-6 sm:pl-7 text-center mb-2">
-              <h3 className="font-oswald text-xl sm:text-2xl font-black uppercase tracking-wider text-[#C5A059] drop-shadow">
-                STARTER PROMOTIONAL RATE
-              </h3>
-            </div>
-
-            {/* Subtitle Divider: 60 MINUTES */}
-            <div className="flex items-center gap-3 my-3">
-              <div className="h-[1px] bg-[#C5A059]/40 flex-1" />
-              <span className="text-[11px] sm:text-xs font-oswald font-extrabold uppercase tracking-widest text-gray-200">
-                60 MINUTES
-              </span>
-              <div className="h-[1px] bg-[#C5A059]/40 flex-1" />
-            </div>
-
-            {/* Rates Columns */}
-            <div className="grid grid-cols-2 gap-2 text-center py-2">
-              <div>
-                <span className="block text-xs font-oswald uppercase text-gray-200 font-bold tracking-wider mb-1">
-                  SINGLE
-                </span>
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
-                    $96
-                  </span>
-                  <span className="text-[11px] text-gray-300 font-sans italic">/ session</span>
-                </div>
-              </div>
-              <div className="border-l border-[#C5A059]/40 pl-2">
-                <span className="block text-xs font-oswald uppercase text-gray-200 font-bold tracking-wider mb-1">
-                  COUPLE
-                </span>
-                <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
-                    $144
-                  </span>
-                  <span className="text-[11px] text-gray-300 font-sans italic">/ session</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Bottom Badge/Button: MINIMUM 12 SESSIONS */}
-          <div className="pt-4 mt-3 flex justify-center">
-            <div
-              className="w-full py-2.5 px-4 rounded-lg font-oswald font-extrabold text-xs sm:text-sm uppercase tracking-wider text-center flex items-center justify-center gap-2 border shadow-md"
-              style={{
-                backgroundColor: "#200307",
-                borderColor: "#C5A059",
-                color: "#C5A059"
-              }}
-            >
-              <Star size={14} fill="#C5A059" className="shrink-0" />
-              <span>MINIMUM 12 SESSIONS</span>
-            </div>
-          </div>
-        </div>
-
-        </>}
-        {/* Student Rate follows the trial on the Rates page. */}
-        <section
-          aria-label="Student Rate"
-          id={referenceLayout ? "student-rate" : undefined}
-          className={`${referenceLayout ? styles.studentOffer : ""} rounded-xl p-5 sm:p-6 flex flex-col justify-between shadow-2xl transition-all duration-300 relative overflow-hidden`}
-          style={{
-            backgroundColor: "#070707",
-            border: "1.5px solid rgba(197, 160, 89, 0.75)"
-          }}
-        >
-          <div>
-            {/* Header */}
-            <div className={`${styles.studentHeading} flex items-center justify-center gap-2.5 mb-2`}>
-              <GraduationCap className="w-6 h-6 text-[#C5A059]" />
-              <h3 className="font-oswald text-xl sm:text-2xl font-black uppercase tracking-wider text-[#C5A059]">
-                STUDENT RATE
-              </h3>
-            </div>
-
-            {/* Subtitle Divider: 60 MINUTES */}
-            <div className="flex items-center gap-3 my-3">
-              <div className="h-[1px] bg-white/20 flex-1" />
-              <span className="text-[11px] sm:text-xs font-oswald font-extrabold uppercase tracking-widest text-gray-200">
-                60 MINUTES
-              </span>
-              <div className="h-[1px] bg-white/20 flex-1" />
-            </div>
-
-            {/* Rate Column */}
-            <div className={`${styles.studentPrice} text-center py-2`}>
-              <span className="block text-xs font-oswald uppercase text-gray-300 font-bold tracking-wider mb-1">
-                SINGLE
-              </span>
-              <div className="flex items-baseline justify-center gap-1">
-                <span className="text-3xl sm:text-4xl md:text-5xl font-black font-oswald text-white tracking-tight">
-                  $80
-                </span>
-                <span className="text-[11px] text-gray-300 font-sans italic">/ session</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Checklist */}
-          <div className={`${styles.studentMinimum} border-t border-white/15 pt-3.5 mt-3 space-y-2`}>
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-200 font-sans font-medium">
-              <span className="w-4 h-4 rounded-full border border-[#C5A059] flex items-center justify-center shrink-0">
-                <Check size={10} className="text-[#C5A059]" />
-              </span>
-              <span>Minimum 12 sessions</span>
-            </div>
-          </div>
-        </section>
-
+        {/* Inclusions */}
+        <p className="text-[11px] sm:text-xs text-gray-300 leading-relaxed font-sans text-center mb-3">
+          Includes a professional consultation, goal analysis, InBody analysis, movement and fitness assessment, personalised exercise guidance and one to one personal training.
+        </p>
       </div>
 
+      {/* Details / Condition Below */}
+      <div className="border-t border-white/15 pt-3 mt-1 text-center">
+        <p className="text-xs text-[#C5A059] leading-snug font-sans font-medium mb-3">
+          The trial session fee is fully waived if a minimum 12 session package is purchased immediately after the trial.
+        </p>
+        <a
+          href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20would%20like%20to%20enquire%20about%20booking%20a%20Trial%20Session."
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.button}
+        >
+          ENQUIRE NOW <ArrowRight aria-hidden="true" size={18} />
+        </a>
+      </div>
+    </div>
   );
+
+  const studentCard = (
+    <article
+      data-package="student"
+      aria-label="Student Rate"
+      id="student-rate"
+      className={styles.card}
+    >
+      <div className={styles.header}>
+        <h3 className={styles.title}>
+          <span className={styles.sessions}>Minimum 12 Sessions</span>
+          <span className={styles.name}>
+            <span className={styles.separator}> &ndash; </span>Student Rate
+          </span>
+        </h3>
+      </div>
+
+      <div className={styles.body}>
+        <p className={styles.duration}><Clock3 aria-hidden="true" />60 Minutes</p>
+        <dl className={styles.prices}>
+          <div className={styles.priceRow}>
+            <dt className={styles.priceLabel}>Single</dt>
+            <dd className={styles.priceValue}>
+              <span className={styles.amount}>$80</span>{" / session"}
+            </dd>
+          </div>
+        </dl>
+
+        <p className={styles.benefitsHeading}>
+          FOUNDATION BENEFITS
+        </p>
+        <ul className={styles.benefits}>
+          <li className={styles.mealPlan}>
+            <Check aria-hidden="true" size={14} className={styles.check} />
+            <span>Valid Student Pass Verification</span>
+          </li>
+          <li className={styles.benefit}>
+            <Check aria-hidden="true" size={14} className={styles.check} />
+            <span>7 Day Personalised Meal Plan</span>
+          </li>
+          <li className={styles.benefit}>
+            <Check aria-hidden="true" size={14} className={styles.check} />
+            <span>Initial InBody Analysis</span>
+          </li>
+          <li className={styles.benefit}>
+            <Check aria-hidden="true" size={14} className={styles.check} />
+            <span>Personalised Training Programme</span>
+          </li>
+          <li className={styles.benefit}>
+            <Check aria-hidden="true" size={14} className={styles.check} />
+            <span>Nutrition &amp; Dietary Guidance</span>
+          </li>
+        </ul>
+
+        <div className={styles.closing}>
+          <a
+            href="https://wa.me/6591081781?text=Hi%20PersonalTrainer.sg%2C%20I%20am%20interested%20in%20the%20Student%20Rate%20package."
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.button}
+          >
+            ENQUIRE NOW <ArrowRight aria-hidden="true" size={18} />
+          </a>
+        </div>
+      </div>
+    </article>
+  );
+
+  const starterPromotionalRate = (
+    <div className={styles.starter}>
+      <div className={styles.starterTitle}>
+        STARTER PROMOTIONAL RATE
+        <small>60 MINUTES</small>
+        <small>(NEW CLIENTS &ndash; ONE TIME ONLY)</small>
+      </div>
+      <div className={styles.starterPrice}>
+        <UserRound aria-hidden="true" />
+        <strong>SINGLE</strong>
+        <div>
+          <b>$96 <small>/ SESSION</small></b>
+          <span>(MINIMUM 12 SESSIONS)</span>
+        </div>
+      </div>
+      <div className={styles.starterPrice}>
+        <UsersRound aria-hidden="true" />
+        <strong>COUPLE <small>(2 PAX)</small></strong>
+        <div>
+          <b>$144 <small>/ SESSION</small></b>
+          <span>(MINIMUM 12 SESSIONS)</span>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div className="w-full max-w-[1500px] mx-auto space-y-6 sm:space-y-8 font-sans">
-      {specialOffers}
-      <section className={styles.poster} data-rates-poster>
-      {referenceLayout && <>
-        <div className={styles.posterHeader}>
-          <div className={styles.brand}>
-            <img src="/logopt.avif" alt="PT" />
-            <div><strong>PERSONALTRAINER.SG</strong><span>SINCE 2002</span></div>
-          </div>
-          <div className={styles.headline}>
-            <h1>PERSONAL TRAINING <span>PACKAGES</span></h1>
-            <p><span>STRUCTURED</span><i /><span>PERSONALISED</span><i /><span>RESULTS DRIVEN</span></p>
-          </div>
-        </div>
-      </>}
-      {/* Session packages */}
-
-      <div data-package-grid className={styles.grid}>
-        {packageCards.map((pkg) => (
-          <article
-            key={pkg.number}
-            data-package={pkg.number}
-            className={`${styles.card} ${pkg.badge ? styles.featured : ""}`}
-          >
-            <div className={styles.header}>
-              {pkg.badge && (
-                <span className={styles.badge}>
-                  <Crown size={15} aria-hidden="true" />{pkg.badge}
-                </span>
-              )}
-              <h3 className={styles.title}>
-                <span className={styles.sessions}>{pkg.number} Sessions</span>
-                <span className={styles.name}>
-                  <span className={styles.separator}> &ndash; </span>{pkg.title}
-                </span>
-              </h3>
-
-            </div>
-
-            <div className={styles.body}>
-              <p className={styles.duration}><Clock3 aria-hidden="true" />60 Minutes</p>
-              <dl className={styles.prices}>
-                {[["Single", pkg.singleRate], ["Couple", pkg.coupleRate]].map(([label, rate]) => (
-                  <div key={label} className={styles.priceRow}>
-                    <dt className={styles.priceLabel}>{label}</dt>
-                    <dd className={styles.priceValue}>
-                      <span className={styles.amount}>{rate}</span>{" / session"}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-
-              <p className={styles.benefitsHeading}>
-                {pkg.benefitsHeading}
-              </p>
-              <ul className={styles.benefits}>
-                {pkg.features.map((feature) => (
-                  <li key={feature} className={feature === pkg.features[0] ? styles.mealPlan : styles.benefit}>
-                    <Check aria-hidden="true" size={14} className={styles.check} />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className={styles.closing}>
-                {!referenceLayout && <p className={styles.description}>{pkg.description}</p>}
-                <a
-                  href={`https://wa.me/6591081781?text=${encodeURIComponent(`Hi PersonalTrainer.sg, I am interested in the ${pkg.number} Sessions ${pkg.title} package.`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.button}
-                >
-                  ENQUIRE NOW <ArrowRight aria-hidden="true" size={18} />
-                </a>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
+      {/* 1. Header Banner: PERSONAL TRAINING PACKAGES (replaces previous mobile strip) */}
       {referenceLayout && (
-        <div className="pt-8">
-        <div className={styles.starter}>
-          <div className={styles.starterTitle}>STARTER PROMOTIONAL RATE<small>60 MINUTES</small><small>(NEW CLIENTS &ndash; ONE TIME ONLY)</small></div>
-          <div className={styles.starterPrice}><UserRound aria-hidden="true" /><strong>SINGLE</strong><div><b>$96 <small>/ SESSION</small></b><span>(MINIMUM 12 SESSIONS)</span></div></div>
-          <div className={styles.starterPrice}><UsersRound aria-hidden="true" /><strong>COUPLE <small>(2 PAX)</small></strong><div><b>$144 <small>/ SESSION</small></b><span>(MINIMUM 12 SESSIONS)</span></div></div>
-        </div>
+        <div className={styles.packagesBanner}>
+          <h1 className={styles.packagesBannerTitle}>PERSONAL TRAINING PACKAGES</h1>
+          <div className={styles.packagesBannerSubtitle}>
+            <span>STRUCTURED</span>
+            <i />
+            <span>PERSONALISED</span>
+            <i />
+            <span>RESULTS DRIVEN</span>
+          </div>
         </div>
       )}
-      {referenceLayout && <div className={styles.posterFooter}>
-        <div><ClipboardList /><span>PERSONALISED<br />MEAL PLAN</span></div>
-        <div><ChartNoAxesCombined /><span>INBODY<br />ANALYSIS &amp; TRACKING</span></div>
-        <div><Dumbbell /><span>STRUCTURED<br />TRAINING PROGRAMME</span></div>
-        <div><Target /><span>PROGRESS<br />MONITORING</span></div>
-        <div><Handshake /><span>ACCOUNTABILITY<br />&amp; FULL SUPPORT</span></div>
-        <strong>IF RESULTS MATTERS</strong>
-      </div>}
+
+      {/* 2. Special Offers: Trial Session & Student Rate side by side */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6 items-stretch">
+        {trialCard}
+        {studentCard}
+      </div>
+
+      {/* 3. Starter Promotional Rate: immediately after Student Rate */}
+      {starterPromotionalRate}
+
+      {/* 4. Core Session packages grid */}
+      <section className={styles.poster} data-rates-poster>
+        <div data-package-grid className={styles.grid}>
+          {packageCards.map((pkg) => (
+            <article
+              key={pkg.number}
+              data-package={pkg.number}
+              className={`${styles.card} ${pkg.badge ? styles.featured : ""}`}
+            >
+              <div className={styles.header}>
+                {pkg.badge && (
+                  <span className={styles.badge}>
+                    <Crown size={15} aria-hidden="true" />{pkg.badge}
+                  </span>
+                )}
+                <h3 className={styles.title}>
+                  <span className={styles.sessions}>{pkg.number} Sessions</span>
+                  <span className={styles.name}>
+                    <span className={styles.separator}> &ndash; </span>{pkg.title}
+                  </span>
+                </h3>
+              </div>
+
+              <div className={styles.body}>
+                <p className={styles.duration}><Clock3 aria-hidden="true" />60 Minutes</p>
+                <dl className={styles.prices}>
+                  {[["Single", pkg.singleRate], ["Couple", pkg.coupleRate]].map(([label, rate]) => (
+                    <div key={label} className={styles.priceRow}>
+                      <dt className={styles.priceLabel}>{label}</dt>
+                      <dd className={styles.priceValue}>
+                        <span className={styles.amount}>{rate}</span>{" / session"}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+
+                <p className={styles.benefitsHeading}>
+                  {pkg.benefitsHeading}
+                </p>
+                <ul className={styles.benefits}>
+                  {pkg.features.map((feature) => (
+                    <li key={feature} className={feature === pkg.features[0] ? styles.mealPlan : styles.benefit}>
+                      <Check aria-hidden="true" size={14} className={styles.check} />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className={styles.closing}>
+                  {!referenceLayout && <p className={styles.description}>{pkg.description}</p>}
+                  <a
+                    href={`https://wa.me/6591081781?text=${encodeURIComponent(`Hi PersonalTrainer.sg, I am interested in the ${pkg.number} Sessions ${pkg.title} package.`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.button}
+                  >
+                    ENQUIRE NOW <ArrowRight aria-hidden="true" size={18} />
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        {referenceLayout && (
+          <div className={styles.posterFooter}>
+            <div><ClipboardList /><span>PERSONALISED<br />MEAL PLAN</span></div>
+            <div><ChartNoAxesCombined /><span>INBODY<br />ANALYSIS &amp; TRACKING</span></div>
+            <div><Dumbbell /><span>STRUCTURED<br />TRAINING PROGRAMME</span></div>
+            <div><Target /><span>PROGRESS<br />MONITORING</span></div>
+            <div><Handshake /><span>ACCOUNTABILITY<br />&amp; FULL SUPPORT</span></div>
+            <strong>IF RESULTS MATTERS</strong>
+          </div>
+        )}
       </section>
     </div>
   );
